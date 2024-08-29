@@ -1,14 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Main from './Main';
-import './App.css';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import MeetUs from './Pages/MeetUs';
-import Brotherhood from './Pages/Brotherhood';
-import Careers from './Pages/Careers';
-import Recruitment from './Pages/Recruitment';
-import BrotherPage from './Pages/BrotherPage';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Main from "./Main";
+import "./App.css";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import MeetUs from "./Pages/MeetUs";
+import Brotherhood from "./Pages/Brotherhood";
+import Careers from "./Pages/Careers";
+import Recruitment from "./Pages/Recruitment";
+import BrotherPage from "./Pages/BrotherPage";
 
 export default function App() {
   return (

@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './NavLinks.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./NavLinks.css";
 
 export default function NavLinks() {
   return (

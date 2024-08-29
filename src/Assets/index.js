@@ -1,1 +1,1 @@
-export { default as earthJPG } from "./Frames/earth.jpg"
+export { default as earthJPG } from "./Frames/earth.jpg";

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './ActiveBrother.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./ActiveBrother.css";
 
 export default function ActiveBrother({ brotherInfo }) {
   const {
@@ -15,20 +15,33 @@ export default function ActiveBrother({ brotherInfo }) {
   } = brotherInfo;
 
   const parseList = (items) => {
-    return items.split(',').map((item, index) => (
-      <li key={index} className="brother-list-item">{item.trim()}</li>
+    return items.split(",").map((item, index) => (
+      <li key={index} className="brother-list-item">
+        {item.trim()}
+      </li>
     ));
   };
 
   return (
     <div className="brother-container">
       <div className="brother-header">
-        <img src={`${name}.jpg`} alt={`${name}'s photo`} className="brother-photo" />
+        <img
+          src={`${name}.jpg`}
+          alt={`${name}'s photo`}
+          className="brother-photo"
+        />
         <div className="brother-info">
           <h2 className="brother-name">{name}</h2>
           <p className="brother-major">Major: {major}</p>
-          <p className="brother-graduation">Graduation Year: {graduationYear}</p>
-          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="linkedin-button">
+          <p className="brother-graduation">
+            Graduation Year: {graduationYear}
+          </p>
+          <a
+            href={linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="linkedin-button"
+          >
             LinkedIn
           </a>
         </div>

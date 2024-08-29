@@ -45,6 +45,8 @@
     background-color: white;
     text-align: center;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
   
   .info-section h2 {
