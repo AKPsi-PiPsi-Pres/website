@@ -1,0 +1,10 @@
+import React from 'react';
+
+export default function Careers() {
+  return (
+    <div>
+      <h1>Careers</h1>
+      <p>Details about career opportunities and support.</p>
+    </div>
+  );
+}
