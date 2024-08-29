@@ -8,7 +8,6 @@ export default function ActiveBrother({ brotherInfo }) {
     major,
     graduationYear,
     linkedinUrl,
-    photo,
     hobbies,
     interests,
     askMeAbout,
@@ -24,7 +23,7 @@ export default function ActiveBrother({ brotherInfo }) {
   return (
     <div className="brother-container">
       <div className="brother-header">
-        <img src={photo} alt={`${name}'s photo`} className="brother-photo" />
+        <img src={`${name}.jpg`} alt={`${name}'s photo`} className="brother-photo" />
         <div className="brother-info">
           <h2 className="brother-name">{name}</h2>
           <p className="brother-major">Major: {major}</p>

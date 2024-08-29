@@ -1,0 +1,9 @@
+.pageContainer {
+    padding-top: 80px;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-color: black;
+    color: aliceblue;
+  }
+  

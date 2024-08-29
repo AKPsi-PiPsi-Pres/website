@@ -17,7 +17,7 @@ export default function Home() {
             className="hero-title"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, ease: 'easeOut' }}
+            transition={{ duration: 15.5, ease: 'easeOut' }}
           >
             ΑΚΨ
           </motion.h1>
@@ -25,7 +25,7 @@ export default function Home() {
             className="hero-subtitle"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, ease: 'easeOut', delay: 0.5 }}
+            transition={{ duration: 16.5, ease: 'easeOut', delay: 0.5 }}
           >
             Pi Psi Chapter
           </motion.p>

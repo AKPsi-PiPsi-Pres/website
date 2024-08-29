@@ -1,5 +1,6 @@
 import React from 'react';
 import BrotherList from './BrotherList';
+import './MeetUs.css';
 
 // Example data for brothers (you can replace this with your real data)
 export const brothers = [
@@ -30,7 +31,7 @@ export const brothers = [
 
 export default function MeetUs() {
   return (
-    <div className="meet-us-page">
+    <div className="meet-us-page pageContainer">
       <h1>Meet Our Brothers</h1>
       <BrotherList brothers={brothers} />
     </div>
