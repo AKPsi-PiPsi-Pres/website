@@ -1,0 +1,31 @@
+.brother-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .brother-grid-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+  }
+  
+  .brother-grid-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .brother-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .brother-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

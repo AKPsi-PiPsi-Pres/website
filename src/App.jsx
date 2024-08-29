@@ -8,6 +8,7 @@ import MeetUs from './Pages/MeetUs';
 import Brotherhood from './Pages/Brotherhood';
 import Careers from './Pages/Careers';
 import Recruitment from './Pages/Recruitment';
+import BrotherPage from './Pages/BrotherPage';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/brotherhood" element={<Brotherhood />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/recruitment" element={<Recruitment />} />
+          <Route path="/meet-us/:name" element={<BrotherPage />} />
         </Routes>
       </div>
     </Router>

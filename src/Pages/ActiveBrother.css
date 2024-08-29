@@ -1,0 +1,95 @@
+.brother-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .brother-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .brother-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .brother-info {
+    flex: 1;
+  }
+  
+  .brother-name {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .brother-major,
+  .brother-graduation {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .linkedin-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0077b5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .linkedin-button:hover {
+    background-color: #005f8d;
+  }
+  
+  .brother-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .brother-section {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .brother-section:last-child {
+    margin-right: 0;
+  }
+  
+  .brother-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .brother-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .brother-list-item {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .brother-love {
+    margin-top: 20px;
+  }
+  
+  .brother-love h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  
