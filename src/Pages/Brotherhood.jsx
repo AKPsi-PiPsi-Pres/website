@@ -4,7 +4,7 @@ export default function Brotherhood() {
   return (
     <div>
       <h1>Brotherhood</h1>
-      <p>Information about the brotherhood or fraternity life.</p>
+      <p>Information about the brotherhood.</p>
     </div>
   );
 }
