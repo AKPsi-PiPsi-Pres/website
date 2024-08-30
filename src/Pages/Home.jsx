@@ -1,14 +1,17 @@
 import React from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
-import { earthJPG } from "../Assets";
-
+import { Spring23RushVideo } from "../Assets";
 export default function Home() {
   return (
     <div
       className="home-container"
-      style={{ backgroundImage: `url(${earthJPG})` }}
     >
+      <div className="background-video">
+        <video src={Spring23RushVideo} autoPlay loop muted playsInline>
+        Your browser does not support the video tag.
+        </video>
+      </div>
       <motion.div
         className="hero-section"
         initial={{ opacity: 0 }}
