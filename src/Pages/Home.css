@@ -34,7 +34,7 @@
     width: 100%;
     color: white;
     text-align: center;
-    background: rgba(0, 0, 0, 0.6); /* Optional: Adds a dark overlay for better text visibility */
+    padding-bottom: 15%;
   }
   
   .hero-content {

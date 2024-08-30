@@ -8,7 +8,7 @@ export default function Home() {
       className="home-container"
     >
       <div className="background-video">
-        <video src={Spring23RushVideo} autoPlay loop muted playsInline>
+        <video src={Spring23RushVideo} autoPlay muted playsInline>
         Your browser does not support the video tag.
         </video>
       </div>
@@ -16,7 +16,7 @@ export default function Home() {
         className="hero-section"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 10 }}
       >
         <div className="hero-content">
           <motion.h1
