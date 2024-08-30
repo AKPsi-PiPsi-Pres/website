@@ -1,6 +1,58 @@
 import React, { useEffect, useRef } from "react";
 import "./Brotherhood.css";
-import { BrotherhoodImage1, BrotherhoodImage2, BrotherhoodImage3, BrotherhoodImage4, BrotherhoodImage5, BrotherhoodImage6, BrotherhoodImage7, BrotherhoodImage8, BrotherhoodImage9, BrotherhoodImage10, BrotherhoodImage11, BrotherhoodImage12, BrotherhoodImage13, BrotherhoodImage14, BrotherhoodImage15, BrotherhoodImage16, BrotherhoodImage17, BrotherhoodImage18, BrotherhoodImage19, BrotherhoodImage20, BrotherhoodImage21, BrotherhoodImage22, BrotherhoodImage23, BrotherhoodImage24, BrotherhoodImage25, BrotherhoodImage26, BrotherhoodImage27, BrotherhoodImage28, BrotherhoodImage29, BrotherhoodImage30, BrotherhoodImage31, BrotherhoodImage32, BrotherhoodImage33, BrotherhoodImage34, BrotherhoodImage35, BrotherhoodImage36, BrotherhoodImage37, BrotherhoodImage38, BrotherhoodImage39, BrotherhoodImage40, BrotherhoodImage41, BrotherhoodImage42, BrotherhoodImage43, BrotherhoodImage44, BrotherhoodImage45, BrotherhoodImage46, BrotherhoodImage47, BrotherhoodImage48, BrotherhoodImage49, BrotherhoodImage50, BrotherhoodImage51 } from "../Assets";
+import {
+  BrotherhoodImage1,
+  BrotherhoodImage2,
+  BrotherhoodImage3,
+  BrotherhoodImage4,
+  BrotherhoodImage5,
+  BrotherhoodImage6,
+  BrotherhoodImage7,
+  BrotherhoodImage8,
+  BrotherhoodImage9,
+  BrotherhoodImage10,
+  BrotherhoodImage11,
+  BrotherhoodImage12,
+  BrotherhoodImage13,
+  BrotherhoodImage14,
+  BrotherhoodImage15,
+  BrotherhoodImage16,
+  BrotherhoodImage17,
+  BrotherhoodImage18,
+  BrotherhoodImage19,
+  BrotherhoodImage20,
+  BrotherhoodImage21,
+  BrotherhoodImage22,
+  BrotherhoodImage23,
+  BrotherhoodImage24,
+  BrotherhoodImage25,
+  BrotherhoodImage26,
+  BrotherhoodImage27,
+  BrotherhoodImage28,
+  BrotherhoodImage29,
+  BrotherhoodImage30,
+  BrotherhoodImage31,
+  BrotherhoodImage32,
+  BrotherhoodImage33,
+  BrotherhoodImage34,
+  BrotherhoodImage35,
+  BrotherhoodImage36,
+  BrotherhoodImage37,
+  BrotherhoodImage38,
+  BrotherhoodImage39,
+  BrotherhoodImage40,
+  BrotherhoodImage41,
+  BrotherhoodImage42,
+  BrotherhoodImage43,
+  BrotherhoodImage44,
+  BrotherhoodImage45,
+  BrotherhoodImage46,
+  BrotherhoodImage47,
+  BrotherhoodImage48,
+  BrotherhoodImage49,
+  BrotherhoodImage50,
+  BrotherhoodImage51,
+} from "../Assets";
 
 export default function Brotherhood() {
   const trackRef = useRef(null);
@@ -26,7 +78,7 @@ export default function Brotherhood() {
     // Initialize the track's position
     track.dataset.percentage = 0;
     track.dataset.prevPercentage = 0;
-    track.style.transform = 'translate(0%, 0%)';
+    track.style.transform = "translate(0%, 0%)";
 
     const handleMouseDown = (e) => {
       track.dataset.mouseDownAt = e.clientX;
