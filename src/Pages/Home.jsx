@@ -21,20 +21,13 @@ export default function Home() {
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 15.5, ease: "easeOut" }}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: -70, opacity: 1 }}
+            transition={{ duration: 5.5, ease: "easeOut" }}
           >
-            ΑΚΨ
+            ΑΚΨ - UCI
           </motion.h1>
-          <motion.p
-            className="hero-subtitle"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 16.5, ease: "easeOut", delay: 0.5 }}
-          >
-            Pi Psi Chapter
-          </motion.p>
+
         </div>
       </motion.div>
       <div className="info-section">
