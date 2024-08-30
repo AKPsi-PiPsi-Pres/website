@@ -1,3 +1,5 @@
+export { default as earthJPG } from "./Frames/earth.jpg";
+export { default as jacobPNG } from "./Frames/jacob.png";
 export { default as earthJPG} from "./Frames/earth.jpg"
 export { default as BrotherhoodImage1 } from "./BrotherhoodPhotos/16F53335-3753-4EB2-896A-17CEDA2F7DDF - Derek Chai.jpeg";
 export { default as BrotherhoodImage2 } from "./BrotherhoodPhotos/1FCA5119-ABCC-4CCB-9B9F-C104D08F2E9C - Britney Nguyen.jpeg";
