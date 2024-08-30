@@ -17,22 +17,37 @@
   align-items: center;
 }
 
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .image-track {
   display: flex;
   gap: 4vmin;
   position: absolute;
-  left: 0;  /* Changed from 50% */
-  transform: translate(0%, 0%);  /* Changed from translate(-50%, 0%) */
+  left: 0;
+  transform: translate(0%, 0%);
   width: max-content;
-  padding: 0 2vw;  /* Changed from 0 2vmin to use viewport width */
+  padding: 0 2vw;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  overflow-x: visible;  /* Changed from auto */
+  overflow-x: visible;
   overflow-y: hidden;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+  
+  /* Add intro animation */
+  opacity: 0;
+  animation: fadeInSlideUp 0.8s ease-out forwards;
 }
 
 .image-track::-webkit-scrollbar {
@@ -45,14 +60,18 @@
   width: 40vmin;
   height: 56vmin;
   object-fit: cover;
-  object-position: 100% center;  /* Keeps images aligned to the left */
+  object-position: 100% center;
+  
+  /* Add intro animation to individual images */
+  opacity: 0;
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+  animation-delay: calc(var(--img-index, 0) * 0.1s);
 }
 
-/* Add this new rule to ensure the rightmost image is visible */
 .image-track::after {
   content: '';
   display: block;
-  width: calc(50vw - 20vmin);  /* Half the viewport width minus half the image width */
+  width: calc(50vw - 20vmin);
   height: 1px;
   flex-shrink: 0;
 }
