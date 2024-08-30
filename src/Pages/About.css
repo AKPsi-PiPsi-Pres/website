@@ -1,9 +1,80 @@
-.pageContainer {
-    padding-top: 80px;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    background-color: black;
-    color: aliceblue;
-  }
-  
+.mainTitleSection {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTitle {
+  font-size: 65px;
+  font-family: 'Greek Font', sans-serif;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.aboutUsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6); /* Optional: Adds a dark overlay for better text visibility */
+}
+
+.aboutUsContent {
+  position: relative;
+  z-index: 2;
+}
+
+.aboutUsTitle {
+  font-family: 'Greek Font', sans-serif;
+  font-size: 72px;
+  margin: 0;
+  letter-spacing: 5px;
+}
+
+.aboutus-subtitle1 {
+  font-family: 'Greek Font', sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.aboutus-section {
+  padding: 50px 20px;
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.aboutus-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.aboutus-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+}
