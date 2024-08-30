@@ -17,7 +17,7 @@ import {
 
 export default function Brotherhood() {
   const trackRef = useRef(null);
-
+  //Make SURE every image you are using has a centered subject, or else it will look very awkward
   const images = [
     BrotherhoodImage12,
     BrotherhoodImage1,
@@ -35,6 +35,11 @@ export default function Brotherhood() {
 
   useEffect(() => {
     const track = trackRef.current;
+
+    // Initialize the track's position
+    track.dataset.percentage = 0;
+    track.dataset.prevPercentage = 0;
+    track.style.transform = 'translate(0%, 0%)';
 
     const handleMouseDown = (e) => {
       track.dataset.mouseDownAt = e.clientX;
@@ -63,7 +68,7 @@ export default function Brotherhood() {
       for (const image of track.getElementsByClassName("img")) {
         image.animate(
           {
-            objectPosition: `${100 + boundedNextPercentage}% 50%`,
+            objectPosition: `${100 + boundedNextPercentage}% center`,
           },
           { duration: 1200, fill: "forwards" },
         );

@@ -21,17 +21,16 @@
   display: flex;
   gap: 4vmin;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  left: 0;  /* Changed from 50% */
+  transform: translate(0%, 0%);  /* Changed from translate(-50%, 0%) */
   width: max-content;
-  padding: 0 2vmin;
+  padding: 0 2vw;  /* Changed from 0 2vmin to use viewport width */
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  overflow-x: auto;
+  overflow-x: visible;  /* Changed from auto */
   overflow-y: hidden;
-  /* Ensure these styles are not overridden */
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
 }
@@ -46,5 +45,14 @@
   width: 40vmin;
   height: 56vmin;
   object-fit: cover;
-  object-position: 100% center;
+  object-position: 100% center;  /* Keeps images aligned to the left */
+}
+
+/* Add this new rule to ensure the rightmost image is visible */
+.image-track::after {
+  content: '';
+  display: block;
+  width: calc(50vw - 20vmin);  /* Half the viewport width minus half the image width */
+  height: 1px;
+  flex-shrink: 0;
 }
