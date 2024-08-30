@@ -1,9 +1,48 @@
-.pageContainer {
-    padding-top: 80px;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    background-color: black;
-    color: aliceblue;
-  }
-  
+/* Recruitment.css */
+
+.recruitmentContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroSection {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.mainTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.rushButton {
+  background-color: white;
+  color: black;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.rushButton:hover {
+  background-color: #ccc;
+}
+
