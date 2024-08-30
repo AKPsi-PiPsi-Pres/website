@@ -34,7 +34,7 @@
     width: 100%;
     color: white;
     text-align: center;
-    padding-bottom: 15%;
+    padding-bottom: 75px;
   }
   
   .hero-content {
@@ -59,6 +59,7 @@
     padding: 50px 20px;
     background-color: white;
     text-align: center;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
