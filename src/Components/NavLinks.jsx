@@ -6,32 +6,32 @@ export default function NavLinks() {
   return (
     <ul className="nav-links">
       <li>
-        <NavLink exact to="/" activeClassName="active">
+        <NavLink exact to="/" activeclassname="active">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink to="/about" activeClassName="active">
+        <NavLink to="/about" activeclassname="active">
           About
         </NavLink>
       </li>
       <li>
-        <NavLink to="/meet-us" activeClassName="active">
+        <NavLink to="/meet-us" activeclassname="active">
           Meet Us
         </NavLink>
       </li>
       <li>
-        <NavLink to="/brotherhood" activeClassName="active">
+        <NavLink to="/brotherhood" activeclassname="active">
           Brotherhood
         </NavLink>
       </li>
       <li>
-        <NavLink to="/careers" activeClassName="active">
+        <NavLink to="/careers" activeclassname="active">
           Careers
         </NavLink>
       </li>
       <li>
-        <NavLink to="/recruitment" activeClassName="active">
+        <NavLink to="/recruitment" activeclassname="active">
           Recruitment
         </NavLink>
       </li>

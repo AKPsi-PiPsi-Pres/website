@@ -1,1 +1,13 @@
 export { default as earthJPG } from "./Frames/earth.jpg";
+export { default as BrotherhoodImage1 } from "./BrotherhoodPhotos/1FCA5119-ABCC-4CCB-9B9F-C104D08F2E9C - Britney Nguyen.jpeg";
+export { default as BrotherhoodImage2 } from "./BrotherhoodPhotos/4E518B82-ECCA-4158-85CE-9A38FD2808C0 - Britney Nguyen.jpeg";
+export { default as BrotherhoodImage3 } from "./BrotherhoodPhotos/FE72019B-8CAD-4FA4-861E-0D6E56669A4A - Britney Nguyen.jpeg";
+export { default as BrotherhoodImage4 } from "./BrotherhoodPhotos/IMG_1165 - Curtis Yang.jpeg";
+export { default as BrotherhoodImage5 } from "./BrotherhoodPhotos/IMG_1552_Original - Tiffany Cheng.jpeg";
+export { default as BrotherhoodImage6 } from "./BrotherhoodPhotos/IMG_1677 - Curtis Yang.jpeg";
+export { default as BrotherhoodImage7 } from "./BrotherhoodPhotos/IMG_1753_Original - Tiffany Cheng.jpeg";
+export { default as BrotherhoodImage8 } from "./BrotherhoodPhotos/IMG_3233 - Curtis Yang.jpeg";
+export { default as BrotherhoodImage9 } from "./BrotherhoodPhotos/IMG_4834_Original - Tiffany Cheng.jpeg";
+export { default as BrotherhoodImage10 } from "./BrotherhoodPhotos/IMG_7681 - Tiffany Cheng.jpeg";
+export { default as BrotherhoodImage11 } from "./BrotherhoodPhotos/IMG_8158 - Tiffany Cheng.jpeg";
+export { default as BrotherhoodImage12 } from "./BrotherhoodPhotos/IMG_8373 - Curtis Yang.gif";
