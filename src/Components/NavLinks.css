@@ -53,3 +53,41 @@
   background-color: #302ad6;
   backdrop-filter: blur(70px);
 }
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #121212;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.mobile li {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0 1.4rem;
+  }
+}
