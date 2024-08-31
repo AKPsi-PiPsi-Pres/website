@@ -140,7 +140,7 @@ export default function Brotherhood() {
         </video>
       </div>
       <div className="carousel-section">
-        <h1 className="brotherhood-title">Our Brotherhood</h1>
+        <p className="brotherhood-title">From quarterly retreats to spontaneous hangouts, our brothers in Alpha Kappa Psi always make lifelong memories.</p>
         <div className="carousel-body">
           <div
             className="image-track"

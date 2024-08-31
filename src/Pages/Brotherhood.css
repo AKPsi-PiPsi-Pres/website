@@ -54,8 +54,9 @@ html, body {
 
 .brotherhood-title {
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
+  font-family: 'Roboto';
 }
 
 .carousel-body {
@@ -115,7 +116,7 @@ html, body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .brotherhood-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .image-track > .img {
