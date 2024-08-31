@@ -7,6 +7,7 @@ import { Button } from "@mui/material";
 import { OpenInNew } from "@mui/icons-material";
 import { useRef, useEffect, useState } from "react";
 
+
 export default function Home() {
   const videoRef = useRef(null);
   const [volume, setVolume] = useState(0.5);
@@ -99,6 +100,28 @@ export default function Home() {
           </Button>
         </div>
       </div>
+
+      <div className="wrapup-section">
+        
+      <div className="final-statements">
+        <div className="statement-one">
+          <p>Our members strive to uphold the highest standards in everything they do.</p>
+        </div>
+        <div className="statement-two">
+          <p>Website designed and developed in-house, on 1600 lines of code and counting...</p>
+        </div>
+      </div>
+      <div className="social-links">
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+        <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          Facebook
+        </a>
+        <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </div>
     </div>
+    </div>
+
   );
 }

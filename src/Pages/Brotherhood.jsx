@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Brotherhood.css";
 import ImageGrid from "react-image-grid-animator";
+import { Fall23RushVideo } from "../Assets";
 import {
   BrotherhoodImage1,
   BrotherhoodImage2,
@@ -94,7 +95,7 @@ export default function Brotherhood() {
       const percentage = (mouseDelta / maxDelta) * -100,
         nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
-      const boundedNextPercentage = Math.max(Math.min(nextPercentage, 0), -55);
+      const boundedNextPercentage = Math.max(Math.min(nextPercentage, 0), -61);
 
       track.dataset.percentage = boundedNextPercentage;
 
@@ -102,7 +103,7 @@ export default function Brotherhood() {
         {
           transform: `translate(${boundedNextPercentage}%, 0%)`,
         },
-        { duration: 1200, fill: "forwards" },
+        { duration: 1200, fill: "forwards" }
       );
 
       for (const image of track.getElementsByClassName("img")) {
@@ -110,7 +111,7 @@ export default function Brotherhood() {
           {
             objectPosition: `${100 + boundedNextPercentage}% center`,
           },
-          { duration: 1200, fill: "forwards" },
+          { duration: 1200, fill: "forwards" }
         );
       }
     };
@@ -132,93 +133,34 @@ export default function Brotherhood() {
   }, []);
 
   return (
-    <>
-      <div className="carousel-body">
-        <div
-          className="image-track"
-          ref={trackRef}
-          id="image-track"
-          data-mouse-down-at="0"
-          data-prev-percentage="0"
-        >
-          {images.map((image, index) => (
-            <img
-              key={index}
-              className="img"
-              src={image}
-              alt="Photo of AKY Brothers"
-              draggable={false}
-            />
-          ))}
+    <div className="section-container">
+      <div className="video-section">
+        <video src={Fall23RushVideo} autoPlay muted playsInline>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="carousel-section">
+        <h1 className="brotherhood-title">Our Brotherhood</h1>
+        <div className="carousel-body">
+          <div
+            className="image-track"
+            ref={trackRef}
+            id="image-track"
+            data-mouse-down-at="0"
+            data-prev-percentage="0"
+          >
+            {images.map((image, index) => (
+              <img
+                key={index}
+                className="img"
+                src={image}
+                alt="Photo of AKY Brothers"
+                draggable={false}
+              />
+            ))}
+          </div>
         </div>
       </div>
-      <div className="collage-section">
-        {/* <div><h1>Our Brotherhood</h1></div> */}
-        <div className="collage-container">
-          <ImageGrid
-            className="image-grid"
-            images={[
-              BrotherhoodImage44,
-              BrotherhoodImage45,
-              BrotherhoodImage46,
-              BrotherhoodImage47,
-              BrotherhoodImage30,
-              BrotherhoodImage31,
-              BrotherhoodImage32,
-              BrotherhoodImage33,
-              BrotherhoodImage34,
-              BrotherhoodImage35,
-              BrotherhoodImage36,
-              BrotherhoodImage37,
-              BrotherhoodImage38,
-              BrotherhoodImage39,
-              BrotherhoodImage23,
-              BrotherhoodImage24,
-              BrotherhoodImage25,
-              BrotherhoodImage26,
-              BrotherhoodImage27,
-              BrotherhoodImage28,
-            ]}
-            visibleCount={6}
-            interval={4500}
-            animationItemcount={0}
-            transitionType={"FADE_AND_SCALE"}
-            transitionDuration={50}
-            isActive={false}
-          />
-          <ImageGrid
-            className="image-grid"
-            images={[
-              BrotherhoodImage1,
-              BrotherhoodImage2,
-              BrotherhoodImage48,
-              BrotherhoodImage49,
-              BrotherhoodImage50,
-              BrotherhoodImage51,
-              BrotherhoodImage14,
-              BrotherhoodImage15,
-              BrotherhoodImage16,
-              BrotherhoodImage4,
-              BrotherhoodImage9,
-              BrotherhoodImage22,
-              BrotherhoodImage18,
-              BrotherhoodImage19,
-              BrotherhoodImage20,
-              BrotherhoodImage21,
-              BrotherhoodImage40,
-              BrotherhoodImage41,
-              BrotherhoodImage42,
-              BrotherhoodImage43,
-            ]}
-            visibleCount={6}
-            interval={5000}
-            animationItemcount={0}
-            transitionType={"FADE_AND_SCALE"}
-            transitionDuration={300}
-            isActive={true}
-          />
-        </div>
-      </div>
-    </>
+    </div>
   );
 }

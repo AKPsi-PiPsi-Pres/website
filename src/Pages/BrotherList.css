@@ -18,7 +18,7 @@ body, html {
 .carousel-body {
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: 121212;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -84,7 +84,7 @@ body, html {
 .collage-section {
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: 121212;
   display: flex;
   justify-content: center;
   align-items: center;
