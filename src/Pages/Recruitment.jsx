@@ -1,13 +1,13 @@
 import React from "react";
 import "./Recruitment.css";
-import { jacobPNG } from "../Assets";
-
+import { Dune } from "../Assets";
+import DuneButton from "../Components/RushButton";
 export default function Recruitment() {
   return (
     <div
       className="recruitmentContainer"
       style={{
-        backgroundImage: `url(${jacobPNG})`,
+        backgroundImage: `url(${Dune})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
@@ -18,11 +18,9 @@ export default function Recruitment() {
       }}
     >
       <div className="heroSection">
-        <h1 className="mainTitle">INSERT RUSH THEME</h1>
+        <h1 className="mainTitle">Rise</h1>
         <p className="subTitle">Fall Rush 2024</p>
-        <a href="#" className="rushButton">
-          Rush Application
-        </a>
+        <DuneButton href="instagram.com/akpsiuci">Rush Application</DuneButton>
       </div>
     </div>
   );
