@@ -82,20 +82,22 @@ export default function Brotherhood() {
     track.dataset.prevPercentage = 0;
     track.style.transform = "translate(0%, 0%)";
 
-    const handleMouseDown = (e) => {
-      track.dataset.mouseDownAt = e.clientX;
+    const handleStart = (e) => {
+      track.dataset.startAt = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
     };
 
-    const handleMouseMove = (e) => {
-      if (track.dataset.mouseDownAt === "0") return;
+    const handleMove = (e) => {
+      if (track.dataset.startAt === "0") return;
 
-      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+      const currentPosition = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+      const startPosition = parseFloat(track.dataset.startAt);
+      const mouseDelta = startPosition - currentPosition,
         maxDelta = window.innerWidth / 2;
 
       const percentage = (mouseDelta / maxDelta) * -100,
         nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
-      const boundedNextPercentage = Math.max(Math.min(nextPercentage, 0), -61);
+      const boundedNextPercentage = Math.max(Math.min(nextPercentage, 0), -65);
 
       track.dataset.percentage = boundedNextPercentage;
 
@@ -116,19 +118,31 @@ export default function Brotherhood() {
       }
     };
 
-    const handleMouseUp = () => {
-      track.dataset.mouseDownAt = "0";
+    const handleEnd = () => {
+      track.dataset.startAt = "0";
       track.dataset.prevPercentage = track.dataset.percentage;
     };
 
-    window.addEventListener("mousedown", handleMouseDown);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleMouseUp);
+    // Mouse events
+    window.addEventListener("mousedown", handleStart);
+    window.addEventListener("mousemove", handleMove);
+    window.addEventListener("mouseup", handleEnd);
+
+    // Touch events
+    window.addEventListener("touchstart", handleStart);
+    window.addEventListener("touchmove", handleMove);
+    window.addEventListener("touchend", handleEnd);
 
     return () => {
-      window.removeEventListener("mousedown", handleMouseDown);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
+      // Mouse events
+      window.removeEventListener("mousedown", handleStart);
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("mouseup", handleEnd);
+
+      // Touch events
+      window.removeEventListener("touchstart", handleStart);
+      window.removeEventListener("touchmove", handleMove);
+      window.removeEventListener("touchend", handleEnd);
     };
   }, []);
 
