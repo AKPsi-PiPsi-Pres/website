@@ -15,7 +15,7 @@ const TableInfo = () => {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`,
+          `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`
         );
         const values = response.data.values;
 
@@ -39,9 +39,9 @@ const TableInfo = () => {
         console.error(error);
       }
     }
-  
-  fetchData();
-}, []); 
+
+    fetchData();
+  }, []);
 
   const handleYearChange = (year) => {
     setSelectedYear(year);
@@ -53,58 +53,41 @@ const TableInfo = () => {
     ));
   };
 
-
   return (
     <div>
-    <div className="tabs">
-      <ul className="years">
-        {Object.keys(data).map(year => (
-          <li key={year} className={selectedYear === year ? 'is-active' : ''} onClick={() => handleYearChange(year)}>
-            <a>{year}</a>
-          </li>
-        ))}
-      </ul>
+      <div className="tabs">
+        <ul className="years">
+          {Object.keys(data).map(year => (
+            <li key={year} className={selectedYear === year ? 'is-active' : ''} onClick={() => handleYearChange(year)}>
+              <a>{year}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="careers-container">
+        <table className="careers-table table is-fullwidth is-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Company</th>
+              <th>Sector</th>
+            </tr>
+          </thead>
+          <tbody>
+            {["Accounting", "Finance", "Consulting", "Marketing", "Technology", "Misc"].map(category => (
+              <React.Fragment key={category}>
+                <tr>
+                  <td colSpan="4" className="subtitle has-text-weight-semibold">{category}</td>
+                </tr>
+                {renderTableData(category)}
+              </React.Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div className="careers-container">
-      <table className="careers-table table is-fullwidth is-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Company</th>
-            <th>Sector</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="accounting-row">
-            <td colSpan="4"><span className="subtitle has-text-weight-semibold">Accounting</span></td>
-          </tr>
-          <tbody className="accounting-data">{renderTableData('Accounting')}</tbody>
-          <tr className="finance-row">
-            <td colSpan="4"><span className="subtitle has-text-weight-semibold">Finance</span></td>
-          </tr>
-          <tbody className="finance-data">{renderTableData('Finance')}</tbody>
-          <tr className="consulting-row">
-            <td colSpan="4"><span className="subtitle has-text-weight-semibold">Consulting</span></td>
-          </tr>
-          <tbody className="consulting-data">{renderTableData('Consulting')}</tbody>
-          <tr className="marketing-row">
-            <td colSpan="4"><span className="subtitle has-text-weight-semibold">Marketing</span></td>
-          </tr>
-          <tbody className="marketing-data">{renderTableData('Marketing')}</tbody>
-          <tr className="tech-row">
-            <td colSpan="4"><span className="subtitle has-text-weight-semibold">Technology</span></td>
-          </tr>
-          <tbody className="tech-data">{renderTableData('Technology')}</tbody>
-          <tr className="misc-row">
-            <td colSpan="4"><span className="subtitle has-text-weight-semibold">Miscellaneous</span></td>
-          </tr>
-          <tbody className="misc-data">{renderTableData('Misc')}</tbody>
-        </tbody>
-      </table>
-    </div>
-  </div>
-);
+  );
 };
 
 export default TableInfo;
