@@ -63,3 +63,28 @@
   margin: 0;
   background: white;
 }
+
+.table {
+  margin: 5rem auto;
+  border-radius: 2rem;
+  border: 1rem hidden blue;
+  border-collapse: collapse;
+  box-shadow:rgba(0, 0, 0, 0.6)
+}
+
+.thead {
+  font-size: 10px;
+  background-color: blue;
+  color: white;
+}
+
+.th, .td {
+  border: 1px;
+  min-width: 30rem;
+  padding: 1.5rem;
+  line-height: 1.7;
+}
+
+.td {
+  font-size: 1.5rem;
+}

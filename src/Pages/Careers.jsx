@@ -2,7 +2,7 @@ import React from "react";
 import "./Careers.css";
 import { motion } from "framer-motion";
 import { earthJPG } from "../Assets";
-import App from './CareerTable';
+import TableInfo from './CareerTable';
 
 export default function Home() {
   return (
@@ -43,7 +43,7 @@ export default function Home() {
       <div className="careers-section">
         <div>
 
-        <App />
+        <TableInfo />
         <div>
         </div>
         </div>
