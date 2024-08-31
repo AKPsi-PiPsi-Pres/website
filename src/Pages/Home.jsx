@@ -67,9 +67,7 @@ export default function Home() {
             The organization of Alpha Kappa Psi was founded in New York
             University in 1904. Now over a century old, Alpha Kappa Psi has
             helped over 300,000 individuals create lifelong friends and pursue
-            their dreams. Our chapter here at UC Irvine is devoted to this same
-            goal of helping students build lasting friendships and achieve their
-            dreams. Our goal is to help Anteaters become the best versions of
+            their dreams. Our goal is to help Anteaters become the best versions of
             themselves that they can be.
           </p>
         </div>
