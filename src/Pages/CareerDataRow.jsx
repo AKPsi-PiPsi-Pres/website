@@ -3,12 +3,12 @@ export default function CareerDataRow({ data }) {
   return (
     <>
       {
-        <tr key={data[0]}>
-          <td>{data[0]}</td>
-          <td>{data[5]}</td>
-          <td>{data[4]}</td>
-          <td>{data[3]}</td>
-        </tr>
+      <tr>
+        <td>{data.Name}</td>
+        <td>{data.Position}</td>
+        <td>{data.Company}</td>
+        <td>{data.Sector}</td>
+      </tr>
       }
     </>
   );
