@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import UserData from './CareerTableTable';
 
 const SHEET_ID = '1YY9TyYXJPHNJ8n1M2O9iKQaB00oCIghhkb5UpxTxV0g';
 const API_KEY = 'AIzaSyB4VMnva4PLLAocjljvt4dLtA-kHaSWcu0';
 const RANGE = 'Form Responses 1!B2:G';
 
-const App = () => {
+const TableInfo = () => {
     const [data, setData] = useState([]);
 
 
@@ -23,7 +23,7 @@ const App = () => {
         };
     
         fetchData();
-      }, []);
+      }, [])
     
       return (
         <div>
@@ -33,22 +33,20 @@ const App = () => {
                 <th>Name</th>
                 <th>Position</th>
                 <th>Company</th>
-                <th>Sector</th>
+                <th>Industry</th>
 
               </tr>
             </thead>
             <tbody>
-              {data.map((row, index) => (
-                <tr key={index}>
-                  {row.map((cell, cellIndex) => (
-                    <td key={cellIndex}>{cell}</td>
-                  ))}
-                </tr>
-              ))}
+              {data.map((currentInfo) => {
+                          const [Name, Position, Company, Industry] = currentInfo;  
+                      })}
+                <UserData data={currentInfo} />
+
             </tbody>
           </table>
         </div>
       );
     };
     
-    export default App;
+    export default TableInfo;
