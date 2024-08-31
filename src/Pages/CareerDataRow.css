@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #363636;
+
+}
+
+tr {
+    border-bottom: 1px solid #ccc;
+    font-family: sans-serif;
+}
+
+td {
+    padding: 12px;
+    font-family: sans-serif;
+}

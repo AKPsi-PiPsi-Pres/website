@@ -22,20 +22,39 @@
     border-radius: 4px;
   }
   
+  .careers-container {
+    width: 70%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
   .careers-table {
     width: 100%;
-    border-collapse: collapse;
+    table-layout: fixed;
   }
   
   .careers-table th, .careers-table td {
     padding: 10px;
-    border: 1px solid #ddd;
     text-align: left;
+    word-wrap: break-word;
   }
   
   .subtitle {
     font-weight: bold;
     margin-top: 10px;
     display: block;
+    font-size: 22px;
+    color: #363636
   }
+
   
+.careers-table td:nth-child(1),
+.careers-table td:nth-child(2), 
+.careers-table td:nth-child(3)  {
+    max-width: 150px;
+    white-space: wrap;
+}
+
+.careers-container {
+    max-width: 100%;
+}
