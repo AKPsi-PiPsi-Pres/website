@@ -103,7 +103,7 @@ export default function Brotherhood() {
         {
           transform: `translate(${boundedNextPercentage}%, 0%)`,
         },
-        { duration: 1200, fill: "forwards" }
+        { duration: 1200, fill: "forwards" },
       );
 
       for (const image of track.getElementsByClassName("img")) {
@@ -111,7 +111,7 @@ export default function Brotherhood() {
           {
             objectPosition: `${100 + boundedNextPercentage}% center`,
           },
-          { duration: 1200, fill: "forwards" }
+          { duration: 1200, fill: "forwards" },
         );
       }
     };
@@ -140,7 +140,10 @@ export default function Brotherhood() {
         </video>
       </div>
       <div className="carousel-section">
-        <p className="brotherhood-title">From quarterly retreats to spontaneous hangouts, our brothers in Alpha Kappa Psi always make lifelong memories.</p>
+        <p className="brotherhood-title">
+          From quarterly retreats to spontaneous hangouts, our brothers in Alpha
+          Kappa Psi always make lifelong memories.
+        </p>
         <div className="carousel-body">
           <div
             className="image-track"
