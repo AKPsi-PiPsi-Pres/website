@@ -50,11 +50,11 @@
     font-weight: bold;
     padding: 20px;
     color: transparent; /* Makes the text color transparent */
-    background: linear-gradient(45deg, #6bff7c, #b300ff, #4db8ff);
+    background: linear-gradient(45deg, #79ff89, #d981ff, #7bcaff, #ffc0c0);
     background-size: 300%;
     background-clip: text;
     -webkit-background-clip: text; /* Ensures compatibility with WebKit browsers */
-    animation: gradient-animation 20s infinite; /* Slow gradient animation */
+    animation: gradient-animation 15s infinite; /* Slow gradient animation */
 }
 
 @keyframes gradient-animation {
