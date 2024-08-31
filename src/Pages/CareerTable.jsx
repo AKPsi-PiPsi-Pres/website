@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CareerDataRow from "./CareerDataRow";
+import "./CareerTable.css";
 
 const SHEET_ID = "1YY9TyYXJPHNJ8n1M2O9iKQaB00oCIghhkb5UpxTxV0g";
 const API_KEY = "AIzaSyB4VMnva4PLLAocjljvt4dLtA-kHaSWcu0";
@@ -10,35 +11,37 @@ const TableInfo = () => {
   const [data, setData] = useState([]);
   const [selectedYear, setSelectedYear] = useState("2024");
 
-  async function fetchData() {
-    try {
-      const response = await axios.get(
-        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`,
-      );
-      const values = response.data.values;
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`,
+        );
+        const values = response.data.values;
 
-      const mainObj = {
-        "2020": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-        "2019": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-        "2018": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-        "2021": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-        "2022": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-        "2023": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-        "2024": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-        "2025": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] }
-      };
+        const mainObj = {
+          "2020": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
+          "2019": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
+          "2018": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
+          "2021": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
+          "2022": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
+          "2023": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
+          "2024": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
+          "2025": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] }
+        };
 
-      values.forEach(row => {
-        mainObj[row[1]][row[2]].push({ "Name": row[0], "Position": row[5], "Company": row[4], "Sector": row[3] });
-      });
+        values.forEach(row => {
+          mainObj[row[1]][row[2]].push({ "Name": row[0], "Position": row[5], "Company": row[4], "Sector": row[3] });
+        });
 
-      setData(mainObj);
-    } catch (error) {
-      console.error(error);
+        setData(mainObj);
+      } catch (error) {
+        console.error(error);
+      }
     }
-  }
   
   fetchData();
+}, []); 
 
   const handleYearChange = (year) => {
     setSelectedYear(year);
@@ -53,7 +56,7 @@ const TableInfo = () => {
 
   return (
     <div>
-    <div className="tabs is-centered is-toggle is-toggle-rounded">
+    <div className="tabs">
       <ul className="years">
         {Object.keys(data).map(year => (
           <li key={year} className={selectedYear === year ? 'is-active' : ''} onClick={() => handleYearChange(year)}>
