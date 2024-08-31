@@ -3,12 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  background: transparent; /* Transparent background */
-  z-index: 100; /* High z-index to stay on top of all content */
-  position: absolute!important; /* Fix the position at the top of the viewport */
+  background: transparent; 
+  z-index: 100;
+  position: absolute!important; 
   top: 0;
-  width: 100%; /* Ensure it spans the full width of the viewport */
-  box-sizing: border-box; /* Ensure padding is included within the width */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navbar .nav-links {
@@ -19,11 +19,11 @@
 
 .navbar .nav-links li a {
   text-decoration: none;
-  color: white; /* White text for contrast */
+  color: white;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .navbar .nav-links li a:hover {
-  color: #ddd; /* Lighter color on hover for better visibility */
+  color: #ddd;
 }

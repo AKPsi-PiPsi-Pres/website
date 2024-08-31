@@ -6,22 +6,24 @@ import { knightAKYLogo } from "../Assets";
 import { Button } from "@mui/material";
 import { OpenInNew } from "@mui/icons-material";
 import { useRef, useEffect, useState } from "react";
-
+import { Instagram, Facebook, ArrowDropDown } from "@mui/icons-material";
 
 export default function Home() {
   const videoRef = useRef(null);
   const [volume, setVolume] = useState(0.5);
 
-  useEffect(() => {
-    if (videoRef) {
-      videoRef.volume = volume;
-    }
-  }, [volume]);
+  // useEffect(() => {
+  //   if (videoRef) {
+  //     videoRef.volume = volume;
+  //   }
+  // }, [volume]);
 
-  const handleVolumeChange = (e) => {
-    setVolume(parseFloat(e.target.value));
-    console.log(volume);
-  };
+  // const handleVolumeChange = (e) => {
+  //   setVolume(parseFloat(e.target.value));
+  //   console.log(volume);
+  // };
+
+
 
   return (
     <div className="home-container">
@@ -34,14 +36,14 @@ export default function Home() {
         className="hero-section"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 10 }}
+        transition={{ duration: 2 }}
       >
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -120, opacity: 0 }}
-            animate={{ y: -80, opacity: 1 }}
-            transition={{ duration: 2.5, ease: [0.17, 0.67, 0.83, 0.67] }}
+            initial={{ y: -82, opacity: 0, scale: 0.9 }}
+            animate={{ y: -80, opacity: 1, scale: 1.0}}
+            transition={{ duration: 4.5, ease: "easeOut" }}
           >
             ΑΚΨ - UCI
             {/* <div className="volume-control">
@@ -105,20 +107,20 @@ export default function Home() {
         
       <div className="final-statements">
         <div className="statement-one">
-          <p>Our members strive to uphold the highest standards in everything they do.</p>
+          <p>Our members strive to uphold the highest standards in everything they do</p>
         </div>
         <div className="statement-two">
-          <p>Website designed and developed in-house, on 1600 lines of code and counting...</p>
+          <p>Site designed and developed in-house, on 1600 lines of code and counting...</p>
         </div>
       </div>
       <div className="social-links">
-        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
-          Instagram
+        <a href="https://www.instagram.com/akpsiuci" target="_blank" rel="noopener noreferrer">
+          <Instagram />
         </a>
-        <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
-          Facebook
+        <a href="https://facebook.com/akpsiuci" target="_blank" rel="noopener noreferrer">
+          <Facebook />
         </a>
-        <a href="mailto:youremail@example.com">youremail@example.com</a>
+        <a href="mailto:akpsi.uci.rush@gmail.com">akpsi.uci.rush@gmail.com</a>
       </div>
     </div>
     </div>
