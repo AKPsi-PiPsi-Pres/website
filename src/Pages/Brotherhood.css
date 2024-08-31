@@ -86,10 +86,9 @@ html, body {
 }
 
 .image-track > .img {
-  width: 44vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: center center;
+  width: 48vmin;
+  height: 64vmin;
+  object-position: 100% center;
   opacity: 0;
   animation: fadeInSlideUp 0.8s ease-out forwards;
   animation-delay: calc(var(--img-index, 0) * 0.1s);
@@ -124,4 +123,39 @@ html, body {
     width: 60vmin;
     height: 75vmin;
   }
+}
+
+.photoframe-section {
+  height: 100;
+  width: 100vw;
+  background-color: #121212;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.photoframe-title {
+  color: white;
+  font-size: 1.5rem;
+  padding: 5rem;
+  font-family: 'Roboto';
+}
+
+
+
+.photoframe-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem; /* Adjust the spacing between images */
+  padding: 1rem;
+}
+
+.photoframe-container img {
+  width: 15vw;
+  height: 15vw;
+  object-fit: cover; /* Ensures images fill the grid cell without distortion */
 }
