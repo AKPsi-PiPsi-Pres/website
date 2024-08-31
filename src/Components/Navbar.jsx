@@ -23,7 +23,7 @@ export function useMobile() {
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const {isMobile, setIsMobile} = useMobile();
+  const { isMobile, setIsMobile } = useMobile();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);

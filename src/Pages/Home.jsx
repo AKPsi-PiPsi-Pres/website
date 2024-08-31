@@ -1,13 +1,14 @@
 import React from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
-import { Spring23RushVideo, JTreeReel } from "../Assets";
+import { Spring23RushVideo, JTreeReel, BrotherhoodImage2 } from "../Assets";
 import { knightAKYLogo } from "../Assets";
-import { Button } from "@mui/material";
+import SleekButton from "../Components/SleekButton";
 import { OpenInNew } from "@mui/icons-material";
 import { useRef, useEffect, useState } from "react";
 import { Instagram, Facebook } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
+import { PersonalGrowth, BrotherhoodImage53 } from "../Assets";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -48,9 +49,9 @@ export default function Home() {
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -100, opacity: 0.4  }}
-            animate={{ y: -100, opacity: 1 }}
-            transition={{ duration: 4.5, ease: "easeOut" }}
+            initial={{ y: -130, opacity: 0.3 }}
+            animate={{ y: -150, opacity: 1 }}
+            transition={{ duration: 4, ease: "easeOut" }}
           >
             ΑΚΨ - UCI
             {/* <div className="volume-control">
@@ -86,18 +87,51 @@ export default function Home() {
           />
         </div>
         <div>
-          <Button
+          <SleekButton
             variant="outlined"
             href="https://akpsi.org/"
             target="_blank"
             endIcon={<OpenInNew />}
           >
             Learn More
-          </Button>
+          </SleekButton>
         </div>
       </div>
 
       <div className="wrapup-section">
+        <div className="summary-section">
+          <div className="summary-item brotherhood">
+            <h2>BROTHERHOOD</h2>
+            <img src={BrotherhoodImage53} alt="Brotherhood" />
+            <p>
+              In Alpha Kappa Psi, you meet as strangers but leave as lifelong
+              friends. Our brotherhood sets us apart and shapes us into who we
+              are.
+            </p>
+            <SleekButton href="/meet-us">Our Brothers</SleekButton>
+          </div>
+
+          <div className="summary-item professionalism">
+            <h2>PROFESSIONALISM</h2>
+            <img src={BrotherhoodImage2} alt="Professionalism" />
+            <p>
+              We inspire one another to chase our passions with confidence by
+              equipping ourselves with the tools necessary to succeed in any
+              industry.
+            </p>
+            <SleekButton href="/careers">Our Careers</SleekButton>
+          </div>
+
+          <div className="summary-item personal-growth">
+            <h2>PERSONAL GROWTH</h2>
+            <img src={PersonalGrowth} alt="Personal Growth" />
+            <p>
+              Our unique culture inspires, encourages, and motivates you to step
+              out of your comfort zone and live the life you've always imagined.
+            </p>
+            <SleekButton href="/recruitment">Recruitment</SleekButton>
+          </div>
+        </div>
         <div className="final-statements">
           <div className="statement-one">
             <p>

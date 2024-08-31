@@ -63,7 +63,7 @@ import {
   BrotherhoodImage60,
   BrotherhoodImage61,
   BrotherhoodImage62,
-  BrotherhoodImage63
+  BrotherhoodImage63,
 } from "../Assets";
 
 export default function Brotherhood() {
@@ -129,7 +129,7 @@ export default function Brotherhood() {
     BrotherhoodImage55,
     BrotherhoodImage56,
     BrotherhoodImage59,
-    BrotherhoodImage63  
+    BrotherhoodImage63,
   ];
 
   useEffect(() => {
@@ -167,7 +167,7 @@ export default function Brotherhood() {
         {
           transform: `translate(${boundedNextPercentage}%, 0%)`,
         },
-        { duration: 1200, fill: "forwards" }
+        { duration: 1200, fill: "forwards" },
       );
 
       for (const image of track.getElementsByClassName("img")) {
@@ -175,7 +175,7 @@ export default function Brotherhood() {
           {
             objectPosition: `${100 + boundedNextPercentage}% center`,
           },
-          { duration: 1200, fill: "forwards" }
+          { duration: 1200, fill: "forwards" },
         );
       }
     };

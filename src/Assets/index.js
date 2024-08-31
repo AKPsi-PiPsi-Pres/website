@@ -61,7 +61,9 @@ export { default as BrotherhoodImage60 } from "./BrotherhoodPhotos/IMG_4129.webp
 export { default as BrotherhoodImage61 } from "./BrotherhoodPhotos/Alpha Kappa Psi Spring Formals 2024 (8).webp";
 export { default as BrotherhoodImage62 } from "./BrotherhoodPhotos/IMG_4754.webp";
 export { default as BrotherhoodImage63 } from "./BrotherhoodPhotos/IMG_7966.webp";
+export { default as PersonalGrowth } from "./Side Photos/personal_growth.jpg";
 
+export { default as Dune } from "./Frames/Designer.webp";
 export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";
 export { default as instagramLogo } from "./Logos/instagramLogo.png";
