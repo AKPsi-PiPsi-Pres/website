@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./Brotherhood.css";
 import ImageGrid from "react-image-grid-animator";
-import { Fall23RushVideo } from "../Assets";
+import { Fall23RushVideo, CruiseReel } from "../Assets";
+import { useMobile } from "../Components/Navbar";
 import {
   BrotherhoodImage1,
   BrotherhoodImage2,
@@ -58,6 +59,7 @@ import {
 
 export default function Brotherhood() {
   const trackRef = useRef(null);
+  const { isMobile, setIsMobile } = useMobile();
   //Make SURE every image you are using has a centered subject, or else it will look very awkward
   const images = [
     BrotherhoodImage13,
@@ -83,13 +85,17 @@ export default function Brotherhood() {
     track.style.transform = "translate(0%, 0%)";
 
     const handleStart = (e) => {
-      track.dataset.startAt = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+      track.dataset.startAt = e.type.includes("mouse")
+        ? e.clientX
+        : e.touches[0].clientX;
     };
 
     const handleMove = (e) => {
       if (track.dataset.startAt === "0") return;
 
-      const currentPosition = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+      const currentPosition = e.type.includes("mouse")
+        ? e.clientX
+        : e.touches[0].clientX;
       const startPosition = parseFloat(track.dataset.startAt);
       const mouseDelta = startPosition - currentPosition,
         maxDelta = window.innerWidth / 2;
@@ -105,7 +111,7 @@ export default function Brotherhood() {
         {
           transform: `translate(${boundedNextPercentage}%, 0%)`,
         },
-        { duration: 1200, fill: "forwards" },
+        { duration: 1200, fill: "forwards" }
       );
 
       for (const image of track.getElementsByClassName("img")) {
@@ -113,7 +119,7 @@ export default function Brotherhood() {
           {
             objectPosition: `${100 + boundedNextPercentage}% center`,
           },
-          { duration: 1200, fill: "forwards" },
+          { duration: 1200, fill: "forwards" }
         );
       }
     };
@@ -149,9 +155,16 @@ export default function Brotherhood() {
   return (
     <div className="section-container">
       <div className="video-section">
-        <video src={Fall23RushVideo} autoPlay muted playsInline>
-          Your browser does not support the video tag.
-        </video>
+        {!isMobile && (
+          <video src={Fall23RushVideo} autoPlay muted playsInline>
+            Your browser does not support the video tag.
+          </video>
+        )}
+        {isMobile && (
+          <video src={CruiseReel} autoPlay muted playsInline>
+            Your browser does not support the video tag.
+          </video>
+        )}
       </div>
       <div className="carousel-section">
         <p className="brotherhood-title">

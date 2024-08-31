@@ -76,9 +76,9 @@
     left: 0;
     right: 0;
     background-color: transparent;
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(0.75rem);
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
   }
 
   .nav-links.mobile li {
