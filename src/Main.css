@@ -2,27 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 5px;
   background: transparent; /* Transparent background */
   z-index: 100; /* High z-index to stay on top of all content */
   position: absolute; /* Fix the position at the top of the viewport */
   top: 0;
   width: 100%; /* Ensure it spans the full width of the viewport */
   box-sizing: border-box; /* Ensure padding is included within the width */
-}
-
-.logo h1 {
-  font-family: 'Greek Font', sans-serif;
-  font-size: 36px;
-  margin: 0;
-  color: white; /* Adjust the color to white for better contrast */
-}
-
-.logo p {
-  font-family: 'Greek Font', sans-serif;
-  font-size: 14px;
-  margin: 0;
-  color: white; /* Adjust the color to white for better contrast */
 }
 
 .navbar .nav-links {

@@ -34,7 +34,7 @@
     width: 100%;
     color: white;
     text-align: center;
-    padding-bottom: 15%;
+    padding-bottom: 75px;
   }
   
   .hero-content {
@@ -47,7 +47,27 @@
     font-size: 72px;
     margin: 0;
     letter-spacing: 5px;
-  }
+    font-weight: bold;
+    padding: 20px;
+    color: transparent; /* Makes the text color transparent */
+    background: linear-gradient(45deg, #79ff89, #d981ff, #7bcaff, #ffc0c0);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text; /* Ensures compatibility with WebKit browsers */
+    animation: gradient-animation 15s infinite; /* Slow gradient animation */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
   
   .hero-subtitle {
     font-family: 'Greek Font', sans-serif;
@@ -56,17 +76,25 @@
   }
   
   .info-section {
-    padding: 50px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 0px;
     background-color: white;
     text-align: center;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: black;
   }
   
   .info-section h2 {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 33px;
+    
   }
   
   .info-section p {
@@ -74,6 +102,61 @@
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
-    color: #333;
   }
   
+  .info-image {
+    width: 25%;
+    height: auto;
+  }
+
+  /* .volume-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.volume-slider:hover {
+  opacity: 1;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.volume-slider::-webkit-slider-thumb:hover,
+.volume-slider::-moz-range-thumb:hover {
+  background: #45a049;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.volume-icon {
+  font-size: 20px;
+  color: #4CAF50;
+} */
