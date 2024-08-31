@@ -1,46 +1,56 @@
 import React from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
-import { Spring23RushVideo } from "../Assets";
+import { Spring23RushVideo, JTreeReel } from "../Assets";
 import { knightAKYLogo } from "../Assets";
 import { Button } from "@mui/material";
 import { OpenInNew } from "@mui/icons-material";
 import { useRef, useEffect, useState } from "react";
+import { Instagram, Facebook } from "@mui/icons-material";
+import { useMobile } from "../Components/Navbar";
 
 export default function Home() {
   const videoRef = useRef(null);
   const [volume, setVolume] = useState(0.5);
+  const { isMobile, setIsMobile } = useMobile();
 
-  useEffect(() => {
-    if (videoRef) {
-      videoRef.volume = volume;
-    }
-  }, [volume]);
+  // useEffect(() => {
+  //   if (videoRef) {
+  //     videoRef.volume = volume;
+  //   }
+  // }, [volume]);
 
-  const handleVolumeChange = (e) => {
-    setVolume(parseFloat(e.target.value));
-    console.log(volume);
-  };
+  // const handleVolumeChange = (e) => {
+  //   setVolume(parseFloat(e.target.value));
+  //   console.log(volume);
+  // };
 
   return (
     <div className="home-container">
       <div className="background-video">
-        <video src={Spring23RushVideo} autoPlay muted playsInline>
-          Your browser does not support the video tag.
-        </video>
+        {!isMobile && (
+          <video src={Spring23RushVideo} autoPlay muted playsInline>
+            Your browser does not support the video tag.
+          </video>
+        )}
+        {isMobile && (
+          <video src={JTreeReel} autoPlay muted playsInline>
+            Your browser does not support the video tag.
+          </video>
+        )}
       </div>
       <motion.div
         className="hero-section"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 10 }}
+        transition={{ duration: 2 }}
       >
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -120, opacity: 0 }}
-            animate={{ y: -80, opacity: 1 }}
-            transition={{ duration: 2.5, ease: [0.17, 0.67, 0.83, 0.67] }}
+            initial={{ y: -90, opacity: 0.4  }}
+            animate={{ y: -90, opacity: 1 }}
+            transition={{ duration: 4.5, ease: "easeOut" }}
           >
             ΑΚΨ - UCI
             {/* <div className="volume-control">
@@ -64,10 +74,8 @@ export default function Home() {
             The organization of Alpha Kappa Psi was founded in New York
             University in 1904. Now over a century old, Alpha Kappa Psi has
             helped over 300,000 individuals create lifelong friends and pursue
-            their dreams. Our chapter here at UC Irvine is devoted to this same
-            goal of helping students build lasting friendships and achieve their
-            dreams. Our goal is to help Anteaters become the best versions of
-            themselves that they can be.
+            their dreams. Our goal is to help Anteaters become the best versions
+            of themselves that they can be.
           </p>
         </div>
         <div>
@@ -78,17 +86,6 @@ export default function Home() {
           />
         </div>
         <div>
-          <h2 style={{ marginBottom: "13px" }}>
-            Alpha Kappa Psi is recognized as the premier developer of principled
-            business leaders
-          </h2>{" "}
-          <p>
-            Our mission: To develop a diverse global community of courageous,
-            principled business leaders with the capability to drive positive
-            impact throughout their lifelong journey.
-          </p>
-        </div>
-        <div>
           <Button
             variant="outlined"
             href="https://akpsi.org/"
@@ -97,6 +94,40 @@ export default function Home() {
           >
             Learn More
           </Button>
+        </div>
+      </div>
+
+      <div className="wrapup-section">
+        <div className="final-statements">
+          <div className="statement-one">
+            <p>
+              Our members strive to uphold the highest standards in everything
+              they do
+            </p>
+          </div>
+          <div className="statement-two">
+            <p>
+              Site designed and developed in-house, on 1600 lines of code and
+              counting...
+            </p>
+          </div>
+        </div>
+        <div className="social-links">
+          <a
+            href="https://www.instagram.com/akpsiuci"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram />
+          </a>
+          <a
+            href="https://facebook.com/akpsiuci"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Facebook />
+          </a>
+          <a href="mailto:akpsi.uci.rush@gmail.com">akpsi.uci.rush@gmail.com</a>
         </div>
       </div>
     </div>
