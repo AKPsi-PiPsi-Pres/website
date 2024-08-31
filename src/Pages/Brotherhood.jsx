@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import "./Brotherhood.css";
-import ImageGrid from "react-image-grid-animator";
 import { Fall23RushVideo, CruiseReel } from "../Assets";
 import { useMobile } from "../Components/Navbar";
 import {
@@ -37,7 +36,6 @@ import {
   BrotherhoodImage31,
   BrotherhoodImage32,
   BrotherhoodImage33,
-  BrotherhoodImage34,
   BrotherhoodImage35,
   BrotherhoodImage36,
   BrotherhoodImage37,
@@ -49,31 +47,89 @@ import {
   BrotherhoodImage43,
   BrotherhoodImage44,
   BrotherhoodImage45,
-  BrotherhoodImage46,
   BrotherhoodImage47,
   BrotherhoodImage48,
   BrotherhoodImage49,
   BrotherhoodImage50,
   BrotherhoodImage51,
+  BrotherhoodImage52,
+  BrotherhoodImage53,
+  BrotherhoodImage54,
+  BrotherhoodImage55,
+  BrotherhoodImage56,
+  BrotherhoodImage57,
+  BrotherhoodImage58,
+  BrotherhoodImage59,
+  BrotherhoodImage60,
+  BrotherhoodImage61,
+  BrotherhoodImage62,
+  BrotherhoodImage63
 } from "../Assets";
 
 export default function Brotherhood() {
   const trackRef = useRef(null);
   const { isMobile, setIsMobile } = useMobile();
   //Make SURE every image you are using has a centered subject, or else it will look very awkward
-  const images = [
+  const carouselImages = [
     BrotherhoodImage13,
-    BrotherhoodImage22,
-    BrotherhoodImage29,
-    BrotherhoodImage34,
-    BrotherhoodImage17,
+    BrotherhoodImage33,
     BrotherhoodImage5,
     BrotherhoodImage6,
+    BrotherhoodImage17,
     BrotherhoodImage7,
     BrotherhoodImage8,
     BrotherhoodImage3,
+    BrotherhoodImage22,
     BrotherhoodImage10,
     BrotherhoodImage11,
+  ];
+
+  const scrapbookImages = [
+    BrotherhoodImage35,
+    BrotherhoodImage33,
+    BrotherhoodImage38,
+    BrotherhoodImage39,
+    BrotherhoodImage40,
+    BrotherhoodImage60,
+    BrotherhoodImage41,
+    BrotherhoodImage42,
+    BrotherhoodImage43,
+    BrotherhoodImage62,
+    BrotherhoodImage44,
+    BrotherhoodImage45,
+    BrotherhoodImage37,
+    BrotherhoodImage47,
+    BrotherhoodImage48,
+    BrotherhoodImage57,
+    BrotherhoodImage49,
+    BrotherhoodImage50,
+    BrotherhoodImage51,
+    BrotherhoodImage30,
+    BrotherhoodImage31,
+    BrotherhoodImage32,
+    BrotherhoodImage23,
+    BrotherhoodImage36,
+    BrotherhoodImage24,
+    BrotherhoodImage25,
+    BrotherhoodImage26,
+    BrotherhoodImage27,
+    BrotherhoodImage28,
+    BrotherhoodImage18,
+    BrotherhoodImage61,
+    BrotherhoodImage19,
+    BrotherhoodImage20,
+    BrotherhoodImage21,
+    BrotherhoodImage14,
+    BrotherhoodImage15,
+    BrotherhoodImage16,
+    BrotherhoodImage9,
+    BrotherhoodImage52,
+    BrotherhoodImage53,
+    BrotherhoodImage54,
+    BrotherhoodImage55,
+    BrotherhoodImage56,
+    BrotherhoodImage59,
+    BrotherhoodImage63  
   ];
 
   useEffect(() => {
@@ -179,16 +235,31 @@ export default function Brotherhood() {
             data-mouse-down-at="0"
             data-prev-percentage="0"
           >
-            {images.map((image, index) => (
+            {carouselImages.map((image, index) => (
               <img
                 key={index}
                 className="img"
                 src={image}
                 alt="Photo of AKY Brothers"
                 draggable={false}
+                loading="lazy"
               />
             ))}
           </div>
+        </div>
+      </div>
+      <div className="photoframe-section">
+        <p className="photoframe-title">The AKY Digital Scrapbook</p>
+        <div className="photoframe-container">
+          {scrapbookImages.map((image, index) => (
+            <img
+              key={index}
+              className="img"
+              src={image}
+              alt="Photo of AKY Brothers"
+              draggable={false}
+            />
+          ))}
         </div>
       </div>
     </div>

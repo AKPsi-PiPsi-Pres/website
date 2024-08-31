@@ -48,8 +48,8 @@ export default function Home() {
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -90, opacity: 0.4  }}
-            animate={{ y: -90, opacity: 1 }}
+            initial={{ y: -100, opacity: 0.4  }}
+            animate={{ y: -100, opacity: 1 }}
             transition={{ duration: 4.5, ease: "easeOut" }}
           >
             ΑΚΨ - UCI
