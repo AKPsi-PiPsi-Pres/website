@@ -39,10 +39,9 @@ const TableInfo = () => {
             </thead>
             <tbody>
               {data.map((currentInfo) => {
-                          const [Name, Position, Company, Industry] = currentInfo;  
+                          const [Name, Position, Company, Industry] = currentInfo; 
+                 <UserData data={currentInfo} />
                       })}
-                <UserData data={currentInfo} />
-
             </tbody>
           </table>
         </div>
