@@ -58,4 +58,4 @@ export { default as BrotherhoodImage55 } from "./BrotherhoodPhotos/Snapseed - Ri
 export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";
 export { default as instagramLogo } from "./Logos/instagramLogo.png";
-export {default as Fall23RushVideo} from "./Videos/FallRush2023Website.mp4"
+export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
