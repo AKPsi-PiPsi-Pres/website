@@ -56,3 +56,4 @@ export { default as BrotherhoodImage53 } from "./BrotherhoodPhotos/IMG_9157.jpg"
 export { default as BrotherhoodImage54 } from "./BrotherhoodPhotos/io3httog.jpg";
 export { default as BrotherhoodImage55 } from "./BrotherhoodPhotos/Snapseed - Rithika Pothi.jpeg";
 export { default as Spring23RushVideo } from "./Videos/akpsi spring 2024 [rush video].mp4";
+export {default as knightAKYLogo} from "./Logos/knightAKPsiLogo.png"
