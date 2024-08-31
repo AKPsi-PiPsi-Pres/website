@@ -153,6 +153,7 @@ export default function Brotherhood() {
         </div>
       </div>
       <div className="collage-section">
+        {/* <div><h1>Our Brotherhood</h1></div> */}
         <div className="collage-container">
           <ImageGrid
             className="image-grid"
