@@ -1,3 +1,12 @@
+/* Reset and base styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbars but keep functionality */
 * {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -7,25 +16,55 @@
   display: none;
 }
 
-.body {
+/* Main container styles */
+.section-container {
   height: 100vh;
-  width: 100vw;
-  background-color: black;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-@keyframes fadeInSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Video section styles */
+.video-section {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #121212;
+}
+
+/* Carousel section styles */
+.carousel-section {
+  height: 100vh;
+  width: 100vw;
+  background-color: #121212;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.brotherhood-title {
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'Roboto';
+}
+
+.carousel-body {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .image-track {
@@ -33,7 +72,7 @@
   gap: 4vmin;
   position: absolute;
   left: 0;
-  transform: translate(0%, 0%);
+  transform: translateY(-50%);
   width: max-content;
   padding: 0 2vw;
   user-select: none;
@@ -42,27 +81,15 @@
   -ms-user-select: none;
   overflow-x: visible;
   overflow-y: hidden;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
-  
-  /* Add intro animation */
   opacity: 0;
   animation: fadeInSlideUp 0.8s ease-out forwards;
 }
 
-.image-track::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
 .image-track > .img {
-  width: 40vmin;
+  width: 44vmin;
   height: 56vmin;
   object-fit: cover;
-  object-position: 100% center;
-  
-  /* Add intro animation to individual images */
+  object-position: center center;
   opacity: 0;
   animation: fadeInSlideUp 0.8s ease-out forwards;
   animation-delay: calc(var(--img-index, 0) * 0.1s);
@@ -76,8 +103,25 @@
   flex-shrink: 0;
 }
 
-/* .collage-section {
-  display: flex;
-  flex-direction: column;
-} */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brotherhood-title {
+    font-size: 1.5rem;
+  }
+
+  .image-track > .img {
+    width: 60vmin;
+    height: 75vmin;
+  }
+}

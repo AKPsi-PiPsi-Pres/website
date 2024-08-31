@@ -2,8 +2,8 @@
     padding-top: 80px;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-    background-color: black;
+    min-height: 100%;
+    background-color: #121212;
     color: aliceblue;
   }
   
