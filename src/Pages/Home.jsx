@@ -1,16 +1,18 @@
 import React from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
-import { Spring23RushVideo } from "../Assets";
+import { Spring23RushVideo, JTreeReel } from "../Assets";
 import { knightAKYLogo } from "../Assets";
 import { Button } from "@mui/material";
 import { OpenInNew } from "@mui/icons-material";
 import { useRef, useEffect, useState } from "react";
-import { Instagram, Facebook, ArrowDropDown } from "@mui/icons-material";
+import { Instagram, Facebook } from "@mui/icons-material";
+import { useMobile } from "../Components/Navbar";
 
 export default function Home() {
   const videoRef = useRef(null);
   const [volume, setVolume] = useState(0.5);
+  const { isMobile, setIsMobile } = useMobile();
 
   // useEffect(() => {
   //   if (videoRef) {
@@ -26,9 +28,16 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className="background-video">
-        <video src={Spring23RushVideo} autoPlay muted playsInline>
-          Your browser does not support the video tag.
-        </video>
+        {!isMobile && (
+          <video src={Spring23RushVideo} autoPlay muted playsInline>
+            Your browser does not support the video tag.
+          </video>
+        )}
+        {isMobile && (
+          <video src={JTreeReel} autoPlay muted playsInline>
+            Your browser does not support the video tag.
+          </video>
+        )}
       </div>
       <motion.div
         className="hero-section"
@@ -39,8 +48,8 @@ export default function Home() {
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -82, opacity: 0, scale: 0.9 }}
-            animate={{ y: -80, opacity: 1, scale: 1.0 }}
+            initial={{ y: -90, opacity: 0.4  }}
+            animate={{ y: -90, opacity: 1 }}
             transition={{ duration: 4.5, ease: "easeOut" }}
           >
             ΑΚΨ - UCI
