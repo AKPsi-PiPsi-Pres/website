@@ -2,7 +2,7 @@ import React from "react";
 import "./Careers.css";
 import { motion } from "framer-motion";
 import { earthJPG } from "../Assets";
-import TableInfo from './CareerTable';
+import TableInfo from "./CareerTable";
 
 export default function Home() {
   return (
@@ -10,7 +10,6 @@ export default function Home() {
       className="careersContainer"
       style={{ backgroundImage: `url(${earthJPG})` }}
     >
-
       <motion.div
         className="careerstitleSection"
         initial={{ opacity: 0 }}
@@ -31,9 +30,7 @@ export default function Home() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 16.5, ease: "easeOut", delay: 0.5 }}
-          >
-            
-          </motion.p>
+          ></motion.p>
         </div>
       </motion.div>
 
@@ -42,10 +39,8 @@ export default function Home() {
       </div>
       <div className="careers-section">
         <div>
-
-        <TableInfo />
-        <div>
-        </div>
+          <TableInfo />
+          <div></div>
         </div>
       </div>
     </div>

@@ -4,12 +4,10 @@ import { motion } from "framer-motion";
 import { Spring23RushVideo } from "../Assets";
 export default function Home() {
   return (
-    <div
-      className="home-container"
-    >
+    <div className="home-container">
       <div className="background-video">
         <video src={Spring23RushVideo} autoPlay muted playsInline>
-        Your browser does not support the video tag.
+          Your browser does not support the video tag.
         </video>
       </div>
       <motion.div
