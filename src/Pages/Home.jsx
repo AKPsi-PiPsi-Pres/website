@@ -81,17 +81,6 @@ export default function Home() {
           />
         </div>
         <div>
-          <h2 style={{ marginBottom: "13px" }}>
-            Alpha Kappa Psi is recognized as the premier developer of principled
-            business leaders
-          </h2>{" "}
-          <p>
-            Our mission: To develop a diverse global community of courageous,
-            principled business leaders with the capability to drive positive
-            impact throughout their lifelong journey.
-          </p>
-        </div>
-        <div>
           <Button
             variant="outlined"
             href="https://akpsi.org/"
