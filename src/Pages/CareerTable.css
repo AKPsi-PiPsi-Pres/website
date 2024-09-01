@@ -1,27 +1,45 @@
 .tabs {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
   }
   
   .years {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    border: 1px solid #ccc; 
+    border-radius: 50px;
+    overflow: hidden;
   }
   
   .years li {
-    margin: 0 10px;
-    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    color: #363636;
+    font-size: 16px;
+    padding: 16px 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, border-color 0.3s;
+    border-right: 1px solid #ccc; 
+
   }
   
-  .years li.is-active a {
-    background-color: #3273dc;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 4px;
+  .years li.is-active {
+    background-color: #3273dc; 
+    color: white; 
+    border-color: #3273dc;
   }
   
+  .tabs .years li:hover {
+    background-color: #f1f1f1; 
+    border-color: #aaa; 
+  }
+
+  .years li:last-child {
+    border-right: none;
+  }
+
   .careers-container {
     width: 70%;
     max-width: 200px;
