@@ -17,12 +17,17 @@
     }
   }
   
+  
   .logos {
     overflow: hidden;
+    width: 70%;
+    max-width: 1200px;
     padding: 60px 0;
     background: white;
     white-space: nowrap;
     position: relative;
+    margin: 0 auto;
+    text-align: center;
   }
   
   .logos:before,
@@ -50,8 +55,8 @@
   }
   
   .logos-slide {
-    display: inline-block;
-    animation: 35s slide infinite linear;
+    display: flex;
+    animation: 50s slide linear infinite;
   }
   
   .logos-slide img {
