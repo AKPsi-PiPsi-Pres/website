@@ -77,6 +77,29 @@ html, body {
   100% { background-position: 0% 50%; }
 }
 
+/* New keyframes for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Info section styles */
 .info-section {
   scroll-snap-align: start;
@@ -86,24 +109,31 @@ html, body {
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   color: #ffffff;
   box-sizing: border-box;
-  border: 3px inset aliceblue;
 }
 
-.info-section h2 {
+.info-content, .info-image-container, .info-button-container {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.info-content {
+  max-width: 800px;
+}
+
+.info-content h2 {
   font-size: 28px;
   margin-bottom: 33px;
 }
 
-.info-section p {
+.info-content p {
   font-size: 18px;
   line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .info-image {
@@ -111,6 +141,27 @@ html, body {
   height: auto;
 }
 
+.info-image-container {
+  animation-delay: 0.3s;
+}
+
+.info-button-container {
+  animation-delay: 0.6s;
+}
+
+@media (max-width: 768px) {
+  .info-content h2 {
+    font-size: 24px;
+  }
+  
+  .info-content p {
+    font-size: 16px;
+  }
+  
+  .info-image {
+    width: 50%;
+  }
+}
 /* Wrapup section styles */
 .wrapup-section {
   scroll-snap-align: start;
@@ -124,63 +175,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px inset aliceblue;
   box-sizing: border-box;
-}
-
-.wrapup-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.wrapup-section p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.final-statements {
-  margin: 20px 0;
-}
-
-.final-statements .statement-one,
-.final-statements .statement-two {
-  font-size: 14px;
-  color: #fefefe;
-  margin-bottom: 10px;
-}
-
-.social-links {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.social-links a {
-  color: #0073e6;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .info-section h2 {
-    font-size: 24px;
-  }
-  
-  .info-section p {
-    font-size: 16px;
-  }
-  
-  .info-image {
-    width: 50%;
-  }
 }
 
 .summary-section {
@@ -198,7 +193,14 @@ html, body {
   align-items: center;
   justify-content: space-around;
   gap: 1rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-play-state: paused;
 }
+
+.summary-item:nth-child(1) { animation-delay: 0.3s; }
+.summary-item:nth-child(2) { animation-delay: 0.6s; }
+.summary-item:nth-child(3) { animation-delay: 0.9s; }
 
 .summary-item h2 {
   font-size: 1.25rem;
@@ -220,40 +222,48 @@ html, body {
   width: 30vmin;
 }
 
+.final-statements {
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-play-state: paused;
+  animation-delay: 1.2s;
+}
 
-.loaderContainer {
+.final-statements .statement-one,
+.final-statements .statement-two {
+  font-size: 14px;
+  color: #fefefe;
+  margin-bottom: 10px;
+}
+
+.social-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #000;
+  gap: 10px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-play-state: paused;
+  animation-delay: 1.5s;
 }
 
-/* Loader animation */
-.loader {
-  border: 8px solid rgba(255, 255, 255, 0.2);
-  border-top: 8px solid #fff;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
+.social-links a {
+  color: #0073e6;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-/* Keyframes for spin animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  100% {
-    transform: rotate(360deg);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-}
-
-/* Recruitment container styles */
-.recruitmentContainer {
-  transition: opacity 1s ease;
-}
-
-.recruitmentContainer.fade-in {
-  opacity: 1;
 }
