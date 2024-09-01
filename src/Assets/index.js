@@ -58,3 +58,21 @@ export { default as BrotherhoodImage55 } from "./BrotherhoodPhotos/Snapseed - Ri
 export { default as Spring23RushVideo  } from "./Videos/akpsi spring 2024 [rush video].mp4";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";
 export { default as instagramLogo } from "./Logos/instagramLogo.png";
+export { default as GoogleLogo } from "./Logos/googleLogo.jpg";
+export { default as AppleLogo } from "./Logos/AppleLogo.png";
+export { default as AdobeLogo } from "./Logos/AdobeLogo.png";
+export { default as DeloitteLogo } from "./Logos/DeloitteLogo.png";
+export { default as EYLogo } from "./Logos/ey.png";
+export { default as FacebookLogo } from "./Logos/Facebook.png";
+export { default as JPMorganLogo } from "./Logos/JPMorgan.png";
+export { default as LinkedInLogo } from "./Logos/LinkedIn.png";
+export { default as MicrosoftLogo } from "./Logos/Microsoft_logo.png";
+export { default as TiktokLogo } from "./Logos/Tiktok.png";
+export { default as TinderLogo } from "./Logos/tinderLogo.png";
+export { default as WellsFargoLogo } from "./Logos/WellsFargo.png";
+
+
+
+
+
+
