@@ -205,7 +205,7 @@ html, body {
 }
 
 .summary-item h2 {
-  font-size: 1rem; /* Adjust font size for mobile */
+  font-size: 1.25rem; /* Adjust font size for mobile */
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -219,7 +219,7 @@ html, body {
 }
 
 .summary-item p {
-  font-size: medium;
+  font-size: large;
   display: flex;
   width: 40vmin; /* Adjust width for mobile */
   margin-left: 10px;
@@ -239,7 +239,7 @@ html, body {
 
 .final-statements .statement-one,
 .final-statements .statement-two {
-  font-size: 14px;
+  font-size: 1rem;
   color: #fefefe;
   margin-bottom: 10px;
   text-align: center; /* Center text for mobile */
@@ -281,8 +281,8 @@ html, body {
   }
 
   .summary-item img {
-    width: 40vmin; /* Restore larger image size */
-    height: 40vmin;
+    width: 44vmin; /* Restore larger image size */
+    height: 44vmin;
     margin-bottom: 1rem;
   }
 

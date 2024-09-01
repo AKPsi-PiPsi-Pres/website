@@ -27,7 +27,7 @@ const DuneButton = styled(Button)(({ theme }) => ({
     rgba(210, 180, 140, 0.9) 100%)`,
   backgroundSize: "200% 200%",
   animation: `${gradientShift} 10s ease infinite`,
-  border: "1px solid rgba(255, 255, 255, 0.2)",
+  border: "1px solid rgba(0, 0, 0, 0.3)",
   borderRadius: 3,
   color: "rgba(255, 255, 255, 0.9)",
   height: 48,
