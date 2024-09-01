@@ -65,6 +65,7 @@ export default function MeetUs() {
 
   return (
     <div className="meet-us-page pageContainer">
+      <div className="content-wrapper">
       <h1>{viewLeadership ? "Leadership" : "Active Brothers"}</h1>
       <ButtonGroup>
         <Button
@@ -85,6 +86,7 @@ export default function MeetUs() {
       ) : (
         <BrotherList brothers={displayedBrothers} />
       )}
+      </div>
     </div>
   );
 }

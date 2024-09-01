@@ -192,7 +192,7 @@ export default function Home() {
           </div>
           <div className="statement-two">
             <p>
-              Site designed and developed in-house, on 1600 lines of code and
+              Site designed and developed in-house, on 2700 lines of code and
               counting...
             </p>
           </div>
