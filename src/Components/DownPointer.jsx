@@ -1,22 +1,41 @@
 import React, { useEffect, useCallback } from "react";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import "./DownPointer.css";
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';import "./DownPointer.css";
+import { useState } from "react";
 
 export default function DownPointerButton() {
-  const scrollToNextSnapElement = useCallback(() => {
-    const elements = document.querySelectorAll("*");
-    const currentScrollPosition = window.scrollY;
+  const [isAtBottom, setIsAtBottom] = useState(false);
 
-    for (let element of elements) {
-      const style = getComputedStyle(element);
-      if (
-        style.scrollSnapAlign === "start" &&
-        element.offsetTop > currentScrollPosition
-      ) {
-        element.scrollIntoView({ behavior: "smooth" });
-        break;
-      }
+  const scrollToNextSnapElement = useCallback(() => {
+    const snapElements = Array.from(document.querySelectorAll('*')).filter(el => 
+        getComputedStyle(el).scrollSnapAlign === 'start'
+      );
+  
+      if (snapElements.length === 0) return;
+  
+      const viewportHeight = window.innerHeight;
+      const currentScrollY = window.scrollY;
+  
+      const currentIndex = snapElements.findIndex(el => 
+        el.getBoundingClientRect().top > -viewportHeight / 2 &&
+        el.getBoundingClientRect().top <= viewportHeight / 2
+      );  
+
+    let nextIndex = currentIndex + 1;
+    if (nextIndex >= snapElements.length - 1) {
+      setIsAtBottom(true);
+    } else {
+      setIsAtBottom(false);
     }
+
+    if (nextIndex >= snapElements.length) {
+      nextIndex = 0;
+      setIsAtBottom(false); // Cycle to the first element if at the end
+    }
+
+
+
+    snapElements[nextIndex].scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
 
   useEffect(() => {
@@ -24,9 +43,26 @@ export default function DownPointerButton() {
       const button = document.getElementById("scroll-down-button");
       button.classList.add("pulse");
       setTimeout(() => button.classList.remove("pulse"), 1000);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    const checkIfBottom = () => {
+      const scrollPosition = window.pageYOffset;
+      const windowSize = window.innerHeight;
+      const bodyHeight = document.documentElement.scrollHeight;
+
+      if (Math.abs(scrollPosition + windowSize - bodyHeight) < 2) {
+        setIsAtBottom(true);
+      } else {
+        setIsAtBottom(false);
+      }
+    };
+
+    window.addEventListener("scroll", checkIfBottom);
+    return () => window.removeEventListener("scroll", checkIfBottom);
   }, []);
 
   return (
@@ -35,7 +71,11 @@ export default function DownPointerButton() {
       className="scroll-down-button"
       onClick={scrollToNextSnapElement}
     >
-      <KeyboardDoubleArrowDownIcon size={24} />
+      {isAtBottom ? (
+        <KeyboardDoubleArrowUpIcon size={24} />
+      ) : (
+        <KeyboardDoubleArrowDownIcon size={24} />
+      )}
     </button>
   );
 }

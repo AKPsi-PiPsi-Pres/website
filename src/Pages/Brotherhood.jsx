@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./Brotherhood.css";
 import { Fall23RushVideo, CruiseReel } from "../Assets";
 import { useMobile } from "../Components/Navbar";
+import DownPointerButton from "../Components/DownPointer";
 import {
   BrotherhoodImage1,
   BrotherhoodImage2,
@@ -262,6 +263,7 @@ export default function Brotherhood() {
           ))}
         </div>
       </div>
+      <DownPointerButton />
     </div>
   );
 }
