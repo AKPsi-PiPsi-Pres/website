@@ -35,7 +35,9 @@ export default function Home() {
       </motion.div>
 
       <div className="careersmainTitleSection">
-        <h1 className="careersmainTitle">Where have we worked?</h1>
+        <h1 className="careersmainTitle">OUR PROFESSIONAL EXPERIENCE</h1>
+        
+
       </div>
       <div className="careers-section">
         <div>
