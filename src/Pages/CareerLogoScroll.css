@@ -57,7 +57,7 @@
   
   .logos-slide {
     display: flex;
-    width: calc(400% + 100px);
+    width: calc(300% + 100px);
     animation: 50s slide linear infinite;
   }
   
