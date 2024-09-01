@@ -56,11 +56,12 @@
   
   .logos-slide {
     display: flex;
+    width: calc(200% + 80px);
     animation: 50s slide linear infinite;
   }
   
   .logos-slide img {
     height: 50px;
-    margin: 0 40px;
+    margin: 0 20px;
   }
   
