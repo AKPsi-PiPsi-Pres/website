@@ -17,6 +17,9 @@
   text-align: center;
   padding: 50px;
   border-radius: 10px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
