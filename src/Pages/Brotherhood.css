@@ -39,8 +39,7 @@ html, body {
   background: #121212;
 }
 
-.hero-section {
-  scroll-snap-align: start;
+.hero-b-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,12 +50,12 @@ html, body {
   background: transparent;
 }
 
-.hero-content {
+.hero-b-content {
   position: relative;
   z-index: 2;
 }
 
-.hero-title {
+.hero-b-title {
   font-family: 'Greek Font', sans-serif;
   user-select: none;
   font-size: 4rem;

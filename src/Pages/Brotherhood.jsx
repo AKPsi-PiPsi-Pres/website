@@ -214,17 +214,17 @@ export default function Brotherhood() {
     <div className="section-container">
       <div className="video-section">
         <motion.div
-          className="hero-section"
+          className="hero-b-section"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
         >
-          <div className="hero-content">
+          <div className="hero-b-content">
             <motion.h1
-              className="hero-title"
+              className="hero-b-title"
               initial={{ y: -130, opacity: 1 }}
               animate={{ y: -150, opacity: 0 }}
-              transition={{ delay: 41, duration: 4, ease: "easeOut" }}
+              transition={{ delay: 41, duration: 2, ease: "easeOut" }}
             >
               Brotherhood
             </motion.h1>
