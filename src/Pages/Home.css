@@ -55,7 +55,7 @@ html, body {
 .hero-title {
   font-family: 'Greek Font', sans-serif;
   user-select: none;
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 0;
   letter-spacing: 5px;
   font-weight: bold;
@@ -118,7 +118,7 @@ html, body {
 
 .info-content, .info-image-container, .info-button-container {
   opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 0.75s ease-out forwards;
   animation-play-state: paused;
 }
 
@@ -146,7 +146,7 @@ html, body {
 }
 
 .info-button-container {
-  animation-delay: 0.6s;
+  animation-delay: 0.5s;
 }
 
 @media (max-width: 768px) {
@@ -162,15 +162,17 @@ html, body {
     width: 50%;
   }
 }
+
 /* Wrapup section styles */
 .wrapup-section {
   scroll-snap-align: start;
   width: 100%;
-  height: 100vh;
+  height: auto; /* Allow the height to adjust based on content */
   padding: 20px;
   background-color: #121212;
   color: #ffffff;
   font-family: Arial, sans-serif;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,53 +183,58 @@ html, body {
 .summary-section {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Default to column layout */
   justify-content: space-around;
-  margin-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 
 .summary-item {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Row layout on mobile */
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 1rem;
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   animation-play-state: paused;
+  margin-bottom: 2rem;
+  background-color: #0f0f0f;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
-.summary-item:nth-child(1) { animation-delay: 0.3s; }
-.summary-item:nth-child(2) { animation-delay: 0.6s; }
-.summary-item:nth-child(3) { animation-delay: 0.9s; }
-
 .summary-item h2 {
-  font-size: 1.25rem;
+  font-size: 1rem; /* Adjust font size for mobile */
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .summary-item img {
-  width: 40vmin;
-  height: 40vmin;
-  margin-bottom: 1rem;
+  width: 50vmin; /* Smaller images for mobile */
+  height: 50vmin;
+  margin-bottom: 0; /* No margin bottom since it's row layout */
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .summary-item p {
-  margin-bottom: 1rem;
-  font-size: large;
+  font-size: medium;
   display: flex;
-  width: 30vmin;
+  width: 40vmin; /* Adjust width for mobile */
+  margin-left: 10px;
 }
 
 .final-statements {
   margin: 20px 0;
   opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
   animation-play-state: paused;
-  animation-delay: 1.2s;
+  animation-delay: 0.2s;
+}
+
+.sleekButton {
+  padding: 1rem;
 }
 
 .final-statements .statement-one,
@@ -235,6 +242,7 @@ html, body {
   font-size: 14px;
   color: #fefefe;
   margin-bottom: 10px;
+  text-align: center; /* Center text for mobile */
 }
 
 .social-links {
@@ -242,9 +250,10 @@ html, body {
   gap: 10px;
   margin-top: 20px;
   opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 0.6s ease-out forwards;
   animation-play-state: paused;
-  animation-delay: 1.5s;
+  animation-delay: 0.3s;
+  justify-content: center; /* Center social links for mobile */
 }
 
 .social-links a {
@@ -257,13 +266,28 @@ html, body {
   text-decoration: underline;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@media (min-width: 768px) {
+  .summary-section {
+    flex-direction: row; /* Row layout for larger screens */
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .summary-item {
+    flex-direction: column; /* Switch back to column on larger screens */
+    align-items: center;
+  }
+
+  .summary-item h2 {
+    font-size: 1.25rem; /* Restore larger font size */
+  }
+
+  .summary-item img {
+    width: 40vmin; /* Restore larger image size */
+    height: 40vmin;
+    margin-bottom: 1rem;
+  }
+
+  .summary-item p {
+    width: 30vmin; /* Restore width for larger screens */
+    margin-left: 0; /* Remove left margin */
   }
 }

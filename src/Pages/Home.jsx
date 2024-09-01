@@ -118,6 +118,7 @@ export default function Home() {
             href="https://akpsi.org/"
             target="_blank"
             endIcon={<OpenInNew />}
+            className="sleekButton"
           >
             Learn More
           </SleekButton>
@@ -133,7 +134,7 @@ export default function Home() {
               friends. Our brotherhood sets us apart and shapes us into who we
               are.
             </p>
-            <SleekButton href="/meet-us">Our Brothers</SleekButton>
+            <SleekButton  className="sleekButton" href="/meet-us">Our Brothers</SleekButton>
           </div>
 
           <div className="summary-item professionalism">
@@ -144,7 +145,7 @@ export default function Home() {
               equipping ourselves with the tools necessary to succeed in any
               industry.
             </p>
-            <SleekButton href="/careers">Our Careers</SleekButton>
+            <SleekButton  className="sleekButton" href="/careers">Our Careers</SleekButton>
           </div>
 
           <div className="summary-item personal-growth">
@@ -154,7 +155,7 @@ export default function Home() {
               Our unique culture inspires, encourages, and motivates you to step
               out of your comfort zone and live the life you've always imagined.
             </p>
-            <SleekButton href="/recruitment">Recruitment</SleekButton>
+            <SleekButton className="sleekButton" href="/recruitment">Recruitment</SleekButton>
           </div>
         </div>
         <div className="final-statements">
