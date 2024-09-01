@@ -79,6 +79,7 @@
     backdrop-filter: blur(0.75rem);
     padding: 1rem;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
   }
 
   .nav-links.mobile li {

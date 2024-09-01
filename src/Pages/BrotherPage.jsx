@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ActiveBrother from "./ActiveBrother";
+import NotFoundPage from "./NotFoundPage";
 
 
 export default function BrotherPage({brothers}) {
@@ -10,11 +11,9 @@ export default function BrotherPage({brothers}) {
   );
 
   const brotherInfo = brotherIndex !== -1 ? brothers[brotherIndex] : null;
-  const prevBrother = brothers[brotherIndex - 1];
-  const nextBrother = brothers[brotherIndex + 1];
 
   if (!brotherInfo) {
-    return <div>Brother not found</div>;
+    return <NotFoundPage />;
   }
 
   return (
