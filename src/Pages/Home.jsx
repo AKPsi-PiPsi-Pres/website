@@ -26,6 +26,32 @@ export default function Home() {
   //   console.log(volume);
   // };
 
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const animateOnScroll = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(animateOnScroll, observerOptions);
+
+    const sections = document.querySelectorAll('.info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links');
+    sections.forEach(section => observer.observe(section));
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, []);
+
+
   return (
     <div className="home-container">
       <div className="background-video">
@@ -69,8 +95,8 @@ export default function Home() {
         </div>
       </motion.div>
       <div className="info-section">
-        <div>
-          <h2>The world’s oldest and largest business fraternity</h2>
+        <div className="info-content">
+          <h2>The world's oldest and largest business fraternity</h2>
           <p>
             The organization of Alpha Kappa Psi was founded in New York
             University in 1904. Now over a century old, Alpha Kappa Psi has
@@ -79,14 +105,14 @@ export default function Home() {
             of themselves that they can be.
           </p>
         </div>
-        <div>
+        <div className="info-image-container">
           <img
             className="info-image"
             src={knightAKYLogo}
             alt="Knight Logo of Alpha Kappa Psi"
           />
         </div>
-        <div>
+        <div className="info-button-container">
           <SleekButton
             variant="outlined"
             href="https://akpsi.org/"
@@ -97,7 +123,6 @@ export default function Home() {
           </SleekButton>
         </div>
       </div>
-
       <div className="wrapup-section">
         <div className="summary-section">
           <div className="summary-item brotherhood">
