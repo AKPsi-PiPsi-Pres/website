@@ -2,9 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ActiveBrother from "./ActiveBrother";
 
-import { brothers } from "./MeetUs";
 
-export default function BrotherPage() {
+export default function BrotherPage({brothers}) {
   const { name } = useParams();
   const brotherIndex = brothers.findIndex(
     (brother) => brother.name.replace(/\s+/g, "") === name,

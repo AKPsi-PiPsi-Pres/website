@@ -2,30 +2,28 @@
 
 .recruitmentContainer {
   position: relative;
-  text-align: center;
   color: white;
   height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background-color: #121212;
 }
 
 .heroSection {
   text-align: center;
-  padding: 50px;
+  padding-bottom: 15rem;
   border-radius: 10px;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/dune-rise');
 .mainTitle {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Dune Rise', sans-serif;
   font-size: 5rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -46,7 +44,7 @@
 }
 
 .subTitle {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Dune Rise', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 10px;

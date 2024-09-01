@@ -1,41 +1,70 @@
-import React from "react";
-import BrotherList from "./BrotherList";
-import "./MeetUs.css";
+import React, { useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
+import BrotherList from './BrotherList';
+import SleekButton from '../Components/SleekButton';
 
-// Example data for brothers (you can replace this with your real data)
-export const brothers = [
-  {
-    name: "John Doe",
-    major: "Business Administration",
-    graduationYear: 2024,
-    linkedinUrl: "https://www.linkedin.com/in/johndoe",
-    photo: "/path-to-photo/john-doe.jpg",
-    hobbies: "Basketball, Hiking, Reading",
-    interests: "Entrepreneurship, Finance, Technology",
-    askMeAbout: "Leadership, Networking, Time Management",
-    loveStatement:
-      "I love AKPsi because it has provided me with a supportive community where I have grown both personally and professionally.",
-  },
-  {
-    name: "Jane Smith",
-    major: "Marketing",
-    graduationYear: 2025,
-    linkedinUrl: "https://www.linkedin.com/in/janesmith",
-    photo: "/path-to-photo/jane-smith.jpg",
-    hobbies: "Photography, Traveling, Cooking",
-    interests: "Branding, Social Media, Advertising",
-    askMeAbout: "Public Speaking, Event Planning, Creative Writing",
-    loveStatement:
-      "AKPsi has given me the tools and confidence to succeed in the business world and has connected me with amazing people.",
-  },
-  // Add more brothers here
-];
+const SHEET_ID = "167TmecKc4cduWtdounqiXDkYgQjssu9cSz4QLljuKLg";
+const API_KEY = "AIzaSyAr5dAYznujGAFBNfnrjLLO27hgzelm5Tk";
+const RANGE_ACTIVES = "Form Responses 1!C2:L";
+const RANGE_EXECUTIVES = "Leadership!C2:L";
 
 export default function MeetUs() {
+  const [activeBrothers, setActiveBrothers] = useState([]);
+  const [executiveBrothers, setExecutiveBrothers] = useState([]);
+  const [viewLeadership, setViewLeadership] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchBrothers = useCallback(async (isLeadership) => {
+    setIsLoading(true);
+    try {
+      const range = isLeadership ? RANGE_EXECUTIVES : RANGE_ACTIVES;
+      const response = await axios.get(
+        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`
+      );
+      if (isLeadership) {
+        setExecutiveBrothers(response.data.values);
+      } else {
+        setActiveBrothers(response.data.values);
+      }
+      console.log(response)
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Fetch active brothers on initial load
+    if (activeBrothers.length === 0) {
+      fetchBrothers(false);
+    }
+  }, [fetchBrothers, activeBrothers.length]);
+
+  const handleToggleView = () => {
+    setViewLeadership(prev => {
+      const newViewLeadership = !prev;
+      if (newViewLeadership && executiveBrothers.length === 0) {
+        fetchBrothers(true);
+      }
+      return newViewLeadership;
+    });
+  };
+
+  const displayedBrothers = viewLeadership ? executiveBrothers : activeBrothers;
+
   return (
     <div className="meet-us-page pageContainer">
-      <h1>Meet Our Brothers</h1>
-      <BrotherList brothers={brothers} />
+      <h1>{viewLeadership ? "Executive Board" : "Active Brothers"}</h1>
+      <SleekButton onClick={handleToggleView}>
+        {viewLeadership ? "View Active Brothers" : "View Executive Board"}
+      </SleekButton>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <BrotherList brothers={displayedBrothers} />
+      )}
     </div>
   );
 }
+
