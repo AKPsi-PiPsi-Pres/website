@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./Brotherhood.css";
 import { Fall23RushVideo, CruiseReel } from "../Assets";
 import { useMobile } from "../Components/Navbar";
+import { motion } from "framer-motion";
 import {
   BrotherhoodImage1,
   BrotherhoodImage2,
@@ -167,7 +168,7 @@ export default function Brotherhood() {
         {
           transform: `translate(${boundedNextPercentage}%, 0%)`,
         },
-        { duration: 1200, fill: "forwards" },
+        { duration: 1200, fill: "forwards" }
       );
 
       for (const image of track.getElementsByClassName("img")) {
@@ -175,7 +176,7 @@ export default function Brotherhood() {
           {
             objectPosition: `${100 + boundedNextPercentage}% center`,
           },
-          { duration: 1200, fill: "forwards" },
+          { duration: 1200, fill: "forwards" }
         );
       }
     };
@@ -211,16 +212,35 @@ export default function Brotherhood() {
   return (
     <div className="section-container">
       <div className="video-section">
-        {!isMobile && (
-          <video src={Fall23RushVideo} autoPlay muted playsInline>
-            Your browser does not support the video tag.
-          </video>
-        )}
-        {isMobile && (
-          <video src={CruiseReel} autoPlay muted playsInline>
-            Your browser does not support the video tag.
-          </video>
-        )}
+        <motion.div
+          className="hero-section"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        >
+          <div className="hero-content">
+            <motion.h1
+              className="hero-title"
+              initial={{ y: -130, opacity: 1 }}
+              animate={{ y: -150, opacity: 0 }}
+              transition={{ delay: 41, duration: 4, ease: "easeOut" }}
+            >
+              Brotherhood
+            </motion.h1>
+          </div>
+        </motion.div>
+        <div className="background-video">
+          {!isMobile && (
+            <video src={Fall23RushVideo} autoPlay muted playsInline>
+              Your browser does not support the video tag.
+            </video>
+          )}
+          {isMobile && (
+            <video src={CruiseReel} autoPlay muted playsInline>
+              Your browser does not support the video tag.
+            </video>
+          )}
+        </div>
       </div>
       <div className="carousel-section">
         <p className="brotherhood-title">
