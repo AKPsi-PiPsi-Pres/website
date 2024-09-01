@@ -26,8 +26,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  border: 1px solid red;
-  background-color: lightyellow;
   overflow-y: auto;
 }
 
