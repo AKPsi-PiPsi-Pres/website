@@ -1,25 +1,27 @@
 import React, { useEffect, useCallback } from "react";
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';import "./DownPointer.css";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
+import "./DownPointer.css";
 import { useState } from "react";
 
 export default function DownPointerButton() {
   const [isAtBottom, setIsAtBottom] = useState(false);
 
   const scrollToNextSnapElement = useCallback(() => {
-    const snapElements = Array.from(document.querySelectorAll('*')).filter(el => 
-        getComputedStyle(el).scrollSnapAlign === 'start'
-      );
-  
-      if (snapElements.length === 0) return;
-  
-      const viewportHeight = window.innerHeight;
-      const currentScrollY = window.scrollY;
-  
-      const currentIndex = snapElements.findIndex(el => 
+    const snapElements = Array.from(document.querySelectorAll("*")).filter(
+      (el) => getComputedStyle(el).scrollSnapAlign === "start",
+    );
+
+    if (snapElements.length === 0) return;
+
+    const viewportHeight = window.innerHeight;
+    const currentScrollY = window.scrollY;
+
+    const currentIndex = snapElements.findIndex(
+      (el) =>
         el.getBoundingClientRect().top > -viewportHeight / 2 &&
-        el.getBoundingClientRect().top <= viewportHeight / 2
-      );  
+        el.getBoundingClientRect().top <= viewportHeight / 2,
+    );
 
     let nextIndex = currentIndex + 1;
     if (nextIndex >= snapElements.length - 1) {
@@ -33,9 +35,10 @@ export default function DownPointerButton() {
       setIsAtBottom(false); // Cycle to the first element if at the end
     }
 
-
-
-    snapElements[nextIndex].scrollIntoView({ behavior: "smooth", block: "start" });
+    snapElements[nextIndex].scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   }, []);
 
   useEffect(() => {

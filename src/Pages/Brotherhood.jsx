@@ -169,7 +169,7 @@ export default function Brotherhood() {
         {
           transform: `translate(${boundedNextPercentage}%, 0%)`,
         },
-        { duration: 1200, fill: "forwards" }
+        { duration: 1200, fill: "forwards" },
       );
 
       for (const image of track.getElementsByClassName("img")) {
@@ -177,7 +177,7 @@ export default function Brotherhood() {
           {
             objectPosition: `${100 + boundedNextPercentage}% center`,
           },
-          { duration: 1200, fill: "forwards" }
+          { duration: 1200, fill: "forwards" },
         );
       }
     };
