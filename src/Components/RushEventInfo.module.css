@@ -68,3 +68,7 @@
         color: antiquewhite;
     }
 }
+
+.active-tab {
+    background-color: antiquewhite;
+}
