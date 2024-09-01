@@ -166,20 +166,6 @@ export default function Home() {
             </SleekButton>
           </div>
         </div>
-        <div className="final-statements">
-          <div className="statement-one">
-            <p>
-              Our members strive to uphold the highest standards in everything
-              they do
-            </p>
-          </div>
-          <div className="statement-two">
-            <p>
-              Site designed and developed in-house, on 1600 lines of code and
-              counting...
-            </p>
-          </div>
-        </div>
         <div className="social-links">
           <a
             href="https://www.instagram.com/akpsiuci"
@@ -196,6 +182,20 @@ export default function Home() {
             <Facebook />
           </a>
           <a href="mailto:akpsi.uci.rush@gmail.com">akpsi.uci.rush@gmail.com</a>
+        </div>
+        <div className="final-statements">
+          <div className="statement-one">
+            <p>
+              Our members strive to uphold the highest standards in everything
+              they do. 
+            </p>
+          </div>
+          <div className="statement-two">
+            <p>
+              Site designed and developed in-house, on 1600 lines of code and
+              counting...
+            </p>
+          </div>
         </div>
       </div>
       <DownPointerButton />
