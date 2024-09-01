@@ -185,7 +185,6 @@ html, body {
   display: flex;
   flex-direction: column; /* Default to column layout */
   justify-content: space-around;
-  padding-bottom: 5rem;
 }
 
 .summary-item {
