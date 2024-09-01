@@ -57,7 +57,9 @@ const TableInfo = () => {
     <div>
       <div className="tabs">
         <ul className="years">
-          {Object.keys(data).map(year => (
+          {Object.keys(data)
+          .sort((a, b) => b - a)
+          .map(year => (
             <li key={year} className={selectedYear === year ? 'is-active' : ''} onClick={() => handleYearChange(year)}>
               <a>{year}</a>
             </li>
@@ -75,14 +77,20 @@ const TableInfo = () => {
             </tr>
           </thead>
           <tbody>
-            {["Accounting", "Finance", "Consulting", "Marketing", "Technology", "Misc"].map(category => (
+            {["Accounting", "Finance", "Consulting", "Marketing", "Technology", "Misc"].map(category => {
+            const categoryRows = renderTableData(category);
+            if (categoryRows.length > 0) {
+              return (
               <React.Fragment key={category}>
                 <tr>
                   <td colSpan="4" className="subtitle has-text-weight-semibold">{category}</td>
                 </tr>
-                {renderTableData(category)}
+                {categoryRows}
               </React.Fragment>
-            ))}
+              );
+            }
+            return null;
+            })}
           </tbody>
         </table>
       </div>
