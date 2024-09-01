@@ -5,4 +5,13 @@
   min-height: 100vh;
   background-color: #121212;
   color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent scrolling on the main container */
+}
+
+.contentWrapper {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px;
 }

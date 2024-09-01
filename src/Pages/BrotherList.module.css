@@ -1,13 +1,16 @@
 .container {
   max-width: 70%;
   margin: 0 auto;
-  padding: 20px;
+  height: 100%; /* Take full height of the parent */
 }
 
 .brotherGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  max-height: calc(100vh - 200px); /* Adjust based on your header/footer size */
+  padding-right: 15px; /* Add some padding for the scrollbar */
 }
 
 @media (max-width: 1200px) {
