@@ -9,6 +9,7 @@ import Brotherhood from "./Pages/Brotherhood";
 import Careers from "./Pages/Careers";
 import Recruitment from "./Pages/Recruitment";
 import BrotherPage from "./Pages/BrotherPage";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/meet-us/:name" element={<BrotherPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Router>

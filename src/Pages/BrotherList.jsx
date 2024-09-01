@@ -1,24 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./BrotherList.css";
+import styles from "./BrotherList.module.css";
+import { PersonalGrowth } from "../Assets";
 
 export default function BrotherList({ brothers }) {
   return (
-    <div className="brother-grid-container">
-      {brothers.map((brother) => (
-        <Link
-          key={brother.name}
-          to={`/meet-us/${brother.name.replace(/\s+/g, "")}`}
-          className="brother-grid-item"
-        >
-          <img
-            src={brother.photo}
-            alt={brother.name}
-            className="brother-photo"
-          />
-          <p className="brother-name">{brother.name}</p>
-        </Link>
-      ))}
+    <div className={styles.container}>
+      <div className={styles.brotherGrid}>
+        {brothers &&
+          brothers.map(
+            (brother) =>
+              brother.length > 0 && (
+                <div key={brother[0]} className={styles.brotherCard}>
+                  <Link to={`/`}>
+                    <div className={styles.imageWrapper}>
+                      <img
+                        src={PersonalGrowth}
+                        alt={brother[0]}
+                        className={styles.brotherPhoto}
+                      />
+                    </div>
+                    <p className={styles.brotherName}>{brother[0]}</p>
+                  </Link>
+                </div>
+              )
+          )}
+      </div>
     </div>
   );
 }

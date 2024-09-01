@@ -9,6 +9,7 @@ import { GoogleLogo, AppleLogo, DeloitteLogo, AdobeLogo, EYLogo,
     walmartlogo, warnbroslogo} from '../Assets';
 
 const LogoScroller = () => {
+  console.log("LogoScroller rendered");
   return (
     <div className="logos">
       <div className="logos-slide">
