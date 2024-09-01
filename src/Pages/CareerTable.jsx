@@ -88,7 +88,7 @@ const TableInfo = () => {
                 {categoryRows}
               </React.Fragment>
               );
-            }
+            } 
             return null;
             })}
           </tbody>
