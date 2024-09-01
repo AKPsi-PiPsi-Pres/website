@@ -19,10 +19,18 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../Assets/Frames/Designer.webp');
+  background-image: url('../Assets/Frames/FALL\ RUSH\ 24\ GRAPHIC\ DESIGN.webp');
   background-size: cover;
   background-position: center;
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .recruitmentContainer::before{
+    background-image: url('../Assets/Frames/FALL\ RUSH\ 24\ SHIRT\ DESIGN.webp');
+  }
+
+  
 }
 
 .viewport {
