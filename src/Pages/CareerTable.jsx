@@ -78,12 +78,14 @@ const TableInfo = () => {
           </thead>
           <tbody>
             {["Accounting", "Finance", "Consulting", "Marketing", "Technology", "Misc"].map(category => {
-            const categoryRows = renderTableData(category);
+            const categoryRows = renderTableData(category) || [];
             if (categoryRows.length > 0) {
               return (
               <React.Fragment key={category}>
                 <tr>
-                  <td colSpan="4" className="subtitle has-text-weight-semibold">{category}</td>
+                  <td colSpan="4" className="subtitle has-text-weight-semibold"
+                  style={{ textDecoration: 'none', fontWeight: 'bold' }}
+                  >{category}</td>
                 </tr>
                 {categoryRows}
               </React.Fragment>
