@@ -45,7 +45,7 @@ export default function Home() {
     const observer = new IntersectionObserver(animateOnScroll, observerOptions);
 
     const sections = document.querySelectorAll(
-      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links"
+      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links",
     );
     sections.forEach((section) => observer.observe(section));
 
@@ -187,7 +187,7 @@ export default function Home() {
           <div className="statement-one">
             <p>
               Our members strive to uphold the highest standards in everything
-              they do. 
+              they do.
             </p>
           </div>
           <div className="statement-two">

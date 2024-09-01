@@ -23,7 +23,7 @@ export default function BrotherList({ brothers }) {
                     <p className={styles.brotherName}>{brother[0]}</p>
                   </Link>
                 </div>
-              )
+              ),
           )}
       </div>
     </div>
