@@ -3,6 +3,7 @@ import "./Careers.css";
 import { motion } from "framer-motion";
 import { earthJPG } from "../Assets";
 import TableInfo from "./CareerTable";
+import LogoScroller from "./CareerLogoScroll";
 
 export default function Home() {
   return (
@@ -36,11 +37,13 @@ export default function Home() {
 
       <div className="careersmainTitleSection">
         <h1 className="careersmainTitle">OUR PROFESSIONAL EXPERIENCE</h1>
-        
+
 
       </div>
       <div className="careers-section">
         <div>
+        <LogoScroller />
+
           <TableInfo />
           <div></div>
         </div>
