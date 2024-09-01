@@ -70,6 +70,39 @@ export { default as MicrosoftLogo } from "./Logos/Microsoft_logo.png";
 export { default as TiktokLogo } from "./Logos/Tiktok.png";
 export { default as TinderLogo } from "./Logos/tinderLogo.png";
 export { default as WellsFargoLogo } from "./Logos/WellsFargo.png";
+export { default as AmexLogo } from "./Logos/amexlogo.png";
+export { default as BandCLogo } from "./Logos/bainandcologo.jpg";
+export { default as bloomberglogo } from "./Logos/bloomberglogo.png";
+export { default as capitalonelogo } from "./Logos/capone.png";
+export { default as doordashlogo } from "./Logos/doordashlogo.jpg";
+export { default as fazelogo } from "./Logos/fazelogo.png";
+export { default as hpLogo } from "./Logos/hpLogo.png";
+export { default as intellogo } from "./Logos/intellogo.png";
+export { default as kialogo } from "./Logos/kialogo.png";
+export { default as kpmglogo } from "./Logos/kpmglogo.png";
+export { default as metalogo } from "./Logos/metalogo.png";
+export { default as nasalogo } from "./Logos/nasalogo.png";
+export { default as nbclogo } from "./Logos/nbclogo.png";
+export { default as oraclelogo } from "./Logos/oraclelogo.jpg";
+export { default as paramountLogo } from "./Logos/paramountLogo.jpg";
+export { default as protivitilogo } from "./Logos/protivitiLogo.png";
+export { default as pwclogo } from "./Logos/pwclogo.png";
+export { default as redbulllogo } from "./Logos/redbulllogo.jpg";
+export { default as statefarmlogo } from "./Logos/statefarmlogo.png";
+export { default as vmwarelogo } from "./Logos/vmwarelogo.png";
+export { default as walmartlogo } from "./Logos/walmartlogo.png";
+export { default as warnbroslogo } from "./Logos/warnerbroslogo.png";
+
+
+
+
+
+
+
+
+
+
+
 
 
 
