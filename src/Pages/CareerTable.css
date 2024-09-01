@@ -39,6 +39,15 @@
     word-wrap: break-word;
   }
   
+.careers-table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.careers-table tbody .subtitle.has-text-weight-semibold {
+  text-decoration: none !important; 
+}
+
+
   .subtitle {
     font-weight: bold;
     margin-top: 10px;
