@@ -1,29 +1,39 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   max-width: 70%;
   margin: 0 auto;
   padding: 20px;
-  height: 100vh; /* Full viewport height */
-  max-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* Hide overflow on container */
 }
 
 .brotherGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  overflow-y: auto; /* Enable vertical scrolling on grid */
-  flex-grow: 1; /* Allow grid to grow and fill available space */
-  padding-right: 15px; /* Add some padding for scrollbar */
-  margin-right: -15px; /* Offset the padding */
 }
+
+@media (max-width: 1200px) {
+  .brotherGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .brotherGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .brotherGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .brotherGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .title {
   font-size: 2.5rem;
   text-align: center;
@@ -51,28 +61,4 @@ Copy.brotherCard {
   font-size: 0.9rem;
   color: #666;
   margin: 0;
-}
-
-@media (max-width: 1200px) {
-  .brotherGrid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .brotherGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .brotherGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .brotherGrid {
-    grid-template-columns: 1fr;
-  }
 }

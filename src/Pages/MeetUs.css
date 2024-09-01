@@ -2,9 +2,7 @@
   padding-top: 80px;
   background-size: cover;
   background-position: center;
-  height: auto; /* or remove this line */
-  min-height: 100vh; /* Keeps the minimum height but allows overflow */
-  background-color: #121212; /* Fixed missing '#' for hex color */
+  min-height: 100vh;
+  background-color: #121212;
   color: aliceblue;
-  overflow-y: auto; /* Allows vertical scrolling */
 }
