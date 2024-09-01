@@ -9,6 +9,7 @@ import { useRef, useEffect, useState } from "react";
 import { Instagram, Facebook } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
 import { PersonalGrowth, BrotherhoodImage53 } from "../Assets";
+import DownPointerButton from "../Components/DownPointer";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -29,28 +30,29 @@ export default function Home() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.1
+      rootMargin: "0px",
+      threshold: 0.1,
     };
 
     const animateOnScroll = (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
+          entry.target.style.animationPlayState = "running";
         }
       });
     };
 
     const observer = new IntersectionObserver(animateOnScroll, observerOptions);
 
-    const sections = document.querySelectorAll('.info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links');
-    sections.forEach(section => observer.observe(section));
+    const sections = document.querySelectorAll(
+      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links"
+    );
+    sections.forEach((section) => observer.observe(section));
 
     return () => {
-      sections.forEach(section => observer.unobserve(section));
+      sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
-
 
   return (
     <div className="home-container">
@@ -134,7 +136,9 @@ export default function Home() {
               friends. Our brotherhood sets us apart and shapes us into who we
               are.
             </p>
-            <SleekButton  className="sleekButton" href="/meet-us">Our Brothers</SleekButton>
+            <SleekButton className="sleekButton" href="/meet-us">
+              Our Brothers
+            </SleekButton>
           </div>
 
           <div className="summary-item professionalism">
@@ -145,7 +149,9 @@ export default function Home() {
               equipping ourselves with the tools necessary to succeed in any
               industry.
             </p>
-            <SleekButton  className="sleekButton" href="/careers">Our Careers</SleekButton>
+            <SleekButton className="sleekButton" href="/careers">
+              Our Careers
+            </SleekButton>
           </div>
 
           <div className="summary-item personal-growth">
@@ -155,7 +161,9 @@ export default function Home() {
               Our unique culture inspires, encourages, and motivates you to step
               out of your comfort zone and live the life you've always imagined.
             </p>
-            <SleekButton className="sleekButton" href="/recruitment">Recruitment</SleekButton>
+            <SleekButton className="sleekButton" href="/recruitment">
+              Recruitment
+            </SleekButton>
           </div>
         </div>
         <div className="final-statements">
@@ -190,6 +198,7 @@ export default function Home() {
           <a href="mailto:akpsi.uci.rush@gmail.com">akpsi.uci.rush@gmail.com</a>
         </div>
       </div>
+      <DownPointerButton />
     </div>
   );
 }
