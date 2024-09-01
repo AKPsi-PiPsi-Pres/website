@@ -39,6 +39,71 @@ html, body {
   background: #121212;
 }
 
+.hero-b-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background: transparent;
+}
+
+.hero-b-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-b-title {
+  font-family: 'Greek Font', sans-serif;
+  user-select: none;
+  font-size: 4rem;
+  margin: 0;
+  letter-spacing: 5px;
+  font-weight: bold;
+  padding: 20px;
+  color: transparent;
+  background: linear-gradient(45deg, #97ffa3, #ff819e, #7bcaff, #ffc0c0);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 
+    2px 2px 0px black,
+    4px 4px 0px rgb(211, 211, 252);
+  animation: gradient-animation 15s infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* New keyframes for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
 /* Carousel section styles */
 .carousel-section {
   height: 100vh;
