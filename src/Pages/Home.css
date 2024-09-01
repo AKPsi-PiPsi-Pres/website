@@ -185,7 +185,6 @@ html, body {
   display: flex;
   flex-direction: column; /* Default to column layout */
   justify-content: space-around;
-  padding-bottom: 5rem;
 }
 
 .summary-item {
@@ -226,11 +225,15 @@ html, body {
 }
 
 .final-statements {
-  margin: 20px 0;
+  margin: 1rem 0;
   opacity: 0;
   animation: fadeInUp 0.4s ease-out forwards;
   animation-play-state: paused;
   animation-delay: 0.2s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .sleekButton {
@@ -241,14 +244,15 @@ html, body {
 .final-statements .statement-two {
   font-size: 1rem;
   color: #fefefe;
+  margin-top: 0px;
   margin-bottom: 10px;
   text-align: center; /* Center text for mobile */
 }
 
 .social-links {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 1rem;
+  margin-top: 1rem;
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
   animation-play-state: paused;
@@ -259,7 +263,7 @@ html, body {
 .social-links a {
   color: #0073e6;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .social-links a:hover {
@@ -281,8 +285,8 @@ html, body {
   }
 
   .summary-item img {
-    width: 44vmin; /* Restore larger image size */
-    height: 44vmin;
+    width: 35vmin; /* Restore larger image size */
+    height: 35vmin;
     margin-bottom: 1rem;
   }
 

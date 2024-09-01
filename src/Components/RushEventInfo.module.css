@@ -1,0 +1,74 @@
+.eventCard {
+    height: auto;
+    width: 50vmin; /* Adjusted for mobile viewing */
+    max-width: 90%; /* Ensure it doesn't exceed screen width */
+    background-color: #12121244;
+    border-radius: 1rem;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+    transition-duration: 500ms;
+    padding: 1rem; /* Added padding for better spacing on mobile */
+    margin: 1rem; /* Added margin for better spacing on smaller screens */
+}
+
+.eventCard:hover {
+    transform: scale(1.05);
+    background-color: #12121283;
+    transition-duration: 500ms;
+}
+
+.eventTitle {
+    font-size: 1.5rem; /* Adjusted for mobile */
+    color: #ffffff;
+    padding: 1.5rem; /* Reduced padding for mobile */
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Dune Rise', sans-serif;
+}
+
+.eventDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap for mobile */
+    align-items: center;
+    padding: 0.5rem; /* Reduced padding for mobile */
+}
+
+.eventDetail {
+    display: flex;
+    align-items: center;
+    font-size: 1rem; /* Adjusted font size for mobile */
+    color: #ffffff;
+}
+
+.eventDetail svg {
+    margin-right: 8px; /* Adjusted margin for mobile */
+    color: #121212;
+    font-size: 1.2rem; /* Adjusted icon size for mobile */
+}
+
+/*Make sure to change the svg color for each rush theme*/
+@media (max-width: 768px) {
+    .eventCard {
+        width: 90vmin;
+        height: 80vmin;
+        align-content: center;
+    }
+
+    .eventTitle {
+        font-size: 1.3rem;
+    }
+
+    .eventDetail {
+        font-size: 0.9rem;
+    }
+
+    .eventDetail svg {
+        font-size: 1rem;
+        color: antiquewhite;
+    }
+}
+
+.active-tab {
+    background-color: antiquewhite;
+}
