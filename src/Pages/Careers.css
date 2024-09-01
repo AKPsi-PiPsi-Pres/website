@@ -99,3 +99,7 @@
   padding: 50px;
   margin-bottom: -42px;
 }
+
+.careersContainer {
+  background-attachment: fixed;
+}

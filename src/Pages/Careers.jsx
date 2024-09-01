@@ -1,7 +1,7 @@
 import React from "react";
 import "./Careers.css";
 import { motion } from "framer-motion";
-import { earthJPG } from "../Assets";
+import { alumni1 } from "../Assets";
 import TableInfo from "./CareerTable";
 import LogoScroller from "./CareerLogoScroll";
 
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div
       className="careersContainer"
-      style={{ backgroundImage: `url(${earthJPG})` }}
+      style={{ backgroundImage: `url(${alumni1})` }}
     >
       <motion.div
         className="careerstitleSection"
