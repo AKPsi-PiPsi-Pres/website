@@ -63,6 +63,11 @@ export { default as BrotherhoodImage62 } from "./BrotherhoodPhotos/IMG_4754.webp
 export { default as BrotherhoodImage63 } from "./BrotherhoodPhotos/IMG_7966.webp";
 export { default as PersonalGrowth } from "./Side Photos/personal_growth.jpg";
 
+export {default as AnujTrollPhoto} from "./TrollPhotos/IMG_1038.PNG"
+export {default as ChrisTrollPhoto} from "./TrollPhotos/IMG_1039.PNG"
+export {default as JacobTrollPhoto} from "./TrollPhotos/IMG_1040.PNG"
+
+
 export { default as Dune } from "./Frames/Designer.webp";
 export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";

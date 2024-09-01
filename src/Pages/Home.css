@@ -219,3 +219,41 @@ html, body {
   display: flex;
   width: 30vmin;
 }
+
+
+.loaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+/* Loader animation */
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-top: 8px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Recruitment container styles */
+.recruitmentContainer {
+  transition: opacity 1s ease;
+}
+
+.recruitmentContainer.fade-in {
+  opacity: 1;
+}
