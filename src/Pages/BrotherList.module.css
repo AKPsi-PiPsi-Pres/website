@@ -1,16 +1,35 @@
 .container {
-  max-width: 70%;
+  width: 100%;
+  max-width: 80%;
   margin: 0 auto;
-  height: 100%; /* Take full height of the parent */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05); /* Slight contrast from background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .brotherGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  overflow-y: auto; /* Enable vertical scrolling if needed */
-  max-height: calc(100vh - 200px); /* Adjust based on your header/footer size */
-  padding-right: 15px; /* Add some padding for the scrollbar */
+  overflow-y: auto;
+  max-height: calc(100vh - 300px); /* Adjusted for more space */
+  padding: 20px;
+  margin-bottom: 30px; /* Space at the bottom */
+}
+
+/* Scrollbar styling for better visibility */
+.brotherGrid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.brotherGrid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.brotherGrid::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
 }
 
 @media (max-width: 1200px) {
@@ -29,6 +48,9 @@
   .brotherGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .container, .header {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -37,21 +59,22 @@
   }
 }
 
-.title {
-  font-size: 2.5rem;
+.brotherCard {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #333;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-Copy.brotherCard {
-  text-align: center;
-  margin-bottom: 20px; /* Add some bottom margin */
+.brotherCard:hover {
+  transform: translateY(-5px);
 }
+
 .imageWrapper {
   aspect-ratio: 3 / 4;
   overflow: hidden;
   margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .brotherPhoto {
@@ -62,6 +85,6 @@ Copy.brotherCard {
 
 .brotherName {
   font-size: 0.9rem;
-  color: #666;
+  color: #e0e0e0;
   margin: 0;
 }

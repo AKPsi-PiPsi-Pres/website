@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import BrotherList from "./BrotherList";
 import { Button, ButtonGroup } from "@mui/material";
+import "./MeetUs.css"
 
 const SHEET_ID = "167TmecKc4cduWtdounqiXDkYgQjssu9cSz4QLljuKLg";
 const API_KEY = "AIzaSyAr5dAYznujGAFBNfnrjLLO27hgzelm5Tk";
@@ -66,6 +67,7 @@ export default function MeetUs() {
   return (
     <div className="meet-us-page pageContainer">
       <div className="content-wrapper">
+      <div className="meet-us-header">
       <h1>{viewLeadership ? "Leadership" : "Active Brothers"}</h1>
       <ButtonGroup>
         <Button
@@ -81,6 +83,7 @@ export default function MeetUs() {
           {"Leadership"}
         </Button>
       </ButtonGroup>
+      </div>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
