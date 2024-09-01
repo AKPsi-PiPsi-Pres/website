@@ -8,6 +8,7 @@ const API_KEY = "AIzaSyB4VMnva4PLLAocjljvt4dLtA-kHaSWcu0";
 const RANGE = "Form Responses 1!B2:G";
 
 const TableInfo = () => {
+  console.log("TableInfo rendered");
   const [data, setData] = useState([]);
   const [selectedYear, setSelectedYear] = useState("2024");
 

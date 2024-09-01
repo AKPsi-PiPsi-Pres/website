@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./Brotherhood.css";
-import ImageGrid from "react-image-grid-animator";
+import { Fall23RushVideo, CruiseReel } from "../Assets";
+import { useMobile } from "../Components/Navbar";
+import DownPointerButton from "../Components/DownPointer";
 import {
   BrotherhoodImage1,
   BrotherhoodImage2,
@@ -35,7 +37,6 @@ import {
   BrotherhoodImage31,
   BrotherhoodImage32,
   BrotherhoodImage33,
-  BrotherhoodImage34,
   BrotherhoodImage35,
   BrotherhoodImage36,
   BrotherhoodImage37,
@@ -47,30 +48,89 @@ import {
   BrotherhoodImage43,
   BrotherhoodImage44,
   BrotherhoodImage45,
-  BrotherhoodImage46,
   BrotherhoodImage47,
   BrotherhoodImage48,
   BrotherhoodImage49,
   BrotherhoodImage50,
   BrotherhoodImage51,
+  BrotherhoodImage52,
+  BrotherhoodImage53,
+  BrotherhoodImage54,
+  BrotherhoodImage55,
+  BrotherhoodImage56,
+  BrotherhoodImage57,
+  BrotherhoodImage58,
+  BrotherhoodImage59,
+  BrotherhoodImage60,
+  BrotherhoodImage61,
+  BrotherhoodImage62,
+  BrotherhoodImage63,
 } from "../Assets";
 
 export default function Brotherhood() {
   const trackRef = useRef(null);
+  const { isMobile, setIsMobile } = useMobile();
   //Make SURE every image you are using has a centered subject, or else it will look very awkward
-  const images = [
+  const carouselImages = [
     BrotherhoodImage13,
-    BrotherhoodImage22,
-    BrotherhoodImage29,
-    BrotherhoodImage34,
-    BrotherhoodImage17,
+    BrotherhoodImage33,
     BrotherhoodImage5,
     BrotherhoodImage6,
+    BrotherhoodImage17,
     BrotherhoodImage7,
     BrotherhoodImage8,
     BrotherhoodImage3,
+    BrotherhoodImage22,
     BrotherhoodImage10,
     BrotherhoodImage11,
+  ];
+
+  const scrapbookImages = [
+    BrotherhoodImage35,
+    BrotherhoodImage33,
+    BrotherhoodImage38,
+    BrotherhoodImage39,
+    BrotherhoodImage40,
+    BrotherhoodImage60,
+    BrotherhoodImage41,
+    BrotherhoodImage42,
+    BrotherhoodImage43,
+    BrotherhoodImage62,
+    BrotherhoodImage44,
+    BrotherhoodImage45,
+    BrotherhoodImage37,
+    BrotherhoodImage47,
+    BrotherhoodImage48,
+    BrotherhoodImage57,
+    BrotherhoodImage49,
+    BrotherhoodImage50,
+    BrotherhoodImage51,
+    BrotherhoodImage30,
+    BrotherhoodImage31,
+    BrotherhoodImage32,
+    BrotherhoodImage23,
+    BrotherhoodImage36,
+    BrotherhoodImage24,
+    BrotherhoodImage25,
+    BrotherhoodImage26,
+    BrotherhoodImage27,
+    BrotherhoodImage28,
+    BrotherhoodImage18,
+    BrotherhoodImage61,
+    BrotherhoodImage19,
+    BrotherhoodImage20,
+    BrotherhoodImage21,
+    BrotherhoodImage14,
+    BrotherhoodImage15,
+    BrotherhoodImage16,
+    BrotherhoodImage9,
+    BrotherhoodImage52,
+    BrotherhoodImage53,
+    BrotherhoodImage54,
+    BrotherhoodImage55,
+    BrotherhoodImage56,
+    BrotherhoodImage59,
+    BrotherhoodImage63,
   ];
 
   useEffect(() => {
@@ -81,20 +141,26 @@ export default function Brotherhood() {
     track.dataset.prevPercentage = 0;
     track.style.transform = "translate(0%, 0%)";
 
-    const handleMouseDown = (e) => {
-      track.dataset.mouseDownAt = e.clientX;
+    const handleStart = (e) => {
+      track.dataset.startAt = e.type.includes("mouse")
+        ? e.clientX
+        : e.touches[0].clientX;
     };
 
-    const handleMouseMove = (e) => {
-      if (track.dataset.mouseDownAt === "0") return;
+    const handleMove = (e) => {
+      if (track.dataset.startAt === "0") return;
 
-      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+      const currentPosition = e.type.includes("mouse")
+        ? e.clientX
+        : e.touches[0].clientX;
+      const startPosition = parseFloat(track.dataset.startAt);
+      const mouseDelta = startPosition - currentPosition,
         maxDelta = window.innerWidth / 2;
 
       const percentage = (mouseDelta / maxDelta) * -100,
         nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
-      const boundedNextPercentage = Math.max(Math.min(nextPercentage, 0), -55);
+      const boundedNextPercentage = Math.max(Math.min(nextPercentage, 0), -65);
 
       track.dataset.percentage = boundedNextPercentage;
 
@@ -115,33 +181,78 @@ export default function Brotherhood() {
       }
     };
 
-    const handleMouseUp = () => {
-      track.dataset.mouseDownAt = "0";
+    const handleEnd = () => {
+      track.dataset.startAt = "0";
       track.dataset.prevPercentage = track.dataset.percentage;
     };
 
-    window.addEventListener("mousedown", handleMouseDown);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleMouseUp);
+    // Mouse events
+    window.addEventListener("mousedown", handleStart);
+    window.addEventListener("mousemove", handleMove);
+    window.addEventListener("mouseup", handleEnd);
+
+    // Touch events
+    window.addEventListener("touchstart", handleStart);
+    window.addEventListener("touchmove", handleMove);
+    window.addEventListener("touchend", handleEnd);
 
     return () => {
-      window.removeEventListener("mousedown", handleMouseDown);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
+      // Mouse events
+      window.removeEventListener("mousedown", handleStart);
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("mouseup", handleEnd);
+
+      // Touch events
+      window.removeEventListener("touchstart", handleStart);
+      window.removeEventListener("touchmove", handleMove);
+      window.removeEventListener("touchend", handleEnd);
     };
   }, []);
 
   return (
-    <>
-      <div className="carousel-body">
-        <div
-          className="image-track"
-          ref={trackRef}
-          id="image-track"
-          data-mouse-down-at="0"
-          data-prev-percentage="0"
-        >
-          {images.map((image, index) => (
+    <div className="section-container">
+      <div className="video-section">
+        {!isMobile && (
+          <video src={Fall23RushVideo} autoPlay muted playsInline>
+            Your browser does not support the video tag.
+          </video>
+        )}
+        {isMobile && (
+          <video src={CruiseReel} autoPlay muted playsInline>
+            Your browser does not support the video tag.
+          </video>
+        )}
+      </div>
+      <div className="carousel-section">
+        <p className="brotherhood-title">
+          From quarterly retreats to spontaneous hangouts, our brothers in Alpha
+          Kappa Psi always make lifelong memories.
+        </p>
+        <div className="carousel-body">
+          <div
+            className="image-track"
+            ref={trackRef}
+            id="image-track"
+            data-mouse-down-at="0"
+            data-prev-percentage="0"
+          >
+            {carouselImages.map((image, index) => (
+              <img
+                key={index}
+                className="img"
+                src={image}
+                alt="Photo of AKY Brothers"
+                draggable={false}
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="photoframe-section">
+        <p className="photoframe-title">The AKY Digital Scrapbook</p>
+        <div className="photoframe-container">
+          {scrapbookImages.map((image, index) => (
             <img
               key={index}
               className="img"
@@ -152,73 +263,7 @@ export default function Brotherhood() {
           ))}
         </div>
       </div>
-      <div className="collage-section">
-        {/* <div><h1>Our Brotherhood</h1></div> */}
-        <div className="collage-container">
-          <ImageGrid
-            className="image-grid"
-            images={[
-              BrotherhoodImage44,
-              BrotherhoodImage45,
-              BrotherhoodImage46,
-              BrotherhoodImage47,
-              BrotherhoodImage30,
-              BrotherhoodImage31,
-              BrotherhoodImage32,
-              BrotherhoodImage33,
-              BrotherhoodImage34,
-              BrotherhoodImage35,
-              BrotherhoodImage36,
-              BrotherhoodImage37,
-              BrotherhoodImage38,
-              BrotherhoodImage39,
-              BrotherhoodImage23,
-              BrotherhoodImage24,
-              BrotherhoodImage25,
-              BrotherhoodImage26,
-              BrotherhoodImage27,
-              BrotherhoodImage28,
-            ]}
-            visibleCount={6}
-            interval={4500}
-            animationItemcount={0}
-            transitionType={"FADE_AND_SCALE"}
-            transitionDuration={50}
-            isActive={false}
-          />
-          <ImageGrid
-            className="image-grid"
-            images={[
-              BrotherhoodImage1,
-              BrotherhoodImage2,
-              BrotherhoodImage48,
-              BrotherhoodImage49,
-              BrotherhoodImage50,
-              BrotherhoodImage51,
-              BrotherhoodImage14,
-              BrotherhoodImage15,
-              BrotherhoodImage16,
-              BrotherhoodImage4,
-              BrotherhoodImage9,
-              BrotherhoodImage22,
-              BrotherhoodImage18,
-              BrotherhoodImage19,
-              BrotherhoodImage20,
-              BrotherhoodImage21,
-              BrotherhoodImage40,
-              BrotherhoodImage41,
-              BrotherhoodImage42,
-              BrotherhoodImage43,
-            ]}
-            visibleCount={6}
-            interval={5000}
-            animationItemcount={0}
-            transitionType={"FADE_AND_SCALE"}
-            transitionDuration={300}
-            isActive={true}
-          />
-        </div>
-      </div>
-    </>
+      <DownPointerButton />
+    </div>
   );
 }

@@ -5,7 +5,8 @@ import { alumni1 } from "../Assets";
 import TableInfo from "./CareerTable";
 import LogoScroller from "./CareerLogoScroll";
 
-export default function Home() {
+export default function Careers() {
+  console.log("Careers component rendered");
   return (
     <div
       className="careersContainer"
