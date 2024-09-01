@@ -28,6 +28,7 @@
     position: relative;
     margin: 0 auto;
     text-align: center;
+    margin-top: 0px;
   }
   
   .logos:before,
@@ -56,12 +57,12 @@
   
   .logos-slide {
     display: flex;
-    width: calc(200% + 80px);
+    width: calc(400% + 100px);
     animation: 50s slide linear infinite;
   }
   
   .logos-slide img {
-    height: 50px;
+    height: 75px;
     margin: 0 20px;
   }
   

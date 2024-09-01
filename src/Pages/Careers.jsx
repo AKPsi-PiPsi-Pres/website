@@ -37,17 +37,11 @@ export default function Home() {
 
       <div className="careersmainTitleSection">
         <h1 className="careersmainTitle">OUR PROFESSIONAL EXPERIENCE</h1>
-
-
       </div>
       <div className="careers-section">
-        <div>
         <LogoScroller />
-
-          <TableInfo />
-          <div></div>
+        <TableInfo />
         </div>
       </div>
-    </div>
   );
 }

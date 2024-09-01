@@ -91,5 +91,11 @@
 
 .careersmainTitle{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 25px
+  font-size: 26px;
+  margin-bottom: 0px;
+}
+
+.careersmainTitleSection{
+  padding: 50px;
+  margin-bottom: -42px;
 }
