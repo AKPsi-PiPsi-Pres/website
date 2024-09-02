@@ -3,6 +3,7 @@ import "./Brotherhood.css";
 import { Fall23RushVideo, CruiseReel } from "../Assets";
 import { useMobile } from "../Components/Navbar";
 import DownPointerButton from "../Components/DownPointer";
+import { motion } from "framer-motion";
 import {
   BrotherhoodImage1,
   BrotherhoodImage2,
@@ -212,16 +213,35 @@ export default function Brotherhood() {
   return (
     <div className="section-container">
       <div className="video-section">
-        {!isMobile && (
-          <video src={Fall23RushVideo} autoPlay muted playsInline>
-            Your browser does not support the video tag.
-          </video>
-        )}
-        {isMobile && (
-          <video src={CruiseReel} autoPlay muted playsInline>
-            Your browser does not support the video tag.
-          </video>
-        )}
+        <motion.div
+          className="hero-b-section"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        >
+          <div className="hero-b-content">
+            <motion.h1
+              className="hero-b-title"
+              initial={{ y: -130, opacity: 1 }}
+              animate={{ y: -150, opacity: 0 }}
+              transition={{ delay: 41, duration: 2, ease: "easeOut" }}
+            >
+              Brotherhood
+            </motion.h1>
+          </div>
+        </motion.div>
+        <div className="background-video">
+          {!isMobile && (
+            <video src={Fall23RushVideo} autoPlay muted playsInline>
+              Your browser does not support the video tag.
+            </video>
+          )}
+          {isMobile && (
+            <video src={CruiseReel} autoPlay muted playsInline>
+              Your browser does not support the video tag.
+            </video>
+          )}
+        </div>
       </div>
       <div className="carousel-section">
         <p className="brotherhood-title">

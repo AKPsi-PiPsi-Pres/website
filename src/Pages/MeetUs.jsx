@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import BrotherList from "./BrotherList";
+import ActiveBrotherList from "./ActiveBrotherList";
+import ExecutiveBoardList from "./ExecutiveBoardList";
 import { Button, ButtonGroup } from "@mui/material";
-import "./MeetUs.css"
+import "./MeetUs.css";
 
 const SHEET_ID = "167TmecKc4cduWtdounqiXDkYgQjssu9cSz4QLljuKLg";
 const API_KEY = "AIzaSyAr5dAYznujGAFBNfnrjLLO27hgzelm5Tk";
@@ -20,7 +21,7 @@ export default function MeetUs() {
     try {
       const range = isLeadership ? RANGE_EXECUTIVES : RANGE_ACTIVES;
       const response = await axios.get(
-        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`
+        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`,
       );
       if (isLeadership) {
         setExecutiveBrothers(response.data.values);
@@ -67,28 +68,30 @@ export default function MeetUs() {
   return (
     <div className="meet-us-page pageContainer">
       <div className="content-wrapper">
-      <div className="meet-us-header">
-      <h1>{viewLeadership ? "Leadership" : "Active Brothers"}</h1>
-      <ButtonGroup>
-        <Button
-          onClick={makeActiveView}
-          variant={!viewLeadership ? "contained" : "outlined"}
-        >
-          {"Active Brothers"}
-        </Button>
-        <Button
-          onClick={makeLeadershipView}
-          variant={viewLeadership ? "contained" : "outlined"}
-        >
-          {"Leadership"}
-        </Button>
-      </ButtonGroup>
-      </div>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <BrotherList brothers={displayedBrothers} />
-      )}
+        <div className="meet-us-header">
+          <h1>{viewLeadership ? "Leadership" : "Active Brothers"}</h1>
+          <ButtonGroup>
+            <Button
+              onClick={makeActiveView}
+              variant={!viewLeadership ? "contained" : "outlined"}
+            >
+              {"Active Brothers"}
+            </Button>
+            <Button
+              onClick={makeLeadershipView}
+              variant={viewLeadership ? "contained" : "outlined"}
+            >
+              {"Leadership"}
+            </Button>
+          </ButtonGroup>
+        </div>
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : viewLeadership ? (
+          <ExecutiveBoardList brothers={displayedBrothers} />
+        ) : (
+          <ActiveBrotherList brothers={displayedBrothers} />
+        )}
       </div>
     </div>
   );
