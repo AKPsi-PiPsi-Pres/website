@@ -20,13 +20,12 @@
   justify-content: space-around;
 }
 
-.contentWrapper h1 {
-  margin-top: 0rem;
-  margin-bottom: 1.5rem;
+.view-buttons {
+  margin-top: 1.5rem;
 }
 
 .meet-us-header {
   width: 100%;
-  margin-bottom: 2rem;
+  margin: 2rem 0rem;
   text-align: center;
 }
