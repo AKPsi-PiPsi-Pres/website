@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { alumni1 } from "../Assets";
 import TableInfo from "./CareerTable";
 import CareerLogoScroller from "./CareerLogoScroll";
+import DownPointerButton from "../Components/DownPointerButton";
 
 export default function Careers() {
   console.log("Careers component rendered");
@@ -20,10 +21,10 @@ export default function Careers() {
       >
         <div className="careersContent">
           <motion.h1
-            className="careersTitle"
-            initial={{ y: -30, opacity: 0 }}
-            animate={{ y: -30, opacity: 1 }}
-            transition={{ duration: 2.5, ease: "easeOut" }}
+            className="hero-c-title"
+            initial={{ y: -150, opacity: 0 }}
+            animate={{ y: -150, opacity: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           >
             Careers
           </motion.h1>
@@ -43,6 +44,7 @@ export default function Careers() {
         <CareerLogoScroller />
         <TableInfo />
       </div>
+      <DownPointerButton />
     </div>
   );
 }
