@@ -7,9 +7,9 @@ const SleekButtonGroup = ({ children, ...props }) => {
     <ButtonGroup className="sleek-button-group" variant="contained" {...props}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === Button) {
-          return React.cloneElement(child, { 
-            className: `${child.props.className || ''} sleek-button`,
-            disableElevation: true 
+          return React.cloneElement(child, {
+            className: `${child.props.className || ""} sleek-button`,
+            disableElevation: true,
           });
         }
         return child;

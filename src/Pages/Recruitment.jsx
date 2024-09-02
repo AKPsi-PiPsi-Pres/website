@@ -83,7 +83,7 @@ export default function Recruitment() {
           <RushEventInfo event={event} />
         </div>
       ))}
-    <DownPointerButton />
+      <DownPointerButton />
     </div>
   );
 }
