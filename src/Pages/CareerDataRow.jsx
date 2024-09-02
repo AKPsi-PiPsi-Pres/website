@@ -1,7 +1,6 @@
 import "./CareerDataRow.css";
 
 export default function CareerDataRow({ data }) {
-  console.log(data[0]);
   return (
       <tr>
         <td>{data.Name}</td>

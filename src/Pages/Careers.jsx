@@ -3,7 +3,7 @@ import "./Careers.css";
 import { motion } from "framer-motion";
 import { alumni1 } from "../Assets";
 import TableInfo from "./CareerTable";
-import LogoScroller from "./CareerLogoScroll";
+import CareerLogoScroller from "./CareerLogoScroll";
 
 export default function Careers() {
   console.log("Careers component rendered");
@@ -16,14 +16,14 @@ export default function Careers() {
         className="careerstitleSection"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1 }}
       >
         <div className="careersContent">
           <motion.h1
             className="careersTitle"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 15.5, ease: "easeOut" }}
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: -30, opacity: 1 }}
+            transition={{ duration: 2.5, ease: "easeOut" }}
           >
             Careers
           </motion.h1>
@@ -31,7 +31,7 @@ export default function Careers() {
             className="careers-subtitle1"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 16.5, ease: "easeOut", delay: 0.5 }}
+            transition={{ duration: 2.5, ease: "easeOut", delay: 0.5 }}
           ></motion.p>
         </div>
       </motion.div>
@@ -40,9 +40,9 @@ export default function Careers() {
         <h1 className="careersmainTitle">OUR PROFESSIONAL EXPERIENCE</h1>
       </div>
       <div className="careers-section">
-        <LogoScroller />
+        <CareerLogoScroller />
         <TableInfo />
-        </div>
       </div>
+    </div>
   );
 }
