@@ -2,7 +2,7 @@ import React from "react";
 import "./Careers.css";
 import { motion } from "framer-motion";
 import { alumni1 } from "../Assets";
-import TableInfo from "./CareerTable";
+import CareerTable from "./CareerTable";
 import CareerLogoScroller from "./CareerLogoScroll";
 import DownPointerButton from "../Components/DownPointerButton";
 
@@ -42,7 +42,7 @@ export default function Careers() {
       </div>
       <div className="careers-section">
         <CareerLogoScroller />
-        <TableInfo />
+        <CareerTable />
       </div>
       <DownPointerButton />
     </div>

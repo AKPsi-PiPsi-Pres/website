@@ -101,10 +101,10 @@ export default function Home() {
           <h2>The world's oldest and largest business fraternity</h2>
           <p>
             The organization of Alpha Kappa Psi was founded in New York
-            University in 1904. Spanning decades, Alpha Kappa Psi has
-            helped over 300,000 individuals create lifelong friends and pursue
-            their dreams. Our goal is to help Anteaters become the best versions
-            of themselves.
+            University in 1904. Spanning decades, Alpha Kappa Psi has helped
+            over 300,000 individuals create lifelong friends and pursue their
+            dreams. Our goal is to help Anteaters become the best versions of
+            themselves.
           </p>
         </div>
         <div className="info-image-container">
