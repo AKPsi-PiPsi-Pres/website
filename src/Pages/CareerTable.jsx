@@ -4,11 +4,11 @@ import CareerDataRow from "./CareerDataRow";
 import "./CareerTable.css";
 
 const SHEET_ID = "1YY9TyYXJPHNJ8n1M2O9iKQaB00oCIghhkb5UpxTxV0g";
-const API_KEY = "AIzaSyB4VMnva4PLLAocjljvt4dLtA-kHaSWcu0";
+const API_KEY = process.env.REACT_APP_CAREERS_INFO_KEY;
 const RANGE = "Form Responses 1!B2:G";
 
 const CareerTable = () => {
-  console.log("TableInfo rendered");
+  console.log(API_KEY);
   const [data, setData] = useState([]);
   const [selectedYear, setSelectedYear] = useState("2024");
 
