@@ -1,15 +1,41 @@
-import React from 'react';
-import './CareerLogoScroll.css';
-import { GoogleLogo, AppleLogo, DeloitteLogo, AdobeLogo, EYLogo,
-    MicrosoftLogo, TiktokLogo, JPMorganLogo,WellsFargoLogo, TinderLogo,
-    LinkedInLogo, kpmglogo, metalogo, capitalonelogo, BandCLogo,
-    doordashlogo, bloomberglogo, fazelogo, hpLogo, intellogo, kialogo,
-    nasalogo, nbclogo, oraclelogo, paramountLogo,
-    protivitilogo, pwclogo, redbulllogo, statefarmlogo, vmwarelogo, 
-    walmartlogo, warnbroslogo} from '../Assets';
+import React from "react";
+import "./CareerLogoScroll.css";
+import {
+  GoogleLogo,
+  AppleLogo,
+  DeloitteLogo,
+  AdobeLogo,
+  EYLogo,
+  MicrosoftLogo,
+  TiktokLogo,
+  JPMorganLogo,
+  WellsFargoLogo,
+  TinderLogo,
+  LinkedInLogo,
+  kpmglogo,
+  metalogo,
+  capitalonelogo,
+  BandCLogo,
+  doordashlogo,
+  bloomberglogo,
+  fazelogo,
+  hpLogo,
+  intellogo,
+  kialogo,
+  nasalogo,
+  nbclogo,
+  oraclelogo,
+  paramountLogo,
+  protivitilogo,
+  pwclogo,
+  redbulllogo,
+  statefarmlogo,
+  vmwarelogo,
+  walmartlogo,
+  warnbroslogo,
+} from "../Assets";
 
-const LogoScroller = () => {
-  console.log("LogoScroller rendered");
+const CareerLogoScroller = () => {
   return (
     <div className="logos">
       <div className="logos-slide">
@@ -50,4 +76,4 @@ const LogoScroller = () => {
   );
 };
 
-export default LogoScroller;
+export default CareerLogoScroller;

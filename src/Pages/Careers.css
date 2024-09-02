@@ -1,7 +1,7 @@
 .careersmainTitleSection {
   width: 100%;
   padding: 50px 20px;
-  background-color: white;
+  background-color: #121212;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@
 .careersmainTitle {
   font-size: 65px;
   font-family: 'Greek Font', sans-serif;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   margin: 0;
 }
@@ -65,7 +65,7 @@
   font-family: 'Greek Font', sans-serif;
   font-size: 24px;
   margin: 0;
-  background: white;
+  background: #121212;
 }
 
 .table {

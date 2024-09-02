@@ -84,9 +84,9 @@ const TableInfo = () => {
               return (
               <React.Fragment key={category}>
                 <tr>
-                  <td colSpan="4" className="subtitle has-text-weight-semibold"
+                  <td colSpan="10" className="subtitle has-text-weight-semibold"
                   style={{ textDecoration: 'none', fontWeight: 'bold' }}
-                  >{category}</td>
+                  >{category + " Industry"}</td>
                 </tr>
                 {categoryRows}
               </React.Fragment>
