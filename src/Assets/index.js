@@ -108,22 +108,6 @@ export { default as vmwarelogo } from "./Logos/vmwarelogo.png";
 export { default as walmartlogo } from "./Logos/walmartlogo.png";
 export { default as warnbroslogo } from "./Logos/warnerbroslogo.png";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
 export { default as JTreeReel } from "./Videos/JoshuatreeReelWebsite.mp4";

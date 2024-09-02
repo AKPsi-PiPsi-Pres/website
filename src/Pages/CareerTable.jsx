@@ -7,7 +7,7 @@ const SHEET_ID = "1YY9TyYXJPHNJ8n1M2O9iKQaB00oCIghhkb5UpxTxV0g";
 const API_KEY = "AIzaSyB4VMnva4PLLAocjljvt4dLtA-kHaSWcu0";
 const RANGE = "Form Responses 1!B2:G";
 
-const TableInfo = () => {
+const CareerTable = () => {
   console.log("TableInfo rendered");
   const [data, setData] = useState([]);
   const [selectedYear, setSelectedYear] = useState("2024");
@@ -21,18 +21,79 @@ const TableInfo = () => {
         const values = response.data.values;
 
         const mainObj = {
-          "2020": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-          "2019": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-          "2018": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-          "2021": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-          "2022": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-          "2023": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-          "2024": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] },
-          "2025": { "Accounting": [], "Finance": [], "Consulting": [], "Marketing": [], "Technology": [], "Misc": [] }
+          2020: {
+            Accounting: [],
+            Finance: [],
+            Consulting: [],
+            Marketing: [],
+            Technology: [],
+            Misc: [],
+          },
+          2019: {
+            Accounting: [],
+            Finance: [],
+            Consulting: [],
+            Marketing: [],
+            Technology: [],
+            Misc: [],
+          },
+          2018: {
+            Accounting: [],
+            Finance: [],
+            Consulting: [],
+            Marketing: [],
+            Technology: [],
+            Misc: [],
+          },
+          2021: {
+            Accounting: [],
+            Finance: [],
+            Consulting: [],
+            Marketing: [],
+            Technology: [],
+            Misc: [],
+          },
+          2022: {
+            Accounting: [],
+            Finance: [],
+            Consulting: [],
+            Marketing: [],
+            Technology: [],
+            Misc: [],
+          },
+          2023: {
+            Accounting: [],
+            Finance: [],
+            Consulting: [],
+            Marketing: [],
+            Technology: [],
+            Misc: [],
+          },
+          2024: {
+            Accounting: [],
+            Finance: [],
+            Consulting: [],
+            Marketing: [],
+            Technology: [],
+            Misc: [],
+          },
+          2025: {
+            Accounting: [],
+            Finance: [],
+            Consulting: [],
+            Marketing: [],
+            Technology: [],
+            Misc: [],
+          },
         };
 
-        values.forEach(row => {
-          mainObj[row[1]][row[2]].push({ "Name": row[0], "Position": row[5], "Company": row[4], "Sector": row[3] });
+        values.forEach((row) => {
+          mainObj[row[1]][row[2]].push({
+            Name: row[0],
+            Position: row[5],
+            Company: row[4],
+            Sector: row[3],
+          });
         });
 
         setData(mainObj);
@@ -59,12 +120,16 @@ const TableInfo = () => {
       <div className="tabs">
         <ul className="years">
           {Object.keys(data)
-          .sort((a, b) => b - a)
-          .map(year => (
-            <li key={year} className={selectedYear === year ? 'is-active' : ''} onClick={() => handleYearChange(year)}>
-              <a>{year}</a>
-            </li>
-          ))}
+            .sort((a, b) => b - a)
+            .map((year) => (
+              <li
+                key={year}
+                className={selectedYear === year ? "is-active" : ""}
+                onClick={() => handleYearChange(year)}
+              >
+                <a>{year}</a>
+              </li>
+            ))}
         </ul>
       </div>
       <div className="careers-container">
@@ -78,21 +143,32 @@ const TableInfo = () => {
             </tr>
           </thead>
           <tbody>
-            {["Accounting", "Finance", "Consulting", "Marketing", "Technology", "Misc"].map(category => {
-            const categoryRows = renderTableData(category) || [];
-            if (categoryRows.length > 0) {
-              return (
-              <React.Fragment key={category}>
-                <tr>
-                  <td colSpan="10" className="subtitle has-text-weight-semibold"
-                  style={{ textDecoration: 'none', fontWeight: 'bold' }}
-                  >{category + " Industry"}</td>
-                </tr>
-                {categoryRows}
-              </React.Fragment>
-              );
-            } 
-            return null;
+            {[
+              "Accounting",
+              "Finance",
+              "Consulting",
+              "Marketing",
+              "Technology",
+              "Misc",
+            ].map((category) => {
+              const categoryRows = renderTableData(category) || [];
+              if (categoryRows.length > 0) {
+                return (
+                  <React.Fragment key={category}>
+                    <tr>
+                      <td
+                        colSpan="10"
+                        className="subtitle has-text-weight-semibold"
+                        style={{ textDecoration: "none", fontWeight: "bold" }}
+                      >
+                        {category + " Industry"}
+                      </td>
+                    </tr>
+                    {categoryRows}
+                  </React.Fragment>
+                );
+              }
+              return null;
             })}
           </tbody>
         </table>
@@ -101,4 +177,4 @@ const TableInfo = () => {
   );
 };
 
-export default TableInfo;
+export default CareerTable;

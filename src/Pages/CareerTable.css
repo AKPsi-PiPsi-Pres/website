@@ -1,125 +1,185 @@
+/* Base styles remain the same */
 .tabs {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .years {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    border: 1px solid #ccc; 
-    border-radius: 50px;
-    overflow: hidden;
-  }
-  
-  .years li {
-    display: inline-block;
-    font-family: sans-serif;
-    color: #ffffff;
-    font-size: 1.2rem;
-    padding: 1.5rem; 
-    cursor: pointer; 
-    transition: background-color 0.3s, border-color 0.3s;
-    border-right: 1px solid #ccc; 
+  display: flex;
+  justify-content: center;
+}
 
-  }
-  
-  .years li.is-active {
-    background-color: #4b75b9; 
-    color: white; 
-    border-color: #3273dc;
-  }
-  
-  .tabs .years li:hover {
-    background-color: #001eff; 
-    border-color: #aaa; 
-  }
+.years {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  overflow: hidden;
+}
 
-  .years li:last-child {
-    border-right: none;
-  }
+.years li {
+  display: inline-block;
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  border-right: 1px solid #ccc;
+}
 
-  .careers-container {
-    width: 70%;
-    max-width: 1.5rem;
-    margin: 0 auto;
-    background-color: #121212;
-  }
+.years li.is-active {
+  background-color: #477ed6;
+  color: white;
+  border-color: #3273dc;
+}
 
-  .careers-table {
-    width: 100%;
-    table-layout: fixed;
-  }
-  
-  .careers-table th, .careers-table td {
-    padding: 1rem;
-    text-align: left;
-    word-wrap: break-word;
-  }
-  
+.tabs .years li:hover {
+  background-color: #455bff;
+  border-color: #aaa;
+}
+
+.years li:last-child {
+  border-right: none;
+}
+
+.careers-container {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #121212;
+}
+
+.careers-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.careers-table th,
+.careers-table td {
+  padding: 1rem;
+  text-align: left;
+  word-wrap: break-word;
+}
+
 .careers-table tbody tr {
   border-bottom: 1px solid #5e5d5d;
 }
 
 .careers-table tbody .subtitle.has-text-weight-semibold {
-  text-decoration: none !important; 
+  text-decoration: none !important;
 }
 
+.subtitle {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  font-size: 1.5rem;
+  color: lightblue;
+  width: 100%;
+}
 
-  .subtitle {
-    font-weight: bold;
-    margin-top: 10px;
-    display: block;
-    font-size: 1.5rem;
-    color: lightblue;
-    width: auto;
+.careers-table td:nth-child(1),
+.careers-table td:nth-child(2),
+.careers-table td:nth-child(3) {
+  max-width: 20rem;
+  white-space: normal;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
   }
 
-  
-.careers-table td:nth-child(1),
-.careers-table td:nth-child(2), 
-.careers-table td:nth-child(3)  {
-    max-width: 20rem;
-    white-space: wrap;
-}
+  .tabs,
+  .years,
+  .careers-container,
+  .careers-table,
+  .careers-table tbody,
+  .careers-table tr,
+  .careers-table td {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
 
-.careers-container {
-    max-width: 100%;
-}
-
-@media (max-width: 768px) {
   .tabs {
-    flex-direction: column; /* Stack tabs vertically on mobile */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
   }
 
   .years {
-    flex-direction: column; /* Stack year tabs vertically */
-    border-radius: 10px; /* Adjust border-radius for better fit */
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid #5e5d5d;
   }
 
   .years li {
-    font-size: 1rem; /* Reduce font size */
-    padding: 1rem; /* Adjust padding */
-    border-right: none; /* Remove right border */
-    border-bottom: 1px solid #ccc; /* Add bottom border for separation */
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-right: none;
+    border-bottom: 1px solid #5e5d5d;
+    text-align: center;
   }
 
   .years li:last-child {
-    border-bottom: none; /* Remove bottom border for last item */
+    border-bottom: none;
   }
 
   .careers-container {
-    width: 100%; /* Full width for mobile */
-    padding: 1rem; /* Add padding */
+    width: 100%;
+    padding: 1rem;
   }
 
-  .careers-table th, .careers-table td {
-    padding: 0.5rem; /* Reduce padding */
-    font-size: 0.9rem; /* Reduce font size */
+  .careers-table,
+  .careers-table tbody,
+  .careers-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .careers-table thead {
+    display: none;
+  }
+
+  .careers-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #5e5d5d;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+
+  .careers-table td {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    text-align: right;
+    border-bottom: 1px solid #444;
+  }
+
+  .careers-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0.3rem;
+  }
+
+  .careers-table td:last-child {
+    border-bottom: none;
   }
 
   .subtitle {
-    font-size: 1.2rem; /* Reduce font size */
+    font-size: 1.2rem;
+    margin: 0.3rem 0rem;
+    text-align: center;
+  }
+
+  .careers-table td,
+  .careers-table td:nth-child(1),
+  .careers-table td:nth-child(2),
+  .careers-table td:nth-child(3) {
+    max-width: none;
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
