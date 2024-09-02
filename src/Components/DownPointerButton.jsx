@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from "react";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
-import "./DownPointer.css";
+import "./DownPointerButton.css";
 import { useState } from "react";
 
 export default function DownPointerButton() {
