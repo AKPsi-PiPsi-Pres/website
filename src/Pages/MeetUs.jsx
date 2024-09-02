@@ -28,7 +28,6 @@ export default function MeetUs() {
       } else {
         setActiveBrothers(response.data.values);
       }
-      console.log(response);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {

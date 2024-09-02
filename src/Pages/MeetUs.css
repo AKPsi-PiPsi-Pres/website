@@ -25,7 +25,20 @@
 }
 
 .meet-us-header {
-  width: 100%;
-  margin: 2rem 0rem;
-  text-align: center;
+  font-family: 'Greek Font', sans-serif;
+  user-select: none;
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 5px;
+  font-weight: bold;
+  padding: 20px;
+  color: transparent;
+  background: linear-gradient(45deg, #97ffa3, #ff819e, #7bcaff, #ffc0c0);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 
+    2px 2px 0px black,
+    4px 4px 0px rgb(211, 211, 252);
+  animation: gradient-animation 15s infinite;
 }

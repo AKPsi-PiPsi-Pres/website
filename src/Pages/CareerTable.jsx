@@ -8,7 +8,6 @@ const API_KEY = process.env.REACT_APP_CAREERS_INFO_KEY;
 const RANGE = "Form Responses 1!B2:G";
 
 const CareerTable = () => {
-  console.log(API_KEY);
   const [data, setData] = useState([]);
   const [selectedYear, setSelectedYear] = useState("2024");
 
@@ -16,7 +15,7 @@ const CareerTable = () => {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`
+          `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`,
         );
         const values = response.data.values;
 

@@ -2,7 +2,7 @@ import React from "react";
 import { AnujTrollPhoto, ChrisTrollPhoto, JacobTrollPhoto } from "../Assets";
 import "./NotFoundPage.css";
 
-export default function NotFoundPage() {
+export default function NotFoundPage({ brotherSearch = false }) {
   const trollImages = [AnujTrollPhoto, ChrisTrollPhoto, JacobTrollPhoto];
   const randomImage =
     trollImages[Math.floor(Math.random() * trollImages.length)];
@@ -17,7 +17,11 @@ export default function NotFoundPage() {
             className="not-found-image"
           />
           <h1 className="not-found-title">404</h1>
-          <p className="not-found-message">Oops! Page not found.</p>
+          <p className="not-found-message">
+            {brotherSearch
+              ? "Oops! Brother not found."
+              : "Oops! Page not found."}
+          </p>
           <p className="not-found-submessage">
             The page you're looking for doesn't exist or has been moved.
           </p>
