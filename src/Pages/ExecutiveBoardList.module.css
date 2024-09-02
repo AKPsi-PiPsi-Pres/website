@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    max-width: 50%;
+    max-width: 56%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -10,7 +10,7 @@
   .brotherGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6rem;
+    gap: 3rem;
     overflow-y: auto;
     max-height: calc(100vh - 300px); /* Adjusted for more space */
     padding: 20px;

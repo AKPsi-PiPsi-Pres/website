@@ -70,7 +70,7 @@ export default function MeetUs() {
       <div className="content-wrapper">
         <div className="meet-us-header">
           <h1>{viewLeadership ? "Leadership" : "Active Brothers"}</h1>
-          <ButtonGroup>
+          <ButtonGroup className="view-buttons">
             <Button
               onClick={makeActiveView}
               variant={!viewLeadership ? "contained" : "outlined"}
