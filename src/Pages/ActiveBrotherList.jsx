@@ -12,7 +12,7 @@ export default function ActiveBrotherList({ brothers }) {
             (brother) =>
               brother.length > 0 && (
                 <div key={brother[0]} className={styles.brotherCard}>
-                  <Link to={`/`}>
+                  <Link to={`/${brother[0].replace(" ", "-")}`}>
                     <div className={styles.imageWrapper}>
                       <img
                         src={PersonalGrowth}

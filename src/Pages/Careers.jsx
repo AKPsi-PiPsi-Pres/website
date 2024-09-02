@@ -7,7 +7,6 @@ import CareerLogoScroller from "./CareerLogoScroll";
 import DownPointerButton from "../Components/DownPointerButton";
 
 export default function Careers() {
-  console.log("Careers component rendered");
   return (
     <div
       className="careersContainer"
