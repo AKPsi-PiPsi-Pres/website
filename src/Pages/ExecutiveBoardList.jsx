@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./BrotherList.module.css";
+import styles from "./ExecutiveBoardList.module.css";
 import { PersonalGrowth } from "../Assets";
 
-export default function BrotherList({ brothers }) {
+export default function ExecutiveBoardList({ brothers }) {
   return (
     <div className={styles.container}>
       <div className={styles.brotherGrid}>

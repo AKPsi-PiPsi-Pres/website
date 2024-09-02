@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import BrotherList from "./BrotherList";
+import ActiveBrotherList from "./ActiveBrotherList";
+import ExecutiveBoardList from "./ExecutiveBoardList";
 import { Button, ButtonGroup } from "@mui/material";
 import "./MeetUs.css";
 
@@ -86,8 +87,10 @@ export default function MeetUs() {
         </div>
         {isLoading ? (
           <p>Loading...</p>
+        ) : viewLeadership ? (
+          <ExecutiveBoardList brothers={displayedBrothers} />
         ) : (
-          <BrotherList brothers={displayedBrothers} />
+          <ActiveBrotherList brothers={displayedBrothers} />
         )}
       </div>
     </div>
