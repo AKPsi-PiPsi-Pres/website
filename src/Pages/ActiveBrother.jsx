@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import "./ActiveBrother.css";
 import { headshotHash } from "../Assets/headshot";
 

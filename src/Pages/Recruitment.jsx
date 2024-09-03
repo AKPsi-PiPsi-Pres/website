@@ -63,7 +63,7 @@ export default function Recruitment() {
 
   if (isLoading) {
     return (
-      <div className="loaderContainer">
+      <div className="loader-container">
         <div className="loader"></div>
       </div>
     );
