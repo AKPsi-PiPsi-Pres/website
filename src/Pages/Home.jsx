@@ -9,7 +9,7 @@ import { useRef, useEffect, useState } from "react";
 import { Instagram, Facebook } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
 import { PersonalGrowth, BrotherhoodImage53 } from "../Assets";
-import DownPointerButton from "../Components/DownPointer";
+import DownPointerButton from "../Components/DownPointerButton";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -101,10 +101,10 @@ export default function Home() {
           <h2>The world's oldest and largest business fraternity</h2>
           <p>
             The organization of Alpha Kappa Psi was founded in New York
-            University in 1904. Now over a century old, Alpha Kappa Psi has
-            helped over 300,000 individuals create lifelong friends and pursue
-            their dreams. Our goal is to help Anteaters become the best versions
-            of themselves that they can be.
+            University in 1904. Spanning decades, Alpha Kappa Psi has helped
+            over 300,000 individuals create lifelong friends and pursue their
+            dreams. Our goal is to help Anteaters become the best versions of
+            themselves.
           </p>
         </div>
         <div className="info-image-container">

@@ -23,7 +23,7 @@ export default function App() {
           <Route path="/brotherhood" element={<Brotherhood />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/recruitment" element={<Recruitment />} />
-          <Route path="/meet-us/:name" element={<BrotherPage />} />
+          <Route path="/:name" element={<BrotherPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>

@@ -1,9 +1,121 @@
-.pageContainer {
-    padding-top: 80px;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    background-color: 121212;
-    color: aliceblue;
-  }
-  
+.careersContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.careerstitleSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3); /* Optional: Adds a dark overlay for better text visibility */
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+.careersmainTitleSection {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.careersmainTitle {
+  font-size: 65px;
+  font-family: 'Greek Font', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0;
+}
+
+
+.careersContent {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-c-title {
+  font-family: 'Greek Font', sans-serif;
+  user-select: none;
+  font-size: 3.5rem;
+  margin: 0;
+  letter-spacing: 5px;
+  font-weight: bold;
+  padding: 20px;
+  color: transparent;
+  background: linear-gradient(45deg, #97ffa3, #ff819e, #7bcaff, #ffc0c0);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 
+    2px 2px 0px black,
+    4px 4px 0px rgb(211, 211, 252);
+  animation: gradient-animation 15s infinite;
+}
+
+.careers-subtitle1 {
+  font-family: 'Greek Font', sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.careers-section {
+  font-family: 'Greek Font', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  background: #121212;
+}
+
+.table {
+  margin: 5rem auto;
+  border-radius: 2rem;
+  border: 1rem hidden blue;
+  border-collapse: collapse;
+  box-shadow:rgba(0, 0, 0, 0.6)
+}
+
+.thead {
+  font-size: 10px;
+  background-color: blue;
+  color: white;
+}
+
+.th, .td {
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+}
+
+.td {
+  font-size: 1.5rem;
+}
+
+.careersmainTitle{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 26px;
+  margin-bottom: 0px;
+}
+
+.careersmainTitleSection{
+  padding: 50px;
+  margin-bottom: -42px;
+}
+

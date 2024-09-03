@@ -3,7 +3,7 @@ import "./Recruitment.css";
 import { Dune } from "../Assets";
 import DuneButton from "../Components/RushButton";
 import RushEventInfo from "../Components/RushEventInfo";
-import DownPointerButton from "../Components/DownPointer";
+import DownPointerButton from "../Components/DownPointerButton";
 
 export default function Recruitment() {
   const [isLoading, setIsLoading] = useState(true);
@@ -63,7 +63,7 @@ export default function Recruitment() {
 
   if (isLoading) {
     return (
-      <div className="loaderContainer">
+      <div className="loader-container">
         <div className="loader"></div>
       </div>
     );

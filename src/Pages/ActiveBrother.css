@@ -1,95 +1,160 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .brother-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
+  width: auto;
+  max-width: 1400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.brother-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.brother-photo {
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 30px;
+  border-radius: 1rem;
+}
+
+.brother-name {
+  font-size: 32px;
+  margin: 0 0 15px;
+  color: #3a5f8e;
+}
+
+.brother-detail {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #b0b0b0;
+}
+
+.linkedin-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3a5f8e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.linkedin-button:hover {
+  background-color: #4c7eb8;
+  transform: translateY(-2px);
+}
+
+.brother-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.brother-section {
+  flex-basis: calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+
+.brother-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #3a5f8e;
+}
+
+.brother-list {
+  list-style-type: none;
+  padding-left: 5rem;
+  text-align: left; /* Ensure list is left-aligned */
+}
+
+.brother-list-item {
+  font-size: 16px;
+  color: #d0d0d0;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  text-align: left; /* Ensure list item text is left-aligned */
+}
+
+.brother-list-item::before {
+  content: "•";
+  color: #3a5f8e;
+  position: absolute;
+  left: 0;
+}
+
+.brother-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.brother-love {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #242424;
+  border-radius: 8px;
+}
+
+.brother-love h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #3a5f8e;
+}
+
+.brother-love p {
+  font-size: 16px;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+/* Animation styles */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .brother-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
-  
-  .brother-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-right: 20px;
-  }
-  
-  .brother-info {
-    flex: 1;
-  }
-  
-  .brother-name {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .brother-major,
-  .brother-graduation {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .linkedin-button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #0077b5;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .linkedin-button:hover {
-    background-color: #005f8d;
-  }
-  
-  .brother-details {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .brother-section {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .brother-section:last-child {
-    margin-right: 0;
-  }
-  
-  .brother-section h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
+
   .brother-list {
-    list-style-type: none;
-    padding-left: 0;
+    padding-left: 1rem;
+  }  
+
+  .brother-photo {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  
-  .brother-list-item {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 5px;
+
+  .brother-section {
+    flex-basis: 100%;
   }
-  
-  .brother-love {
-    margin-top: 20px;
-  }
-  
-  .brother-love h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  
+}
