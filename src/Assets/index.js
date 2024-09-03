@@ -87,7 +87,7 @@ export { default as TinderLogo } from "./Logos/tinderLogo.png";
 export { default as WellsFargoLogo } from "./Logos/WellsFargo.png";
 export { default as AmexLogo } from "./Logos/amexlogo.png";
 export { default as BandCLogo } from "./Logos/BainLogo.png";
-export { default as bloomberglogo } from "./Logos/BloombergLogo.png";
+// export { default as bloomberglogo } from "./Logos/BloombergLogo.png";
 export { default as capitalonelogo } from "./Logos/CapitalOneLogo.png";
 export { default as doordashlogo } from "./Logos/DoorDashLogo.png";
 export { default as fazelogo } from "./Logos/fazelogo.png";

@@ -17,7 +17,7 @@ import {
   capitalonelogo,
   BandCLogo,
   doordashlogo,
-  bloomberglogo,
+  // bloomberglogo,
   fazelogo,
   hpLogo,
   intellogo,
@@ -41,7 +41,7 @@ const CareerLogoScroller = () => {
       <div className="logos-slide">
         <img src={statefarmlogo} alt="Statefarm" />
         <img src={hpLogo} alt="HP" />
-        <img src={bloomberglogo} alt="Bloomberg" />
+        {/* <img src={bloomberglogo} alt="Bloomberg" /> */}
         <img src={GoogleLogo} alt="Google" />
         <img src={AppleLogo} alt="Apple" />
         <img src={DeloitteLogo} alt="Deloitte" />
