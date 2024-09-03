@@ -12,6 +12,8 @@ body, html {
   position: relative;
 }
 
+
+
 .recruitmentContainer::before {
   content: "";
   position: fixed;
