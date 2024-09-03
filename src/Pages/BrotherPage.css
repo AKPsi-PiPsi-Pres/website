@@ -1,0 +1,21 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Dark background to match your theme */
+  }
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #3a5f8e; /* Light navy blue to match your accent color */
+    border-top: 3px solid #121212; /* Make the top border invisible */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

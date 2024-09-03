@@ -28,7 +28,6 @@ export default function MeetUs() {
       } else {
         setActiveBrothers(response.data.values);
       }
-      console.log(response);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
@@ -70,7 +69,7 @@ export default function MeetUs() {
       <div className="content-wrapper">
         <div className="meet-us-header">
           <h1>{viewLeadership ? "Leadership" : "Active Brothers"}</h1>
-          <ButtonGroup>
+          <ButtonGroup className="view-buttons">
             <Button
               onClick={makeActiveView}
               variant={!viewLeadership ? "contained" : "outlined"}
@@ -86,7 +85,9 @@ export default function MeetUs() {
           </ButtonGroup>
         </div>
         {isLoading ? (
-          <p>Loading...</p>
+          <div className="loader-container">
+            <div className="loader"></div>
+          </div>
         ) : viewLeadership ? (
           <ExecutiveBoardList brothers={displayedBrothers} />
         ) : (
