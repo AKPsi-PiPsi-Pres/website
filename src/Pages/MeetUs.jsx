@@ -85,7 +85,9 @@ export default function MeetUs() {
           </ButtonGroup>
         </div>
         {isLoading ? (
-          <p>Loading...</p>
+          <div className="loader-container">
+            <div className="loader"></div>
+          </div>
         ) : viewLeadership ? (
           <ExecutiveBoardList brothers={displayedBrothers} />
         ) : (
