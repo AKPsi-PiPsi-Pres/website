@@ -43,7 +43,6 @@ export default function Careers() {
         <CareerLogoScroller />
         <CareerTable />
       </div>
-      <DownPointerButton />
     </div>
   );
 }

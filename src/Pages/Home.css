@@ -11,7 +11,6 @@ html, body {
   height: 100vh;
   width: 100%;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   background-size: cover;
   background-position: center;
@@ -37,7 +36,6 @@ html, body {
 
 /* Hero section styles */
 .hero-section {
-  scroll-snap-align: start;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +100,6 @@ html, body {
 
 /* Info section styles */
 .info-section {
-  scroll-snap-align: start;
   padding: 80px 20px 20px;
   background-color: #121212;
   text-align: center;
@@ -165,7 +162,6 @@ html, body {
 
 /* Wrapup section styles */
 .wrapup-section {
-  scroll-snap-align: start;
   width: 100%;
   height: auto; /* Allow the height to adjust based on content */
   padding: 2rem;
@@ -285,7 +281,7 @@ transition: box-shadow 0.5s ease-in-out; /* Smooth shadow transition */
   .summary-item {
     flex-direction: column; /* Switch back to column on larger screens */
     align-items: center;
-    max-width: 55vmin; /* Limit the width based on content */
+    max-width: 50vmin; /* Limit the width based on content */
     width: auto; /* Let the width adjust to the content */
     padding: 1rem; /* Ensure 1rem padding around the content */
     box-sizing: border-box; /* Include padding in the width calculation */

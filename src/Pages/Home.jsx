@@ -12,8 +12,8 @@ import { PersonalGrowth, BrotherhoodImage53 } from "../Assets";
 import DownPointerButton from "../Components/DownPointerButton";
 
 export default function Home() {
-  const videoRef = useRef(null);
-  const [volume, setVolume] = useState(0.5);
+  // const videoRef = useRef(null);
+  // const [volume, setVolume] = useState(0.5);
   const { isMobile, setIsMobile } = useMobile();
 
   // useEffect(() => {
@@ -198,7 +198,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <DownPointerButton />
     </div>
   );
 }

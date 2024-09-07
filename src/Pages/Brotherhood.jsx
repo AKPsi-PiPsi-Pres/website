@@ -283,7 +283,6 @@ export default function Brotherhood() {
           ))}
         </div>
       </div>
-      <DownPointerButton />
     </div>
   );
 }

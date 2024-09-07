@@ -8,7 +8,7 @@ import "./MeetUs.css";
 const SHEET_ID = "167TmecKc4cduWtdounqiXDkYgQjssu9cSz4QLljuKLg";
 const API_KEY = process.env.REACT_APP_ACTIVE_INFO_KEY;
 const RANGE_ACTIVES = "Form Responses 1!C2:L";
-const RANGE_EXECUTIVES = "Leadership!C2:L";
+const RANGE_EXECUTIVES = "Leadership!C2:N";
 
 export default function MeetUs() {
   const [activeBrothers, setActiveBrothers] = useState([]);
