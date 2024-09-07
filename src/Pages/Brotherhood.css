@@ -181,8 +181,8 @@ html, body {
   }
 
   .image-track > .img {
-    width: 60vmin;
-    height: 75vmin;
+    width: 90vmin;
+    height: 120vmin;
   }
 }
 
