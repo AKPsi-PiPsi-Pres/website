@@ -20,8 +20,6 @@ html, body {
 .section-container {
   height: 100vh;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
 }
 
 /* Video section styles */
@@ -29,7 +27,6 @@ html, body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  scroll-snap-align: start;
 }
 
 .video-section video {
@@ -114,7 +111,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
 }
 
 .brotherhood-title {
@@ -199,7 +195,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
 }
 
 .photoframe-title {

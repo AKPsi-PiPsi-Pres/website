@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    max-width: 56%;
+    max-width: 65%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -66,7 +66,7 @@
   }
   
   .brotherCard:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
   
   .imageWrapper {
@@ -84,8 +84,13 @@
   }
   
   .brotherName {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #e0e0e0;
     margin: 0;
+    font-weight: 550;
+  }
+
+  .brotherLink {
+    text-decoration: none;
   }
   
