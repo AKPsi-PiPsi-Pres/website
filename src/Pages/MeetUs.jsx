@@ -23,6 +23,7 @@ export default function MeetUs() {
       const response = await axios.get(
         `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`,
       );
+      console.log(response.data.values)
       if (isLeadership) {
         setExecutiveBrothers(response.data.values);
       } else {
