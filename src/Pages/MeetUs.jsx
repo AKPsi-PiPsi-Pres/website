@@ -23,7 +23,6 @@ export default function MeetUs() {
       const response = await axios.get(
         `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`,
       );
-      console.log(response.data.values)
       if (isLeadership) {
         setExecutiveBrothers(response.data.values);
       } else {
@@ -69,7 +68,9 @@ export default function MeetUs() {
     <div className="meet-us-page pageContainer">
       <div className="content-wrapper">
         <div className="meet-us-header">
-          <h1 className="meet-us-title">{viewLeadership ? "Leadership" : "Active Brothers"}</h1>
+          <h1 className="meet-us-title">
+            {viewLeadership ? "Leadership" : "Active Brothers"}
+          </h1>
           <ButtonGroup className="view-buttons">
             <Button
               onClick={makeActiveView}
