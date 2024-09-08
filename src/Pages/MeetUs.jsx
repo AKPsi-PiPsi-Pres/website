@@ -91,9 +91,9 @@ export default function MeetUs() {
             <div className="loader"></div>
           </div>
         ) : viewLeadership ? (
-          <ExecutiveBoardList brothers={displayedBrothers} />
+          <div><ExecutiveBoardList brothers={displayedBrothers} /></div>
         ) : (
-          <ActiveBrotherList brothers={displayedBrothers} />
+          <div><ActiveBrotherList brothers={displayedBrothers} /></div>
         )}
       </div>
     </div>
