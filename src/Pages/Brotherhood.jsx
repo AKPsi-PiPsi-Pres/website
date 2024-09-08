@@ -213,15 +213,10 @@ export default function Brotherhood() {
   return (
     <div className="section-container">
       <div className="video-section">
-        <motion.div
-          className="hero-b-section"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-        >
-          <div className="hero-b-content">
+        <motion.div className="hero-section">
+          <div className="hero-content">
             <motion.h1
-              className="hero-b-title"
+              className="hero-title"
               initial={{ y: -130, opacity: 1 }}
               animate={{ y: -150, opacity: 0 }}
               transition={{ delay: 41, duration: 2, ease: "easeOut" }}
@@ -283,7 +278,6 @@ export default function Brotherhood() {
           ))}
         </div>
       </div>
-      <DownPointerButton />
     </div>
   );
 }

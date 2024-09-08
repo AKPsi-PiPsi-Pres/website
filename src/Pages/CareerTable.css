@@ -1,7 +1,26 @@
-/* Base styles remain the same */
+:root {
+  --primary-color: #0077b5;
+  --primary-light: #0a8cd2;
+  --accent-color: #00a0dc;
+  --bg-dark: #121212;
+  --bg-card: #1e1e1e;
+  --text-light: #ffffff;
+  --text-muted: #b0b0b0;
+  --border-color: #2a2a2a;
+  --transition-speed: 0.3s;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+}
+
 .tabs {
   display: flex;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .years {
@@ -9,31 +28,57 @@
   padding: 0;
   margin: 0;
   display: flex;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 50px;
   overflow: hidden;
+  background-color: var(--bg-card);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transition-speed) ease;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.years:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .years li {
   display: inline-block;
-  font-family: sans-serif;
-  color: #ffffff;
-  font-size: 1.2rem;
-  padding: 1.5rem;
+  color: var(--text-light);
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
   cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
-  border-right: 1px solid #ccc;
+  transition: all var(--transition-speed) ease;
+  border-right: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.years li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.years li:hover::before {
+  left: 100%;
 }
 
 .years li.is-active {
-  background-color: #477ed6;
-  color: white;
-  border-color: #3273dc;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 600;
 }
 
 .tabs .years li:hover {
-  background-color: #455bff;
-  border-color: #aaa;
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
 }
 
 .years li:last-child {
@@ -41,39 +86,87 @@
 }
 
 .careers-container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-  background-color: #121212;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transition-speed) ease;
+}
+
+.careers-container:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .careers-table {
   width: 100%;
   table-layout: fixed;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .careers-table th,
 .careers-table td {
-  padding: 1rem;
+  padding: 1.2rem;
   text-align: left;
   word-wrap: break-word;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.careers-table th {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.careers-table th::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.careers-table th:hover::after {
+  transform: scaleX(1);
 }
 
 .careers-table tbody tr {
-  border-bottom: 1px solid #5e5d5d;
+  transition: all var(--transition-speed) ease;
 }
 
-.careers-table tbody .subtitle.has-text-weight-semibold {
-  text-decoration: none !important;
+.careers-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.careers-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 .subtitle {
-  font-weight: bold;
-  margin-top: 10px;
+  font-weight: 600;
+  margin-top: 1.2rem;
   display: block;
-  font-size: 1.5rem;
-  color: lightblue;
+  font-size: 1.25rem;
+  color: var(--accent-color);
   width: 100%;
+  transition: color var(--transition-speed) ease;
+}
+
+.subtitle:hover {
+  color: var(--primary-light);
 }
 
 .careers-table td:nth-child(1),
@@ -83,42 +176,27 @@
   white-space: normal;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
 
-  .tabs,
-  .years,
-  .careers-container,
-  .careers-table,
-  .careers-table tbody,
-  .careers-table tr,
-  .careers-table td {
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-
   .tabs {
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     padding: 1rem;
   }
 
   .years {
     flex-direction: column;
-    border-radius: 10px;
     width: 100%;
-    border: 1px solid #5e5d5d;
+    border-radius: 12px;
   }
 
   .years li {
-    font-size: 1rem;
-    padding: 0.8rem;
+    padding: 1rem;
     border-right: none;
-    border-bottom: 1px solid #5e5d5d;
+    border-bottom: 1px solid var(--border-color);
     text-align: center;
   }
 
@@ -127,8 +205,8 @@
   }
 
   .careers-container {
-    width: 100%;
-    padding: 1rem;
+    width: 95%;
+    padding: 1.5rem;
   }
 
   .careers-table,
@@ -143,25 +221,36 @@
   }
 
   .careers-table tr {
-    margin-bottom: 1rem;
-    border: 1px solid #5e5d5d;
-    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: all var(--transition-speed) ease;
+  }
+
+  .careers-table tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .careers-table td {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
-    text-align: right;
-    border-bottom: 1px solid #444;
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
   }
 
   .careers-table td::before {
     content: attr(data-label);
-    font-weight: bold;
+    font-weight: 600;
     text-align: left;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .careers-table td:last-child {
@@ -169,9 +258,9 @@
   }
 
   .subtitle {
-    font-size: 1.2rem;
-    margin: 0.3rem 0rem;
-    text-align: center;
+    font-size: 1.1rem;
+    margin: 0.75rem 0;
+    text-align: left;
   }
 
   .careers-table td,

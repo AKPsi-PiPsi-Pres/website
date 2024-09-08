@@ -1,34 +1,130 @@
+:root {
+  --primary-color: #0077b5;
+  --accent-color: #00a0dc;
+  --bg-dark: #121212;
+  --bg-card: #1e1e1e;
+  --text-light: #ffffff;
+  --text-muted: #b0b0b0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
 .container {
   width: 100%;
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 85%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: var(--bg-card);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .brotherGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr); /* Maximum of 6 images per row */
   gap: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
   overflow-y: auto;
-  max-height: calc(100vh - 300px); /* Adjusted for more space */
-  padding: 20px;
-  margin-bottom: 30px; /* Space at the bottom */
+  height: auto; /* Adjust based on content */
 }
 
-/* Scrollbar styling for better visibility */
 .brotherGrid::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .brotherGrid::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
 }
 
 .brotherGrid::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+.brotherCard {
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: rgba(37, 37, 37, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.brotherPhoto {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Prevent overflow */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.brotherCard:hover .brotherPhoto {
+  transform: scale(1.05);
+}
+
+.brotherLink {
+  text-decoration: none;
+  display: block;
+}
+
+.brotherName {
+  all: unset;
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0.75rem 0;
+  padding: 0 0.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.brotherCard:hover .brotherName {
+  color: var(--accent-color);
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-left: 8px solid var(--accent-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1400px) {
+  .brotherGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -47,8 +143,9 @@
   .brotherGrid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .container, .header {
+  .container {
     max-width: 90%;
+    padding: 1.5rem;
   }
 }
 
@@ -56,34 +153,7 @@
   .brotherGrid {
     grid-template-columns: 1fr;
   }
-}
-
-.brotherCard {
-  text-align: center;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.brotherCard:hover {
-  transform: translateY(-5px);
-}
-
-.imageWrapper {
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.brotherPhoto {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.brotherName {
-  font-size: 0.9rem;
-  color: #e0e0e0;
-  margin: 0;
+  .container {
+    padding: 1rem;
+  }
 }
