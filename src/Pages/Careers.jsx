@@ -20,7 +20,7 @@ export default function Careers() {
       >
         <div className="careersContent">
           <motion.h1
-            className="hero-c-title"
+            className="hero-title"
             initial={{ y: -150, opacity: 0 }}
             animate={{ y: -150, opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
