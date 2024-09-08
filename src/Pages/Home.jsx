@@ -45,7 +45,7 @@ export default function Home() {
     const observer = new IntersectionObserver(animateOnScroll, observerOptions);
 
     const sections = document.querySelectorAll(
-      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links",
+      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links"
     );
     sections.forEach((section) => observer.observe(section));
 
@@ -68,18 +68,13 @@ export default function Home() {
           </video>
         )}
       </div>
-      <motion.div
-        className="hero-section"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-      >
+      <motion.div className="hero-section">
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -130, opacity: 0.3 }}
-            animate={{ y: -150, opacity: 1 }}
-            transition={{ duration: 4, ease: "easeOut" }}
+            initial={{ y: -130,  }}
+            animate={{ y: -150 }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             ΑΚΨ - UCI
             {/* <div className="volume-control">
@@ -166,37 +161,39 @@ export default function Home() {
             </SleekButton>
           </div>
         </div>
-        <div className="social-links">
-          <a
-            href="https://www.instagram.com/akpsiuci"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram />
-          </a>
-          <a
-            href="https://facebook.com/akpsiuci"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Facebook />
-          </a>
-          <a href="mailto:akpsi.uci.rush@gmail.com">akpsi.uci.rush@gmail.com</a>
-        </div>
-        <div className="final-statements">
-          <div className="statement-one">
-            <p>
-              Our members strive to uphold the highest standards in everything
-              they do.
-            </p>
+        <footer className="site-footer">
+          <div className="footer-content">
+            <div className="social-links">
+              <a
+                href="https://www.instagram.com/akpsiuci"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram />
+              </a>
+              <a
+                href="https://facebook.com/akpsiuci"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook />
+              </a>
+              <a href="mailto:akpsi.uci.rush@gmail.com">
+                akpsi.uci.rush@gmail.com
+              </a>
+            </div>
+            <div className="final-statements">
+              <p className="statement-one">
+                Our members strive to uphold the highest standards in everything
+                they do.
+              </p>
+              <p className="statement-two">
+                Site designed and developed in-house, on 2700 lines of code and
+                counting...
+              </p>
+            </div>
           </div>
-          <div className="statement-two">
-            <p>
-              Site designed and developed in-house, on 2700 lines of code and
-              counting...
-            </p>
-          </div>
-        </div>
+        </footer>
       </div>
     </div>
   );
