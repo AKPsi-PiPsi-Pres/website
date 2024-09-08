@@ -1,75 +1,94 @@
 .eventCard {
-    height: auto;
-    width: 50vmin; /* Adjusted for mobile viewing */
-    max-width: 90%; /* Ensure it doesn't exceed screen width */
-    background-color: #12121244;
-    border-radius: 1rem;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
-    transition-duration: 500ms;
-    padding: 1rem; /* Added padding for better spacing on mobile */
-    margin: 1rem; /* Added margin for better spacing on smaller screens */
-    transform: scale(1.05);
-    background-color: #12121283;
-    transition-duration: 500ms;
+    --card-bg: rgba(20, 20, 30, 0.8);
+    --text-primary: #e6e6e6;
+    --text-secondary: #b0b0b0;
+    --accent: #d86800;
+    --border: #4a4a5a;
+
+    width: 50vmin;
+    max-width: 90%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    padding: 2rem;
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.eventCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.7;
 }
 
 .eventCard:hover {
-    background-color: #00000083;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .eventTitle {
-    font-size: 1.5rem; /* Adjusted for mobile */
-    color: #ffffff;
-    padding: 1.5rem; /* Reduced padding for mobile */
-    margin: 0;
-    text-align: center;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin: 0 0 1.5rem 0;
+    text-align: left;
     font-weight: 700;
-    font-family: 'Dune Rise', sans-serif;
+    font-family: 'Dune Rise', 'Arial', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
 }
 
 .eventDetails {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Reduced gap for mobile */
-    align-items: center;
-    padding: 0.5rem; /* Reduced padding for mobile */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
 }
 
 .eventDetail {
     display: flex;
     align-items: center;
-    font-size: 1rem; /* Adjusted font size for mobile */
-    color: #ffffff;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.eventDetail:hover {
+    color: var(--text-primary);
 }
 
 .eventDetail svg {
-    margin-right: 8px; /* Adjusted margin for mobile */
-    color: #121212;
-    font-size: 1.2rem; /* Adjusted icon size for mobile */
+    margin-right: 0.75rem;
+    color: var(--accent);
+    font-size: 1.2rem;
 }
 
-/*Make sure to change the svg color for each rush theme*/
 @media (max-width: 768px) {
     .eventCard {
         width: 90vmin;
-        height: 80vmin;
-        align-content: center;
+        padding: 1.5rem;
     }
 
     .eventTitle {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
-    .eventDetail {
-        font-size: 0.9rem;
-    }
-
-    .eventDetail svg {
-        font-size: 1rem;
-        color: antiquewhite;
+    .eventDetails {
+        grid-template-columns: 1fr;
     }
 }
 
 .active-tab {
-    background-color: antiquewhite;
+    background-color: var(--accent);
+    color: var(--card-bg);
 }
