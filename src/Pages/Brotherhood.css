@@ -65,7 +65,6 @@ html, body {
   }
 }
 
-
 /* Carousel section styles */
 .carousel-section {
   height: 100vh;
@@ -129,22 +128,24 @@ html, body {
   width: max-content;
   padding: 0 2vw;
   user-select: none;
-  overflow-x: visible;
+  overflow-x: auto; /* Use auto to allow scrolling if needed */
   overflow-y: hidden;
   opacity: 0;
   animation: fadeInSlideUp 0.8s ease-out forwards;
 }
 
 .image-track > .img {
-  width: 48vmin;
-  height: 64vmin;
-  object-position: 100% center;
+  width: 48vmin; /* Keeps the size consistent */
+  height: 64vmin; /* Keeps the size consistent */
+  object-fit: cover; /* Ensure images cover the set dimensions */
+  object-position: center; /* Center the image within its container */
   opacity: 0;
   animation: fadeInSlideUp 0.8s ease-out forwards;
   animation-delay: calc(var(--img-index, 0) * 0.1s);
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  will-change: transform, opacity; /* Optimize performance for animations */
 }
 
 .image-track > .img:hover {
@@ -220,7 +221,7 @@ html, body {
 
 .photoframe-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
   gap: 1.5rem;
   padding: 2rem;
   max-width: 100rem;
@@ -232,10 +233,11 @@ html, body {
 .photoframe-container img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  object-fit: cover; /* Ensure images cover the set dimensions */
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  will-change: transform, opacity; /* Optimize performance for animations */
 }
 
 .photoframe-container img:hover {
@@ -250,12 +252,12 @@ html, body {
   }
 
   .image-track > .img {
-    width: 90vmin;
-    height: 120vmin;
+    width: 90vmin; /* Adjust size for mobile view */
+    height: 120vmin; /* Adjust size for mobile view */
   }
 
   .photoframe-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid for mobile view */
     grid-template-rows: repeat(auto-fill, 1fr);
   }
 

@@ -21,16 +21,18 @@ body {
   border-radius: 16px;
   background-color: var(--bg-card);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .brotherGrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Increased by 1 */
+  grid-template-columns: repeat(6, 1fr); /* Maximum of 6 images per row */
   gap: 1.5rem;
-  overflow-y: auto;
-  max-height: calc(100vh - 300px);
   padding: 1rem;
   margin-bottom: 2rem;
+  overflow-y: auto;
+  height: auto; /* Adjust based on content */
 }
 
 .brotherGrid::-webkit-scrollbar {
@@ -52,19 +54,23 @@ body {
   transition: all 0.3s ease;
   background-color: rgba(37, 37, 37, 0.7);
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .imageWrapper {
+  width: 100%;
   aspect-ratio: 3 / 4;
-  overflow: hidden;
   position: relative;
+  margin-bottom: 0;
 }
 
 .brotherPhoto {
   width: 100%;
-  height: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Prevent overflow */
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -91,6 +97,27 @@ body {
 
 .brotherCard:hover .brotherName {
   color: var(--accent-color);
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-left: 8px solid var(--accent-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 1400px) {
