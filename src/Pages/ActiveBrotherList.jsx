@@ -30,7 +30,7 @@ export default function ActiveBrotherList({ brothers }) {
                     <p className={styles.brotherName}>{brother[0]}</p>
                   </Link>
                 </div>
-              )
+              ),
           )}
       </div>
     </div>

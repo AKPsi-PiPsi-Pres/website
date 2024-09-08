@@ -45,7 +45,7 @@ export default function Home() {
     const observer = new IntersectionObserver(animateOnScroll, observerOptions);
 
     const sections = document.querySelectorAll(
-      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links"
+      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links",
     );
     sections.forEach((section) => observer.observe(section));
 
@@ -72,7 +72,7 @@ export default function Home() {
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -130,  }}
+            initial={{ y: -130 }}
             animate={{ y: -150 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
@@ -188,7 +188,7 @@ export default function Home() {
                 they do.
               </p>
               <p className="statement-two">
-                Site designed and developed in-house, on 2700 lines of code and
+                Site designed and developed in-house, on 5000 lines of code and
                 counting...
               </p>
             </div>

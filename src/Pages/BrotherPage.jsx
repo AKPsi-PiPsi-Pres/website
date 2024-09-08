@@ -19,16 +19,14 @@ export default function BrotherPage() {
     setIsNotFound(false);
     try {
       const response = await axios.get(
-        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`
+        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`,
       );
       const brotherIndex = response.data.values.findIndex(
-        (brother) => brother[0].replace(/ /g, "-") === name
+        (brother) => brother[0].replace(/ /g, "-") === name,
       );
       if (brotherIndex !== -1) {
-        console.log("Brother Found");
         setBrotherInfo(response.data.values[brotherIndex]);
       } else {
-        console.log("Brother Not Found");
         setIsNotFound(true);
       }
     } catch (error) {

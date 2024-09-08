@@ -213,9 +213,7 @@ export default function Brotherhood() {
   return (
     <div className="section-container">
       <div className="video-section">
-        <motion.div
-          className="hero-section"
-        >
+        <motion.div className="hero-section">
           <div className="hero-content">
             <motion.h1
               className="hero-title"
