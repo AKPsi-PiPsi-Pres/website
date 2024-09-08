@@ -14,10 +14,11 @@ export default function ActiveBrother({ brotherInfo }) {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
-    const sections = containerRef.current.querySelectorAll(".animate-on-scroll");
+    const sections =
+      containerRef.current.querySelectorAll(".animate-on-scroll");
     sections.forEach((section) => observer.observe(section));
 
     return () => {
@@ -26,10 +27,8 @@ export default function ActiveBrother({ brotherInfo }) {
   }, []);
 
   function splitItems(text) {
-    console.log("splitItems input:", text); // Log the input
-    if (!text) return []; // Return an empty array if text is null or undefined
+    if (!text) return [];
     const result = text.split("\r\n\r\n");
-    console.log("splitItems result:", result); // Log the result
     return result;
   }
 
@@ -49,10 +48,6 @@ export default function ActiveBrother({ brotherInfo }) {
   const interests = splitItems(interestsRaw);
   const experience = splitItems(experienceRaw);
   const askMeAbout = splitItems(askMeAboutRaw);
-
-  console.log("Interests:", interests);
-  console.log("Experience:", experience);
-  console.log("Ask Me About:", askMeAbout);
 
   const renderList = (items) => {
     if (!Array.isArray(items)) {

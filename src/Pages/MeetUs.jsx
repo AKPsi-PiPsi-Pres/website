@@ -8,7 +8,7 @@ import "./MeetUs.css";
 const SHEET_ID = "167TmecKc4cduWtdounqiXDkYgQjssu9cSz4QLljuKLg";
 const API_KEY = process.env.REACT_APP_ACTIVE_INFO_KEY;
 const RANGE_ACTIVES = "Form Responses 1!C2:L";
-const RANGE_EXECUTIVES = "Leadership!C2:L";
+const RANGE_EXECUTIVES = "Leadership!C2:N";
 
 export default function MeetUs() {
   const [activeBrothers, setActiveBrothers] = useState([]);
@@ -68,7 +68,9 @@ export default function MeetUs() {
     <div className="meet-us-page pageContainer">
       <div className="content-wrapper">
         <div className="meet-us-header">
-          <h1>{viewLeadership ? "Leadership" : "Active Brothers"}</h1>
+          <h1 className="meet-us-title">
+            {viewLeadership ? "Leadership" : "Active Brothers"}
+          </h1>
           <ButtonGroup className="view-buttons">
             <Button
               onClick={makeActiveView}
@@ -89,9 +91,9 @@ export default function MeetUs() {
             <div className="loader"></div>
           </div>
         ) : viewLeadership ? (
-          <ExecutiveBoardList brothers={displayedBrothers} />
+          <div><ExecutiveBoardList brothers={displayedBrothers} /></div>
         ) : (
-          <ActiveBrotherList brothers={displayedBrothers} />
+          <div><ActiveBrotherList brothers={displayedBrothers} /></div>
         )}
       </div>
     </div>

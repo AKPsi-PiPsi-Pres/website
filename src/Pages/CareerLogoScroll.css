@@ -36,10 +36,6 @@
   z-index: 2;
 }
   
-.logos:hover .logos-slide {
-  animation-play-state: paused;
-}
-
 .logos-slide {
   display: flex;
   width: calc(300% + 200px);
