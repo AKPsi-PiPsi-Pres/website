@@ -17,7 +17,7 @@ body {
 }
 
 .brother-container {
-  max-width: 100rem; /* Adjusted from 1200px to 100rem */
+  max-width: 90%; 
   margin: 5rem auto;
   padding: 3rem;
   background-color: var(--bg-card);
