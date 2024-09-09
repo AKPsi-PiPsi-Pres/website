@@ -72,9 +72,7 @@ export default function Home() {
         <div className="hero-content">
           <motion.h1
             className="hero-title"
-            initial={{ y: -130 }}
-            animate={{ y: -150 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ y: -150 }}
           >
             ΑΚΨ - UCI
             {/* <div className="volume-control">
