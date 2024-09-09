@@ -58,7 +58,7 @@ body, html {
   z-index: -1;
 }
 
-.heroSection {
+.hero-recruitment-Section {
   text-align: center;
   border-radius: 10px;
   -webkit-user-select: none; 
@@ -68,7 +68,7 @@ body, html {
 
 @import url('https://fonts.cdnfonts.com/css/dune-rise');
 
-.mainTitle {
+.main-recruitment-Title {
   font-family: 'Dune Rise', sans-serif;
   background: linear-gradient(
     45deg,

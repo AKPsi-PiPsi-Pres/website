@@ -71,8 +71,8 @@ export default function Recruitment() {
 
   return (
     <div className="recruitmentContainer">
-      <div className="heroSection viewport">
-        <h1 className="mainTitle">Rise</h1>
+      <div className="hero-recruitment-Section viewport">
+        <h1 className="main-recruitment-Title">Rise</h1>
         <p className="subTitle">Fall Rush 2024</p>
         <DuneButton href="https://instagram.com/akpsiuci">
           Rush Application
