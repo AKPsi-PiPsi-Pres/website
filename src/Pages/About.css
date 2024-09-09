@@ -1,33 +1,16 @@
-.mainTitleSection {
-  width: 100%;
-  padding: 50px 20px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mainTitle {
-  font-size: 65px;
-  font-family: 'Greek Font', sans-serif;
-  color: black;
-  text-align: center;
-  margin: 0;
-}
+/* About.css */
 
 .aboutUsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-type: none;
   justify-content: flex-start;
-  height: auto;
+  min-height: 100vh;
   width: 100%;
-  min-height: 100vh; /* Ensure container takes up at least full viewport height */
-  overflow: auto; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: white;
 }
 
 .titleSection {
@@ -36,10 +19,8 @@
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  color: white;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6); /* Optional: Adds a dark overlay for better text visibility */
-  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .aboutUsContent {
@@ -60,14 +41,69 @@
   margin: 0;
 }
 
+.mainTitleSection {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #1a202c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTitle {
+  font-size: 65px;
+  font-family: 'Greek Font', sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
 .aboutus-section {
   padding: 50px 20px;
-  background-color: white;
+  background-color: #2d3748;
   text-align: center;
   width: 100%;
+}
+
+.content-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .content-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .content-grid > div {
+    width: 48%;
+  }
+}
+
+.content-grid.reverse {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+  .content-grid.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.content-image {
+  background-color: #4a5568;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .aboutus-section h2 {
@@ -78,7 +114,97 @@
 .aboutus-section p {
   font-size: 18px;
   line-height: 1.6;
+  margin-bottom: 20px;
+  color: #cbd5e0;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  color: #63b3ed;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  color: #4299e1;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.charts-section {
+  margin-top: 50px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .charts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.chart-container {
+  background-color: #4a5568;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.chart-container h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.cta-section {
+  padding: 80px 20px;
+  background-color: #2b6cb0;
+  text-align: center;
+}
+
+.cta-content {
   max-width: 800px;
   margin: 0 auto;
-  color: #333;
+}
+
+.cta-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: white;
+  color: #2b6cb0;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e2e8f0;
+}
+
+/* Recharts Customization */
+.recharts-pie-label-text {
+  font-size: 12px;
+  fill: #fff;
+}
+
+.recharts-legend-item-text {
+  color: #fff !important;
 }
