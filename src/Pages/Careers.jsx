@@ -35,9 +35,6 @@ export default function Careers() {
     >
       <motion.div
         className="careerstitleSection"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
       >
         <div className="hero-title" style={{"top": "-150px"}}>
             Careers

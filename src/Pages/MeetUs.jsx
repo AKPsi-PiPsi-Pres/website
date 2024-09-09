@@ -36,7 +36,6 @@ export default function MeetUs() {
   }, []);
 
   useEffect(() => {
-    // Fetch active brothers on initial load
     if (activeBrothers.length === 0) {
       fetchBrothers(false);
     }

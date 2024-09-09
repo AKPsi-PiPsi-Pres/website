@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // Set a maximum loading time of 5 seconds
+    }, 5000);
 
     const handleCanPlay = () => {
       clearTimeout(timer);

@@ -10,7 +10,7 @@ export function useMobile() {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // Check initial size
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
