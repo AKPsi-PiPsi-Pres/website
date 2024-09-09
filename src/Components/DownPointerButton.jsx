@@ -32,7 +32,7 @@ export default function DownPointerButton() {
 
     if (nextIndex >= snapElements.length) {
       nextIndex = 0;
-      setIsAtBottom(false); // Cycle to the first element if at the end
+      setIsAtBottom(false);
     }
 
     snapElements[nextIndex].scrollIntoView({

@@ -189,23 +189,19 @@ export default function Brotherhood() {
       track.dataset.prevPercentage = track.dataset.percentage;
     };
 
-    // Mouse events
     window.addEventListener("mousedown", handleStart);
     window.addEventListener("mousemove", handleMove);
     window.addEventListener("mouseup", handleEnd);
 
-    // Touch events
     window.addEventListener("touchstart", handleStart);
     window.addEventListener("touchmove", handleMove);
     window.addEventListener("touchend", handleEnd);
 
     return () => {
-      // Mouse events
       window.removeEventListener("mousedown", handleStart);
       window.removeEventListener("mousemove", handleMove);
       window.removeEventListener("mouseup", handleEnd);
 
-      // Touch events
       window.removeEventListener("touchstart", handleStart);
       window.removeEventListener("touchmove", handleMove);
       window.removeEventListener("touchend", handleEnd);
@@ -215,7 +211,7 @@ export default function Brotherhood() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // Set a maximum loading time of 5 seconds
+    }, 5000); 
 
     const handleCanPlay = () => {
       clearTimeout(timer);
