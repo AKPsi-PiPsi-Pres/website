@@ -7,7 +7,7 @@ import {
   aboutImage3,
   aboutImage4,
   aboutImage5,
-  aboutImage6,
+  aboutImage7,
 } from "../Assets";
 import { Instagram, Facebook } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
@@ -69,7 +69,7 @@ export default function About() {
     const observer = new IntersectionObserver(animateOnScroll, observerOptions);
 
     const sections = document.querySelectorAll(
-      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links"
+      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-a-item, .final-statements, .social-links"
     );
     sections.forEach((section) => observer.observe(section));
 
@@ -81,8 +81,8 @@ export default function About() {
   return (
     <div className="home-container">
       <div className="background-image">
-        {!isMobile && <img src={aboutImage6} />}
-        {isMobile && <img src={aboutImage6} />}
+        {!isMobile && <img src={aboutImage7} />}
+        {isMobile && <img src={aboutImage7} />}
       </div>
       <motion.div className="hero-section">
         <div className="hero-content">
@@ -188,27 +188,27 @@ export default function About() {
       <div className="wrapup-section">
         <h2>Our Core Values</h2>
         <div className="summary-section">
-          <div className="summary-item">
+          <div className="summary-a-item">
             <h2>BROTHERHOOD</h2>
             <img src={aboutImage3} alt="Brotherhood" />
             <p>Foster lifelong connections</p>
           </div>
-          <div className="summary-item">
+          <div className="summary-a-item">
             <h2>INTEGRITY</h2>
             <img src={aboutImage5} alt="Integrity" />
             <p>Uphold ethical standards</p>
           </div>
-          <div className="summary-item">
+          <div className="summary-a-item">
             <h2>KNOWLEDGE</h2>
             <img src={aboutImage4} alt="Knowledge" />
             <p>Pursue continuous learning</p>
           </div>
-          <div className="summary-item">
+          <div className="summary-a-item">
             <h2>SERVICE</h2>
             <img src={aboutImage1} alt="Service" />
             <p>Give back to the community</p>
           </div>
-          <div className="summary-item">
+          <div className="summary-a-item">
             <h2>UNITY</h2>
             <img src={aboutImage2} alt="Unity" />
             <p>Strengthen through collaboration</p>
