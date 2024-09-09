@@ -27,8 +27,8 @@ body {
 
 .brotherGrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Maximum of 6 images per row */
-  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr); /* Maximum of 6 images per row */
+  gap: 2rem;
   padding: 1rem;
   margin-bottom: 2rem;
   overflow-y: auto;
