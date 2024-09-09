@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Brotherhood.css";
 import { Fall23RushVideo, CruiseReel } from "../Assets";
 import { useMobile } from "../Components/Navbar";
@@ -71,6 +71,10 @@ import {
 export default function Brotherhood() {
   const trackRef = useRef(null);
   const { isMobile, setIsMobile } = useMobile();
+  const videoRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+
   //Make SURE every image you are using has a centered subject, or else it will look very awkward
   const carouselImages = [
     BrotherhoodImage13,
@@ -177,6 +181,9 @@ export default function Brotherhood() {
       }
     };
 
+    
+  
+
     const handleEnd = () => {
       track.dataset.startAt = "0";
       track.dataset.prevPercentage = track.dataset.percentage;
@@ -205,74 +212,103 @@ export default function Brotherhood() {
     };
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // Set a maximum loading time of 5 seconds
+
+    const handleCanPlay = () => {
+      clearTimeout(timer);
+      setIsLoading(false);
+    };
+
+    if (videoRef.current) {
+      videoRef.current.addEventListener('canplay', handleCanPlay);
+    }
+
+    return () => {
+      clearTimeout(timer);
+      if (videoRef.current) {
+        videoRef.current.removeEventListener('canplay', handleCanPlay);
+      }
+    };
+  }, []);
+
   return (
-    <div className="section-container">
-      <div className="video-section">
-        <motion.div className="hero-section">
-          <div className="hero-content">
-            <motion.h1
-              className="hero-title"
-              initial={{ y: -130, opacity: 1 }}
-              animate={{ y: -150, opacity: 0 }}
-              transition={{ delay: 41, duration: 2, ease: "easeOut" }}
-            >
-              Brotherhood
-            </motion.h1>
-          </div>
-        </motion.div>
-        <div className="background-video">
-          {!isMobile && (
-            <video src={Fall23RushVideo} autoPlay muted playsInline>
-              Your browser does not support the video tag.
-            </video>
-          )}
-          {isMobile && (
-            <video src={CruiseReel} autoPlay muted playsInline>
-              Your browser does not support the video tag.
-            </video>
-          )}
+    <>
+      {isLoading && (
+        <div className="loader-container">
+          <div className="loader"></div>
         </div>
-      </div>
-      <div className="carousel-section">
-        <p className="brotherhood-title">
-          From quarterly retreats to spontaneous hangouts, our brothers in Alpha
-          Kappa Psi always make lifelong memories.
-        </p>
-        <div className="carousel-body">
-          <div
-            className="image-track"
-            ref={trackRef}
-            id="image-track"
-            data-mouse-down-at="0"
-            data-prev-percentage="0"
-          >
-            {carouselImages.map((image, index) => (
+      )}
+      <div className={`section-container ${isLoading ? 'hidden' : ''}`}>
+        <div className="video-section">
+          <motion.div className="hero-section">
+            <div className="hero-content">
+              <motion.h1
+                className="hero-title"
+                initial={{ y: -130, opacity: 1 }}
+                animate={{ y: -150, opacity: 0 }}
+                transition={{ delay: 41, duration: 2, ease: "easeOut" }}
+              >
+                Brotherhood
+              </motion.h1>
+            </div>
+          </motion.div>
+          <div className="background-video">
+            {!isMobile && (
+              <video ref={videoRef} src={Fall23RushVideo} autoPlay muted playsInline>
+                Your browser does not support the video tag.
+              </video>
+            )}
+            {isMobile && (
+              <video ref={videoRef} src={CruiseReel} autoPlay muted playsInline>
+                Your browser does not support the video tag.
+              </video>
+            )}
+          </div>
+        </div>
+        <div className="carousel-section">
+          <p className="brotherhood-title">
+            From quarterly retreats to spontaneous hangouts, our brothers in Alpha
+            Kappa Psi always make lifelong memories.
+          </p>
+          <div className="carousel-body">
+            <div
+              className="image-track"
+              ref={trackRef}
+              id="image-track"
+              data-mouse-down-at="0"
+              data-prev-percentage="0"
+            >
+              {carouselImages.map((image, index) => (
+                <img
+                  key={index}
+                  className="img"
+                  src={image}
+                  alt="Photo of AKY Brothers"
+                  draggable={false}
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="photoframe-section">
+          <p className="photoframe-title">The AKY Digital Scrapbook</p>
+          <div className="photoframe-container">
+            {scrapbookImages.map((image, index) => (
               <img
                 key={index}
                 className="img"
                 src={image}
                 alt="Photo of AKY Brothers"
                 draggable={false}
-                loading="lazy"
               />
             ))}
           </div>
         </div>
       </div>
-      <div className="photoframe-section">
-        <p className="photoframe-title">The AKY Digital Scrapbook</p>
-        <div className="photoframe-container">
-          {scrapbookImages.map((image, index) => (
-            <img
-              key={index}
-              className="img"
-              src={image}
-              alt="Photo of AKY Brothers"
-              draggable={false}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
