@@ -9,7 +9,6 @@ import { useRef, useEffect, useState } from "react";
 import { Instagram, Facebook } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
 import { PersonalGrowth, BrotherhoodImage53 } from "../Assets";
-import DownPointerButton from "../Components/DownPointerButton";
 
 export default function Home() {
   // const videoRef = useRef(null);
