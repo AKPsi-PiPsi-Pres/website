@@ -29,7 +29,7 @@ body, html {
 
 @media (max-width: 768px) {
   .recruitmentContainer::before{
-    background-image: url('../Assets/Frames/FALL\ RUSH\ 24\ SHIRT\ DESIGN.webp');
+    background-image: url('../Assets/Frames/FALL\ RUSH\ 24\ SHIRT\ DESIGN.jpeg');
   }
 
   
@@ -156,7 +156,7 @@ body, html {
 
 /*Adjust css for mobile displays as well*/
 @media (max-width: 768px) {
-  .mainTitle {
+  .main-recruitment-Title {
     font-size: 4rem;
     color: rgba(150, 130, 110, 0.9);
     animation: glowAnimationMobile 7s ease-in-out;
