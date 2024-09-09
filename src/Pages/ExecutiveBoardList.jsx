@@ -4,7 +4,7 @@ import styles from "./ExecutiveBoardList.module.css";
 import { headshotHash } from "../Assets/headshot";
 
 export default function ExecutiveBoardList({ brothers }) {
-  // Separate brothers into Cabinet and Executive Board based on brother[12]
+  // Separate brothers into Cabinet and Executive Board based on brother[10]
   const cabinetMembers = brothers.filter(
     (brother) => brother[10] === "Cabinet",
   );
@@ -37,9 +37,8 @@ export default function ExecutiveBoardList({ brothers }) {
                         className={styles.brotherPhoto}
                       />
                     </div>
-                    <p className={styles.brotherName}>
-                      {brother[11]} - {brother[0]}
-                    </p>
+                    <p className={styles.brotherName}>{brother[0]}</p>
+                    <p className={styles.brotherRole}>{brother[11]}</p>
                   </Link>
                 </div>
               ),
@@ -70,9 +69,8 @@ export default function ExecutiveBoardList({ brothers }) {
                         className={styles.brotherPhoto}
                       />
                     </div>
-                    <p className={styles.brotherName}>
-                      {brother[11]} - {brother[0]}
-                    </p>
+                    <p className={styles.brotherName}>{brother[0]}</p>
+                    <p className={styles.brotherRole}>{brother[11]}</p>
                   </Link>
                 </div>
               ),

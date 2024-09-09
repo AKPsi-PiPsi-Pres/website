@@ -1,10 +1,13 @@
 :root {
-  --primary-color: #005d8f;
-  --accent-color: #006b92da;
+  --primary-color: #0074b2;
+  --accent-color: #0084b4da;
   --bg-dark: #121212;
-  --bg-card: #161616;
+  --bg-card: rgba(255, 255, 255, 0.1); /* Adding transparency for glassmorphism */
   --text-light: #ffffff;
   --text-muted: #b0b0b0;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --hover-shadow: rgba(0, 0, 0, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.25);
 }
 
 body {
@@ -20,13 +23,16 @@ body {
   padding: 2rem;
   border-radius: 16px;
   background-color: var(--bg-card);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: 0 8px 24px var(--card-shadow); 
+  border: 1px solid var(--glass-border); /* Border for glass effect */
+  box-sizing: border-box;
 }
 
 .brotherGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  gap: 3rem;
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -46,36 +52,41 @@ body {
 }
 
 .brotherCard {
-  text-align: center;
-  transition: all 0.3s ease;
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(37, 37, 37, 0.5); /* Subtle background transparency */
   border-radius: 12px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  backdrop-filter: blur(10px); /* Glass effect */
+  border: 1px solid var(--glass-border); /* Soft frosted border */
+  position: relative;
 }
 
 .brotherCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px var(--hover-shadow); /* Larger shadow on hover */
 }
 
 .imageWrapper {
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
-  margin-bottom: 0; /* Removed margin-bottom */
-  border-radius: 0; /* Removed border-radius */
+  margin-bottom: 0;
 }
 
 .brotherPhoto {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .brotherCard:hover .brotherPhoto {
-  transform: scale(1.05);
+  transform: scale(1.02); /* Slight zoom on hover */
+  filter: brightness(1.1); /* Lighten image on hover */
 }
 
 .brotherLink {
@@ -85,11 +96,21 @@ body {
 
 .brotherName {
   display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--text-light);
-  margin: 0.75rem 0;
+  margin: 0.75rem 0 0.25rem 0; /* Adjusted margins for better spacing */
   padding: 0 0.5rem;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.brotherRole {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-muted); /* Muted color for the role */
+  font-weight: 400;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -97,7 +118,66 @@ body {
   color: var(--accent-color);
 }
 
-/* ... (previous CSS remains unchanged) ... */
+.brotherCard:hover .brotherRole {
+  color: var(--accent-color); /* Match the role hover effect with the name */
+}
+
+/* Loader styles */
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-left: 8px solid var(--accent-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1200px) {
+  .brotherGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mid-size screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .brotherGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .brotherGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brotherGrid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
 
 h2 {
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -131,38 +211,5 @@ h2::after {
 @media (max-width: 480px) {
   h2 {
     font-size: 1.75rem;
-  }
-}
-
-
-@media (max-width: 1200px) {
-  .brotherGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .brotherGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .brotherGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  .container {
-    max-width: 90%;
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .brotherGrid {
-    grid-template-columns: 1fr;
-  }
-  .container {
-    padding: 1rem;
   }
 }
