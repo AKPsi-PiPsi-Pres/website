@@ -240,8 +240,8 @@ p {
 }
 
 .summary-a-item img {
-  width: 33vmin;
-  height: 33vmin;
+  width: 27vmin;
+  height: 27vmin;
   object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 1rem;
@@ -261,6 +261,14 @@ p {
 .recharts-legend-item-text {
   color: var(--color-text) !important;
 }
+
+@media (max-width: 1024px) {
+  .summary-a-item img {
+    width: 25vmin;
+    height: 25vmin;
+  }
+}
+
 
 /* Media Queries */
 @media (min-width: 768px) {

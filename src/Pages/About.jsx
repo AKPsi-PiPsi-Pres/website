@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
 import { motion } from "framer-motion";
+import FAQ from "../Components/FAQ";
 import {
   aboutImage1,
   aboutImage2,
@@ -214,6 +215,10 @@ export default function About() {
             <p>Strengthen through collaboration</p>
           </div>
         </div>
+        <div className="info-section">
+          <FAQ />
+        </div>
+
         <footer className="site-footer">
           <div className="footer-content">
             <div className="social-links">
