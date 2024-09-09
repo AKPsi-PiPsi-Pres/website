@@ -1,6 +1,6 @@
 export { default as earthJPG } from "./Frames/earth.jpg";
 export { default as jacobPNG } from "./Frames/jacob.png";
-export { default as alumni1 } from "./Frames/alumni.jpg";
+export { default as alumni1 } from "./Frames/alumni.webp";
 export { default as BrotherhoodImage1 } from "./BrotherhoodPhotos/16F53335-3753-4EB2-896A-17CEDA2F7DDF - Derek Chai.webp";
 export { default as BrotherhoodImage2 } from "./BrotherhoodPhotos/1FCA5119-ABCC-4CCB-9B9F-C104D08F2E9C - Britney Nguyen.webp";
 export { default as BrotherhoodImage3 } from "./BrotherhoodPhotos/31BF6EC9-B344-4578-8A22-ACF2BA6163FD - Britney Nguyen.webp";
@@ -69,7 +69,7 @@ export { default as ChrisTrollPhoto } from "./TrollPhotos/IMG_1039.PNG";
 export { default as JacobTrollPhoto } from "./TrollPhotos/IMG_1040.PNG";
 
 export { default as Dune } from "./Frames/FALL RUSH 24 GRAPHIC DESIGN.webp";
-export { default as DuneMini } from "./Frames/FALL RUSH 24 GRAPHIC DESIGN.webp";
+export { default as DuneMini } from "./Frames/FALL RUSH 24 SHIRT DESIGN.jpeg";
 export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";
 export { default as instagramLogo } from "./Logos/instagramLogo.png";
@@ -111,3 +111,11 @@ export { default as warnbroslogo } from "./Logos/warnerbroslogo.png";
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
 export { default as JTreeReel } from "./Videos/JoshuatreeReelWebsite.mp4";
+
+export { default as aboutImage1 } from "./AboutPhotos/aboutImage1.webp"
+export { default as aboutImage2 } from "./AboutPhotos/aboutImage2.webp"
+export { default as aboutImage3 } from "./AboutPhotos/aboutImage3.webp"
+export { default as aboutImage4 } from "./AboutPhotos/aboutImage4.webp"
+export { default as aboutImage5 } from "./AboutPhotos/aboutImage5.webp"
+export { default as aboutImage6 } from "./AboutPhotos/aboutImage6.webp"
+export { default as aboutImage7 } from "./AboutPhotos/aboutImages7.webp"
