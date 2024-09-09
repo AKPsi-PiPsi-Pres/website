@@ -1,30 +1,40 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
 import { Spring23RushVideo, JTreeReel, BrotherhoodImage2 } from "../Assets";
 import { knightAKYLogo } from "../Assets";
 import SleekButton from "../Components/SleekButton";
 import { OpenInNew } from "@mui/icons-material";
-import { useRef, useEffect, useState } from "react";
 import { Instagram, Facebook } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
 import { PersonalGrowth, BrotherhoodImage53 } from "../Assets";
 
 export default function Home() {
-  // const videoRef = useRef(null);
-  // const [volume, setVolume] = useState(0.5);
-  const { isMobile, setIsMobile } = useMobile();
+  const { isMobile } = useMobile();
+  const [isLoading, setIsLoading] = useState(true);
+  const videoRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (videoRef) {
-  //     videoRef.volume = volume;
-  //   }
-  // }, [volume]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // Set a maximum loading time of 5 seconds
 
-  // const handleVolumeChange = (e) => {
-  //   setVolume(parseFloat(e.target.value));
-  //   console.log(volume);
-  // };
+    const handleCanPlay = () => {
+      clearTimeout(timer);
+      setIsLoading(false);
+    };
+
+    if (videoRef.current) {
+      videoRef.current.addEventListener('canplay', handleCanPlay);
+    }
+
+    return () => {
+      clearTimeout(timer);
+      if (videoRef.current) {
+        videoRef.current.removeEventListener('canplay', handleCanPlay);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const observerOptions = {
@@ -54,40 +64,35 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="home-container">
-      <div className="background-video">
-        {!isMobile && (
-          <video src={Spring23RushVideo} autoPlay muted playsInline>
-            Your browser does not support the video tag.
-          </video>
-        )}
-        {isMobile && (
-          <video src={JTreeReel} autoPlay muted playsInline>
-            Your browser does not support the video tag.
-          </video>
-        )}
-      </div>
-      <motion.div className="hero-section">
-        <div className="hero-content">
-          <motion.h1
-            className="hero-title"
-            initial={{ y: -150 }}
-          >
-            ΑΚΨ - UCI
-            {/* <div className="volume-control">
-              <input
-                type="range"
-                min="-0.1"
-                max="1.1"
-                step="0.1"
-                value={volume}
-                onChange={handleVolumeChange}
-                className="volume-slider"
-              />
-            </div> */}
-          </motion.h1>
+    <>
+      {isLoading && (
+        <div className="loader-container">
+          <div className="loader"></div>
         </div>
-      </motion.div>
+      )}
+      <div className={`home-container ${isLoading ? 'hidden' : ''}`}>
+        <div className="background-video">
+          {!isMobile && (
+            <video ref={videoRef} src={Spring23RushVideo} autoPlay muted playsInline>
+              Your browser does not support the video tag.
+            </video>
+          )}
+          {isMobile && (
+            <video ref={videoRef} src={JTreeReel} autoPlay muted playsInline>
+              Your browser does not support the video tag.
+            </video>
+          )}
+        </div>
+        <motion.div className="hero-section">
+          <div className="hero-content">
+            <motion.h1
+              className="hero-title"
+              initial={{ y: -150 }}
+            >
+              ΑΚΨ - UCI
+            </motion.h1>
+          </div>
+        </motion.div>
       <div className="info-section">
         <div className="info-content">
           <h2>The world's oldest and largest business fraternity</h2>
@@ -193,5 +198,6 @@ export default function Home() {
         </footer>
       </div>
     </div>
+    </>
   );
 }
