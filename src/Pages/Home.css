@@ -192,7 +192,7 @@ html, body {
 /* Wrapup section styles */
 .wrapup-section {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem 1rem 2rem;
   background-color: var(--bg-dark);
   color: var(--text-light);
   min-height: 100vh;
@@ -237,8 +237,8 @@ html, body {
 }
 
 .summary-item img {
-  width: 50vmin;
-  height: 50vmin;
+  width: 44vmin;
+  height: 44vmin;
   object-fit: cover;
   border-radius: 8px;
 }
