@@ -2,7 +2,7 @@
 
 :root {
   --color-background: #121212;
-  --color-background-light: #212730;
+  --color-background-light: #1e1e1e;
   --color-background-lighter: #4a5568;
   --color-text: #ffffff;
   --color-text-muted: #cbd5e0;
@@ -219,7 +219,7 @@ p {
   margin-bottom: 60px;
 }
 
-.summary-item {
+.summary-a-item {
   flex: 1 1 calc(20% - 20px);
   min-width: 150px;
   background-color: var(--color-background-light);
@@ -229,7 +229,7 @@ p {
   transition: transform 0.3s ease;
 }
 
-.summary-item:hover {
+.summary-a-item:hover {
   transform: translateY(-5px);
 }
 
@@ -240,10 +240,11 @@ p {
 }
 
 .summary-a-item img {
-  width: 30vmin;
-  height: 30vmin;
+  width: 33vmin;
+  height: 33vmin;
   object-fit: cover;
   margin-bottom: 1rem;
+  border-radius: 1rem;
 }
 
 .summary-a-item p {
@@ -315,6 +316,7 @@ p {
   .summary-a-item img {
     width: 80vmin;
     height: 80vmin;
+    border-radius: 1rem;
   }
   
 }
