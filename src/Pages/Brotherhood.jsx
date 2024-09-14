@@ -74,7 +74,6 @@ export default function Brotherhood() {
   const videoRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
 
-
   //Make SURE every image you are using has a centered subject, or else it will look very awkward
   const carouselImages = [
     BrotherhoodImage13,
@@ -181,9 +180,6 @@ export default function Brotherhood() {
       }
     };
 
-    
-  
-
     const handleEnd = () => {
       track.dataset.startAt = "0";
       track.dataset.prevPercentage = track.dataset.percentage;
@@ -211,7 +207,7 @@ export default function Brotherhood() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); 
+    }, 5000);
 
     const handleCanPlay = () => {
       clearTimeout(timer);
@@ -219,13 +215,13 @@ export default function Brotherhood() {
     };
 
     if (videoRef.current) {
-      videoRef.current.addEventListener('canplay', handleCanPlay);
+      videoRef.current.addEventListener("canplay", handleCanPlay);
     }
 
     return () => {
       clearTimeout(timer);
       if (videoRef.current) {
-        videoRef.current.removeEventListener('canplay', handleCanPlay);
+        videoRef.current.removeEventListener("canplay", handleCanPlay);
       }
     };
   }, []);
@@ -237,7 +233,7 @@ export default function Brotherhood() {
           <div className="loader"></div>
         </div>
       )}
-      <div className={`section-container ${isLoading ? 'hidden' : ''}`}>
+      <div className={`section-container ${isLoading ? "hidden" : ""}`}>
         <div className="video-section">
           <motion.div className="hero-section">
             <div className="hero-content">
@@ -253,7 +249,13 @@ export default function Brotherhood() {
           </motion.div>
           <div className="background-video">
             {!isMobile && (
-              <video ref={videoRef} src={Fall23RushVideo} autoPlay muted playsInline>
+              <video
+                ref={videoRef}
+                src={Fall23RushVideo}
+                autoPlay
+                muted
+                playsInline
+              >
                 Your browser does not support the video tag.
               </video>
             )}
@@ -266,8 +268,8 @@ export default function Brotherhood() {
         </div>
         <div className="carousel-section">
           <p className="brotherhood-title">
-            From quarterly retreats to spontaneous hangouts, our brothers in Alpha
-            Kappa Psi always make lifelong memories.
+            From quarterly retreats to spontaneous hangouts, our brothers in
+            Alpha Kappa Psi always make lifelong memories.
           </p>
           <div className="carousel-body">
             <div

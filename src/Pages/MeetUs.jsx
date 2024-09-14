@@ -21,7 +21,7 @@ export default function MeetUs() {
     try {
       const range = isLeadership ? RANGE_EXECUTIVES : RANGE_ACTIVES;
       const response = await axios.get(
-        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`
+        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`,
       );
       if (isLeadership) {
         setExecutiveBrothers(response.data.values);
