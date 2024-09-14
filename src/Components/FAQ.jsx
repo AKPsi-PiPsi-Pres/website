@@ -43,11 +43,14 @@ export default function FAQ() {
   const [openIndexes, setOpenIndexes] = useState([]);
 
   const toggleFAQ = (index) => {
-    if (openIndexes.includes(index)) {
-      setOpenIndexes(openIndexes.filter((i) => i !== index));
-    } else {
-      setOpenIndexes([...openIndexes, index]);
-    }
+    setOpenIndexes((prevOpenIndexes) => {
+      console.log("Previous openIndexes:", prevOpenIndexes);
+      if (prevOpenIndexes.includes(index)) {
+        return prevOpenIndexes.filter((i) => i !== index);
+      } else {
+        return [...prevOpenIndexes, index];
+      }
+    });
   };
 
   return (
@@ -55,10 +58,13 @@ export default function FAQ() {
       <h2>Frequently Asked Questions</h2>
       <div className="faq-container">
         {faqData.map((faq, index) => (
-          <div className="faq-item" key={index}>
+          <div
+            className="faq-item"
+            key={index}
+            onClick={() => toggleFAQ(index)}
+          >
             <div
               className={`faq-question ${openIndexes.includes(index) ? "active" : ""}`}
-              onClick={() => toggleFAQ(index)}
             >
               {faq.question}
               <span className="faq-icon">
