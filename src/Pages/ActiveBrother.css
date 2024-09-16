@@ -17,7 +17,7 @@ body {
 }
 
 .brother-container {
-  max-width: 100rem; /* Adjusted from 1200px to 100rem */
+  max-width: 90%; 
   margin: 5rem auto;
   padding: 3rem;
   background-color: var(--bg-card);
@@ -209,6 +209,9 @@ body {
   position: relative;
   padding-left: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .brother-list-item:hover {

@@ -2,9 +2,12 @@
   --primary-color: #0077b5;
   --accent-color: #00a0dc;
   --bg-dark: #121212;
-  --bg-card: #1e1e1e;
+  --bg-card: rgba(255, 255, 255, 0.1); /* Adding transparency for glassmorphism */
   --text-light: #ffffff;
   --text-muted: #b0b0b0;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --hover-shadow: rgba(0, 0, 0, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.25);
 }
 
 body {
@@ -20,8 +23,9 @@ body {
   padding: 2rem;
   border-radius: 16px;
   background-color: var(--bg-card);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  height: 100%;
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: 0 8px 24px var(--card-shadow); 
+  border: 1px solid var(--glass-border); /* Border for glass effect */
   box-sizing: border-box;
 }
 
@@ -31,8 +35,6 @@ body {
   gap: 2rem;
   padding: 1rem;
   margin-bottom: 2rem;
-  overflow-y: auto;
-  height: auto; /* Adjust based on content */
 }
 
 .brotherGrid::-webkit-scrollbar {
@@ -50,15 +52,22 @@ body {
 }
 
 .brotherCard {
-  text-align: center;
-  transition: all 0.3s ease;
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(37, 37, 37, 0.5); /* Subtle background transparency */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   align-items: center;
+  backdrop-filter: blur(10px); /* Glass effect */
+  border: 1px solid var(--glass-border); /* Soft frosted border */
+  position: relative;
+}
+
+.brotherCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px var(--hover-shadow); /* Larger shadow on hover */
 }
 
 .imageWrapper {
@@ -70,14 +79,16 @@ body {
 
 .brotherPhoto {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  max-height: 100%; /* Prevent overflow */
+  height: auto;
+  max-height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, filter 0.4s ease; /* Smooth image scaling */
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
 }
 
 .brotherCard:hover .brotherPhoto {
-  transform: scale(1.05);
+  transform: scale(1.02); /* Slight zoom on hover */
+  filter: brightness(1.1); /* Lighten image on hover */
 }
 
 .brotherLink {
@@ -88,18 +99,19 @@ body {
 .brotherName {
   all: unset;
   display: block;
-  font-size: 0.9rem;
+  font-size: 1rem; /* Slightly larger for readability */
   color: var(--text-light);
   margin: 0.75rem 0;
   padding: 0 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .brotherCard:hover .brotherName {
-  color: var(--accent-color);
+  color: var(--accent-color); /* Accent color for hover state */
 }
 
+/* Loader styles */
 .loaderContainer {
   display: flex;
   justify-content: center;
@@ -121,6 +133,7 @@ body {
   100% { transform: rotate(360deg); }
 }
 
+/* Responsive layout adjustments */
 @media (max-width: 1400px) {
   .brotherGrid {
     grid-template-columns: repeat(5, 1fr);
@@ -143,6 +156,7 @@ body {
   .brotherGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .container {
     max-width: 90%;
     padding: 1.5rem;
@@ -153,6 +167,7 @@ body {
   .brotherGrid {
     grid-template-columns: 1fr;
   }
+
   .container {
     padding: 1rem;
   }

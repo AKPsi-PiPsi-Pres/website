@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
 import { motion } from "framer-motion";
+import FAQ from "../Components/FAQ";
 import {
   aboutImage1,
   aboutImage2,
@@ -25,10 +26,10 @@ import {
 } from "recharts";
 
 const majorData = [
-  { name: "Business", value: 43 },
-  { name: "Engineering", value: 29 },
-  { name: "Computer Science", value: 24 },
-  { name: "Other", value: 4 },
+  { name: "Business", value: 38 },
+  { name: "Engineering", value: 15 },
+  { name: "Computer Science", value: 23 },
+  { name: "Other", value: 24 },
 ];
 
 const clubData = [
@@ -69,7 +70,7 @@ export default function About() {
     const observer = new IntersectionObserver(animateOnScroll, observerOptions);
 
     const sections = document.querySelectorAll(
-      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-a-item, .final-statements, .social-links"
+      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-a-item, .final-statements, .social-links",
     );
     sections.forEach((section) => observer.observe(section));
 
@@ -101,19 +102,48 @@ export default function About() {
         <div className="charts-grid">
           <div className="chart-container">
             <h3>Major Breakdown</h3>
-            <ResponsiveContainer width="100%" height={500}>
+            <ResponsiveContainer width="90%" height={500}>
               <PieChart>
                 <Pie
                   data={majorData}
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  outerRadius={200} // Increased from 150
+                  outerRadius={200}
                   fill="#8884d8"
-                  dataKey="value"
-                  label={({ name, percent }) =>
-                    `${name} ${(percent * 100).toFixed(0)}%`
-                  }
+                  label={({
+                    cx,
+                    cy,
+                    midAngle,
+                    innerRadius,
+                    outerRadius,
+                    percent,
+                    name,
+                  }) => {
+                    const RADIAN = Math.PI / 180;
+                    const radius =
+                      innerRadius + (outerRadius - innerRadius) * 0.5;
+                    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+                    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+                    return (
+                      <text
+                        x={x}
+                        y={y}
+                        fill="white"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                      >
+                        <tspan x={x} dy="-0.5em">
+                          {name}
+                        </tspan>
+                        <tspan
+                          x={x}
+                          dy="1.2em"
+                        >{`${(percent * 100).toFixed(0)}%`}</tspan>
+                      </text>
+                    );
+                  }}
                 >
                   {majorData.map((entry, index) => (
                     <Cell
@@ -136,12 +166,41 @@ export default function About() {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  outerRadius={200} // Increased from 150
+                  outerRadius={200}
                   fill="#8884d8"
-                  dataKey="value"
-                  label={({ name, percent }) =>
-                    `${name} ${(percent * 100).toFixed(0)}%`
-                  }
+                  label={({
+                    cx,
+                    cy,
+                    midAngle,
+                    innerRadius,
+                    outerRadius,
+                    percent,
+                    name,
+                  }) => {
+                    const RADIAN = Math.PI / 180;
+                    const radius =
+                      innerRadius + (outerRadius - innerRadius) * 0.5;
+                    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+                    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+                    return (
+                      <text
+                        x={x}
+                        y={y}
+                        fill="white"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                      >
+                        <tspan x={x} dy="-0.5em">
+                          {name}
+                        </tspan>
+                        <tspan
+                          x={x}
+                          dy="1.2em"
+                        >{`${(percent * 100).toFixed(0)}%`}</tspan>
+                      </text>
+                    );
+                  }}
                 >
                   {clubData.map((entry, index) => (
                     <Cell
@@ -214,6 +273,10 @@ export default function About() {
             <p>Strengthen through collaboration</p>
           </div>
         </div>
+        <div className="info-section">
+          <FAQ />
+        </div>
+
         <footer className="site-footer">
           <div className="footer-content">
             <div className="social-links">

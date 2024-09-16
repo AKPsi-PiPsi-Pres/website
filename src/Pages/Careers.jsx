@@ -33,11 +33,9 @@ export default function Careers() {
       className="careersContainer"
       style={{ backgroundImage: `url(${alumni1})` }}
     >
-      <motion.div
-        className="careerstitleSection"
-      >
-        <div className="hero-title" style={{"top": "-150px"}}>
-            Careers
+      <motion.div className="careerstitleSection">
+        <div className="hero-title" style={{ top: "-150px" }}>
+          Careers
         </div>
       </motion.div>
 
