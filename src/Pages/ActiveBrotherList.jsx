@@ -18,7 +18,7 @@ export default function ActiveBrotherList({ brothers, isLoading }) {
                 brother.length > 0 && (
                   <div key={brother[0]} className={styles.brotherCard}>
                     <Link
-                      to={`/${brother[0].replace(" ", "-")}`}
+                      to={`/${encodeURIComponent(brother[0].replace(/ /g, "-"))}`}
                       className={styles.brotherLink}
                     >
                       <div className={styles.imageWrapper}>
@@ -36,7 +36,7 @@ export default function ActiveBrotherList({ brothers, isLoading }) {
                       <p className={styles.brotherName}>{brother[0]}</p>
                     </Link>
                   </div>
-                ),
+                )
             )}
         </div>
       )}
