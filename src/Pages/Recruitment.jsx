@@ -12,7 +12,7 @@ export default function Recruitment() {
     {
       name: "Meet The Bros",
       date: "2024-09-15",
-      location: "SB1 1200",
+      location: "SB1 2200 and Merage Terrace",
       attire: "Casual",
       time: "6:00 PM - 9:00 PM",
       "open-ness": "Open Invite",
@@ -20,7 +20,7 @@ export default function Recruitment() {
     {
       name: "Alumni Night",
       date: "2024-10-05",
-      location: "SB1 1200",
+      location: "SB1 2400",
       attire: "Business Professional",
       time: "6:00 PM - 9:00 PM",
       "open-ness": "Open Invite",
@@ -44,7 +44,7 @@ export default function Recruitment() {
     {
       name: "Interviews",
       date: "2024-10-28",
-      location: "Emerald Bay A & B",
+      location: "Sent via Email",
       attire: "Business Professional",
       time: "6:00 PM - 9:00 PM",
       "open-ness": "Invite Only",
