@@ -168,8 +168,8 @@ p {
 
 .chart-container {
   flex: 1 1 calc(50% - 40px); /* Changed from 33% to 50% */
-  min-width: 400px; /* Increased from 300px */
-  max-width: 600px; /* Added max-width for very large screens */
+  min-width: 25rem; /* Increased from 300px */
+  max-width: 100rem; /* Added max-width for very large screens */
   background-color: var(--color-background-light);
   padding: 30px; /* Increased padding */
   border-radius: var(--border-radius);
@@ -183,7 +183,7 @@ p {
 
 /* Adjust the ResponsiveContainer in your React component */
 .chart-container .recharts-responsive-container {
-  height: 500px !important; /* Increased from 400px, use !important to override inline styles */
+  height: 500px;
 }
 
 /* Media Queries */
@@ -240,8 +240,8 @@ p {
 }
 
 .summary-a-item img {
-  width: 33vmin;
-  height: 33vmin;
+  width: 27vmin;
+  height: 27vmin;
   object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 1rem;
@@ -261,6 +261,14 @@ p {
 .recharts-legend-item-text {
   color: var(--color-text) !important;
 }
+
+@media (max-width: 1024px) {
+  .summary-a-item img {
+    width: 25vmin;
+    height: 25vmin;
+  }
+}
+
 
 /* Media Queries */
 @media (min-width: 768px) {

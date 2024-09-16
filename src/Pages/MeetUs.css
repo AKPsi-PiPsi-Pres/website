@@ -75,6 +75,7 @@
   margin-bottom: 1rem;
 }
 
+/* General Button Styles */
 .view-buttons button {
   padding: 1rem 2rem;
   background-color: var(--bg-card);
@@ -88,10 +89,7 @@
   overflow: hidden;
 }
 
-.view-buttons button:not(:last-child) {
-  border-right: 1px solid rgba(255,255,255,0.1);
-}
-
+/* Hover Effect */
 .view-buttons button::before {
   content: '';
   position: absolute;
@@ -99,35 +97,53 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: all 0.4s ease;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.4s ease;
 }
 
 .view-buttons button:hover::before {
   left: 100%;
 }
 
-.view-buttons button.active {
+/* Active Button Styling */
+.view-buttons button.active, 
+.view-buttons button.active-tab {
   background-color: var(--primary-color);
   color: var(--text-light);
 }
 
+.view-buttons .MuiButtonBase-root.active-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+/* Separator Between Buttons */
+.view-buttons button:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .view-buttons {
     width: 90%;
     max-width: 400px;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   .view-buttons button {
     width: 100%;
     padding: 1.25rem 2rem;
     border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .view-buttons button:last-child {
@@ -142,6 +158,7 @@
   }
 }
 
+/* Content Wrapper for Small Screens */
 @media (max-width: 768px) {
   .contentWrapper {
     padding: 1.5rem;
@@ -149,23 +166,6 @@
 
   .meet-us-title {
     font-size: 2.5rem;
-  }
-
-  .view-buttons {
-    flex-direction: column;
-    width: 100%;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-
-  .view-buttons button {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .view-buttons button:last-child {
-    border-bottom: none;
   }
 }
 
