@@ -11,7 +11,7 @@ export default function Recruitment() {
   const events = [
     {
       name: "Meet The Bros",
-      date: "2024-09-15",
+      date: "Tuesday, October 1st",
       location: "SB1 2200 and Merage Terrace",
       attire: "Casual",
       time: "6:00 PM - 9:00 PM",
@@ -19,15 +19,15 @@ export default function Recruitment() {
     },
     {
       name: "Alumni Night",
-      date: "2024-10-05",
-      location: "SB1 2400",
+      date: "Thursday, October 3rd",
+      location: "SB1 1200",
       attire: "Business Professional",
       time: "6:00 PM - 9:00 PM",
       "open-ness": "Open Invite",
     },
     {
       name: "Game Night",
-      date: "2024-09-22",
+      date: "Friday, October 4th",
       location: "SB1 1200",
       attire: "Business Casual",
       time: "6:00 PM - 9:00 PM",
@@ -35,7 +35,7 @@ export default function Recruitment() {
     },
     {
       name: "Social Barbeque",
-      date: "2024-11-12",
+      date: "Tuesday, October 8th",
       location: "Sent via Email",
       attire: "Casual",
       time: "6:00 PM - 9:00 PM",
@@ -43,7 +43,7 @@ export default function Recruitment() {
     },
     {
       name: "Interviews",
-      date: "2024-10-28",
+      date: "Thursday + Friday, October 10th and 11th",
       location: "Sent via Email",
       attire: "Business Professional",
       time: "6:00 PM - 9:00 PM",
