@@ -74,7 +74,7 @@ export default function Recruitment() {
       <div className="hero-recruitment-Section viewport">
         <h1 className="main-recruitment-Title">Rise</h1>
         <p className="subTitle">Fall Rush 2024</p>
-        <DuneButton href="https://instagram.com/akpsiuci">
+        <DuneButton href="https://docs.google.com/forms/d/e/1FAIpQLScFxDkUrW7QN0_sEpIi4Wk0yjCoLLfLSBh0UvqAe9hfHfhcKQ/formResponse?pli=1">
           Rush Application
         </DuneButton>
       </div>
