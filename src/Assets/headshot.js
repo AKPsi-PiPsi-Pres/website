@@ -27,6 +27,17 @@ import CatelynnChen from "./ActiveHeadshots/Catelynn Chen.webp";
 import ElleHsu from "./ActiveHeadshots/Elle Hsu.webp";
 import AnujPatel from "./ActiveHeadshots/Anuj Patel.webp";
 import RithikaPothi from "./ActiveHeadshots/Rithika Pothi.webp";
+import AndrewHauber from "./ActiveHeadshots/Andrew Hauber.webp";
+import AllenLai from "./ActiveHeadshots/Allen Lai.webp";
+import CindyChen from "./ActiveHeadshots/Cindy Chen.webp";
+import DanielKim from "./ActiveHeadshots/Daniel Kim.webp";
+import DonnyChau from "./ActiveHeadshots/Donny Chau.webp";
+import HaleyYoon from "./ActiveHeadshots/Haley Yoon.webp";
+import KatieWang from "./ActiveHeadshots/Katie Wang.webp";
+import LaurenCho from "./ActiveHeadshots/Lauren Cho.webp";
+import MaxVano from "./ActiveHeadshots/Max Vano.webp";
+import MinaNguyen from "./ActiveHeadshots/Mina Nguyen.webp";
+import PranayMach from "./ActiveHeadshots/Pranay Macherla.webp";
 import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
 
 export const headshotHash = {
@@ -59,5 +70,16 @@ export const headshotHash = {
   "Elle Hsu": ElleHsu,
   "Anuj Patel": AnujPatel,
   "Rithika Pothi": RithikaPothi,
+  "Andrew Hauber": AndrewHauber,
+  "Allen Lai": AllenLai,
+  "Cindy Chen": CindyChen,
+  "Daniel Kim": DanielKim,
+  "Donny Chau": DonnyChau,
+  "Haley Yoon": HaleyYoon,
+  "Katie Wang": KatieWang,
+  "Lauren Cho": LaurenCho,
+  "Massimo Vano": MaxVano,
+  "Pranay Macherla": PranayMach,
+  "Mina Nguyen": MinaNguyen,
   "Default Headshot": DefaultHeadshot,
 };
