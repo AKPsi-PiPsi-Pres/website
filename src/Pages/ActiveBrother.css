@@ -22,7 +22,6 @@ body {
   padding: 3rem;
   background-color: var(--bg-card);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  border-radius: 16px;
   position: relative;
   overflow: hidden;
 }
@@ -53,7 +52,6 @@ body {
   height: auto;
   object-fit: cover;
   margin-right: 4rem;
-  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -67,7 +65,6 @@ body {
   right: -10px;
   bottom: -10px;
   border: 2px solid var(--accent-color);
-  border-radius: 10px;
   z-index: -1;
   transition: all 0.3s ease;
 }
@@ -118,7 +115,6 @@ body {
   background-color: var(--primary-color);
   color: var(--text-light);
   text-decoration: none;
-  border-radius: 50px;
   font-weight: 600;
   margin-top: 1.5rem;
   transition: all 0.3s ease;
@@ -159,7 +155,6 @@ body {
 .brother-section {
   background-color: rgba(37, 37, 37, 0.7);
   padding: 2rem;
-  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -230,7 +225,6 @@ body {
 .brother-love {
   background-color: rgba(42, 42, 42, 0.7);
   padding: 2.5rem;
-  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);

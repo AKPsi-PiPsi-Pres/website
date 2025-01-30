@@ -88,7 +88,6 @@ html, body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -191,7 +190,6 @@ html, body {
 .info-image {
   width: 20%;
   height: auto;
-  border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: transform var(--transition-speed) ease;
 }
@@ -239,7 +237,6 @@ html, body {
   animation-play-state: paused;
   background-color: var(--bg-card);
   padding: 2rem;
-  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
@@ -255,12 +252,17 @@ html, body {
   color: var(--accent-color);
 }
 
-.summary-item img {
-  width: 44vmin;
-  height: 44vmin;
-  object-fit: cover;
-  border-radius: 8px;
+.summary-item img { 
+  width: 100%; 
+  max-width: 44vmin; 
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; 
 }
+
+.summary-item img::hover { 
+  transform: scale(1.1);
+}
+
 
 .summary-item p {
   font-size: 1rem;
