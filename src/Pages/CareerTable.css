@@ -89,7 +89,6 @@ body {
   width: 80%;
   margin: 0 auto;
   background-color: var(--bg-card);
-  border-radius: 12px;
   padding: 2.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: box-shadow var(--transition-speed) ease;

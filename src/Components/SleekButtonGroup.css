@@ -18,12 +18,3 @@
     border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
   
-  .sleek-button-group .sleek-button:first-of-type {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  
-  .sleek-button-group .sleek-button:last-child {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }

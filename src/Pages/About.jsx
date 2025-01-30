@@ -304,10 +304,6 @@ export default function About() {
                 integrity, and professional excellence."
               </p>
               <p className="statement-two">
-                "From campus to boardroom, our impact resonates across
-                industries and continents."
-              </p>
-              <p className="statement-three">
                 Join us in writing the next chapter of business innovation and
                 ethical leadership.
               </p>

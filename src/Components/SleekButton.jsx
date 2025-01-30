@@ -4,7 +4,6 @@ import { Button, styled } from "@mui/material";
 const SleekDarkButton = styled(Button)(({ theme }) => ({
   background: "linear-gradient(45deg, #1565C0 40%, #1976D2 90%)",
   border: 0,
-  borderRadius: 5,
   color: "#F5F5F5",
   height: 48,
   padding: "0 30px",
