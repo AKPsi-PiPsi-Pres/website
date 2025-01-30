@@ -40,11 +40,12 @@ const clubData = [
 ];
 
 const placementData = [
-  { year: "2019", oncampus: 65, beyondCampus: 80 },
-  { year: "2020", oncampus: 70, beyondCampus: 85 },
-  { year: "2021", oncampus: 75, beyondCampus: 88 },
-  { year: "2022", oncampus: 78, beyondCampus: 90 },
-  { year: "2023", oncampus: 80, beyondCampus: 92 },
+  { year: "2019", oncampus: 63, beyondCampus: 70 },
+  { year: "2020", oncampus: 70, beyondCampus: 75 },
+  { year: "2021", oncampus: 72, beyondCampus: 77 },
+  { year: "2022", oncampus: 68, beyondCampus: 75 },
+  { year: "2023", oncampus: 77, beyondCampus: 83 },
+  { year: "2024", oncampus: 85, beyondCampus: 90 },
 ];
 
 const COLORS = ["#0066cc", "#00a86b", "#f39c12", "#8e44ad"];

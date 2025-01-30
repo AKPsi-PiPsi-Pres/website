@@ -119,3 +119,39 @@ export { default as aboutImage4 } from "./AboutPhotos/aboutImage4.webp";
 export { default as aboutImage5 } from "./AboutPhotos/aboutImage5.webp";
 export { default as aboutImage6 } from "./AboutPhotos/aboutImage6.webp";
 export { default as aboutImage7 } from "./AboutPhotos/aboutImages7.webp";
+
+export const companyHash = {
+    // "Aarush Inamdar": AdobeLogo,
+    // "Alex Kao": JPMorganLogo,
+    // "Sarah Kim": SarahKim,
+    // "Yan Amy Zhou": YanAmyZhou,
+    // "Alexandra Ancheta": AlexaAncheta,
+    // "Tiffany Cheng": TiffanyCheng,
+    // "Izella Han": IzellaHan,
+    // "Anna Shan": AnnaShan,
+    // "Isabella Tan": IsabellaTan,
+    // "Amy Tu": AmyTu,
+    // "Mason Whang": MasonWhang,
+    // "Edmund Ma": EdmundMa,
+    // "Chris Wang": ChrisWang,
+    // "Andrew Sou": AndrewSou,
+    // "Annie Nguyen": AnnieNguyen,
+    // "Alexis Lin": AlexisLin,
+    // "Catelynn Chen": CatelynnChen,
+    // "Elle Hsu": ElleHsu,
+    // "Anuj Patel": AnujPatel,
+    // "Rithika Pothi": RithikaPothi,
+    // "Andrew Hauber": AndrewHauber,
+    // "Allen Lai": AllenLai,
+    // "Cindy Chen": CindyChen,
+    // "Daniel Kim": DanielKim,
+    // "Donny Chau": DonnyChau,
+    // "Haley Yoon": HaleyYoon,
+    // "Katie Wang": KatieWang,
+    // "Lauren Cho": LaurenCho,
+    // "Massimo Vano": MaxVano,
+    // "Pranay Macherla": PranayMach,
+    // "Mina Nguyen": MinaNguyen,
+    // "Default Headshot": DefaultHeadshot,
+  };
+  
