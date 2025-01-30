@@ -279,10 +279,11 @@ html, body {
 }
 
 .final-statements .statement-one,
-.final-statements .statement-two {
-  font-size: 1.2rem;
+.final-statements .statement-two,
+.final-statements .statement-three {
   color: var(--text-light);
   margin: 1rem 0;
+  font-size: 0.75rem;
 }
 
 .social-links {
