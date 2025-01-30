@@ -234,14 +234,13 @@ html, body {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover; /* Ensure images cover the set dimensions */
-  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   will-change: transform, opacity; /* Optimize performance for animations */
 }
 
 .photoframe-container img:hover {
-  transform: scale(1.05) rotate(2deg);
+  transform: scale(1.05);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
 }
 

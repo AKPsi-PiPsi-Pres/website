@@ -21,7 +21,6 @@ body {
   max-width: 80%;
   margin: 2rem auto;
   padding: 2rem;
-  border-radius: 16px;
   background-color: var(--bg-card);
   backdrop-filter: blur(10px); /* Glass effect */
   box-shadow: 0 8px 24px var(--card-shadow); 
@@ -53,7 +52,6 @@ body {
 
 .brotherCard {
   background-color: rgba(37, 37, 37, 0.5); /* Subtle background transparency */
-  border-radius: 12px;
   box-shadow: 0 4px 12px var(--card-shadow);
   transition: all 0.4s ease;
   display: flex;
@@ -83,7 +81,6 @@ body {
   max-height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease, filter 0.4s ease; /* Smooth image scaling */
-  border-radius: 12px 12px 0 0; /* Rounded top corners */
 }
 
 .brotherCard:hover .brotherPhoto {

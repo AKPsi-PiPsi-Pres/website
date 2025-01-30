@@ -131,6 +131,19 @@ export default function Brotherhood() {
   ];
 
   useEffect(() => {
+
+    document.querySelectorAll('.photoframe-container img').forEach(img => {
+      img.addEventListener('mouseenter', function () {
+        const randomRotation = Math.random() < 0.5 ? -2 : 2; // Randomly choose -2 or 2
+        this.style.transform = `scale(1.05) rotate(${randomRotation}deg)`;
+      });
+    
+      img.addEventListener('mouseleave', function () {
+        this.style.transform = 'scale(1)'; // Reset on hover out
+      });
+    });
+    
+
     const track = trackRef.current;
 
     // Initialize the track's position
