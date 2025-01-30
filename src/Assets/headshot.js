@@ -38,6 +38,7 @@ import LaurenCho from "./ActiveHeadshots/Lauren Cho.webp";
 import MaxVano from "./ActiveHeadshots/Max Vano.webp";
 import MinaNguyen from "./ActiveHeadshots/Mina Nguyen.webp";
 import PranayMach from "./ActiveHeadshots/Pranay Macherla.webp";
+import DanielVercueil from "./ActiveHeadshots/Daniel Verceil.webp";
 import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
 
 export const headshotHash = {
@@ -45,6 +46,7 @@ export const headshotHash = {
   "Alex Kao": AlexKao,
   "Oriana Kou": OrianaKou,
   "Curtis Yang": CurtisYang,
+  "Daniel Vercueil": DanielVercueil,
   "Jessica Choi": JessicaChoi,
   "Alex Li": AlexLi,
   "Justin Lin": JustinLin,
