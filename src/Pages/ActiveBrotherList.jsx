@@ -30,7 +30,7 @@ export default function ActiveBrotherList({ brothers, isLoading }) {
                           }
                           alt={brother[0]}
                           className={styles.brotherPhoto}
-                          loading="lazy" /* Optimize image loading */
+                          loading="lazy"
                         />
                       </div>
                       <p className={styles.brotherName}>{brother[0]}</p>
