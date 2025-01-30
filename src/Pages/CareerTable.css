@@ -87,7 +87,7 @@ body {
 
 .careers-container {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   background-color: var(--bg-card);
   padding: 2.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -103,6 +103,7 @@ body {
   table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0;
+  margin: 0 !important;
 }
 
 .careers-table th,

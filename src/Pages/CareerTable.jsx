@@ -160,7 +160,7 @@ const CareerTable = () => {
                         className="subtitle has-text-weight-semibold"
                         style={{ textDecoration: "none", fontWeight: "bold" }}
                       >
-                        {category + " Industry"}
+                        {category}
                       </td>
                     </tr>
                     {categoryRows}
