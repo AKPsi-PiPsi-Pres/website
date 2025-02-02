@@ -45,11 +45,14 @@ import {
     PfizerLogo,
     SiemensLogo,
     AmazonLogo,
+    RedbullLogo,
+    
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
 
 export const companyHash = {
+    "Oriana Kou": RedbullLogo,
     "Aarush Inamdar": AdobeLogo,
     "Alex Kao": JPMorganLogo,
     "Sarah Kim": DefaultHeadshot,
@@ -58,7 +61,7 @@ export const companyHash = {
     "Tiffany Cheng": DefaultHeadshot,
     "Izella Han": RippleMatchLogo,
     "Anna Shan": BlackstoneLogo,
-    "Isabella Tan": MonsterLogo,
+    "Isabella Tan": MonsterLogo, //GRAD
     "Amy Tu": DefaultHeadshot,
     "Mason Whang": DefaultHeadshot,
     "Edmund Ma": RyanLLCLogo,
@@ -68,8 +71,8 @@ export const companyHash = {
     "Alexis Lin": CrowdstrikeLogo,
     "Catelynn Chen": DefaultHeadshot,
     "Elle Hsu": PepsiLogo,
-    "Anuj Patel": DefaultHeadshot,
-    "Rithika Pothi": capitalonelogo,
+    "Anuj Patel": nasalogo,
+    "Rithika Pothi": capitalonelogo,  //GRAD
     "Andrew Hauber": DefaultHeadshot,
     "Allen Lai": CiscoLogo,
     "Cindy Chen": DefaultHeadshot,
