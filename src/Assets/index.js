@@ -107,6 +107,20 @@ export { default as statefarmlogo } from "./Logos/statefarmlogo.png";
 export { default as vmwarelogo } from "./Logos/vmwarelogo.png";
 export { default as walmartlogo } from "./Logos/walmartlogo.png";
 export { default as warnbroslogo } from "./Logos/warnerbroslogo.png";
+export { default as BakerTillyLogo } from "./Logos/BakerTillyLogo.webp";
+export { default as RippleMatchLogo } from "./Logos/RippleMatchLogo.jpg";
+export { default as BlackstoneLogo } from "./Logos/BlackstoneLogo.png";
+export { default as MonsterLogo } from "./Logos/MonsterLogo.png";
+export { default as RyanLLCLogo } from "./Logos/RyanLLCLogo.webp";
+export { default as SAPLogo } from "./Logos/SAPLogo.png";
+export { default as CrowdstrikeLogo } from "./Logos/CrowdstrikeLogo.png";
+export { default as PepsiLogo } from "./Logos/PepsiLogo.png";
+export { default as CiscoLogo } from "./Logos/CiscoLogo.png";
+export { default as TakenakaPartnersLogo } from "./Logos/TakenakaPartnersLogo.jpg";
+export { default as AutodeskLogo } from "./Logos/AutodeskLogo.png";
+export { default as PfizerLogo } from "./Logos/PfizerLogo.png";
+export { default as SiemensLogo } from "./Logos/SiemensLogo.png";
+export { default as AmazonLogo } from "./Logos/AmazonLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
@@ -120,38 +134,3 @@ export { default as aboutImage5 } from "./AboutPhotos/aboutImage5.webp";
 export { default as aboutImage6 } from "./AboutPhotos/aboutImage6.webp";
 export { default as aboutImage7 } from "./AboutPhotos/aboutImages7.webp";
 
-export const companyHash = {
-    // "Aarush Inamdar": AdobeLogo,
-    // "Alex Kao": JPMorganLogo,
-    // "Sarah Kim": SarahKim,
-    // "Yan Amy Zhou": YanAmyZhou,
-    // "Alexandra Ancheta": AlexaAncheta,
-    // "Tiffany Cheng": TiffanyCheng,
-    // "Izella Han": IzellaHan,
-    // "Anna Shan": AnnaShan,
-    // "Isabella Tan": IsabellaTan,
-    // "Amy Tu": AmyTu,
-    // "Mason Whang": MasonWhang,
-    // "Edmund Ma": EdmundMa,
-    // "Chris Wang": ChrisWang,
-    // "Andrew Sou": AndrewSou,
-    // "Annie Nguyen": AnnieNguyen,
-    // "Alexis Lin": AlexisLin,
-    // "Catelynn Chen": CatelynnChen,
-    // "Elle Hsu": ElleHsu,
-    // "Anuj Patel": AnujPatel,
-    // "Rithika Pothi": RithikaPothi,
-    // "Andrew Hauber": AndrewHauber,
-    // "Allen Lai": AllenLai,
-    // "Cindy Chen": CindyChen,
-    // "Daniel Kim": DanielKim,
-    // "Donny Chau": DonnyChau,
-    // "Haley Yoon": HaleyYoon,
-    // "Katie Wang": KatieWang,
-    // "Lauren Cho": LaurenCho,
-    // "Massimo Vano": MaxVano,
-    // "Pranay Macherla": PranayMach,
-    // "Mina Nguyen": MinaNguyen,
-    // "Default Headshot": DefaultHeadshot,
-  };
-  

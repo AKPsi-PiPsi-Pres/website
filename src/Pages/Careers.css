@@ -39,12 +39,11 @@
 
 .careersmainTitle {
   font-size: 3rem;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: rgb(255, 255, 255);
   text-align: center;
   margin: 0;
 }
-
 
 .careersContent {
   position: relative;

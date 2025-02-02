@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./ActiveBrotherList.module.css";
 import { headshotHash } from "../Assets/headshot";
+import { companyHash } from "../Assets/company";
 
 export default function ActiveBrotherList({ brothers, isLoading }) {
   return (
@@ -32,6 +33,17 @@ export default function ActiveBrotherList({ brothers, isLoading }) {
                           className={styles.brotherPhoto}
                           loading="lazy"
                         />
+                        <div className={styles.overlay}>
+                          <img
+                            src={
+                              companyHash[brother[0]]
+                                ? companyHash[brother[0]]
+                                : companyHash["Default Headshot"]
+                            }
+                            alt={`${brother[0]} company logo`}
+                            className={styles.overlayImage}
+                          />
+                        </div>
                       </div>
                       <p className={styles.brotherName}>{brother[0]}</p>
                     </Link>

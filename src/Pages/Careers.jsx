@@ -40,7 +40,7 @@ export default function Careers() {
       </motion.div>
 
       <div className="careersmainTitleSection">
-        <h1 className="careersmainTitle">OUR PROFESSIONAL EXPERIENCE</h1>
+        <h1 className="careersmainTitle">Our Professional Experience</h1>
       </div>
       <div className="careers-section">
         <CareerLogoScroller />
