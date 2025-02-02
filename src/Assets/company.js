@@ -69,7 +69,7 @@ export const companyHash = {
     "Chris Wang": DefaultHeadshot,
     "Andrew Sou": DefaultHeadshot,
     "Annie Nguyen": SAPLogo,
-    "Alexis Lin": CrowdstrikeLogo,
+    "Alexis Lin": AmazonLogo,
     "Catelynn Chen": DefaultHeadshot,
     "Elle Hsu": PepsiLogo,
     "Anuj Patel": nasalogo,
