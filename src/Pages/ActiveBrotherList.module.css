@@ -75,6 +75,32 @@ body {
   margin-bottom: 0;
 }
 
+/* Add an overlay element that will show the company hash value */
+.imageWrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.brotherCard:hover .overlay {
+  opacity: 1;
+}
+
+.overlayImage {
+  max-width: 75%;
+  height: auto;
+}
+
 .brotherPhoto {
   width: 100%;
   height: auto;
@@ -84,8 +110,8 @@ body {
 }
 
 .brotherCard:hover .brotherPhoto {
-  transform: scale(1.02); /* Slight zoom on hover */
-  filter: brightness(1.1); /* Lighten image on hover */
+  transform: scale(1.02); 
+  filter: brightness(0.8); /* Darken image on hover */
 }
 
 .brotherLink {

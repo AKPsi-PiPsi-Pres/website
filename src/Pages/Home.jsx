@@ -194,7 +194,7 @@ export default function Home() {
                   everything they do.
                 </p>
                 <p className="statement-two">
-                  Site designed and developed in-house, on 5000 lines of code
+                  Site designed and developed in-house, on 7000 lines of code
                   and counting...
                 </p>
               </div>
