@@ -108,7 +108,7 @@ export { default as vmwarelogo } from "./Logos/vmwarelogo.png";
 export { default as walmartlogo } from "./Logos/walmartlogo.png";
 export { default as warnbroslogo } from "./Logos/warnerbroslogo.png";
 export { default as BakerTillyLogo } from "./Logos/BakerTillyLogo.webp";
-export { default as RippleMatchLogo } from "./Logos/RippleMatchLogo.jpg";
+export { default as RippleMatchLogo } from "./Logos/RippleMatchLogo.webp";
 export { default as BlackstoneLogo } from "./Logos/BlackstoneLogo.png";
 export { default as MonsterLogo } from "./Logos/MonsterLogo.png";
 export { default as RyanLLCLogo } from "./Logos/RyanLLCLogo.webp";
@@ -123,6 +123,7 @@ export { default as SiemensLogo } from "./Logos/SiemensLogo.png";
 export { default as AmazonLogo } from "./Logos/AmazonLogo.png";
 export { default as RedbullLogo } from "./Logos/RedBullLogo.png"
 export { default as UBSLogo } from "./Logos/UBSLogo.png"
+export { default as RentazonLogo } from "./Logos/RentazonLogo.png"
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";

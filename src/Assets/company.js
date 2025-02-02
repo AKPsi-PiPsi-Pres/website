@@ -47,6 +47,7 @@ import {
     AmazonLogo,
     RedbullLogo,
     UBSLogo,
+    RentazonLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -73,7 +74,7 @@ export const companyHash = {
     "Elle Hsu": PepsiLogo,
     "Anuj Patel": nasalogo,
     "Rithika Pothi": capitalonelogo,  //GRAD
-    "Andrew Hauber": DefaultHeadshot,
+    "Andrew Hauber": RentazonLogo,
     "Allen Lai": CiscoLogo,
     "Cindy Chen": DefaultHeadshot,
     "Daniel Kim": TakenakaPartnersLogo,
