@@ -122,6 +122,7 @@ export { default as PfizerLogo } from "./Logos/PfizerLogo.png";
 export { default as SiemensLogo } from "./Logos/SiemensLogo.png";
 export { default as AmazonLogo } from "./Logos/AmazonLogo.png";
 export { default as RedbullLogo } from "./Logos/RedBullLogo.png"
+export { default as UBSLogo } from "./Logos/UBSLogo.png"
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
