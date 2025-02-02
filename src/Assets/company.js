@@ -46,7 +46,7 @@ import {
     SiemensLogo,
     AmazonLogo,
     RedbullLogo,
-    
+    UBSLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -54,7 +54,7 @@ import {
 export const companyHash = {
     "Oriana Kou": RedbullLogo,
     "Aarush Inamdar": AdobeLogo,
-    "Alex Kao": JPMorganLogo,
+    "Alex Kao": UBSLogo,
     "Sarah Kim": DefaultHeadshot,
     "Yan Amy Zhou": JPMorganLogo,
     "Alexandra Ancheta": BakerTillyLogo,
