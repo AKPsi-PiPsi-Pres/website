@@ -137,7 +137,7 @@ export default function Home() {
                 are.
               </p>
               <SleekButton className="sleekButton" href="/meet-us">
-                Our Brothers
+                Brothers
               </SleekButton>
             </div>
 
@@ -150,7 +150,7 @@ export default function Home() {
                 industry.
               </p>
               <SleekButton className="sleekButton" href="/careers">
-                Our Careers
+                Careers
               </SleekButton>
             </div>
 
