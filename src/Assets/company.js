@@ -48,6 +48,8 @@ import {
     RedbullLogo,
     UBSLogo,
     RentazonLogo,
+    ThalesLogo,
+    ElevatedLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -63,8 +65,8 @@ export const companyHash = {
     "Izella Han": RippleMatchLogo,
     "Anna Shan": BlackstoneLogo,
     "Isabella Tan": MonsterLogo, //GRAD
-    "Amy Tu": DefaultHeadshot,
-    "Mason Whang": DefaultHeadshot,
+    "Amy Tu": ThalesLogo,
+    "Mason Whang": ElevatedLogo,
     "Edmund Ma": RyanLLCLogo,
     "Chris Wang": DefaultHeadshot,
     "Andrew Sou": DefaultHeadshot,
