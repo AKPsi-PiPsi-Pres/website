@@ -10,7 +10,7 @@ import {
   aboutImage5,
   aboutImage7,
 } from "../Assets";
-import { Instagram, Facebook } from "@mui/icons-material";
+import { Instagram, Facebook, LinkedIn } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
 import {
   PieChart,
@@ -294,6 +294,13 @@ export default function About() {
                 rel="noopener noreferrer"
               >
                 <Facebook />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/alpha-kappa-psi-uci"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedIn />
               </a>
               <a href="mailto:akpsi.uci.rush@gmail.com">
                 akpsi.uci.rush@gmail.com
