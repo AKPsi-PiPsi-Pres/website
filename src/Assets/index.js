@@ -124,6 +124,8 @@ export { default as AmazonLogo } from "./Logos/AmazonLogo.png";
 export { default as RedbullLogo } from "./Logos/RedBullLogo.png"
 export { default as UBSLogo } from "./Logos/UBSLogo.png"
 export { default as RentazonLogo } from "./Logos/RentazonLogo.png"
+export { default as ThalesLogo } from "./Logos/ThalesLogo.png"
+export { default as ElevatedLogo } from "./Logos/ElevatedLogo.jpeg"
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
