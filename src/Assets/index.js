@@ -126,6 +126,8 @@ export { default as UBSLogo } from "./Logos/UBSLogo.png"
 export { default as RentazonLogo } from "./Logos/RentazonLogo.png"
 export { default as ThalesLogo } from "./Logos/ThalesLogo.png"
 export { default as ElevatedLogo } from "./Logos/ElevatedLogo.jpeg"
+export { default as OITLogo } from "./Logos/OITLogo.png"
+export { default as BiologicalSciencesLogo } from "./Logos/BiologicalSciencesLogo.png"
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
