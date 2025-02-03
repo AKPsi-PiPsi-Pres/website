@@ -13,7 +13,7 @@
 body {
   background-color: var(--bg-dark);
   color: var(--text-light);
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Playfair Display';
   line-height: 1.6;
 }
 

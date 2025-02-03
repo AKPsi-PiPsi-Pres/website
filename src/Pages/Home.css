@@ -16,7 +16,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: auto;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Playfair Display';
 }
 
 /* Main container styles */
@@ -76,7 +76,7 @@ html, body {
 }
 
 .hero-title {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Playfair Display';
   user-select: none;
   font-size: clamp(2rem, 5vw, 4rem);
   margin: 0;

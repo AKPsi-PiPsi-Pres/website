@@ -116,7 +116,7 @@ export { default as SAPLogo } from "./Logos/SAPLogo.png";
 export { default as CrowdstrikeLogo } from "./Logos/CrowdstrikeLogo.png";
 export { default as PepsiLogo } from "./Logos/PepsiLogo.png";
 export { default as CiscoLogo } from "./Logos/CiscoLogo.png";
-export { default as TakenakaPartnersLogo } from "./Logos/TakenakaPartnersLogo.jpg";
+export { default as TakenakaPartnersLogo } from "./Logos/TakenakaPartnersLogo.png";
 export { default as AutodeskLogo } from "./Logos/AutodeskLogo.png";
 export { default as PfizerLogo } from "./Logos/PfizerLogo.png";
 export { default as SiemensLogo } from "./Logos/SiemensLogo.png";

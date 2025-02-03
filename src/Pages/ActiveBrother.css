@@ -10,7 +10,7 @@
 body {
   background-color: var(--bg-dark);
   color: var(--text-light);
-  font-family: 'Poppins', 'Inter', sans-serif;
+  font-family: 'Playfair Display';
   margin: 0;
   padding: 0;
   line-height: 1.6;
