@@ -110,6 +110,7 @@ export { default as warnbroslogo } from "./Logos/warnerbroslogo.png";
 export { default as BakerTillyLogo } from "./Logos/BakerTillyLogo.webp";
 export { default as RippleMatchLogo } from "./Logos/RippleMatchLogo.webp";
 export { default as BlackstoneLogo } from "./Logos/BlackstoneLogo.png";
+export { default as BlackrockLogo } from "./Logos/BlackrockLogo.png";
 export { default as MonsterLogo } from "./Logos/MonsterLogo.png";
 export { default as RyanLLCLogo } from "./Logos/RyanLLCLogo.webp";
 export { default as SAPLogo } from "./Logos/SAPLogo.png";
