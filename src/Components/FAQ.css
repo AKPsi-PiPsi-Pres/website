@@ -34,7 +34,7 @@
   margin-bottom: 20px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .faq-item.active {
@@ -57,7 +57,7 @@
   justify-content: space-between;
   align-items: center;
   color: var(--color-text);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.25s ease;
 }
 
 .faq-question:hover {
@@ -68,7 +68,7 @@
 /* FAQ Icon */
 .faq-icon {
   font-size: 1.8rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
   color: var(--color-accent);
 }
 
@@ -78,7 +78,7 @@
   opacity: 0;
   padding: 0 20px;
   overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
 }
 
 .faq-item.active .faq-answer {
