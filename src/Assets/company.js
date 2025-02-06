@@ -52,6 +52,11 @@ import {
     ElevatedLogo,
     BiologicalSciencesLogo,
     OITLogo,
+    EdisonLogo,
+    YerbaMateLogo,
+    CaliforniaISOLogo,
+    KumonLogo,
+    MerageLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -61,21 +66,22 @@ export const companyHash = {
     "Jessica Choi": AmazonLogo,
     "Aarush Inamdar": AdobeLogo,
     "Alex Kao": UBSLogo,
-    "Sarah Kim": DefaultHeadshot,
+    "Sarah Kim": KumonLogo,
     "Yan Amy Zhou": JPMorganLogo,
     "Alexandra Ancheta": BakerTillyLogo,
-    "Tiffany Cheng": DefaultHeadshot,
+    "Tiffany Cheng": MerageLogo,
+    "Tiffany Vo": MerageLogo,
     "Izella Han": RippleMatchLogo,
     "Anna Shan": BlackstoneLogo,
     "Isabella Tan": MonsterLogo, //GRAD
     "Amy Tu": ThalesLogo,
     "Mason Whang": ElevatedLogo,
     "Edmund Ma": RyanLLCLogo,
-    "Chris Wang": DefaultHeadshot,
+    "Chris Wang": YerbaMateLogo,
     "Andrew Sou": DefaultHeadshot,
     "Annie Nguyen": SAPLogo,
     "Alexis Lin": AmazonLogo,
-    "Catelynn Chen": DefaultHeadshot,
+    "Catelynn Chen": EdisonLogo,
     "Elle Hsu": PepsiLogo,
     "Anuj Patel": nasalogo,
     "Rithika Pothi": capitalonelogo,  //GRAD
@@ -90,6 +96,7 @@ export const companyHash = {
     "Massimo Vano": SiemensLogo,
     "Pranay Macherla": AmazonLogo,
     "Mina Nguyen": DefaultHeadshot,
+    "Vinh Tran": CaliforniaISOLogo,
     "Default Headshot": DefaultHeadshot,
   };
     
