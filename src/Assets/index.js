@@ -129,6 +129,11 @@ export { default as ThalesLogo } from "./Logos/ThalesLogo.png"
 export { default as ElevatedLogo } from "./Logos/ElevatedLogo.jpeg"
 export { default as OITLogo } from "./Logos/OITLogo.png"
 export { default as BiologicalSciencesLogo } from "./Logos/BiologicalSciencesLogo.png"
+export { default as EdisonLogo } from "./Logos/EdisonLogo.svg"
+export { default as YerbaMateLogo } from "./Logos/YerbaMateLogo.webp"
+export { default as CaliforniaISOLogo } from "./Logos/CaliforniaISOLogo.png"
+export { default as KumonLogo } from "./Logos/KumonLogo.png"
+export { default as MerageLogo } from "./Logos/MerageLogo.png"
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
