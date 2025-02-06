@@ -8,7 +8,7 @@ const faqData = [
   },
   {
     question: "What sets Alpha Kappa Psi apart from other organizations?",
-    answer: `AKPsi are the only business fraternity at UCI with a national reach that is open to all majors. You can learn about a vastly different field from each member, and that's what is special about us. `,
+    answer: `AKPsi are the only business fraternity at UCI with a national reach that is open to all majors. You can learn about a vastly different field from each member, and that's what is special about us.`,
   },
   {
     question: "What majors does Alpha Kappa Psi accept?",
@@ -40,48 +40,37 @@ const faqData = [
 ];
 
 export default function FAQ() {
-  const [openIndexes, setOpenIndexes] = useState([]);
+  // Only one open FAQ at a time for a sleek accordion feel.
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
-    setOpenIndexes((prevOpenIndexes) => {
-      console.log("Previous openIndexes:", prevOpenIndexes);
-      if (prevOpenIndexes.includes(index)) {
-        return prevOpenIndexes.filter((i) => i !== index);
-      } else {
-        return [...prevOpenIndexes, index];
-      }
-    });
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className="faq-section">
-      <h2>Frequently Asked Questions</h2>
+    <section className="faq-section">
+      <div className="faq-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Your questions, answered.</p>
+      </div>
       <div className="faq-container">
         {faqData.map((faq, index) => (
           <div
-            className="faq-item"
+            className={`faq-item ${activeIndex === index ? "active" : ""}`}
             key={index}
-            onClick={() => toggleFAQ(index)}
           >
-            <div
-              className={`faq-question ${openIndexes.includes(index) ? "active" : ""}`}
-            >
-              {faq.question}
+            <button className="faq-question" onClick={() => toggleFAQ(index)}>
+              <span className="question-text">{faq.question}</span>
               <span className="faq-icon">
-                {openIndexes.includes(index) ? "▲" : "▼"}
+                {activeIndex === index ? "–" : "+"}
               </span>
-            </div>
-            <div
-              className={`faq-answer ${openIndexes.includes(index) ? "active" : ""}`}
-              style={{
-                display: openIndexes.includes(index) ? "block" : "none",
-              }}
-            >
-              {faq.answer}
+            </button>
+            <div className="faq-answer">
+              <p>{faq.answer}</p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -134,6 +134,7 @@ export { default as YerbaMateLogo } from "./Logos/YerbaMateLogo.webp"
 export { default as CaliforniaISOLogo } from "./Logos/CaliforniaISOLogo.png"
 export { default as KumonLogo } from "./Logos/KumonLogo.png"
 export { default as MerageLogo } from "./Logos/MerageLogo.png"
+export { default as OriginsWorldFoodsLogo } from "./Logos/OriginsWorldFoodsLogo.png"
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";

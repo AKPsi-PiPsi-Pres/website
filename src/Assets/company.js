@@ -57,6 +57,7 @@ import {
     CaliforniaISOLogo,
     KumonLogo,
     MerageLogo,
+    OriginsWorldFoodsLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -97,6 +98,7 @@ export const companyHash = {
     "Pranay Macherla": AmazonLogo,
     "Mina Nguyen": DefaultHeadshot,
     "Vinh Tran": CaliforniaISOLogo,
+    "Daniel Vercueil": OriginsWorldFoodsLogo,
     "Default Headshot": DefaultHeadshot,
   };
     
