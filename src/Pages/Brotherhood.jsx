@@ -118,7 +118,7 @@ export default function Brotherhood() {
     BrotherhoodImage19,
     BrotherhoodImage20,
     BrotherhoodImage21,
-    BrotherhoodImage14,
+    // BrotherhoodImage14,
     BrotherhoodImage15,
     BrotherhoodImage16,
     BrotherhoodImage9,
