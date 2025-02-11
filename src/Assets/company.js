@@ -25,7 +25,7 @@ import {
     oraclelogo,
     paramountLogo,
     protivitilogo,
-    pwclogo,
+    PWCLogo,
     redbulllogo,
     statefarmlogo,
     vmwarelogo,
@@ -58,6 +58,13 @@ import {
     KumonLogo,
     MerageLogo,
     OriginsWorldFoodsLogo,
+    KimleyHornLogo,
+    ConcordiaLogo,
+    ExperianLogo,
+    WiseAssistantLogo,
+    DepopLogo,
+    AcornsLogo,
+    HORLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -99,6 +106,18 @@ export const companyHash = {
     "Mina Nguyen": DefaultHeadshot,
     "Vinh Tran": CaliforniaISOLogo,
     "Daniel Vercueil": OriginsWorldFoodsLogo,
+    "Tommy Nguyen": DefaultHeadshot,
+    "Alex Sriprathum": KimleyHornLogo,
+    "Nico Simonian": DefaultHeadshot,
+    "Carl Qiao": PWCLogo,
+    "Logan Kim": ConcordiaLogo,
+    "Ryan Park": ExperianLogo,
+    "Melinda Do": WiseAssistantLogo,
+    "Travis Yen": DepopLogo,
+    "Tyler Ho": DeloitteLogo,
+    "Erin Tran": AcornsLogo,
+    "Bradly Ho": HORLogo,
+    "Brandon Koh": DefaultHeadshot,
     "Default Headshot": DefaultHeadshot,
   };
     

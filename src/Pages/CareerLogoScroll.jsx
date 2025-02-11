@@ -27,7 +27,7 @@ import {
   oraclelogo,
   paramountLogo,
   protivitilogo,
-  pwclogo,
+  PWCLogo,
   redbulllogo,
   statefarmlogo,
   vmwarelogo,
@@ -68,7 +68,7 @@ const CareerLogoScroller = () => {
         <img src={oraclelogo} alt="Oracle" />
         <img src={paramountLogo} alt="Paramount" />
         <img src={protivitilogo} alt="Protiviti" />
-        <img src={pwclogo} alt="PWC" />
+        <img src={PWCLogo} alt="PWC" />
         <img src={redbulllogo} alt="Redbull" />
         <img src={warnbroslogo} alt="Warner Bros" />
       </div>
