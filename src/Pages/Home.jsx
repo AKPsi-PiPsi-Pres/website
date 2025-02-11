@@ -98,13 +98,13 @@ export default function Home() {
         </motion.div>
         <div className="info-section">
           <div className="info-content">
-            <h2>The world's oldest and largest business fraternity</h2>
+            <h2>THE WORLD'S OLDEST AND LARGEST BUSINESS FRATERNITY</h2>
             <p>
-              The organization of Alpha Kappa Psi was founded in New York
-              University in 1904. Spanning decades, Alpha Kappa Psi has helped
-              over 300,000 individuals create lifelong friends and pursue their
-              dreams. Our goal is to help Anteaters become the best versions of
-              themselves.
+              The organization of Alpha Kappa Psi was founded in New York University in 1904. 
+              Now over a century old, Alpha Kappa Psi has helped over 300,000 individuals create lifelong 
+              friends and pursue their dreams. Our chapter here at UC Irvine is devoted to this same goal 
+              of helping students build lasting friendships and achieve their dreams. Our goal is to help 
+              Anteaters become the best versions of themselves that they can be.
             </p>
           </div>
           <div className="info-image-container">
