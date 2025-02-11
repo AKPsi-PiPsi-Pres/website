@@ -161,7 +161,7 @@ html, body {
 
 .info-content {
   max-width: 66%;
-  background-color: var(--bg-card);
+  /* background-color: var(--bg-card); */
   padding: 2rem;
 }
 
@@ -237,16 +237,16 @@ html, body {
   opacity: 0;
   animation: fadeInUp 0.5s ease-out forwards;
   animation-play-state: paused;
-  background-color: var(--bg-card);
+  /* background-color: var(--bg-card); */
   padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-.summary-item:hover {
+/* .summary-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .summary-item h2 {
   font-size: 1.5rem;
