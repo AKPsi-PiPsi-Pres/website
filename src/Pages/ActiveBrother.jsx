@@ -54,6 +54,7 @@ export default function ActiveBrother({ brotherInfo }) {
       console.error("renderList received non-array input:", items);
       return null;
     }
+    console.log(items)
     return (
       <ul className="brother-list">
         {items.map((item, index) => (

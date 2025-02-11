@@ -101,7 +101,6 @@ export { default as nbclogo } from "./Logos/NBCUniversal.png";
 export { default as oraclelogo } from "./Logos/OracleLogo.png";
 export { default as paramountLogo } from "./Logos/ParamountLogo.png";
 export { default as protivitilogo } from "./Logos/protivitiLogo.png";
-export { default as pwclogo } from "./Logos/pwclogo.png";
 export { default as redbulllogo } from "./Logos/redbulllogo.jpg";
 export { default as statefarmlogo } from "./Logos/statefarmlogo.png";
 export { default as vmwarelogo } from "./Logos/vmwarelogo.png";
@@ -135,6 +134,15 @@ export { default as CaliforniaISOLogo } from "./Logos/CaliforniaISOLogo.png"
 export { default as KumonLogo } from "./Logos/KumonLogo.png"
 export { default as MerageLogo } from "./Logos/MerageLogo.png"
 export { default as OriginsWorldFoodsLogo } from "./Logos/OriginsWorldFoodsLogo.png"
+export { default as WiseAssistantLogo } from "./Logos/WiseAssistantLogo.png";
+export { default as KimleyHornLogo } from "./Logos/KimleyHornLogo.webp";
+export { default as WiseLogo } from "./Logos/WiseAssistantLogo.png";
+export { default as HORLogo } from "./Logos/HORLogo.png";
+export { default as DepopLogo } from "./Logos/DepopLogo.png";
+export { default as ConcordiaLogo } from "./Logos/ConcordiaLogo.png";
+export { default as ExperianLogo } from "./Logos/ExperianLogo.png";
+export { default as PWCLogo } from "./Logos/PWCLogo.png";
+export { default as AcornsLogo } from "./Logos/AcornsLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
