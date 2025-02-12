@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Recruitment.css";
-import { Dune } from "../Assets";
-import DuneButton from "../Components/RushButton";
+import { ChromeHearts } from "../Assets";
 import RushEventInfo from "../Components/RushEventInfo";
 import DownPointerButton from "../Components/DownPointerButton";
+import RushButton from "../Components/RushButton";
 
 export default function Recruitment() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +11,7 @@ export default function Recruitment() {
   const events = [
     {
       name: "Meet The Bros",
-      date: "Tuesday, October 1st",
+      date: "Tuesday, April 1st",
       location: "SB1 2200 and Merage Terrace",
       attire: "Casual",
       time: "6:00 PM - 9:00 PM",
@@ -19,7 +19,7 @@ export default function Recruitment() {
     },
     {
       name: "Alumni Night",
-      date: "Thursday, October 3rd",
+      date: "Thursday, April 3rd",
       location: "SB1 1200",
       attire: "Business Professional",
       time: "6:00 PM - 9:00 PM",
@@ -27,7 +27,7 @@ export default function Recruitment() {
     },
     {
       name: "Game Night",
-      date: "Friday, October 4th",
+      date: "Friday, April 4th",
       location: "SB1 1200",
       attire: "Business Casual",
       time: "6:00 PM - 9:00 PM",
@@ -35,7 +35,7 @@ export default function Recruitment() {
     },
     {
       name: "Social Barbeque",
-      date: "Tuesday, October 8th",
+      date: "Tuesday, April 8th",
       location: "Sent via Email",
       attire: "Casual",
       time: "6:00 PM - 9:00 PM",
@@ -43,7 +43,7 @@ export default function Recruitment() {
     },
     {
       name: "Interviews",
-      date: "Thursday + Friday, October 10th and 11th",
+      date: "Thursday + Friday, April 10th and 11th",
       location: "Sent via Email",
       attire: "Business Professional",
       time: "6:00 PM - 9:00 PM",
@@ -53,7 +53,7 @@ export default function Recruitment() {
 
   useEffect(() => {
     const img = new Image();
-    img.src = Dune;
+    img.src = ChromeHearts;
     img.onload = () => {
       setTimeout(() => {
         setIsLoading(false);
@@ -72,11 +72,11 @@ export default function Recruitment() {
   return (
     <div className="recruitmentContainer">
       <div className="hero-recruitment-Section viewport">
-        <h1 className="main-recruitment-Title">Rise</h1>
-        <p className="subTitle">Fall Rush 2024</p>
-        <DuneButton href="https://docs.google.com/forms/d/e/1FAIpQLScFxDkUrW7QN0_sEpIi4Wk0yjCoLLfLSBh0UvqAe9hfHfhcKQ/formResponse?pli=1">
+        <h1 className="main-recruitment-Title">Timeless</h1>
+        <p className="subTitle">Spring Rush 2025</p>
+        <RushButton href="https://docs.google.com/forms/d/e/1FAIpQLScFxDkUrW7QN0_sEpIi4Wk0yjCoLLfLSBh0UvqAe9hfHfhcKQ/formResponse?pli=1">
           Rush Application
-        </DuneButton>
+        </RushButton>
       </div>
       {events.map((event, index) => (
         <div key={index} className="viewport">

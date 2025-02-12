@@ -70,6 +70,7 @@ export { default as JacobTrollPhoto } from "./TrollPhotos/IMG_1040.PNG";
 
 export { default as Dune } from "./Frames/FALL RUSH 24 GRAPHIC DESIGN.webp";
 export { default as DuneMini } from "./Frames/FALL RUSH 24 SHIRT DESIGN.jpeg";
+export { default as ChromeHearts } from "./Frames/SPRING RUSH 25 GRAPHIC DESIGN.webp";
 export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";
 export { default as instagramLogo } from "./Logos/instagramLogo.png";
