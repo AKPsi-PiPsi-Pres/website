@@ -1,94 +1,112 @@
-.eventCard {
-    --card-bg: rgba(20, 20, 30, 0.8);
-    --text-primary: #e6e6e6;
-    --text-secondary: #b0b0b0;
-    --accent: #d86800;
-    --border: #4a4a5a;
-
-    width: 50vmin;
-    max-width: 90%;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    padding: 2rem;
-    margin: 1rem;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: #0f0f0f;
+    font-family: 'Old English Text MT', serif;
+  }
+  
+  .recruitmentContainer {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
     position: relative;
-    overflow: hidden;
-}
-
-.eventCard::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    opacity: 0.7;
-}
-
-.eventCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
-}
-
-.eventTitle {
-    font-size: 1.8rem;
-    color: var(--text-primary);
-    margin: 0 0 1.5rem 0;
-    text-align: left;
-    font-weight: 700;
-    font-family: 'Dune Rise', 'Arial', sans-serif;
-    letter-spacing: 1px;
+    background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(10,10,10,1) 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .viewport {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: silver;
+    text-shadow: 2px 2px 5px black;
+    padding: 0rem 2rem;
+    position: relative;
+  }
+  
+  .hero-recruitment-Section {
+    text-align: center;
+    border-radius: 10px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .main-recruitment-Title {
+    font-size: 6rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.5rem;
-}
+    color: silver;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  .subTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    color: rgba(192, 192, 192, 0.9);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .eventSection h2 {
+    font-size: 3rem;
+    color: silver;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+  }
+  
+  .eventSection p {
+    font-size: 1.2rem;
+    color: rgba(200, 200, 200, 0.9);
+  }
 
-.eventDetails {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    align-items: start;
-}
+  .chrome-event-card {
+    background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(15,15,15,0.9) 100%);
+    border: 2px solid silver;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  }
 
-.eventDetail {
+  .chrome-event-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Old English Text MT', serif;
+    color: silver;
+  }
+
+  .chrome-event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .chrome-event-detail {
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    color: var(--text-secondary);
-    transition: color 0.3s ease;
-}
-
-.eventDetail:hover {
-    color: var(--text-primary);
-}
-
-.eventDetail svg {
-    margin-right: 0.75rem;
-    color: var(--accent);
+    gap: 10px;
     font-size: 1.2rem;
-}
-
-@media (max-width: 768px) {
-    .eventCard {
-        width: 90vmin;
-        padding: 1.5rem;
-    }
-
-    .eventTitle {
-        font-size: 1.5rem;
-    }
-
-    .eventDetails {
-        grid-template-columns: 1fr;
-    }
-}
-
-.active-tab {
-    background-color: var(--accent);
-    color: var(--card-bg);
-}
+    color: rgba(220, 220, 220, 0.9);
+    background: rgba(50,50,50,0.2);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.1);
+  }
