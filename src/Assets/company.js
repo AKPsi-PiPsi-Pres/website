@@ -65,6 +65,9 @@ import {
     DepopLogo,
     AcornsLogo,
     HORLogo,
+    GitHubLogo,
+    YouTubeLogo,
+    LoroPianaLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -83,7 +86,7 @@ export const companyHash = {
     "Anna Shan": BlackstoneLogo,
     "Isabella Tan": MonsterLogo, //GRAD
     "Amy Tu": ThalesLogo,
-    "Mason Whang": ElevatedLogo,
+    "Mason Whang": LoroPianaLogo,
     "Edmund Ma": RyanLLCLogo,
     "Chris Wang": YerbaMateLogo,
     "Andrew Sou": DefaultHeadshot,
@@ -99,7 +102,7 @@ export const companyHash = {
     "Daniel Kim": TakenakaPartnersLogo,
     "Donny Chau": AutodeskLogo,
     "Haley Yoon": DefaultHeadshot,
-    "Katie Wang": PfizerLogo,
+    "Katie Wang": GitHubLogo,
     "Lauren Cho": OITLogo,
     "Massimo Vano": SiemensLogo,
     "Pranay Macherla": AmazonLogo,
@@ -117,7 +120,7 @@ export const companyHash = {
     "Tyler Ho": DeloitteLogo,
     "Erin Tran": AcornsLogo,
     "Bradly Ho": HORLogo,
-    "Brandon Koh": DefaultHeadshot,
+    "Brandon Koh": YouTubeLogo,
     "Default Headshot": DefaultHeadshot,
   };
     
