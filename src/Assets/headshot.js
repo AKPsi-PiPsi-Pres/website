@@ -39,6 +39,18 @@ import MaxVano from "./ActiveHeadshots/Max Vano.webp";
 import MinaNguyen from "./ActiveHeadshots/Mina Nguyen.webp";
 import PranayMach from "./ActiveHeadshots/Pranay Macherla.webp";
 import DanielVercueil from "./ActiveHeadshots/Daniel Verceil.webp";
+import TylerHo from "./ActiveHeadshots/Tyler Ho.webp";
+import TravisYen from "./ActiveHeadshots/Travis Yen.webp";
+import TommyNguyen from "./ActiveHeadshots/Tommy Nguyen.webp";
+import RyanPark from "./ActiveHeadshots/Ryan Park.webp";
+import NicoSimonian from "./ActiveHeadshots/Nico Simonian.webp";
+import MelindaDo from "./ActiveHeadshots/Melinda Do.webp";
+import LoganKim from "./ActiveHeadshots/Logan Kim.webp";
+import ErinTran from "./ActiveHeadshots/Erin Tran.webp";
+import CarlQiao from "./ActiveHeadshots/Carl Qiao.webp";
+import BrandonKoh from "./ActiveHeadshots/Brandon Koh.webp";
+import BradlyHo from "./ActiveHeadshots/Bradly Ho.webp";
+import AlexSriprathum from "./ActiveHeadshots/Alex Sriprathum.webp";
 import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
 
 export const headshotHash = {
@@ -83,5 +95,17 @@ export const headshotHash = {
   "Massimo Vano": MaxVano,
   "Pranay Macherla": PranayMach,
   "Mina Nguyen": MinaNguyen,
+  "Tyler Ho": TylerHo,
+  "Travis Yen": TravisYen,
+  "Tommy Nguyen": TommyNguyen,
+  "Ryan Park": RyanPark,
+  "Nico Simonian": NicoSimonian,
+  "Melinda Do": MelindaDo,
+  "Logan Kim": LoganKim,
+  "Erin Tran": ErinTran,
+  "Carl Qiao": CarlQiao,
+  "Brandon Koh": BrandonKoh,
+  "Bradly Ho": BradlyHo,
+  "Alex Sriprathum": AlexSriprathum,
   "Default Headshot": DefaultHeadshot,
 };
