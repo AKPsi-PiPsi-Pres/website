@@ -160,3 +160,5 @@ export { default as aboutImage5 } from "./AboutPhotos/aboutImage5.webp";
 export { default as aboutImage6 } from "./AboutPhotos/aboutImage6.webp";
 export { default as aboutImage7 } from "./AboutPhotos/aboutImages7.webp";
 
+export {default as LastGMFall24 } from "./Frames/LastGMFall24Fraternity.webp";
+export {default as WinterRetreatFraternity } from "./Frames/WinterRetreatFraternity.webp";
