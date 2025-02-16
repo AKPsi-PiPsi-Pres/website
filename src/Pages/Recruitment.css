@@ -3,7 +3,7 @@ body, html {
   padding: 0;
   height: 100%;
   overflow: auto;
-  background-color: #0f0f0f;
+  /* background-color: #0f0f0f; */
   font-family: 'Old English Text MT', serif;
 }
 
