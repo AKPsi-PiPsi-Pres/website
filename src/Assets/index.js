@@ -71,7 +71,6 @@ export { default as JacobTrollPhoto } from "./TrollPhotos/IMG_1040.PNG";
 export { default as Dune } from "./Frames/FALL RUSH 24 GRAPHIC DESIGN.webp";
 export { default as DuneMini } from "./Frames/FALL RUSH 24 SHIRT DESIGN.jpeg";
 export { default as ChromeHearts } from "./Frames/SPRING RUSH 25 GRAPHIC DESIGN.webp";
-export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";
 export { default as instagramLogo } from "./Logos/instagramLogo.png";
 export { default as GoogleLogo } from "./Logos/GoogleLogo.png";
@@ -151,6 +150,7 @@ export { default as LoroPianaLogo } from "./Logos/LoroPianaLogo.png";
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
 export { default as JTreeReel } from "./Videos/JoshuatreeReelWebsite.mp4";
+export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
 
 export { default as aboutImage1 } from "./AboutPhotos/aboutImage1.webp";
 export { default as aboutImage2 } from "./AboutPhotos/aboutImage2.webp";
@@ -162,3 +162,5 @@ export { default as aboutImage7 } from "./AboutPhotos/aboutImages7.webp";
 
 export {default as LastGMFall24 } from "./Frames/LastGMFall24Fraternity.webp";
 export {default as WinterRetreatFraternity } from "./Frames/WinterRetreatFraternity.webp";
+
+export {default as TimelessAudio } from "./Audios/The Weeknd - Timeless (Instrumental).mp3";

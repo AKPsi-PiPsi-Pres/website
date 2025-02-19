@@ -4,6 +4,7 @@ import { ChromeHearts } from "../Assets";
 import RushEventInfo from "../Components/RushEventInfo";
 import DownPointerButton from "../Components/DownPointerButton";
 import RushButton from "../Components/RushButton";
+import { TimelessAudio } from "../Assets";
 
 export default function Recruitment() {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,6 +51,23 @@ export default function Recruitment() {
       "open-ness": "Invite Only",
     },
   ];
+
+  const [audio] = useState(new Audio(TimelessAudio));
+
+  useEffect(() => {
+    // Set up audio
+    audio.loop = true;
+    
+    // Start playing when component mounts
+    audio.play().catch(error => {
+      console.log("Audio playback failed:", error);
+    });
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, [audio]);
 
   useEffect(() => {
     const img = new Image();

@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Brotherhood.css";
 import { Fall23RushVideo, CruiseReel } from "../Assets";
 import { useMobile } from "../Components/Navbar";
-import DownPointerButton from "../Components/DownPointerButton";
 import { motion } from "framer-motion";
 import {
   BrotherhoodImage1,
