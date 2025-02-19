@@ -98,7 +98,7 @@ export default function Home() {
         </motion.div>
         <div className="info-section">
           <div className="info-content">
-            <h2>The world's oldest and largest business fraternity</h2>
+            <h2>THE WORLD'S OLDEST AND LARGEST BUSINESS FRATERNITY</h2>
             <p>
               The organization of Alpha Kappa Psi was founded in New York
               University in 1904. Spanning decades, Alpha Kappa Psi has helped
