@@ -12,7 +12,7 @@ export default function BrotherPage() {
   const { name } = useParams();
   const SHEET_ID = "167TmecKc4cduWtdounqiXDkYgQjssu9cSz4QLljuKLg";
   const API_KEY = process.env.REACT_APP_ACTIVE_INFO_KEY;
-  const range = "Form Responses 1!C2:L";
+  const range = "Form Responses 1!C2:M";
 
   const getBrotherInfo = useCallback(async () => {
     setIsLoading(true);

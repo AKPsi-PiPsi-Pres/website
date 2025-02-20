@@ -14,7 +14,7 @@ export default function ActiveBrother({ brotherInfo }) {
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     const sections =
@@ -43,6 +43,7 @@ export default function ActiveBrother({ brotherInfo }) {
     experienceRaw,
     askMeAboutRaw,
     loveStatement,
+    favoriteSong,
   ] = brotherInfo;
 
   const interests = splitItems(interestsRaw);
@@ -54,7 +55,6 @@ export default function ActiveBrother({ brotherInfo }) {
       console.error("renderList received non-array input:", items);
       return null;
     }
-    console.log(items)
     return (
       <ul className="brother-list">
         {items.map((item, index) => (
@@ -89,6 +89,14 @@ export default function ActiveBrother({ brotherInfo }) {
             LinkedIn
           </a>
         </div>
+        {favoriteSong && (
+          <div className="brother-soundtrack">
+            <div
+              className="brother-soundtrack"
+              dangerouslySetInnerHTML={{ __html: favoriteSong }}
+            ></div>
+          </div>
+        )}
       </div>
       <div className="brother-details">
         <div className="brother-section animate-on-scroll">
