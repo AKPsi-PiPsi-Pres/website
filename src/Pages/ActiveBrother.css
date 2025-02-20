@@ -50,13 +50,46 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 300px;       /* Adjust as needed */
+  width: 22rem;
   max-width: 100%;
-  background-color: var(--bg-card);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive adjustments for screens 1368px and below */
+@media (max-width: 1368px) {
+  .brother-header {
+    flex-wrap: wrap; /* Allow flex items to wrap */
+  }
+  .brother-soundtrack {
+    position: static; /* Remove absolute positioning so it flows naturally */
+    order: 2;        /* Ensure it appears after the photo/info */
+    width: 100%;     /* Span full available width */
+    margin-top: 1rem;/* Add spacing from above elements */
+  }
+  .brother-info {
+    order: 1;
+    width: 100%;
+  }
+}
+
+/* Responsive adjustments for mid-size screens (e.g., iPads) and smaller */
+@media (max-width: 1024px) {
+  .brother-header {
+    flex-wrap: wrap; /* Allow flex items to wrap */
+  }
+  .brother-soundtrack {
+    position: static; /* Remove absolute positioning */
+    order: 2;        /* Ensure it appears after the photo/info */
+    width: 100%;     /* Span full width */
+    margin-top: 1rem;/* Add spacing from above elements */
+  }
+  /* Ensure the photo/info container takes full width if needed */
+  .brother-info {
+    order: 1;
+    width: 100%;
+  }
 }
 
 /* Responsive adjustments for smaller screens */
@@ -76,15 +109,6 @@ body {
     width: 100%;
   }
 }
-
-.brother-soundtrack iframe {
-  border: none;
-  width: 100%;
-  height: 5rem;
-  border-radius: 12px;
-  display: block;
-}
-
 
 .brother-photo {
   max-width: 300px;
