@@ -33,14 +33,16 @@ import {
   vmwarelogo,
   walmartlogo,
   warnbroslogo,
+  GitHubLogo,
+  BainLogo, 
+  AmazonLogo,
+  BlackrockLogo
 } from "../Assets";
 
 const CareerLogoScroller = () => {
   return (
     <div className="logos">
       <div className="logos-slide">
-        <img src={statefarmlogo} alt="Statefarm" />
-        <img src={hpLogo} alt="HP" />
         <img src={bloomberglogo} alt="Bloomberg" />
         <img src={GoogleLogo} alt="Google" />
         <img src={AppleLogo} alt="Apple" />
@@ -49,25 +51,31 @@ const CareerLogoScroller = () => {
         <img src={EYLogo} alt="EY" />
         <img src={MicrosoftLogo} alt="Microsoft" />
         <img src={TiktokLogo} alt="Tiktok" />
-        <img src={JPMorganLogo} alt="JPMorgan" />
         <img src={WellsFargoLogo} alt="Wells Fargo" />
+        <img src={BainLogo} alt="Redbull" />
+        <img src={nasalogo} alt="NASA" />
+        <img src={GitHubLogo} alt="Warner Bros" />
         <img src={TinderLogo} alt="Tinder" />
         <img src={vmwarelogo} alt="vmware" />
         <img src={LinkedInLogo} alt="LinkedIn" />
-        <img src={kpmglogo} alt="KPMG" />
+        <img src={AmazonLogo} alt="Amazon" />
         <img src={metalogo} alt="Meta" />
         <img src={capitalonelogo} alt="Capital One" />
         <img src={BandCLogo} alt="Bain and Co" />
         <img src={doordashlogo} alt="Doordash" />
-        <img src={fazelogo} alt="Faze" />
-        <img src={intellogo} alt="Intel" />
-        <img src={kialogo} alt="KIA" />
-        <img src={walmartlogo} alt="Walmart" />
-        <img src={nasalogo} alt="NASA" />
-        <img src={nbclogo} alt="NBC" />
+        <img src={hpLogo} alt="HP" />
         <img src={oraclelogo} alt="Oracle" />
         <img src={paramountLogo} alt="Paramount" />
+        <img src={intellogo} alt="Intel" />
+        <img src={kialogo} alt="KIA" />
+        <img src={BlackrockLogo} alt="BlackRock" />
+        <img src={walmartlogo} alt="Walmart" />
+        <img src={nbclogo} alt="NBC" />
+        <img src={kpmglogo} alt="KPMG" />
+        <img src={JPMorganLogo} alt="JPMorgan" />
         <img src={protivitilogo} alt="Protiviti" />
+        <img src={fazelogo} alt="Faze" />
+        <img src={statefarmlogo} alt="Statefarm" />
         <img src={PWCLogo} alt="PWC" />
         <img src={redbulllogo} alt="Redbull" />
         <img src={warnbroslogo} alt="Warner Bros" />

@@ -146,6 +146,7 @@ export { default as AcornsLogo } from "./Logos/AcornsLogo.png";
 export { default as YouTubeLogo } from "./Logos/YouTubeLogo.png";
 export { default as GitHubLogo } from "./Logos/GitHubLogo.png";
 export { default as LoroPianaLogo } from "./Logos/LoroPianaLogo.png";
+export { default as BainLogo } from "./Logos/BainLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
