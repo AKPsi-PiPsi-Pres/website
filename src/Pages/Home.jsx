@@ -5,7 +5,7 @@ import { Spring23RushVideo, JTreeReel, BrotherhoodImage2 } from "../Assets";
 import { knightAKYLogo } from "../Assets";
 import SleekButton from "../Components/SleekButton";
 import { OpenInNew } from "@mui/icons-material";
-import { Instagram, Facebook } from "@mui/icons-material";
+import { Instagram, Facebook, LinkedIn } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
 import { PersonalGrowth, BrotherhoodImage53 } from "../Assets";
 
@@ -54,7 +54,7 @@ export default function Home() {
     const observer = new IntersectionObserver(animateOnScroll, observerOptions);
 
     const sections = document.querySelectorAll(
-      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links",
+      ".info-content, .info-image-container, .info-button-container, .wrapup-section, .summary-item, .final-statements, .social-links"
     );
     sections.forEach((section) => observer.observe(section));
 
@@ -183,6 +183,13 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <Facebook />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/alpha-kappa-psi-uci"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedIn />
                 </a>
                 <a href="mailto:akpsi.uci.rush@gmail.com">
                   akpsi.uci.rush@gmail.com
