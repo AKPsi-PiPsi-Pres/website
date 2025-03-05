@@ -10,11 +10,13 @@ import Careers from "./Pages/Careers";
 import Recruitment from "./Pages/Recruitment";
 import BrotherPage from "./Pages/BrotherPage";
 import NotFoundPage from "./Pages/NotFoundPage";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
     <Router>
       <div className="App">
+        <Analytics />
         <Main />
         <Routes>
           <Route exact path="/" element={<Home />} />
