@@ -97,7 +97,7 @@ body, html {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: titleGradient 8s linear infinite, titleFloat 4s ease-in-out infinite, titleHoverGlow 5s ease-in-out, titleGlow 5s ease-in-out infinite;
+  animation: titleGradient 8s linear infinite, titleFloat 2s ease-in-out infinite, titleHoverGlow 5s ease-in-out, titleGlow 3s ease-in-out infinite;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
 }
 
@@ -226,7 +226,7 @@ body, html {
 
 .eventSection {
   opacity: 0;
-  animation: sectionFadeIn 1s ease-out forwards 2.5s;
+  animation: sectionFadeIn 1s ease-out forwards 2s;
 }
 
 @keyframes sectionFadeIn {
@@ -261,7 +261,7 @@ body, html {
     rgba(192, 192, 192, 0.5),
     transparent
   );
-  animation: shimmer 2s infinite;
+  animation: shimmer 1.5s infinite;
 }
 
 @keyframes shimmer {

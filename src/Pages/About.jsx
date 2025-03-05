@@ -8,7 +8,7 @@ import {
   aboutImage3,
   aboutImage4,
   aboutImage5,
-  aboutImage7,
+  WinterRetreatFraternity,
 } from "../Assets";
 import { Instagram, Facebook, LinkedIn } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
@@ -83,8 +83,8 @@ export default function About() {
   return (
     <div className="home-container">
       <div className="background-image">
-        {!isMobile && <img src={aboutImage7} />}
-        {isMobile && <img src={aboutImage7} />}
+        {!isMobile && <img src={WinterRetreatFraternity} />}
+        {isMobile && <img src={WinterRetreatFraternity} />}
       </div>
       <motion.div className="hero-section">
         <div className="hero-content">
