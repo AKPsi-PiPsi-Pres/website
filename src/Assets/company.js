@@ -68,6 +68,7 @@ import {
     GitHubLogo,
     YouTubeLogo,
     LoroPianaLogo,
+    USAALogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -80,7 +81,7 @@ export const companyHash = {
     "Sarah Kim": KumonLogo,
     "Yan Amy Zhou": JPMorganLogo,
     "Alexandra Ancheta": BakerTillyLogo,
-    "Tiffany Cheng": MerageLogo,
+    "Tiffany Cheng": AppleLogo,
     "Tiffany Vo": MerageLogo,
     "Izella Han": RippleMatchLogo,
     "Anna Shan": BlackstoneLogo,
@@ -108,10 +109,10 @@ export const companyHash = {
     "Pranay Macherla": AmazonLogo,
     "Mina Nguyen": DefaultHeadshot,
     "Vinh Tran": CaliforniaISOLogo,
-    "Daniel Vercueil": OriginsWorldFoodsLogo,
+    "Daniel Vercueil": MerageLogo,
     "Tommy Nguyen": DefaultHeadshot,
     "Alex Sriprathum": KimleyHornLogo,
-    "Nico Simonian": DefaultHeadshot,
+    "Nico Simonian": USAALogo,
     "Carl Qiao": PWCLogo,
     "Logan Kim": ConcordiaLogo,
     "Ryan Park": ExperianLogo,

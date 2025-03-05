@@ -1,6 +1,6 @@
 /* FAQ Section Container */
 .faq-section {
-  padding: 80px 20px;
+  padding: 5rem 1rem;
   background-color: var(--color-background);
   color: var(--color-text);
   text-align: center;
@@ -23,8 +23,14 @@
 
 /* FAQ Container */
 .faq-container {
-  max-width: 75%;
+  max-width: 80%;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .faq-container {
+    max-width: 95%;
+  }
 }
 
 /* FAQ Card Style */
@@ -60,10 +66,6 @@
   transition: background-color 0.25s ease;
 }
 
-.faq-question:hover {
-  /* If your accent is defined as a hex, you can use a semi-transparent version here */
-  background-color: rgba(71, 135, 255, 0.1);
-}
 
 /* FAQ Icon */
 .faq-icon {
@@ -78,7 +80,7 @@
   opacity: 0;
   padding: 0 20px;
   overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.1s ease, opacity 0.2s ease, padding 0.2s ease;
 }
 
 .faq-item.active .faq-answer {
