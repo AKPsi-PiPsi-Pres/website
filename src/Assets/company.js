@@ -69,6 +69,7 @@ import {
     YouTubeLogo,
     LoroPianaLogo,
     USAALogo,
+    BlackrockLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -84,7 +85,7 @@ export const companyHash = {
     "Tiffany Cheng": AppleLogo,
     "Tiffany Vo": MerageLogo,
     "Izella Han": RippleMatchLogo,
-    "Anna Shan": BlackstoneLogo,
+    "Anna Shan": BlackrockLogo,
     "Isabella Tan": MonsterLogo, //GRAD
     "Amy Tu": ThalesLogo,
     "Mason Whang": LoroPianaLogo,
