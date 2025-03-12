@@ -148,6 +148,8 @@ export { default as GitHubLogo } from "./Logos/GitHubLogo.png";
 export { default as LoroPianaLogo } from "./Logos/LoroPianaLogo.png";
 export { default as BainLogo } from "./Logos/BainLogo.png";
 export { default as USAALogo } from "./Logos/USAALogo.png";
+export { default as SnowflakeLogo } from "./Logos/SnowflakeLogo.png";
+export { default as TripleALogo } from "./Logos/TripleALogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
