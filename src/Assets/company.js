@@ -1,3 +1,4 @@
+import { Snowflake } from "lucide-react";
 import {
     GoogleLogo,
     AppleLogo,
@@ -70,6 +71,8 @@ import {
     LoroPianaLogo,
     USAALogo,
     BlackrockLogo,
+    TripleALogo,
+    SnowflakeLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -87,7 +90,7 @@ export const companyHash = {
     "Izella Han": RippleMatchLogo,
     "Anna Shan": BlackrockLogo,
     "Isabella Tan": MonsterLogo, //GRAD
-    "Amy Tu": ThalesLogo,
+    "Amy Tu": SnowflakeLogo,
     "Mason Whang": LoroPianaLogo,
     "Edmund Ma": RyanLLCLogo,
     "Chris Wang": YerbaMateLogo,
@@ -105,7 +108,7 @@ export const companyHash = {
     "Donny Chau": AutodeskLogo,
     "Haley Yoon": DefaultHeadshot,
     "Katie Wang": GitHubLogo,
-    "Lauren Cho": OITLogo,
+    "Lauren Cho": TripleALogo,
     "Massimo Vano": SiemensLogo,
     "Pranay Macherla": AmazonLogo,
     "Mina Nguyen": DefaultHeadshot,
