@@ -52,6 +52,31 @@ const COLORS = ["#0066cc", "#00a86b", "#f39c12", "#8e44ad"];
 
 export default function About() {
   const { isMobile } = useMobile();
+  
+  // Animation variants
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.5,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    }
+  };
+  
+  const scaleInVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { 
+        duration: 0.5,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    }
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -98,226 +123,346 @@ export default function About() {
           </motion.h1>
         </div>
       </motion.div>
-      <div className="info-section">
-        <h2>Chapter Demographics</h2>
-        <div className="charts-grid">
-          <div className="chart-container">
-            <h3>Major Breakdown</h3>
-            <ResponsiveContainer width="90%" height={500}>
-              <PieChart>
-                <Pie
-                  data={majorData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  outerRadius={200}
-                  fill="#8884d8"
-                  label={({
-                    cx,
-                    cy,
-                    midAngle,
-                    innerRadius,
-                    outerRadius,
-                    percent,
-                    name,
-                  }) => {
-                    const RADIAN = Math.PI / 180;
-                    const radius =
-                      innerRadius + (outerRadius - innerRadius) * 0.5;
-                    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+      <div className="section-background info-background">
+        <div className="section-overlay"></div>
+        <div className="info-section">
+          <h2 className="section-title">Chapter Demographics</h2>
+          <div className="charts-grid">
+            <motion.div 
+              className="chart-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeInVariants}
+            >
+              <h3>Major Breakdown</h3>
+              <ResponsiveContainer width="90%" height={500}>
+                <PieChart>
+                  <Pie
+                    data={majorData}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    outerRadius={200}
+                    fill="#8884d8"
+                    label={({
+                      cx,
+                      cy,
+                      midAngle,
+                      innerRadius,
+                      outerRadius,
+                      percent,
+                      name,
+                    }) => {
+                      const RADIAN = Math.PI / 180;
+                      const radius =
+                        innerRadius + (outerRadius - innerRadius) * 0.5;
+                      const x = cx + radius * Math.cos(-midAngle * RADIAN);
+                      const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
-                    return (
-                      <text
-                        x={x}
-                        y={y}
-                        fill="white"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                      >
-                        <tspan x={x} dy="-0.5em">
-                          {name}
-                        </tspan>
-                        <tspan
+                      return (
+                        <text
                           x={x}
-                          dy="1.2em"
-                        >{`${(percent * 100).toFixed(0)}%`}</tspan>
-                      </text>
-                    );
-                  }}
-                >
-                  {majorData.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
-                    />
-                  ))}
-                </Pie>
-                <Tooltip />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="chart-container">
-            <h3>Club Involvement</h3>
-            <ResponsiveContainer width="100%" height={500}>
-              <PieChart>
-                <Pie
-                  data={clubData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  outerRadius={200}
-                  fill="#8884d8"
-                  label={({
-                    cx,
-                    cy,
-                    midAngle,
-                    innerRadius,
-                    outerRadius,
-                    percent,
-                    name,
-                  }) => {
-                    const RADIAN = Math.PI / 180;
-                    const radius =
-                      innerRadius + (outerRadius - innerRadius) * 0.5;
-                    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+                          y={y}
+                          fill="white"
+                          textAnchor="middle"
+                          dominantBaseline="central"
+                        >
+                          <tspan x={x} dy="-0.5em">
+                            {name}
+                          </tspan>
+                          <tspan
+                            x={x}
+                            dy="1.2em"
+                          >{`${(percent * 100).toFixed(0)}%`}</tspan>
+                        </text>
+                      );
+                    }}
+                  >
+                    {majorData.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </motion.div>
+            <motion.div 
+              className="chart-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeInVariants}
+              transition={{ delay: 0.1 }}
+            >
+              <h3>Club Involvement</h3>
+              <ResponsiveContainer width="100%" height={500}>
+                <PieChart>
+                  <Pie
+                    data={clubData}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    outerRadius={200}
+                    fill="#8884d8"
+                    label={({
+                      cx,
+                      cy,
+                      midAngle,
+                      innerRadius,
+                      outerRadius,
+                      percent,
+                      name,
+                    }) => {
+                      const RADIAN = Math.PI / 180;
+                      const radius =
+                        innerRadius + (outerRadius - innerRadius) * 0.5;
+                      const x = cx + radius * Math.cos(-midAngle * RADIAN);
+                      const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
-                    return (
-                      <text
-                        x={x}
-                        y={y}
-                        fill="white"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                      >
-                        <tspan x={x} dy="-0.5em">
-                          {name}
-                        </tspan>
-                        <tspan
+                      return (
+                        <text
                           x={x}
-                          dy="1.2em"
-                        >{`${(percent * 100).toFixed(0)}%`}</tspan>
-                      </text>
-                    );
-                  }}
+                          y={y}
+                          fill="white"
+                          textAnchor="middle"
+                          dominantBaseline="central"
+                        >
+                          <tspan x={x} dy="-0.5em">
+                            {name}
+                          </tspan>
+                          <tspan
+                            x={x}
+                            dy="1.2em"
+                          >{`${(percent * 100).toFixed(0)}%`}</tspan>
+                        </text>
+                      );
+                    }}
+                  >
+                    {clubData.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </motion.div>
+            <motion.div 
+              className="chart-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeInVariants}
+              transition={{ delay: 0.2 }}
+            >
+              <h3>Leadership Involvement Rates</h3>
+              <ResponsiveContainer width="100%" height={500}>
+                <LineChart
+                  data={placementData}
+                  margin={{ top: 5, right: 30, left: 15, bottom: 5 }}
                 >
-                  {clubData.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
-                    />
-                  ))}
-                </Pie>
-                <Tooltip />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="chart-container">
-            <h3>Leadership Involvement Rates</h3>
-            <ResponsiveContainer width="100%" height={500}>
-              <LineChart
-                data={placementData}
-                margin={{ top: 5, right: 30, left: 15, bottom: 5 }}
-              >
-                <XAxis dataKey="year" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line
-                  type="monotone"
-                  dataKey="oncampus"
-                  stroke="#0066cc"
-                  name="On-campus (%)"
-                  strokeWidth={2}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="beyondCampus"
-                  stroke="#00a86b"
-                  name="Campus and Beyond (%)"
-                  strokeWidth={2}
-                />
-              </LineChart>
-            </ResponsiveContainer>
+                  <XAxis dataKey="year" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Line
+                    type="monotone"
+                    dataKey="oncampus"
+                    stroke="#0066cc"
+                    name="On-campus (%)"
+                    strokeWidth={2}
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="beyondCampus"
+                    stroke="#00a86b"
+                    name="Campus and Beyond (%)"
+                    strokeWidth={2}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </motion.div>
           </div>
         </div>
       </div>
-      <div className="wrapup-section">
-        <h2>Our Core Values</h2>
-        <div className="summary-section">
-          <div className="summary-a-item">
-            <h2>BROTHERHOOD</h2>
-            <img src={aboutImage3} alt="Brotherhood" />
-            <p>Foster lifelong connections</p>
+      <div className="pillar-background">
+        <div className="pillar-overlay"></div>
+        <div className="wrapup-section">
+          <h2 className="pillar-title">Our Core Values</h2>
+          <div className="summary-section">
+            <motion.div 
+              className="summary-item"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={scaleInVariants}
+              custom={0}
+            >
+              <div className="item-content">
+                <h2>BROTHERHOOD</h2>
+                <div className="image-container">
+                  <img src={aboutImage3} alt="Brotherhood" />
+                  <div className="image-overlay"></div>
+                </div>
+                <p>Foster lifelong connections</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="summary-item"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={scaleInVariants}
+              custom={1}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="item-content">
+                <h2>INTEGRITY</h2>
+                <div className="image-container">
+                  <img src={aboutImage5} alt="Integrity" />
+                  <div className="image-overlay"></div>
+                </div>
+                <p>Uphold ethical standards</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="summary-item"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={scaleInVariants}
+              custom={2}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="item-content">
+                <h2>KNOWLEDGE</h2>
+                <div className="image-container">
+                  <img src={aboutImage4} alt="Knowledge" />
+                  <div className="image-overlay"></div>
+                </div>
+                <p>Pursue continuous learning</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="summary-item"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={scaleInVariants}
+              custom={3}
+              transition={{ delay: 0.3 }}
+            >
+              <div className="item-content">
+                <h2>SERVICE</h2>
+                <div className="image-container">
+                  <img src={aboutImage1} alt="Service" />
+                  <div className="image-overlay"></div>
+                </div>
+                <p>Give back to the community</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="summary-item"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={scaleInVariants}
+              custom={4}
+              transition={{ delay: 0.4 }}
+            >
+              <div className="item-content">
+                <h2>UNITY</h2>
+                <div className="image-container">
+                  <img src={aboutImage2} alt="Unity" />
+                  <div className="image-overlay"></div>
+                </div>
+                <p>Strengthen through collaboration</p>
+              </div>
+            </motion.div>
           </div>
-          <div className="summary-a-item">
-            <h2>INTEGRITY</h2>
-            <img src={aboutImage5} alt="Integrity" />
-            <p>Uphold ethical standards</p>
+          
+          <div className="section-background faq-background">
+            <div className="section-overlay"></div>
+            <div className="info-section faq-section">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInVariants}
+              >
+                <FAQ />
+              </motion.div>
+            </div>
           </div>
-          <div className="summary-a-item">
-            <h2>KNOWLEDGE</h2>
-            <img src={aboutImage4} alt="Knowledge" />
-            <p>Pursue continuous learning</p>
-          </div>
-          <div className="summary-a-item">
-            <h2>SERVICE</h2>
-            <img src={aboutImage1} alt="Service" />
-            <p>Give back to the community</p>
-          </div>
-          <div className="summary-a-item">
-            <h2>UNITY</h2>
-            <img src={aboutImage2} alt="Unity" />
-            <p>Strengthen through collaboration</p>
-          </div>
-        </div>
-        <div className="info-section">
-          <FAQ />
-        </div>
 
-        <footer className="site-footer">
-          <div className="footer-content">
-            <div className="social-links">
-              <a
-                href="https://www.instagram.com/akpsiuci"
-                target="_blank"
-                rel="noopener noreferrer"
+          <footer className="site-footer">
+            <div className="footer-content">
+              <motion.div 
+                className="social-links"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInVariants}
               >
-                <Instagram />
-              </a>
-              <a
-                href="https://facebook.com/akpsiuci"
-                target="_blank"
-                rel="noopener noreferrer"
+                <a
+                  href="https://www.instagram.com/akpsiuci"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <Instagram />
+                </a>
+                <a
+                  href="https://facebook.com/akpsiuci"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <Facebook />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/alpha-kappa-psi-uci"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <LinkedIn />
+                </a>
+                <a href="mailto:akpsi.uci.rush@gmail.com" className="email-link">
+                  akpsi.uci.rush@gmail.com
+                </a>
+              </motion.div>
+              <motion.div 
+                className="final-statements"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInVariants}
               >
-                <Facebook />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/alpha-kappa-psi-uci"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedIn />
-              </a>
-              <a href="mailto:akpsi.uci.rush@gmail.com">
-                akpsi.uci.rush@gmail.com
-              </a>
+                <p className="statement-one">
+                  "Forging tomorrow's leaders through the crucible of brotherhood,
+                  integrity, and professional excellence."
+                </p>
+                <p className="statement-two">
+                  Join us in writing the next chapter of business innovation and
+                  ethical leadership.
+                </p>
+              </motion.div>
             </div>
-            <div className="final-statements">
-              <p className="statement-one">
-                "Forging tomorrow's leaders through the crucible of brotherhood,
-                integrity, and professional excellence."
-              </p>
-              <p className="statement-two">
-                Join us in writing the next chapter of business innovation and
-                ethical leadership.
-              </p>
-            </div>
-          </div>
-        </footer>
+          </footer>
+        </div>
       </div>
     </div>
   );

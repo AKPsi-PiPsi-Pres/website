@@ -13,6 +13,31 @@ export default function Home() {
   const { isMobile } = useMobile();
   const [isLoading, setIsLoading] = useState(true);
   const videoRef = useRef(null);
+  
+  // Animation variants
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.5,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    }
+  };
+  
+  const scaleInVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { 
+        duration: 0.5,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    }
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -96,117 +121,217 @@ export default function Home() {
             </motion.h1>
           </div>
         </motion.div>
-        <div className="info-section">
-          <div className="info-content">
-            <h2>THE WORLD'S OLDEST AND LARGEST BUSINESS FRATERNITY</h2>
-            <p>
-              The organization of Alpha Kappa Psi was founded in New York
-              University in 1904. Spanning decades, Alpha Kappa Psi has helped
-              over 300,000 individuals create lifelong friends and pursue their
-              dreams. Our goal is to help Anteaters become the best versions of
-              themselves.
-            </p>
-          </div>
-          <div className="info-image-container">
-            <img
-              className="info-image"
-              src={knightAKYLogo}
-              alt="Knight Logo of Alpha Kappa Psi"
-            />
-          </div>
-          <div className="info-button-container">
-            <SleekButton
-              variant="outlined"
-              href="https://akpsi.org/"
-              target="_blank"
-              endIcon={<OpenInNew />}
-              className="sleekButton"
+        <div className="section-background info-background">
+          <div className="section-overlay"></div>
+          <div className="info-section">
+            <h2 className="section-title">THE FIRST AND LARGEST BUSINESS FRATERNITY</h2>
+            <motion.div 
+              className="info-content"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0,
+                  transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+                }
+              }}
             >
-              Learn More
-            </SleekButton>
+              <p>
+                The organization of Alpha Kappa Psi was founded in New York
+                University in 1904. Spanning decades, Alpha Kappa Psi has helped
+                over 300,000 individuals create lifelong friends and pursue their
+                dreams. Our goal is to help Anteaters become the best versions of
+                themselves.
+              </p>
+            </motion.div>
+            <motion.div 
+              className="info-image-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={{
+                hidden: { opacity: 0, scale: 0.9 },
+                visible: { 
+                  opacity: 1, 
+                  scale: 1,
+                  transition: { duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }
+                }
+              }}
+            >
+              <img
+                className="info-image"
+                src={knightAKYLogo}
+                alt="Knight Logo of Alpha Kappa Psi"
+              />
+              <div className="image-glow"></div>
+            </motion.div>
+            <motion.div 
+              className="info-button-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0,
+                  transition: { duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }
+                }
+              }}
+            >
+              <SleekButton
+                variant="outlined"
+                href="https://akpsi.org/"
+                target="_blank"
+                endIcon={<OpenInNew />}
+                className="sleekButton"
+              >
+                Learn More
+              </SleekButton>
+            </motion.div>
           </div>
         </div>
-        <div className="wrapup-section">
-          <div className="summary-section">
-            <div className="summary-item brotherhood">
-              <h2>BROTHERHOOD</h2>
-              <img src={BrotherhoodImage53} alt="Brotherhood" />
-              <p>
-                In Alpha Kappa Psi, you meet as strangers but leave as lifelong
-                friends. Our brotherhood sets us apart and shapes us into who we
-                are.
-              </p>
-              <SleekButton className="sleekButton" href="/meet-us">
-                Brothers
-              </SleekButton>
-            </div>
+        <div className="pillar-background">
+          <div className="pillar-overlay"></div>
+          <div className="wrapup-section">
+            <h2 className="pillar-title">OUR PILLARS</h2>
+            <div className="summary-section">
+              <motion.div 
+                className="summary-item brotherhood"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={scaleInVariants}
+                custom={0}
+              >
+                <div className="item-content">
+                  <h2>BROTHERHOOD</h2>
+                  <div className="image-container">
+                    <img src={BrotherhoodImage53} alt="Brotherhood" />
+                    <div className="image-overlay"></div>
+                  </div>
+                  <p>
+                    In Alpha Kappa Psi, you meet as strangers but leave as lifelong
+                    friends. Our brotherhood sets us apart and shapes us into who we
+                    are.
+                  </p>
+                  <SleekButton className="sleekButton" href="/meet-us">
+                    Brothers
+                  </SleekButton>
+                </div>
+              </motion.div>
 
-            <div className="summary-item professionalism">
-              <h2>PROFESSIONALISM</h2>
-              <img src={BrotherhoodImage2} alt="Professionalism" />
-              <p>
-                We inspire one another to chase our passions with confidence by
-                equipping ourselves with the tools necessary to succeed in any
-                industry.
-              </p>
-              <SleekButton className="sleekButton" href="/careers">
-                Careers
-              </SleekButton>
-            </div>
+              <motion.div 
+                className="summary-item professionalism"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={scaleInVariants}
+                custom={1}
+                transition={{ delay: 0.2 }}
+              >
+                <div className="item-content">
+                  <h2>PROFESSIONALISM</h2>
+                  <div className="image-container">
+                    <img src={BrotherhoodImage2} alt="Professionalism" />
+                    <div className="image-overlay"></div>
+                  </div>
+                  <p>
+                    We inspire one another to chase our passions with confidence by
+                    equipping ourselves with the tools necessary to succeed in any
+                    industry.
+                  </p>
+                  <SleekButton className="sleekButton" href="/careers">
+                    Careers
+                  </SleekButton>
+                </div>
+              </motion.div>
 
-            <div className="summary-item personal-growth">
-              <h2>PERSONAL GROWTH</h2>
-              <img src={PersonalGrowth} alt="Personal Growth" />
-              <p>
-                Our unique culture inspires, encourages, and motivates you to
-                step out of your comfort zone and live the life you've always
-                imagined.
-              </p>
-              <SleekButton className="sleekButton" href="/recruitment">
-                Recruitment
-              </SleekButton>
+              <motion.div 
+                className="summary-item personal-growth"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={scaleInVariants}
+                custom={2}
+                transition={{ delay: 0.4 }}
+              >
+                <div className="item-content">
+                  <h2>PERSONAL GROWTH</h2>
+                  <div className="image-container">
+                    <img src={PersonalGrowth} alt="Personal Growth" />
+                    <div className="image-overlay"></div>
+                  </div>
+                  <p>
+                    Our unique culture inspires, encourages, and motivates you to
+                    step out of your comfort zone and live the life you've always
+                    imagined.
+                  </p>
+                  <SleekButton className="sleekButton" href="/recruitment">
+                    Recruitment
+                  </SleekButton>
+                </div>
+              </motion.div>
             </div>
+            <footer className="site-footer">
+              <div className="footer-content">
+                <motion.div 
+                  className="social-links"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInVariants}
+                >
+                  <a
+                    href="https://www.instagram.com/akpsiuci"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                  >
+                    <Instagram />
+                  </a>
+                  <a
+                    href="https://facebook.com/akpsiuci"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                  >
+                    <Facebook />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/alpha-kappa-psi-uci"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                  >
+                    <LinkedIn />
+                  </a>
+                  <a href="mailto:akpsi.uci.rush@gmail.com" className="email-link">
+                    akpsi.uci.rush@gmail.com
+                  </a>
+                </motion.div>
+                <motion.div 
+                  className="final-statements"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInVariants}
+                >
+                  <p className="statement-one">
+                    Our members strive to uphold the highest standards in
+                    everything they do.
+                  </p>
+                  <p className="statement-two">
+                    Site designed and developed in-house, on 7000 lines of code
+                    and counting...
+                  </p>
+                </motion.div>
+              </div>
+            </footer>
           </div>
-          <footer className="site-footer">
-            <div className="footer-content">
-              <div className="social-links">
-                <a
-                  href="https://www.instagram.com/akpsiuci"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Instagram />
-                </a>
-                <a
-                  href="https://facebook.com/akpsiuci"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Facebook />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/alpha-kappa-psi-uci"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkedIn />
-                </a>
-                <a href="mailto:akpsi.uci.rush@gmail.com">
-                  akpsi.uci.rush@gmail.com
-                </a>
-              </div>
-              <div className="final-statements">
-                <p className="statement-one">
-                  Our members strive to uphold the highest standards in
-                  everything they do.
-                </p>
-                <p className="statement-two">
-                  Site designed and developed in-house, on 7000 lines of code
-                  and counting...
-                </p>
-              </div>
-            </div>
-          </footer>
         </div>
       </div>
     </>
