@@ -75,7 +75,7 @@ body {
 
 .titleSection, .mainTitleSection, .aboutus-section, .info-section, .wrapup-section {
   width: 100%;
-  padding: 50px 20px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -586,12 +586,6 @@ p {
   border-radius: 50%;
   transition: all 0.3s ease;
   text-decoration: none;
-}
-
-.social-icon:hover {
-  background: var(--accent-color);
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 160, 220, 0.4);
 }
 
 .email-link {

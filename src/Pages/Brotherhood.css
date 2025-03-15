@@ -142,7 +142,6 @@ html, body {
   opacity: 0;
   animation: fadeInSlideUp 0.8s ease-out forwards;
   animation-delay: calc(var(--img-index, 0) * 0.1s);
-  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   will-change: transform, opacity; /* Optimize performance for animations */
