@@ -73,6 +73,7 @@ import {
     BlackrockLogo,
     TripleALogo,
     SnowflakeLogo,
+    RadixWellnessLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -101,7 +102,7 @@ export const companyHash = {
     "Elle Hsu": PepsiLogo,
     "Anuj Patel": nasalogo,
     "Rithika Pothi": capitalonelogo,  //GRAD
-    "Andrew Hauber": RentazonLogo,
+    "Andrew Hauber": TripleALogo,
     "Allen Lai": CiscoLogo,
     "Cindy Chen": BiologicalSciencesLogo,
     "Daniel Kim": TakenakaPartnersLogo,
@@ -111,7 +112,7 @@ export const companyHash = {
     "Lauren Cho": TripleALogo,
     "Massimo Vano": SiemensLogo,
     "Pranay Macherla": AmazonLogo,
-    "Mina Nguyen": DefaultHeadshot,
+    "Mina Nguyen": RadixWellnessLogo,
     "Vinh Tran": CaliforniaISOLogo,
     "Daniel Vercueil": MerageLogo,
     "Tommy Nguyen": DefaultHeadshot,
