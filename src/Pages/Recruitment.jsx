@@ -92,7 +92,7 @@ export default function Recruitment() {
       <div className="hero-recruitment-Section viewport">
         <h1 className="main-recruitment-Title">Timeless</h1>
         <p className="subTitle">Spring Rush 2025</p>
-        <RushButton href="https://docs.google.com/forms/d/e/1FAIpQLScFxDkUrW7QN0_sEpIi4Wk0yjCoLLfLSBh0UvqAe9hfHfhcKQ/formResponse?pli=1">
+        <RushButton href="https://forms.gle/1bS5VebGJoLP8dJu5">
           Rush Application
         </RushButton>
       </div>
