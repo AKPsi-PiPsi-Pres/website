@@ -28,7 +28,13 @@ export default function ActiveBrother({ brotherInfo }) {
 
   function splitItems(text) {
     if (!text) return [];
-    const result = text.split("\r\n\r\n");
+    // \r\n (Windows), \n (Unix), \r (old Mac) line breaks
+    // Replace all types of line breaks with \n for consistency
+    const normalizedText = text.replace(/\r\n|\r|\n/g, '\n');
+    // Split on double line breaks and filter out empty strings
+    const result = normalizedText.split('\n\n')
+      .map(item => item.trim())
+      .filter(item => item.length > 0);
     return result;
   }
 
