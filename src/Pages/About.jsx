@@ -186,7 +186,6 @@ export default function About() {
                       />
                     ))}
                   </Pie>
-                  <Tooltip />
                   <Legend />
                 </PieChart>
               </ResponsiveContainer>
@@ -250,7 +249,6 @@ export default function About() {
                       />
                     ))}
                   </Pie>
-                  <Tooltip />
                   <Legend />
                 </PieChart>
               </ResponsiveContainer>
@@ -271,7 +269,6 @@ export default function About() {
                 >
                   <XAxis dataKey="year" />
                   <YAxis />
-                  <Tooltip />
                   <Legend />
                   <Line
                     type="monotone"

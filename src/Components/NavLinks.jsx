@@ -61,12 +61,12 @@ export default function NavLinks({ isMobile, closeMobileMenu }) {
       </li>
       <li>
         <NavLink
-          to="/recruitment"
+          to="/rush"
           activeclassname="active"
           className={linkClass}
           onClick={handleClick}
         >
-          Recruitment
+          Rush
         </NavLink>
       </li>
     </ul>
