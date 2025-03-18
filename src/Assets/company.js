@@ -74,6 +74,7 @@ import {
     TripleALogo,
     SnowflakeLogo,
     RadixWellnessLogo,
+    RumeLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -112,7 +113,7 @@ export const companyHash = {
     "Lauren Cho": TripleALogo,
     "Massimo Vano": SiemensLogo,
     "Pranay Macherla": AmazonLogo,
-    "Mina Nguyen": RadixWellnessLogo,
+    "Mina Nguyen": RumeLogo,
     "Vinh Tran": CaliforniaISOLogo,
     "Daniel Vercueil": MerageLogo,
     "Tommy Nguyen": DefaultHeadshot,
