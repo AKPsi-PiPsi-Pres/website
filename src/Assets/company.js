@@ -77,6 +77,7 @@ import {
     RumeLogo,
     VerizonLogo,
     MeetTheFlockersLogo,
+    SwayLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
