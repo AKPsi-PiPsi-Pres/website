@@ -110,7 +110,7 @@ export const companyHash = {
     "Cindy Chen": BiologicalSciencesLogo,
     "Daniel Kim": TakenakaPartnersLogo,
     "Donny Chau": AutodeskLogo,
-    "Haley Yoon": DefaultHeadshot,
+    "Haley Yoon": SwayLogo,
     "Katie Wang": GitHubLogo,
     "Lauren Cho": TripleALogo,
     "Massimo Vano": SiemensLogo,
