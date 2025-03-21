@@ -75,6 +75,7 @@ import {
     SnowflakeLogo,
     RadixWellnessLogo,
     RumeLogo,
+    VerizonLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -103,7 +104,7 @@ export const companyHash = {
     "Elle Hsu": PepsiLogo,
     "Anuj Patel": nasalogo,
     "Rithika Pothi": capitalonelogo,  //GRAD
-    "Andrew Hauber": TripleALogo,
+    "Andrew Hauber": VerizonLogo,
     "Allen Lai": CiscoLogo,
     "Cindy Chen": BiologicalSciencesLogo,
     "Daniel Kim": TakenakaPartnersLogo,

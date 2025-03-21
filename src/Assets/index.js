@@ -152,11 +152,13 @@ export { default as SnowflakeLogo } from "./Logos/SnowflakeLogo.png";
 export { default as TripleALogo } from "./Logos/TripleALogo.png";
 export { default as RadixWellnessLogo } from "./Logos/RadixWellnessLogo.jpeg";
 export { default as RumeLogo } from "./Logos/RumeLogo.png";
+export { default as VerizonLogo } from "./Logos/VerizonLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
 export { default as JTreeReel } from "./Videos/JoshuatreeReelWebsite.mp4";
 export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
+export { default as Spring25RushVideo } from "./Videos/SpringRush2025Website.mp4";
 
 export { default as aboutImage1 } from "./AboutPhotos/aboutImage1.webp";
 export { default as aboutImage2 } from "./AboutPhotos/aboutImage2.webp";
