@@ -76,6 +76,8 @@ import {
     RadixWellnessLogo,
     RumeLogo,
     VerizonLogo,
+    MeetTheFlockersLogo,
+    SwayLogo,
     CapitalGroupLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
@@ -110,7 +112,7 @@ export const companyHash = {
     "Cindy Chen": BiologicalSciencesLogo,
     "Daniel Kim": TakenakaPartnersLogo,
     "Donny Chau": AutodeskLogo,
-    "Haley Yoon": DefaultHeadshot,
+    "Haley Yoon": SwayLogo,
     "Katie Wang": GitHubLogo,
     "Lauren Cho": TripleALogo,
     "Massimo Vano": SiemensLogo,
@@ -118,7 +120,7 @@ export const companyHash = {
     "Mina Nguyen": RumeLogo,
     "Vinh Tran": CaliforniaISOLogo,
     "Daniel Vercueil": MerageLogo,
-    "Tommy Nguyen": DefaultHeadshot,
+    "Tommy Nguyen": MeetTheFlockersLogo,
     "Alex Sriprathum": KimleyHornLogo,
     "Nico Simonian": USAALogo,
     "Carl Qiao": PWCLogo,
