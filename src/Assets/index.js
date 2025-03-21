@@ -155,6 +155,7 @@ export { default as RumeLogo } from "./Logos/RumeLogo.png";
 export { default as VerizonLogo } from "./Logos/VerizonLogo.png";
 export { default as MeetTheFlockersLogo } from "./Logos/MeetTheFlockers.png";
 export { default as SwayLogo } from "./Logos/SwayLogo.png";
+export { default as CapitalGroupLogo } from "./Logos/CapitalGroupLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
