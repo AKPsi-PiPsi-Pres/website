@@ -96,7 +96,6 @@ export const companyHash = {
     "Amy Tu": SnowflakeLogo,
     "Mason Whang": LoroPianaLogo,
     "Edmund Ma": RyanLLCLogo,
-    "Chris Wang": YerbaMateLogo,
     "Andrew Sou": DefaultHeadshot,
     "Annie Nguyen": SAPLogo,
     "Alexis Lin": AmazonLogo,
