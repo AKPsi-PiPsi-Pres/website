@@ -76,6 +76,7 @@ import {
     RadixWellnessLogo,
     RumeLogo,
     VerizonLogo,
+    MeetTheFlockersLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -117,7 +118,7 @@ export const companyHash = {
     "Mina Nguyen": RumeLogo,
     "Vinh Tran": CaliforniaISOLogo,
     "Daniel Vercueil": MerageLogo,
-    "Tommy Nguyen": DefaultHeadshot,
+    "Tommy Nguyen": MeetTheFlockersLogo,
     "Alex Sriprathum": KimleyHornLogo,
     "Nico Simonian": USAALogo,
     "Carl Qiao": PWCLogo,
