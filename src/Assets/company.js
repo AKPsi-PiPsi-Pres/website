@@ -79,6 +79,7 @@ import {
     MeetTheFlockersLogo,
     SwayLogo,
     CapitalGroupLogo,
+    BrenLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -100,7 +101,7 @@ export const companyHash = {
     "Mason Whang": LoroPianaLogo,
     "Edmund Ma": RyanLLCLogo,
     "Chris Wang": YerbaMateLogo,
-    "Andrew Sou": DefaultHeadshot,
+    "Andrew Sou": BrenLogo,
     "Annie Nguyen": SAPLogo,
     "Alexis Lin": AmazonLogo,
     "Catelynn Chen": EdisonLogo,
