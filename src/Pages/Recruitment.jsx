@@ -8,6 +8,7 @@ import { TimelessAudio } from "../Assets";
 
 export default function Recruitment() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const events = [
     {
@@ -54,6 +55,17 @@ export default function Recruitment() {
 
   const [audio] = useState(new Audio(TimelessAudio));
 
+  // Detect if user is on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const isMobileDevice = /android|iPad|iPhone|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+      setIsMobile(isMobileDevice);
+    };
+
+    checkMobile();
+  }, []);
+
   useEffect(() => {
     // Set up audio
     audio.loop = true;
@@ -79,6 +91,25 @@ export default function Recruitment() {
     };
   }, []);
 
+  // Get the appropriate calendar link based on device
+  const getCalendarLink = () => {
+    const calendarId = "MTM4ZGI0YWFlZDBlYzlmYTE1NTU2Y2E1ZmZmZjcwZjkzODI0ODk2ZmI4ZWM5NTAwMTNhY2E3YTAxMzlmYmExY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t";
+    
+    if (isMobile) {
+      // Mobile app deep links
+      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        // iOS deep link
+        return `googlecalendar://addcalendar?cid=${calendarId}`;
+      } else {
+        // Android deep link
+        return `intent://calendar/addcalendar?cid=${calendarId}#Intent;scheme=googlecalendar;package=com.google.android.calendar;end`;
+      }
+    } else {
+      // Web link for desktop
+      return `https://calendar.google.com/calendar/u/0?cid=${calendarId}`;
+    }
+  };
+
   if (isLoading) {
     return (
       <div className="loader-container">
@@ -92,9 +123,19 @@ export default function Recruitment() {
       <div className="hero-recruitment-Section viewport">
         <h1 className="main-recruitment-Title">Timeless</h1>
         <p className="subTitle">Spring Rush 2025</p>
-        <RushButton href="https://forms.gle/1bS5VebGJoLP8dJu5">
-          Rush Application
-        </RushButton>
+        <div className="rush-buttons">
+          <a 
+            href={getCalendarLink()} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="calendar-button"
+          >
+            Add Rush Events to Calendar
+          </a>
+          <RushButton href="https://forms.gle/1bS5VebGJoLP8dJu5">
+            Rush Application
+          </RushButton>
+        </div>
       </div>
       {events.map((event, index) => (
         <div key={index} className="viewport">
