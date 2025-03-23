@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
-import { Spring23RushVideo, JTreeReel, BrotherhoodImage2 } from "../Assets";
+import { Spring23RushVideo, JTreeReel, BrotherhoodImage2, BrotherhoodImage27, BrotherhoodImage66, BrotherhoodImage76, BrotherhoodImage74, BrotherhoodImage65 } from "../Assets";
 import { knightAKYLogo } from "../Assets";
 import SleekButton from "../Components/SleekButton";
 import { OpenInNew } from "@mui/icons-material";
 import { Instagram, Facebook, LinkedIn } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
-import { PersonalGrowth, BrotherhoodImage53 } from "../Assets";
+import { PersonalGrowth, BrotherhoodImage75 } from "../Assets";
 
 export default function Home() {
   const { isMobile } = useMobile();
@@ -210,7 +210,7 @@ export default function Home() {
                 <div className="item-content">
                   <h2>BROTHERHOOD</h2>
                   <div className="image-container">
-                    <img src={BrotherhoodImage53} alt="Brotherhood" />
+                    <img src={BrotherhoodImage76} alt="Brotherhood" />
                     <div className="image-overlay"></div>
                   </div>
                   <p>
@@ -236,7 +236,7 @@ export default function Home() {
                 <div className="item-content">
                   <h2>PROFESSIONALISM</h2>
                   <div className="image-container">
-                    <img src={BrotherhoodImage2} alt="Professionalism" />
+                    <img src={BrotherhoodImage66} alt="Professionalism" />
                     <div className="image-overlay"></div>
                   </div>
                   <p>
@@ -262,7 +262,7 @@ export default function Home() {
                 <div className="item-content">
                   <h2>PERSONAL GROWTH</h2>
                   <div className="image-container">
-                    <img src={PersonalGrowth} alt="Personal Growth" />
+                    <img src={BrotherhoodImage75} alt="Personal Growth" />
                     <div className="image-overlay"></div>
                   </div>
                   <p>
