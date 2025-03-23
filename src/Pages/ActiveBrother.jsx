@@ -106,7 +106,7 @@ export default function ActiveBrother({ brotherInfo }) {
       </div>
       <div className="brother-details">
         <div className="brother-section animate-on-scroll">
-          <h3>Hobbies</h3>
+          <h3>Interests</h3>
           {renderList(interests)}
         </div>
         <div className="brother-section animate-on-scroll">
