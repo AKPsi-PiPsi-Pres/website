@@ -84,6 +84,13 @@ export { default as BrotherhoodImage81 } from "./BrotherhoodPhotos/broho42.webp"
 export { default as BrotherhoodImage82 } from "./BrotherhoodPhotos/broho43.webp";
 export { default as BrotherhoodImage83 } from "./BrotherhoodPhotos/broho44.webp";
 
+export { default as CoreValueB} from "./AboutPhotos/CoreValueS.jpeg";
+export { default as CoreValueK} from "./AboutPhotos/CoreValueK.jpg";
+export { default as CoreValueS} from "./AboutPhotos/CoreValueB.jpeg";
+export { default as CoreValueU} from "./AboutPhotos/CoreValueU.jpg";
+export { default as CoreValueI} from "./AboutPhotos/CoreValueI.jpg";
+
+
 export { default as AnujTrollPhoto } from "./TrollPhotos/IMG_1038.PNG";
 export { default as ChrisTrollPhoto } from "./TrollPhotos/IMG_1039.PNG";
 export { default as JacobTrollPhoto } from "./TrollPhotos/IMG_1040.PNG";

@@ -3,11 +3,12 @@ import "./About.css";
 import { motion } from "framer-motion";
 import FAQ from "../Components/FAQ";
 import {
-  aboutImage1,
-  aboutImage2,
-  aboutImage3,
-  aboutImage4,
   aboutImage5,
+  CoreValueB,
+  CoreValueI,
+  CoreValueK,
+  CoreValueS,
+  CoreValueU,
   WinterRetreatFraternity,
 } from "../Assets";
 import { Instagram, Facebook, LinkedIn } from "@mui/icons-material";
@@ -309,7 +310,7 @@ export default function About() {
               <div className="item-content">
                 <h2>BROTHERHOOD</h2>
                 <div className="image-container">
-                  <img src={aboutImage3} alt="Brotherhood" />
+                  <img src={CoreValueB} alt="Brotherhood" />
                   <div className="image-overlay"></div>
                 </div>
                 <p>Foster lifelong connections</p>
@@ -328,7 +329,7 @@ export default function About() {
               <div className="item-content">
                 <h2>INTEGRITY</h2>
                 <div className="image-container">
-                  <img src={aboutImage5} alt="Integrity" />
+                  <img src={CoreValueI} alt="Integrity" />
                   <div className="image-overlay"></div>
                 </div>
                 <p>Uphold ethical standards</p>
@@ -347,7 +348,7 @@ export default function About() {
               <div className="item-content">
                 <h2>KNOWLEDGE</h2>
                 <div className="image-container">
-                  <img src={aboutImage4} alt="Knowledge" />
+                  <img src={CoreValueK} alt="Knowledge" />
                   <div className="image-overlay"></div>
                 </div>
                 <p>Pursue continuous learning</p>
@@ -366,7 +367,7 @@ export default function About() {
               <div className="item-content">
                 <h2>SERVICE</h2>
                 <div className="image-container">
-                  <img src={aboutImage1} alt="Service" />
+                  <img src={CoreValueS} alt="Service" />
                   <div className="image-overlay"></div>
                 </div>
                 <p>Give back to the community</p>
@@ -385,7 +386,7 @@ export default function About() {
               <div className="item-content">
                 <h2>UNITY</h2>
                 <div className="image-container">
-                  <img src={aboutImage2} alt="Unity" />
+                  <img src={CoreValueU} alt="Unity" />
                   <div className="image-overlay"></div>
                 </div>
                 <p>Strengthen through collaboration</p>
