@@ -53,6 +53,7 @@ body {
 .brotherCard {
   background-color: rgba(37, 37, 37, 0.5); /* Subtle background transparency */
   box-shadow: 0 4px 12px var(--card-shadow);
+  border-radius: 0.5rem;
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;

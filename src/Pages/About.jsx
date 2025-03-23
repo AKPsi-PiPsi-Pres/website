@@ -26,16 +26,19 @@ import {
 } from "recharts";
 
 const majorData = [
-  { name: "Business", value: 38 },
-  { name: "Engineering", value: 15 },
-  { name: "Computer Science", value: 23 },
-  { name: "Other", value: 24 },
+  { name: "Business", value: 34 },
+  { name: "Engineering", value: 19 },
+  { name: "CompSci", value: 13 },
+  { name: "Other", value: 8 },
+  { name: "Arts", value: 17 },
+  { name: "Health Sciences", value: 9 },
 ];
 
 const clubData = [
-  { name: "Professional", value: 47 },
+  { name: "Professional", value: 37 },
   { name: "Social", value: 18 },
   { name: "Academic", value: 27 },
+  { name: "Cultural", value: 10 },
   { name: "Other", value: 8 },
 ];
 
@@ -48,7 +51,7 @@ const placementData = [
   { year: "2024", oncampus: 85, beyondCampus: 90 },
 ];
 
-const COLORS = ["#0066cc", "#00a86b", "#f39c12", "#8e44ad"];
+const COLORS = ["#0066cc", "#00a86b", "#f39c12", "#8e44ad", "#e74c3c", "#3498db"];
 
 export default function About() {
   const { isMobile } = useMobile();

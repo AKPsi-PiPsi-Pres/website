@@ -96,7 +96,7 @@ export { default as instagramLogo } from "./Logos/instagramLogo.png";
 export { default as GoogleLogo } from "./Logos/GoogleLogo.png";
 export { default as AppleLogo } from "./Logos/AppleLogo.png";
 export { default as AdobeLogo } from "./Logos/AdobeLogo.png";
-export { default as DeloitteLogo } from "./Logos/DeloitteLogo.png";
+export { default as DeloitteLogo } from "./Logos/DeloitteLogo.webp";
 export { default as EYLogo } from "./Logos/EYLogo.webp";
 export { default as FacebookLogo } from "./Logos/Facebook.png";
 export { default as JPMorganLogo } from "./Logos/JPMorganLogo.png";
