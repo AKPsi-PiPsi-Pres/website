@@ -126,7 +126,7 @@ html, body {
 .section-title::after {
   content: '';
   position: absolute;
-  left: 30%;
+  left: 50%;
   right: 30%;
   bottom: 0;
   height: 2px;
