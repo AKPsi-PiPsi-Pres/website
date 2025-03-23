@@ -173,7 +173,7 @@ html, body {
 
 /*Info section styles */
 .info-section {
-  padding: 4rem 1.5rem;
+  padding: 3rem 1rem;
   text-align: center;
   min-height: 100vh;
   width: 100%;
@@ -189,7 +189,7 @@ html, body {
 
 .section-title {
   font-size: clamp(1.5rem, 5vw, 3rem);
-  margin-bottom: 4rem;
+  margin: 5rem 0rem;
   position: relative;
   text-align: center;
   font-weight: 700;
@@ -226,12 +226,12 @@ html, body {
 .info-content::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
   background: linear-gradient(45deg, var(--primary-color), transparent, var(--accent-color), transparent);
-  border-radius: 14px;
+  border-radius: 10px;
   z-index: -1;
   opacity: 0.4;
   animation: borderGlow 6s linear infinite;
@@ -242,17 +242,17 @@ html, body {
   line-height: 1.8;
   color: var(--text-muted);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 0;
 }
 
 .info-image-container {
   position: relative;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .info-image {
   width: auto;
-  height: 10rem;
+  height: 15rem;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
   transition: all 0.5s var(--cubic-bezier);
   position: relative;
@@ -654,7 +654,7 @@ html, body {
   }
 
   .info-section {
-    padding: 4rem 1rem;
+    padding: 3rem 0.5rem;
   }
 
   .info-content {
