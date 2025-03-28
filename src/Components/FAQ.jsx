@@ -8,7 +8,7 @@ const faqData = [
   },
   {
     question: "What sets Alpha Kappa Psi apart from other organizations?",
-    answer: `AKPsi are the only business fraternity at UCI with a national reach that is open to all majors. You can learn about a vastly different field from each member, and that's what is special about us.`,
+    answer: `AKPsi is the only business fraternity at UCI with a national reach that is open to all majors. You can learn about a vastly different field from each member, and that's what is special about us.`,
   },
   {
     question: "What majors does Alpha Kappa Psi accept?",
