@@ -185,6 +185,7 @@ export { default as SwayLogo } from "./Logos/SwayLogo.png";
 export { default as CapitalGroupLogo } from "./Logos/CapitalGroupLogo.png";
 export { default as BrenLogo } from "./Logos/BrenLogo.png";
 export { default as RaytheonLogo } from "./Logos/RaytheonLogo.png";
+export { default as GlobalFoundriesLogo } from "./Logos/GlobalFoundriesLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";

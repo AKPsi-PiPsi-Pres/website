@@ -81,6 +81,7 @@ import {
     CapitalGroupLogo,
     BrenLogo,
     RaytheonLogo,
+    GlobalFoundriesLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -113,7 +114,7 @@ export const companyHash = {
     "Allen Lai": CiscoLogo,
     "Cindy Chen": BiologicalSciencesLogo,
     "Daniel Kim": TakenakaPartnersLogo,
-    "Donny Chau": AutodeskLogo,
+    "Donny Chau": GlobalFoundriesLogo,
     "Haley Yoon": SwayLogo,
     "Katie Wang": GitHubLogo,
     "Lauren Cho": RaytheonLogo,
