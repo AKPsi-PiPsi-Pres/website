@@ -14,7 +14,7 @@ export default function Recruitment() {
     {
       name: "Meet The Bros",
       date: "Tuesday, April 1st",
-      location: "SB1 2200 and Merage Terrace",
+      location: "SB1 1200",
       attire: "Casual",
       time: "6:00 PM - 9:00 PM",
       "open-ness": "Open Invite",
