@@ -92,7 +92,7 @@ export const headshotHash = {
   "Haley Yoon": HaleyYoon,
   "Katie Wang": KatieWang,
   "Lauren Cho": LaurenCho,
-  "Massimo Vano": MaxVano,
+  "Max Vano": MaxVano,
   "Pranay Macherla": PranayMach,
   "Mina Nguyen": MinaNguyen,
   "Tyler Ho": TylerHo,
