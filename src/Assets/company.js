@@ -118,7 +118,7 @@ export const companyHash = {
     "Haley Yoon": SwayLogo,
     "Katie Wang": GitHubLogo,
     "Lauren Cho": RaytheonLogo,
-    "Massimo Vano": SiemensLogo,
+    "Max Vano": SiemensLogo,
     "Pranay Macherla": AmazonLogo,
     "Mina Nguyen": RumeLogo,
     "Vinh Tran": CaliforniaISOLogo,
