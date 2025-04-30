@@ -81,7 +81,7 @@ import {
     BrenLogo,
     RaytheonLogo,
     GlobalFoundriesLogo,
-    KaiserPermanenteLogo,
+    KaiserLogo,
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -120,7 +120,7 @@ export const companyHash = {
     "Lauren Cho": RaytheonLogo,
     "Max Vano": SiemensLogo,
     "Pranay Macherla": AmazonLogo,
-    "Mina Nguyen": KaiserPermanenteLogo,
+    "Mina Nguyen": KaiserLogo,
     "Vinh Tran": CaliforniaISOLogo,
     "Daniel Vercueil": MerageLogo,
     "Tommy Nguyen": MeetTheFlockersLogo,
