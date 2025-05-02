@@ -55,12 +55,12 @@
 }
 
 /* Special styling for Rush NavLink */
-.nav-links li:last-child .NavLink {
-  color: #ffd700; /* Golden text color */
+/* .nav-links li:last-child .NavLink {
+  color: #ffd700;
   animation: rushGlow 3s infinite ease-in-out;
-  font-weight: 600; /* Slightly bolder */
+  font-weight: 600;
   position: relative;
-  letter-spacing: 0.03em; /* Slightly wider letter spacing */
+  letter-spacing: 0.03em;
 }
 
 .nav-links li:last-child .NavLink::after {
@@ -71,7 +71,7 @@
 .nav-links li:last-child .NavLink:hover::after,
 .nav-links li:last-child .NavLink.active::after {
   transform: scaleX(1);
-}
+} */
 
 @keyframes rushGlow {
   0% {
@@ -125,11 +125,11 @@
   }
   
   /* Ensure the Rush NavLink still stands out on mobile */
-  .nav-links.mobile li:last-child {
+  /* .nav-links.mobile li:last-child {
     margin-top: 12px;
     padding-top: 8px;
     border-top: 1px solid rgba(255, 215, 0, 0.5);
-  }
+  } */
 
   .hamburger {
     display: flex;
