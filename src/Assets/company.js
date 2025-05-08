@@ -25,7 +25,6 @@ import {
     nbclogo,
     oraclelogo,
     paramountLogo,
-    protivitilogo,
     PWCLogo,
     redbulllogo,
     statefarmlogo,
