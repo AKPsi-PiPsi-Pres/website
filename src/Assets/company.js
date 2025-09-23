@@ -54,47 +54,37 @@ import {
     SBSLogo,
     TurboAILogo,
     Wun2FreeLogo,
-    
+    SkylarLogo,
+    ReitLogo,
+    PurpleLogo
+
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
 
 export const companyHash = {
-    "Oriana Kou": RedbullLogo,
-    "Jessica Choi": AmazonLogo,
     "Aarush Inamdar": AdobeLogo,
-    "Alex Kao": UBSLogo,
+    "Alex Kao": JPMorganLogo,
     "Sarah Kim": KumonLogo,
     "Yan Amy Zhou": JPMorganLogo,
-    "Alexandra Ancheta": BakerTillyLogo,
-    "Tiffany Cheng": AppleLogo,
-    "Tiffany Vo": MerageLogo,
-    "Izella Han": RippleMatchLogo,
     "Anna Shan": BlackrockLogo,
-    "Amy Tu": SnowflakeLogo,
-    "Mason Whang": LoroPianaLogo,
-    "Edmund Ma": RyanLLCLogo,
-    "Chris Wang": YerbaMateLogo,
+    "Mason Whang": LoroPianaLogo, 
     "Andrew Sou": BrenLogo,
     "Annie Nguyen": SAPLogo,
     "Alexis Lin": AmazonLogo,
-    "Catelynn Chen": EdisonLogo,
-    "Elle Hsu": PepsiLogo,
+    "Catelynn Chen": SkylarLogo,
+    "Elle Hsu": PurpleLogo,
     "Anuj Patel": nasalogo,
-    "Rithika Pothi": capitalonelogo,  //GRAD
     "Andrew Hauber": CapitalGroupLogo,
     "Allen Lai": CiscoLogo,
     "Cindy Chen": BiologicalSciencesLogo,
     "Daniel Kim": TakenakaPartnersLogo,
     "Donny Chau": GlobalFoundriesLogo,
-    "Haley Yoon": SwayLogo,
     "Katie Wang": GitHubLogo,
     "Lauren Cho": RaytheonLogo,
     "Max Vano": SiemensLogo,
     "Pranay Macherla": AmazonLogo,
     "Mina Nguyen": KaiserPermanenteLogo,
-    "Vinh Tran": CaliforniaISOLogo,
-    "Daniel Vercueil": MerageLogo,
     "Tommy Nguyen": MeetTheFlockersLogo,
     "Alex Sriprathum": KimleyHornLogo,
     "Nico Simonian": USAALogo,
@@ -104,7 +94,7 @@ export const companyHash = {
     "Melinda Do": WiseAssistantLogo,
     "Travis Yen": DepopLogo,
     "Tyler Ho": DeloitteLogo,
-    "Erin Tran": AcornsLogo,
+    "Erin Tran": ReitLogo,
     "Bradly Ho": HORLogo,
     "Brandon Koh": YouTubeLogo,
     "David Kim": BachemLogo,
@@ -118,6 +108,7 @@ export const companyHash = {
     "Samantha Lee": AmplifySurgicalLogo,
     "Henry Lee": SBSLogo,
     "Rishi Murumkar": BioRadLogo,
+    "Izella Han": RippleMatchLogo,
     "Default Headshot": DefaultHeadshot,
   };
     

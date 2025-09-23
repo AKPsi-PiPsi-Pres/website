@@ -200,6 +200,9 @@ export { default as RadixLogo } from "./Logos/RadixLogo.png";
 export { default as SBSLogo } from "./Logos/SBSLogo.png";
 export { default as TurboAILogo } from "./Logos/TurboAILogo.png";
 export { default as Wun2FreeLogo } from "./Logos/Wun2FreeLogo.png";
+export { default as SkylarLogo } from "./Logos/SkylarLogo.png";
+export { default as ReitLogo} from "./Logos/ReitLogo.png";
+export { default as PurpleLogo} from "./Logos/PurpleLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";

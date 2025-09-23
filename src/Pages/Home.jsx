@@ -106,12 +106,21 @@ export default function Home() {
               muted
               playsInline
               loop
+              preload = "auto"
             >
               Your browser does not support the video tag.
             </video>
           )}
           {isMobile && (
-            <video ref={videoRef} src={NewFall2025} autoPlay muted playsInline loop>
+            <video 
+              ref={videoRef} 
+              src={NewFall2025} 
+              autoPlay 
+              muted 
+              playsInline 
+              loop
+              preload = "auto"
+            >
               Your browser does not support the video tag.
             </video>
           )}
