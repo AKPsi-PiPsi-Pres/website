@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
-import { Spring23RushVideo, JTreeReel, BrotherhoodImage2, BrotherhoodImage27, BrotherhoodImage66, BrotherhoodImage76, BrotherhoodImage74, BrotherhoodImage65 } from "../Assets";
+import { BrotherhoodImage66, BrotherhoodImage76, NewFall2025 } from "../Assets";
 import { knightAKYLogo } from "../Assets";
 import SleekButton from "../Components/SleekButton";
 import { OpenInNew } from "@mui/icons-material";
 import { Instagram, Facebook, LinkedIn } from "@mui/icons-material";
 import { useMobile } from "../Components/Navbar";
-import { PersonalGrowth, BrotherhoodImage75 } from "../Assets";
+import { BrotherhoodImage75 } from "../Assets";
 
 export default function Home() {
   const { isMobile } = useMobile();
@@ -49,14 +49,15 @@ export default function Home() {
       setIsLoading(false);
     };
 
-    if (videoRef.current) {
-      videoRef.current.addEventListener("canplay", handleCanPlay);
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.addEventListener("canplay", handleCanPlay);
     }
 
     return () => {
       clearTimeout(timer);
-      if (videoRef.current) {
-        videoRef.current.removeEventListener("canplay", handleCanPlay);
+      if (videoElement) {
+        videoElement.removeEventListener("canplay", handleCanPlay);
       }
     };
   }, []);
@@ -100,16 +101,17 @@ export default function Home() {
           {!isMobile && (
             <video
               ref={videoRef}
-              src={Spring23RushVideo}
+              src={NewFall2025}
               autoPlay
               muted
               playsInline
+              loop
             >
               Your browser does not support the video tag.
             </video>
           )}
           {isMobile && (
-            <video ref={videoRef} src={JTreeReel} autoPlay muted playsInline>
+            <video ref={videoRef} src={NewFall2025} autoPlay muted playsInline loop>
               Your browser does not support the video tag.
             </video>
           )}

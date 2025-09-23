@@ -59,7 +59,7 @@ const RushEventInfo = ({ event }) => {
           margin: 2rem auto;
           padding: 3px;
           background: linear-gradient(145deg, rgba(192, 192, 192, 0.2), rgba(128, 128, 128, 0.1));
-          border-radius: 15px;
+          border-radius: 0px;
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
           animation: cardAppear 0.8s ease-out forwards;
         }
@@ -79,7 +79,7 @@ const RushEventInfo = ({ event }) => {
           position: relative;
           padding: 2px;
           background: linear-gradient(145deg, rgba(192, 192, 192, 0.3), rgba(128, 128, 128, 0.1));
-          border-radius: 14px;
+          border-radius: 0px;
           overflow: hidden;
         }
 
@@ -105,13 +105,13 @@ const RushEventInfo = ({ event }) => {
           }
         }
 
-        .card-inner {
-          position: relative;
-          background: linear-gradient(145deg, rgba(25, 25, 25, 0.95), rgba(15, 15, 15, 0.98));
-          border-radius: 12px;
-          overflow: hidden;
-          z-index: 1;
-        }
+        // .card-inner {
+        //   position: relative;
+        //   background: linear-gradient(145deg, rgba(25, 25, 25, 0.95), rgba(15, 15, 15, 0.98));
+        //   border-radius: 0px;
+        //   overflow: hidden;
+        //   z-index: 1;
+        // }
 
         .corner-ornament {
           position: absolute;
@@ -187,9 +187,9 @@ const RushEventInfo = ({ event }) => {
         }
 
         .event-title {
-          font-family: 'Old English Text MT', 'Times New Roman', serif;
+          font-family: 'Playfair Display', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
           font-size: 2.5rem;
-          color: silver;
+          color: white;
           text-align: center;
           letter-spacing: 2px;
           text-transform: uppercase;
@@ -217,7 +217,7 @@ const RushEventInfo = ({ event }) => {
 
         .event-detail {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           gap: 1rem;
           padding: 1rem;
           background: linear-gradient(
@@ -266,7 +266,7 @@ const RushEventInfo = ({ event }) => {
           justify-content: center;
           width: 24px;
           height: 24px;
-          color: silver;
+          color: white;
           transition: transform 0.3s ease;
         }
 
@@ -275,10 +275,14 @@ const RushEventInfo = ({ event }) => {
         }
 
         .detail-text {
-          font-family: 'Times New Roman', serif;
+          font-family: 'Playfair Display', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
           font-size: 1.1rem;
-          color: rgba(192, 192, 192, 0.9);
+          color: white;
           letter-spacing: 1px;
+          flex: 1 1 auto;
+          text-align: left;
+          white-space: normal;
+          overflow-wrap: anywhere;
         }
 
         @media (max-width: 768px) {

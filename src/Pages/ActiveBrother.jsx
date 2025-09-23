@@ -76,8 +76,12 @@ export default function ActiveBrother({ brotherInfo }) {
     <div className="brother-container" ref={containerRef}>
       <div className="brother-header animate-on-scroll">
         <img
-          src={headshotHash[name]}
-          alt={`${name}'s photo`}
+          src={
+            headshotHash[name]
+              ? headshotHash[name]
+              : headshotHash["Default Headshot"]
+          }
+          alt={name}
           className="brother-photo"
         />
         <div className="brother-info">

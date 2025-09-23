@@ -145,10 +145,10 @@ body {
 }
 
 .careers-table tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
+  background-color: transparent;
+  transform: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .careers-table tbody tr:last-child td {
@@ -230,8 +230,9 @@ body {
   }
 
   .careers-table tr:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Mobile hover removed: no lift or shadow */
+    transform: none;
+    box-shadow: none;
   }
 
   .careers-table td {

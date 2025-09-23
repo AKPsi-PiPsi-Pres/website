@@ -97,7 +97,8 @@ export { default as JacobTrollPhoto } from "./TrollPhotos/IMG_1040.PNG";
 
 export { default as Dune } from "./Frames/FALL RUSH 24 GRAPHIC DESIGN.webp";
 export { default as DuneMini } from "./Frames/FALL RUSH 24 SHIRT DESIGN.jpeg";
-export { default as ChromeHearts } from "./Frames/SPRING RUSH 25 GRAPHIC DESIGN.webp";
+export { default as NatureAscend } from "./Frames/FALL2025.jpeg";
+export { default as AscendLogo } from "./Frames/ASCEND.png";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";
 export { default as instagramLogo } from "./Logos/instagramLogo.png";
 export { default as GoogleLogo } from "./Logos/GoogleLogo.png";
@@ -187,11 +188,24 @@ export { default as BrenLogo } from "./Logos/BrenLogo.png";
 export { default as RaytheonLogo } from "./Logos/RaytheonLogo.png";
 export { default as GlobalFoundriesLogo } from "./Logos/GlobalFoundriesLogo.png";
 export { default as KaiserPermanenteLogo } from "./Logos/KaiserPermanenteLogo.webp";
+export { default as ACCLogo } from "./Logos/ACCLogo.png";
+export { default as AmplifySurgicalLogo } from "./Logos/AmplifySurgicalLogo.png";
+export { default as BachemLogo } from "./Logos/BachemLogo.png";
+export { default as BioRadLogo } from "./Logos/BioRadLogo.png";
+export { default as CopilotLogo } from "./Logos/CopilotLogo.png";
+export { default as FlowspaceLogo } from "./Logos/FlowspaceLogo.png";
+export { default as PartifulLogo } from "./Logos/PartifulLogo.png";
+export { default as protivitiLogo } from "./Logos/protivitiLogo.png";
+export { default as RadixLogo } from "./Logos/RadixLogo.png";
+export { default as SBSLogo } from "./Logos/SBSLogo.png";
+export { default as TurboAILogo } from "./Logos/TurboAILogo.png";
+export { default as Wun2FreeLogo } from "./Logos/Wun2FreeLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
 export { default as JTreeReel } from "./Videos/JoshuatreeReelWebsite.mp4";
 export { default as Spring23RushVideo } from "./Videos/SpringRush2024Website.mp4";
+export { default as NewFall2025 } from "./Videos/NewFall2025.mp4";
 
 export { default as aboutImage1 } from "./AboutPhotos/aboutImage1.webp";
 export { default as aboutImage2 } from "./AboutPhotos/aboutImage2.webp";
@@ -204,4 +218,4 @@ export { default as aboutImage7 } from "./AboutPhotos/aboutImages7.webp";
 export {default as LastGMFall24 } from "./Frames/LastGMFall24Fraternity.webp";
 export {default as WinterRetreatFraternity } from "./Frames/WinterRetreatFraternity.webp";
 
-export {default as TimelessAudio } from "./Audios/The Weeknd - Timeless (Instrumental).mp3";
+export {default as BloodOrangeAudio } from "./Audios/Champagne Coast - Blood Orange.mp3";

@@ -9,7 +9,7 @@ const RANGE = "Form Responses 1!B2:G";
 
 const CareerTable = () => {
   const [data, setData] = useState([]);
-  const [selectedYear, setSelectedYear] = useState("2024");
+  const [selectedYear, setSelectedYear] = useState("2025");
 
   useEffect(() => {
     async function fetchData() {
@@ -126,7 +126,13 @@ const CareerTable = () => {
                 className={selectedYear === year ? "is-active" : ""}
                 onClick={() => handleYearChange(year)}
               >
-                <a>{year}</a>
+                <button
+                  type="button"
+                  className="year-button"
+                  style={{ background: "none", border: "none", padding: 0, margin: 0, font: "inherit", color: "inherit", cursor: "pointer" }}
+                >
+                  {year}
+                </button>
               </li>
             ))}
         </ul>

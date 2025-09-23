@@ -1,124 +1,74 @@
 import React from "react";
-import { Button, styled, keyframes } from "@mui/material";
+import { Button, styled } from "@mui/material";
+// import { keyframes } from "@emotion/react";
 
-const shine = keyframes`
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-`;
+// const shine = keyframes`
+//   0% {
+//     background-position: -200% center;
+//   }
+//   100% {
+//     background-position: 200% center;
+//   }
+// `;
 
-const glowPulse = keyframes`
-  0%, 100% {
-    box-shadow: 0 0 10px rgba(192, 192, 192, 0.3),
-                0 0 20px rgba(192, 192, 192, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 15px rgba(192, 192, 192, 0.4),
-                0 0 30px rgba(192, 192, 192, 0.3);
-  }
-`;
+// const glowPulse = keyframes`
+//   0%, 100% {
+//     box-shadow: 0 0 10px rgba(192, 192, 192, 0.3),
+//                 0 0 20px rgba(192, 192, 192, 0.2);
+//   }
+//   50% {
+//     box-shadow: 0 0 15px rgba(192, 192, 192, 0.4),
+//                 0 0 30px rgba(192, 192, 192, 0.3);
+//   }
+// `;
 
-const borderFlare = keyframes`
-  0%, 100% {
-    border-color: rgba(192, 192, 192, 0.6);
-  }
-  50% {
-    border-color: rgba(255, 255, 255, 0.8);
-  }
-`;
+// const borderFlare = keyframes`
+//   0%, 100% {
+//     border-color: rgba(192, 192, 192, 0.6);
+//   }
+//   50% {
+//     border-color: rgba(255, 255, 255, 0.8);
+//   }
+// `;
 
 const ChromeButton = styled(Button)(({ theme }) => ({
-  position: 'relative',
-  background: `linear-gradient(45deg, 
-    rgba(40, 40, 40, 1) 0%,
-    rgba(25, 25, 25, 1) 25%,
-    rgba(15, 15, 15, 1) 50%,
-    rgba(25, 25, 25, 1) 75%,
-    rgba(40, 40, 40, 1) 100%)`,
-  backgroundSize: '200% 200%',
-  border: '2px solid rgba(192, 192, 192, 0.6)',
-  borderRadius: '4px',
-  color: 'silver',
-  height: '54px',
-  padding: '0 40px',
-  fontFamily: "'Old English Text MT', 'Times New Roman', serif",
-  fontSize: '1.1rem',
-  fontWeight: 'normal',
-  letterSpacing: '2px',
-  textTransform: 'uppercase',
-  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-  overflow: 'hidden',
-  animation: `${borderFlare} 3s infinite`,
-
-  '&::before': {
-    content: '""',
-    position: 'absolute',
-    top: '0',
-    left: '-100%',
-    width: '100%',
-    height: '100%',
-    background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)',
-    animation: `${shine} 3s infinite`,
-    zIndex: 1,
-  },
-
-  '&::after': {
-    content: '""',
-    position: 'absolute',
-    top: '-2px',
-    left: '-2px',
-    right: '-2px',
-    bottom: '-2px',
-    background: 'linear-gradient(45deg, transparent, rgba(192, 192, 192, 0.1), transparent)',
-    zIndex: -1,
-    borderRadius: '4px',
-  },
+  display: 'inline-block',
+  padding: '12px 28px', // Exact same padding as calendar button
+  backgroundColor: 'transparent', // Exact same background as calendar button
+  color: 'rgba(239, 239, 239, 1)', // Exact same color as calendar button
+  textDecoration: 'none', // Same as calendar button
+  border: '2px solid rgb(255, 255, 255)', // Exact same border as calendar button
+  borderRadius: '0px', // Exact same border radius as calendar button
+  fontFamily: "'Playfair Display', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif", // Exact same font family as calendar button
+  fontSize: '1rem', // Exact same font size as calendar button
+  letterSpacing: '1px', // Exact same letter spacing as calendar button
+  transition: 'all 0.3s ease', // Exact same transition as calendar button
+  textTransform: 'uppercase', // Exact same text transform as calendar button
+  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.2)', // Exact same shadow as calendar button
+  // backdropFilter: 'blur(2px)', // Exact same backdrop filter as calendar button
+  marginBottom: '0.5rem', // Same margin as calendar button
 
   '&:hover': {
-    backgroundSize: '150% 150%',
-    color: '#ffffff',
-    borderColor: 'rgba(255, 255, 255, 0.8)',
-    transform: 'translateY(-2px)',
-    animation: `${glowPulse} infinite`,
-    textShadow: `
-      0 0 5px rgba(255, 255, 255, 0.5),
-      0 0 10px rgba(255, 255, 255, 0.3)
-    `,
-
-    '&::after': {
-      opacity: 1,
-    },
-  },
-
-  '&:active': {
-    transform: 'translateY(1px)',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)', // Exact same hover background as calendar button
+    borderColor: 'rgba(192, 192, 192, 0.6)', // Exact same hover border as calendar button
+    color: 'white', // Exact same hover color as calendar button
+    transform: 'translateY(-2px)', // Exact same transform as calendar button
+    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.3)', // Exact same hover shadow as calendar button
   },
 
   '@media (max-width: 768px)': {
-    height: '48px',
-    padding: '0 30px',
-    fontSize: '1rem',
+    width: '100%',
+    textAlign: 'center',
+    padding: '10px 20px', // Same mobile padding as calendar button
+    fontSize: '0.9rem', // Same mobile font size as calendar button
   },
 }));
 
 const RushButton = ({ children, ...props }) => {
   return (
-    <div style={{ 
-      position: 'relative',
-      display: 'inline-block',
-      padding: '3px',
-      background: 'linear-gradient(45deg, rgba(192, 192, 192, 0.2), rgba(128, 128, 128, 0.1))',
-      borderRadius: '6px',
-    }}>
-      <ChromeButton variant="contained" {...props}>
-        {children}
-      </ChromeButton>
-    </div>
+    <ChromeButton variant="contained" {...props}>
+      {children}
+    </ChromeButton>
   );
 };
 

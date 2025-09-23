@@ -109,19 +109,37 @@
     flex-direction: column;
     position: absolute;
     top: 60px;
-    left: 0;
-    right: 0;
+    /* center horizontally and size to content where possible */
+    left: 50%;
+    transform: translateX(-50%);
+    /* prefer fitting content, but cap to viewport */
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: 180px;
+    max-width: calc(100% - 2rem);
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(0.75rem);
     padding: 1rem;
+    box-sizing: border-box;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4),
                 0 0 15px rgba(255, 215, 0, 0.2); /* Slight golden glow */
+    /* If content is wider than max-width, allow horizontal scroll instead of wrapping */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-links.mobile li {
     margin: 0.5rem 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* center the item horizontally */
+  }
+
+  /* Keep link text on a single line so words don't break; center text in each link */
+  .nav-links.mobile li .NavLink {
+    white-space: nowrap;
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    text-align: center; /* center label text */
   }
   
   /* Ensure the Rush NavLink still stands out on mobile */
