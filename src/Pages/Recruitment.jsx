@@ -135,7 +135,7 @@ export default function Recruitment() {
           >
             <b>Add Rush Events to Calendar</b>
           </RushButton>
-          <RushButton href="https://forms.gle/1bS5VebGJoLP8dJu5">
+          <RushButton href="https://docs.google.com/forms/d/e/1FAIpQLScLB9c0ge0Pvst4GfiRO5L22eNQNcGpBJn1Xe_eKAa8rCTB5g/viewform">
             <b>Rush Application</b>
           </RushButton>
         </div>
