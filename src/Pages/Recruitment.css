@@ -4,7 +4,7 @@ body, html {
   height: 100%;
   overflow: auto;
   /* background-color: #0f0f0f; */
-  font-family: 'Palatino Linotype';
+  font-family: 'Playfair Display', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
 }
 
 .recruitmentContainer {
@@ -12,7 +12,7 @@ body, html {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   position: relative;
-  background-image: url('../Assets/Frames/SPRING\ RUSH\ 25\ GRAPHIC\ DESIGN.webp');
+  background-image: url('../Assets/Frames/FALL2025.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -26,8 +26,8 @@ body, html {
   right: 0;
   bottom: 0;
   background: radial-gradient(circle at center, 
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.65) 100%
   );
   pointer-events: none;
   z-index: 1;
@@ -40,7 +40,7 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: silver;
+  color: white;
   text-shadow: 2px 2px 5px black;
   padding: 0rem 2rem;
   position: relative;
@@ -242,7 +242,7 @@ body, html {
 
 .eventSection h2 {
   font-size: 3rem;
-  color: silver;
+  color: white;
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
   position: relative;
   overflow: hidden;
@@ -310,23 +310,23 @@ body, html {
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  transform: translateY(-1.25rem);
 }
 
 .calendar-button {
   display: inline-block;
   padding: 12px 28px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
   color: silver;
   text-decoration: none;
-  border: 1px solid rgba(192, 192, 192, 0.4);
-  border-radius: 4px;
-  font-family: 'Palatino Linotype', 'Times New Roman', serif;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0px;
+  font-family: 'Playfair Display', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
   font-size: 1rem;
   letter-spacing: 1px;
   transition: all 0.3s ease;
   text-transform: uppercase;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
   margin-bottom: 0.5rem;
 }
 
@@ -342,6 +342,7 @@ body, html {
   .rush-buttons {
     width: 100%;
     max-width: 300px;
+    transform: translateY(-0.75rem);
   }
   
   .calendar-button {
@@ -349,5 +350,20 @@ body, html {
     text-align: center;
     padding: 10px 20px;
     font-size: 0.9rem;
+  }
+}
+
+/* Slightly smaller Ascend logo with responsive behavior */
+.main-recruitment-Title-image {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 60%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .main-recruitment-Title-image {
+    margin: 0 auto 2rem; /* slightly more space on mobile */
+    max-width: 90%; /* larger on mobile */
   }
 }

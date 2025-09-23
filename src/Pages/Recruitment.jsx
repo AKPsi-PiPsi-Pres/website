@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Recruitment.css";
-import { ChromeHearts } from "../Assets";
+import { NatureAscend, AscendLogo } from "../Assets";
 import RushEventInfo from "../Components/RushEventInfo";
 import DownPointerButton from "../Components/DownPointerButton";
 import RushButton from "../Components/RushButton";
-import { TimelessAudio } from "../Assets";
+import { BloodOrangeAudio } from "../Assets";
 
 export default function Recruitment() {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,47 +13,47 @@ export default function Recruitment() {
   const events = [
     {
       name: "Meet The Bros",
-      date: "Tuesday, April 1st",
-      location: "SB1 1200",
+      date: "Tuesday, Sep 30th",
+      location: "SB1200",
       attire: "Casual",
-      time: "6:00 PM - 9:00 PM",
-      "open-ness": "Open Invite",
-    },
-    {
-      name: "Alumni Night",
-      date: "Thursday, April 3rd",
-      location: "SB1 1200",
-      attire: "Business Professional",
       time: "6:00 PM - 9:00 PM",
       "open-ness": "Open Invite",
     },
     {
       name: "Game Night",
-      date: "Friday, April 4th",
-      location: "SB1 1200",
+      date: "Thursday, Oct 2nd",
+      location: "SB1200",
       attire: "Business Casual",
       time: "6:00 PM - 9:00 PM",
       "open-ness": "Open Invite",
     },
     {
+      name: "Alumni Night",
+      date: "Friday, Oct 3rd",
+      location: "SB1200",
+      attire: "Business Professional",
+      time: "6:00 PM - 9:00 PM",
+      "open-ness": "Open Invite",
+    },
+    {
       name: "Social Barbeque",
-      date: "Tuesday, April 8th",
+      date: "Monday, Oct 6th",
       location: "Sent via Email",
       attire: "Casual",
-      time: "6:00 PM - 9:00 PM",
+      time: "6:00 PM",
       "open-ness": "Invite Only",
     },
     {
       name: "Interviews",
-      date: "Thursday + Friday, April 10th and 11th",
+      date: "Wednesday, Oct 8th + Thursday, Oct 9th",
       location: "Sent via Email",
       attire: "Business Professional",
-      time: "6:00 PM - 9:00 PM",
+      time: "6:00 PM",
       "open-ness": "Invite Only",
     },
   ];
 
-  const [audio] = useState(new Audio(TimelessAudio));
+  const [audio] = useState(new Audio(BloodOrangeAudio));
 
   // Detect if user is on mobile
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function Recruitment() {
 
   useEffect(() => {
     const img = new Image();
-    img.src = ChromeHearts;
+    img.src = NatureAscend;
     img.onload = () => {
       setTimeout(() => {
         setIsLoading(false);
@@ -93,20 +93,24 @@ export default function Recruitment() {
 
   // Get the appropriate calendar link based on device
   const getCalendarLink = () => {
-    const calendarId = "MTM4ZGI0YWFlZDBlYzlmYTE1NTU2Y2E1ZmZmZjcwZjkzODI0ODk2ZmI4ZWM5NTAwMTNhY2E3YTAxMzlmYmExY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t";
-    
+    // Full calendar ID (from your embed URL)
+    const calendarId = "2dffb3ba0d4158fce2472e84601aa546522ce8b9df5219c466ae9b6f886e809d@group.calendar.google.com";
+    const calendarTz = "America/Los_Angeles"; // timezone from the embed URL
+
+    const encodedId = encodeURIComponent(calendarId);
+    const encodedTz = encodeURIComponent(calendarTz);
+
     if (isMobile) {
-      // Mobile app deep links
+      // Mobile app deep links (will open the Google Calendar app if installed)
       if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        // iOS deep link
-        return `googlecalendar://addcalendar?cid=${calendarId}`;
+        return `googlecalendar://addcalendar?cid=${encodedId}`;
       } else {
-        // Android deep link
-        return `intent://calendar/addcalendar?cid=${calendarId}#Intent;scheme=googlecalendar;package=com.google.android.calendar;end`;
+        return `intent://calendar/addcalendar?cid=${encodedId}#Intent;scheme=googlecalendar;package=com.google.android.calendar;end`;
       }
     } else {
-      // Web link for desktop
-      return `https://calendar.google.com/calendar/u/0?cid=${calendarId}`;
+      // Desktop: open the calendar page (users can add/subscribe there)
+      // Use the `cid` variant which opens the calendar and allows subscribing.
+      return `https://calendar.google.com/calendar/u/0?cid=${encodedId}&ctz=${encodedTz}`;
     }
   };
 
@@ -121,19 +125,18 @@ export default function Recruitment() {
   return (
     <div className="recruitmentContainer">
       <div className="hero-recruitment-Section viewport">
-        <h1 className="main-recruitment-Title">Timeless</h1>
-        <p className="subTitle">Spring Rush 2025</p>
+  <img src={AscendLogo} alt="Ascend - Fall Rush 2025" className="main-recruitment-Title-image" />
         <div className="rush-buttons">
-          <a 
+          <RushButton 
             href={getCalendarLink()} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="calendar-button"
           >
-            Add Rush Events to Calendar
-          </a>
+            <b>Add Rush Events to Calendar</b>
+          </RushButton>
           <RushButton href="https://forms.gle/1bS5VebGJoLP8dJu5">
-            Rush Application
+            <b>Rush Application</b>
           </RushButton>
         </div>
       </div>
