@@ -30,7 +30,7 @@ export default function Recruitment() {
     {
       name: "Alumni Night",
       date: "Friday, Oct 3rd",
-      location: "SB1200",
+      location: "SB1128",
       attire: "Business Professional",
       time: "6:00 PM - 9:00 PM",
       "open-ness": "Open Invite",
