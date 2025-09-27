@@ -16,7 +16,6 @@ import {
     ConcordiaLogo,
     ExperianLogo,
     WiseAssistantLogo,
-    DepopLogo,
     HORLogo,
     GitHubLogo,
     YouTubeLogo,
@@ -42,7 +41,8 @@ import {
     Wun2FreeLogo,
     SkylarLogo,
     ReitLogo,
-    PurpleLogo
+    PurpleLogo,
+    JobrightLogo
 
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
@@ -78,7 +78,7 @@ export const companyHash = {
     "Logan Kim": ConcordiaLogo,
     "Ryan Park": ExperianLogo,
     "Melinda Do": WiseAssistantLogo,
-    "Travis Yen": DepopLogo,
+    "Travis Yen": JobrightLogo,
     "Tyler Ho": DeloitteLogo,
     "Erin Tran": ReitLogo,
     "Bradly Ho": HORLogo,

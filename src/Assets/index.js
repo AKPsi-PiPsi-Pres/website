@@ -203,6 +203,7 @@ export { default as Wun2FreeLogo } from "./Logos/Wun2FreeLogo.png";
 export { default as SkylarLogo } from "./Logos/SkylarLogo.png";
 export { default as ReitLogo} from "./Logos/ReitLogo.png";
 export { default as PurpleLogo} from "./Logos/PurpleLogo.png";
+export { default as JobrightLogo } from "./Logos/JobrightLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
