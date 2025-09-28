@@ -32,7 +32,6 @@ import AllenLai from "./ActiveHeadshots/Allen Lai.webp";
 import CindyChen from "./ActiveHeadshots/Cindy Chen.webp";
 import DanielKim from "./ActiveHeadshots/Daniel Kim.webp";
 import DonnyChau from "./ActiveHeadshots/Donny Chau.webp";
-import HaleyYoon from "./ActiveHeadshots/Haley Yoon.webp";
 import KatieWang from "./ActiveHeadshots/Katie Wang.webp";
 import LaurenCho from "./ActiveHeadshots/Lauren Cho.webp";
 import MaxVano from "./ActiveHeadshots/Max Vano.webp";
@@ -51,6 +50,18 @@ import CarlQiao from "./ActiveHeadshots/Carl Qiao.webp";
 import BrandonKoh from "./ActiveHeadshots/Brandon Koh.webp";
 import BradlyHo from "./ActiveHeadshots/Bradly Ho.webp";
 import AlexSriprathum from "./ActiveHeadshots/Alex Sriprathum.webp";
+import AshleyKang from "./ActiveHeadshots/Ashley Kang.webp";
+import DavidKim from "./ActiveHeadshots/David Kim.webp";
+import AshlynWong from "./ActiveHeadshots/Ashlyn Wong.webp";
+import BrandonPeng from "./ActiveHeadshots/Brandon Peng.webp";
+import GabrielleReyes from "./ActiveHeadshots/Gabrielle Reyes.webp";
+import MillicentMei from "./ActiveHeadshots/Millicent Mei.webp";
+import GraceRyu from "./ActiveHeadshots/Grace Ryu.webp";
+import HenryLee from "./ActiveHeadshots/Henry Lee.webp";
+import RishiMurumkar from "./ActiveHeadshots/Rishi Murumkar.webp";
+import SamanthaLee from "./ActiveHeadshots/Samantha Lee.webp";
+import NicoleKwan from "./ActiveHeadshots/Nicole Kwan.webp";
+
 import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
 
 export const headshotHash = {
@@ -89,7 +100,6 @@ export const headshotHash = {
   "Cindy Chen": CindyChen,
   "Daniel Kim": DanielKim,
   "Donny Chau": DonnyChau,
-  "Haley Yoon": HaleyYoon,
   "Katie Wang": KatieWang,
   "Lauren Cho": LaurenCho,
   "Max Vano": MaxVano,
@@ -107,5 +117,16 @@ export const headshotHash = {
   "Brandon Koh": BrandonKoh,
   "Bradly Ho": BradlyHo,
   "Alex Sriprathum": AlexSriprathum,
+  "Ashley Kang": AshleyKang,
+  "David Kim": DavidKim,
+  "Ashlyn Wong": AshlynWong,
+  "Brandon Peng": BrandonPeng,
+  "Gabrielle Reyes": GabrielleReyes,
+  "Millicent Mei": MillicentMei,
+  "Grace Ryu": GraceRyu,
+  "Henry Lee": HenryLee,
+  "Rishi Murumkar": RishiMurumkar,
+  "Samantha Lee": SamanthaLee,
+  "Nicole Kwan": NicoleKwan,
   "Default Headshot": DefaultHeadshot,
 };
