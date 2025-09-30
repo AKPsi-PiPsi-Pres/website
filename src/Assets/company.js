@@ -38,12 +38,11 @@ import {
     RadixLogo,
     SBSLogo,
     TurboAILogo,
-    Wun2FreeLogo,
     SkylarLogo,
     ReitLogo,
     PurpleLogo,
-    JobrightLogo
-
+    JobrightLogo,
+    FritoLayLogo
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -85,7 +84,7 @@ export const companyHash = {
     "Brandon Koh": YouTubeLogo,
     "David Kim": BachemLogo,
     "Ashley Kang": PartifulLogo,
-    "Millicent Mei": Wun2FreeLogo,
+    "Millicent Mei": FritoLayLogo,
     "Brandon Peng": ACCLogo,
     "Nicole Kwan": CopilotLogo,
     "Ashlyn Wong": FlowspaceLogo,
