@@ -37,7 +37,7 @@ export default function Recruitment() {
     },
     {
       name: "Social Barbeque",
-      date: "Monday, Oct 6th",
+      date: "Tuesday, Oct 7th",
       location: "Sent via Email",
       attire: "Casual",
       time: "6:00 PM",
