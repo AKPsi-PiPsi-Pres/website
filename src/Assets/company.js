@@ -10,7 +10,6 @@ import {
     TakenakaPartnersLogo,
     SiemensLogo,
     AmazonLogo,
-    BiologicalSciencesLogo,
     KumonLogo,
     KimleyHornLogo,
     ConcordiaLogo,
@@ -37,12 +36,13 @@ import {
     PartifulLogo,
     RadixLogo,
     SBSLogo,
-    TurboAILogo,
     SkylarLogo,
     ReitLogo,
     PurpleLogo,
     JobrightLogo,
-    FritoLayLogo
+    FritoLayLogo,
+    BiologicalSciencesLogo,
+    UCIAthleticsLogo
   } from "../Assets";
   import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
   
@@ -88,7 +88,7 @@ export const companyHash = {
     "Brandon Peng": ACCLogo,
     "Nicole Kwan": CopilotLogo,
     "Ashlyn Wong": FlowspaceLogo,
-    "Gabrielle Reyes": TurboAILogo,
+    "Gabrielle Reyes": UCIAthleticsLogo,
     "Grace Ryu": RadixLogo,
     "Samantha Lee": AmplifySurgicalLogo,
     "Henry Lee": SBSLogo,

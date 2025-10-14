@@ -98,7 +98,7 @@ export { default as JacobTrollPhoto } from "./TrollPhotos/IMG_1040.PNG";
 export { default as Dune } from "./Frames/FALL RUSH 24 GRAPHIC DESIGN.webp";
 export { default as DuneMini } from "./Frames/FALL RUSH 24 SHIRT DESIGN.jpeg";
 export { default as NatureAscend } from "./Frames/FALL2025.jpeg";
-export { default as AscendLogo } from "./Frames/ASCEND.png";
+export { default as AscendLogo } from "./Frames/ASCEND.webp";
 export { default as knightAKYLogo } from "./Logos/knightAKPsiLogo.png";
 export { default as instagramLogo } from "./Logos/instagramLogo.png";
 export { default as GoogleLogo } from "./Logos/GoogleLogo.png";
@@ -205,6 +205,7 @@ export { default as ReitLogo} from "./Logos/ReitLogo.png";
 export { default as PurpleLogo} from "./Logos/PurpleLogo.png";
 export { default as JobrightLogo } from "./Logos/JobrightLogo.png";
 export { default as FritoLayLogo } from "./Logos/FritoLayLogo.png";
+export { default as UCIAthleticsLogo } from "./Logos/UCIAthleticsLogo.png";
 
 export { default as Fall23RushVideo } from "./Videos/FallRush2023Website.mp4";
 export { default as CruiseReel } from "./Videos/CruiseReelWebsite.mp4";
