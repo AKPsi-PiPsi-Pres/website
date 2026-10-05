@@ -385,6 +385,14 @@ export const LOCAL_CAREERS = [
     "Growth & Strategic Marketing",
   ],
   [
+    "Millicent Mei",
+    "2026",
+    "Marketing",
+    "Growth Marketing",
+    "Launchpoint",
+    "Growth Marketing Intern",
+  ],
+  [
     "Mina Nguyen",
     "2026",
     "Consulting",
