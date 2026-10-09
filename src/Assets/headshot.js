@@ -73,6 +73,10 @@ import JamesFitzpatrick from "./ActiveHeadshots/James Fitzpatrick.webp";
 import PranavRao from "./ActiveHeadshots/Pranav Rao.webp";
 import MeganDinh from "./ActiveHeadshots/Megan Dinh.webp";
 import EmilyChien from "./ActiveHeadshots/Emily Chien.webp";
+import AnnabelleButarbutar from "./ActiveHeadshots/Annabelle Butarbutar.webp";
+import AudreyLam from "./ActiveHeadshots/Audrey Lam.webp";
+import BraedenYeoh from "./ActiveHeadshots/Braeden Yeoh.webp";
+import LeviaWhang from "./ActiveHeadshots/Levia Whang.webp";
 
 import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
 
@@ -159,5 +163,9 @@ export const headshotHash = {
   "Pranav Rao": PranavRao,
   "Megan Dinh": MeganDinh,
   "Emily Chien": EmilyChien,
+  "Annabelle Butarbutar": AnnabelleButarbutar,
+  "Audrey Lam": AudreyLam,
+  "Braeden Yeoh": BraedenYeoh,
+  "Levia Whang": LeviaWhang,
   "Default Headshot": DefaultHeadshot,
 };
