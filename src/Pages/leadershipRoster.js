@@ -47,10 +47,10 @@ export const LEADERSHIP_ROSTER = [
     leadershipType: "Cabinet",
     position: "Vice President of Marketing",
   },
-  /* Audrey Lam takes Philanthropy, but has no headshot or roster entry yet —
-     Grace Ryu stands in until her photo lands. */
+  /* The stand-in is over: Audrey Lam's headshot is in, so Philanthropy goes
+     to her under her own name and Grace Ryu steps back to a regular member. */
   {
-    fullName: "Grace Ryu",
+    fullName: "Audrey Lam",
     leadershipType: "Executive Board",
     position: "Philanthropy Chairman",
   },
