@@ -11,12 +11,24 @@ import { headshotHash } from "../Assets/headshot";
 describe("BETA_CLASS", () => {
   it("is on, and a missing photo is no reason to hold a member back", () => {
     expect(BETA_CLASS_VISIBLE).toBe(true);
-    const emitted = betaClassRows().map((row) => row[0]);
-    const withoutPhotos = BETA_CLASS.filter(
+
+    /* Words are the whole of the gate: whoever wrote a profile is emitted,
+       and nobody else is, with hasHeadshot playing no part either way.
+       Asserted as set equality rather than by finding a member who has words
+       and no photo — the class had several of those once, and has none now
+       that the photos have landed, which must not read as a failure. */
+    const emitted = betaClassRows()
+      .map((row) => row[0])
+      .sort();
+    const written = BETA_CLASS.filter((member) => member.whyAkpsi)
+      .map((member) => member.fullName)
+      .sort();
+    expect(emitted).toEqual(written);
+
+    /* And if one does turn up again, they go on the grid photo or no. */
+    BETA_CLASS.filter(
       (member) => member.whyAkpsi && !hasHeadshot(member.fullName),
-    );
-    expect(withoutPhotos.length).toBeGreaterThan(0);
-    withoutPhotos.forEach((member) => {
+    ).forEach((member) => {
       expect(emitted).toContain(member.fullName);
     });
   });

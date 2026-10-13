@@ -78,6 +78,7 @@ import AudreyLam from "./ActiveHeadshots/Audrey Lam.webp";
 import BraedenYeoh from "./ActiveHeadshots/Braeden Yeoh.webp";
 import LeviaWhang from "./ActiveHeadshots/Levia Whang.webp";
 import SophieChoi from "./ActiveHeadshots/Sophie Choi.webp";
+import DanielaHerrera from "./ActiveHeadshots/Daniela Herrera.webp";
 
 import DefaultHeadshot from "./ActiveHeadshots/Default Headshot.webp";
 
@@ -169,5 +170,6 @@ export const headshotHash = {
   "Braeden Yeoh": BraedenYeoh,
   "Levia Whang": LeviaWhang,
   "Sophie Choi": SophieChoi,
+  "Daniela Herrera": DanielaHerrera,
   "Default Headshot": DefaultHeadshot,
 };
