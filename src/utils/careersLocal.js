@@ -74,9 +74,9 @@ export const LOCAL_CAREERS = [
     "Annabelle Butarbutar",
     "2026",
     "Marketing",
-    "Social Media Marketing",
+    "Sales and Marketing",
     "RBS Wellness Spa",
-    "Social Media and Marketing Manager",
+    "Sales and Marketing Manager",
   ],
   [
     "Annie Nguyen",
